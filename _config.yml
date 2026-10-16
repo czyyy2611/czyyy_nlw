@@ -1,0 +1,105 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+title: czyyy 的博客
+subtitle: ''
+description: ''
+keywords:
+author: czyyy2611
+language: zh-CN
+timezone: Asia/Shanghai
+
+# URL
+## 项目页必须写成 https://用户名.github.io/仓库名，大小写要和 GitHub 上完全一致。
+## 这个值写错会导致 CSS/JS 全部 404，页面变成裸 HTML。
+url: https://czyyy2611.github.io/czyyy_nlw
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true # 保留 URL 末尾的 index.html
+  trailing_html: true # 保留 URL 末尾的 .html
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true # 外链在新标签页打开
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+## 开启后，`hexo new "标题"` 会同时生成 source/_posts/标题/ 目录用来放图片。
+## 文章里直接写 ![](图片名.png) 就能引用，不需要额外插件。
+post_asset_folder: true
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+
+# Home page setting
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+meta_generator: true
+
+# Date / Time format
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: 'mtime'
+
+# Pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## 强制把 source/.nojekyll 复制到 public/：
+## 没有它的话 GitHub Pages 会用 Jekyll 处理 gh-pages 分支，
+## 而 Jekyll 会忽略以下划线开头的文件/目录，容易埋雷。
+include:
+  - .nojekyll
+exclude:
+ignore:
+
+# Extensions
+## 主题名对应 themes/ 下的目录名
+theme: butterfly
+
+# Deployment
+## hexo deploy 会把 public/ 推到下方仓库的 gh-pages 分支
+deploy:
+  type: git
+  repo: https://github.com/czyyy2611/czyyy_nlw.git
+  branch: gh-pages
+
+# 本地搜索（配合 _config.butterfly.yml 里的 local_search 使用）
+search:
+  path: search.xml
+  field: post
+  content: true
+  format: html

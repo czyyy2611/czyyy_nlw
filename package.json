@@ -1,0 +1,39 @@
+{
+  "name": "czyyy-nlw-blog",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "hexo server",
+    "s": "hexo server",
+    "build": "hexo generate",
+    "g": "hexo generate",
+    "clean": "hexo clean",
+    "cl": "hexo clean",
+    "deploy": "hexo deploy",
+    "d": "hexo deploy",
+    "go": "hexo clean && hexo generate && hexo deploy",
+    "new": "hexo new"
+  },
+  "hexo": {
+    "version": "7.3.0"
+  },
+  "dependencies": {
+    "hexo": "^7.3.0",
+    "hexo-deployer-git": "^4.0.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^4.0.0",
+    "hexo-generator-searchdb": "^1.4.1",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^7.0.1",
+    "hexo-renderer-pug": "^3.0.0",
+    "hexo-renderer-stylus": "^3.0.1",
+    "hexo-server": "^3.0.0",
+    "hexo-theme-butterfly": "^5.3.5",
+    "hexo-wordcount": "^6.0.1"
+  },
+  "devDependencies": {
+    "hexo-cli": "^4.3.2"
+  }
+}
