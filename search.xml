@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/czyyy_nlw/2026/10/16/hello-world/</url>
+    <content><![CDATA[<p>欢迎来到我的小站 👋</p>
+<p>这是 Hexo + Butterfly 搭的第一篇文章，用来验证整条链路是通的。</p>
+<h2 id="怎么写文章"><a href="#怎么写文章" class="headerlink" title="怎么写文章"></a>怎么写文章</h2><p>在项目根目录执行：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run new -- <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>会生成 <code>source/_posts/文章标题.md</code>，用任意 Markdown 编辑器写就行。<br>写完本地预览：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run s</span><br></pre></td></tr></table></figure>
+
+<p>打开 <a href="http://localhost:4000/">http://localhost:4000</a> 看效果，满意了再发布：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run go</span><br></pre></td></tr></table></figure>
+
+<p><code>npm run go</code> 等于 <code>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</code>，会把页面生成到<br><code>public/</code> 然后推到 GitHub 的 <code>gh-pages</code> 分支。</p>
+<h2 id="放图片"><a href="#放图片" class="headerlink" title="放图片"></a>放图片</h2><p>因为开启了 <code>post_asset_folder</code>，新建文章时会同时生成一个同名文件夹，<br>图片丢进去，正文里直接写相对路径即可：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片说明</span>](<span class="link">图片名.png</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">hello</span>(<span class="params">name</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">`Hello, <span class="subst">$&#123;name&#125;</span>!`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">hello</span>(<span class="string">&#x27;world&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>模板搭好了，接下来把 <code>_config.yml</code> 里的站名、<code>_config.butterfly.yml</code> 里的头像和社交链接换成自己的就行。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>折腾</tag>
+      </tags>
+  </entry>
+</search>
