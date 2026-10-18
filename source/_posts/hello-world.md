@@ -5,7 +5,7 @@ tags:
   - 折腾
 categories:
   - 随笔
-description: 第一篇博客，顺便说明这套站点是怎么搭起来的。
+description: 第一篇博客
 ---
 
 欢迎来到我的小站 👋

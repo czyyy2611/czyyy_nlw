@@ -139,7 +139,7 @@ npm run go     # 生成 + 部署
 
 **注意本地预览地址带 `/czyyy_nlw/` 前缀** —— 因为站点配置的是项目页，不是根域名。直接开 `localhost:4000` 会 404，这是正常的。
 
-`npm run go` 需要代理（见 4.3）；只跑 `npm run g` 或 `npm run s` 不需要代理。
+`npm run go` 需要代理（见 4.2）；只跑 `npm run g` 或 `npm run s` 不需要代理。
 
 ### 1.8 边写边看（推荐工作流）
 
@@ -186,6 +186,42 @@ VSCode 的预览用的是**它自己的样式**，不是 Butterfly 主题，但�
 - 改了 `_config.yml` 或 `_config.butterfly.yml` 后，需要**关掉窗口重新双击**（主题配置不会热更新）
 - 本地预览的地址一定要带 `/czyyy_nlw/`，直接开 `localhost:4000` 是 404
 - 浏览器提示"无法访问"时，先确认那个黑窗口还开着
+
+### 1.9 给文章加密
+
+已安装插件 `hexo-blog-encrypt`（见 [`package.json`](package.json) 第 22 行），**按文章**开启：在 front matter 加一行 `password:` 即可。
+
+```yaml
+---
+title: 只有我知道的文章
+password: 你的密码
+abstract: 这篇文章已加密，请输入密码查看。
+message: 请输入访问密码
+---
+```
+
+正文照常写。构建后，读者点进文章会先看到密码框，输对了才显示内容。
+
+全局提示语在 [`_config.yml`](_config.yml) 第 115-120 行的 `encrypt:` 里（第 113-114 行是说明注释），单篇文章的 `abstract` / `message` 会覆盖全局值。
+
+**取消加密**：删掉 front matter 里的 `password` 那一行，重新构建即可。
+
+改完要重启预览并清理：
+
+```bash
+npm run cl
+npm run s
+```
+
+#### 它到底安全到什么程度
+
+| 能做到 | 做不到 |
+|---|---|
+| 正文以 AES 密文形式存在 HTML 里，没有密码看不到 | 防不住离线暴力破解——密码太弱（比如 `123456`）几秒就能试出来 |
+| 首页摘要、搜索索引不泄露正文（已实测 `public/search.xml` 无明文） | 文章同名文件夹里的**图片/附件不加密**，知道 URL 可直接打开 |
+| 标题、日期、封面仍公开，但正文安全 | 密码忘了找不回，只能改 front matter 重设 |
+
+> 结论：防“随手点开看看”足够；**不要用它存真正的敏感信息**（身份证、密码、私密照片）。
 
 ---
 
@@ -774,47 +810,48 @@ public/
 npm run go        # clean + generate + deploy，真正发布到线上
 ```
 
-`go` 会重新生成一遍（所以不必先手动 `g`），并且需要代理（见 4.3）。
+`go` 会重新生成一遍（所以不必先手动 `g`），并且需要代理（见 4.2）。
 
-### 4.2 `npm run go`：生成 + 部署
+### 4.2 推送（发布到线上）
+
+本地检查没问题后，一条命令：
 
 ```bash
 npm run go
 ```
 
-等价于 `hexo clean && hexo generate && hexo deploy`。
+等价于 `hexo clean && hexo generate && hexo deploy`：把 `source/` 构建到 `public/`，再推到 `gh-pages` 分支。GitHub Pages **1~2 分钟后自动更新**。
 
-它做两件事：
-1. 把 `source/` 渲染成静态页面到 `public/`
-2. 把 `public/` 推到 GitHub 的 `gh-pages` 分支
-
-GitHub Pages 会自动从 `gh-pages` 分支发布，**推上去 1~2 分钟后就生效**。
-
-### 4.3 代理
-
-`npm run go` 要访问 `github.com`，而你的网络对它有 TLS 拦截。所以**部署前必须先开代理**。注意：`npm run g` 和 `npm run s` 都是纯本地操作，**不需要代理**。
-
-git 已经配好了（只对 github.com 生效）：
+**前提：代理必须开着**（`github.com` 被 TLS 拦截；`npm run g` / `npm run s` 不需要代理）。换电脑或重装 Git 后，先执行一次：
 
 ```bash
+git config --global user.name "czyyy2611"
+git config --global user.email "你的邮箱"
+git config --global credential.helper manager
 git config --global http."https://github.com".proxy http://127.0.0.1:7897
 ```
 
-代理没开时的表现：`Failed to connect to github.com:443 over proxy`。这不是仓库坏了，开代理重试即可。
+报错对照：
 
-### 4.4 源码也要提交
+| 报错 | 原因 |
+|---|---|
+| `Failed to connect to github.com:443 over proxy` | 代理没开 |
+| `Author identity unknown` | 没配 `user.name` / `user.email` |
+| `SEC_E_UNTRUSTED_ROOT` | git 没走代理，检查上面最后一行 |
 
-`npm run go` 只推构建产物到 `gh-pages`。**源码在 `main` 分支**，改完文章记得：
+### 4.3 源码也要推
+
+`npm run go` **只推构建产物**到 `gh-pages`，源码仍然只在本地。改完文章或配置，记得：
 
 ```bash
 git add -A
-git commit -m "新增文章：xxx"
+git commit -m "描述这次改了什么"
 git push
 ```
 
-否则源码只在你本地，换台电脑就找不回来了。
+否则换台电脑就找不回来了。
 
-### 4.5 让搜索引擎别收录（已启用）
+### 4.4 让搜索引擎别收录（已启用）
 
 博客默认是公开的，任何人拿到链接都能看，搜索引擎也会收录。如果只想「能访问但别太招摇」，用两处配置：
 
@@ -861,7 +898,7 @@ inject:
 | 改了主题配置没反应 | 缓存 | `npx hexo clean` 后重试 |
 | 图片不显示 | 路径不对 | 图片放 `source/_posts/文章名/`，正文用相对路径 `![](图.png)` |
 | 公式不渲染 | 没启用 | `math.use: katex`，文章 front matter 加 `mathjax: true` |
-| 百度/Google 搜不到博客 | 已开启 noindex，这是**预期行为** | 见 4.5；想恢复收录就删掉 robots.txt 和那条 meta |
+| 百度/Google 搜不到博客 | 已开启 noindex，这是**预期行为** | 见 4.4；想恢复收录就删掉 robots.txt 和那条 meta |
 | YAML 报 `bad indentation` | 用了 Tab 或缩进没对齐 | 见 6.3 |
 | 文章里 `{% note %}` 原样显示 | 标签拼错 / 缺 `{% endnote %}` | 对照 6.5 检查闭合 |
 

@@ -109,3 +109,12 @@ search:
 browsersync:
   open: false # 浏览器由 `hexo server --open` 负责打开，避免开两个标签页
   notify: false # 关闭右上角的 "connected" 提示
+
+# 文章加密（插件：hexo-blog-encrypt）
+# 这里只是默认提示语；是否加密由每篇文章 front matter 里的 password 决定。
+encrypt:
+  abstract: 这篇文章已加密，请输入密码查看。
+  message: 请输入访问密码
+  theme: default
+  wrong_pass_message: 密码错误，请重新输入。
+  wrong_hash_message: 抱歉，这篇内容无法通过验证。
