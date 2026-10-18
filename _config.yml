@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: czyyy 的博客
+title: czyyy_nlw
 subtitle: ''
-description: ''
+description: 'Hello World'
 keywords:
-author: czyyy2611
+author: czyyy
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -103,3 +103,9 @@ search:
   field: post
   content: true
   format: html
+
+# 本地预览增强（hexo-browsersync）
+# 保存文章后浏览器自动刷新。只在 hexo server 时生效，不影响线上站点。
+browsersync:
+  open: false # 浏览器由 `hexo server --open` 负责打开，避免开两个标签页
+  notify: false # 关闭右上角的 "connected" 提示
