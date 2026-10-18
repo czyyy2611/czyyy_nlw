@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>a</title>
-    <url>/czyyy_nlw/2026/10/17/1/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/czyyy_nlw/2026/10/16/hello-world/</url>
     <content><![CDATA[<p>欢迎来到我的小站 👋</p>
@@ -34,5 +29,34 @@
       <tags>
         <tag>折腾</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>a</title>
+    <url>/czyyy_nlw/2026/10/18/1/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="6067ded28844222029a505fca3519346583bc3e2795711367c5e88f16f8ac9ee"
+     data-nonce="23065d9bda4eee61bb68dd62"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    54c67c4889eb6d730055ef8d73277dec5e87a03024aa9ee597ac3862f041bbc9b430c25257cc4cac59677800aca12608351c321dcb6ac415e901a977ffbbc1671516c7db67dcf22bd8d3f599f693fc93da8c7cf5469b7eb3d82f039b9358b51277bb6473fb3dce425e95d2e6ef85e71eb109e4c1a83a6fc47440c5bb08bcb0e315980aaa59515714e23927006de9aabd4a3ab38c40554213a6fc2b4095cee552d0aaeb474b141dbeff0dacfc8e6bbf16ae0dc2ac138b3d1f1e0ad57917212582bc9e6be79c194688d4b052cfd76ffc6cc15df940578e569409c65a7fd3a4e7835038198490a4ba3d4f6ece1d91fbf9cf62fc11c96eb1735b2c72c7458cb7454eb4688bfc76c414aa094334e13c53545491b7edfe2126db4c17261020ef8d0516a21ba8e26c11612494a48d5d47da2dcb3b0c21
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
 </search>
