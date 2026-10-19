@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>a</title>
-    <url>/czyyy_nlw/2026/10/18/1/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="ed5930c6b3c1ab73adbdf1b74cfb637d4e0c6e031691785334c963babb5e5b5b"
-     data-nonce="ae097726d171d72924d5cc26"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    f56780fe09ee7e3ea0a9f55a2eb6a8119396acc54e1d6af5ff6054a69b4876925a303d1e194d1dd804f990df69e12d80ebbc7a2a9441dbbe1a393c2804956c6eba803b7cd199e33c8ef0d32f90c5fbf332038997c90b9704adb2b95c08f1b0f87ac5833dd47bb7337cf96341d4afa3d6230371bf8b3dbb325eda9a38b689d1327eb86ac67175b122c990453afa1677e010af9d15856ba188a49d6153c34030348d734c31dcb851b6350256ef6411713d184c674ba7c036f2779e3e1327dd772d5972d3a6ac4e5c10454535514b5d8bac9e01af43ef05ba26ca536c17edf2cffce79272adf2e5ef3e23b1332575d0a8cccb1fd564eaa2190f61d9757c48d5c07a496d8b50e4c0c84de4091e9d89b03bccb3493698be8f3ed46349f07f649aad3a79796f05f342dffcbdb8393b6e362ffb47a037
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
     <title>Learn Markdown</title>
     <url>/czyyy_nlw/2026/10/19/markdown/</url>
     <content><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
@@ -116,33 +87,32 @@
 <h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1>]]></content>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/czyyy_nlw/2026/10/16/hello-world/</url>
-    <content><![CDATA[<p>欢迎来到我的小站 👋</p>
-<p>这是 Hexo + Butterfly 搭的第一篇文章，用来验证整条链路是通的。</p>
-<h2 id="怎么写文章"><a href="#怎么写文章" class="headerlink" title="怎么写文章"></a>怎么写文章</h2><p>在项目根目录执行：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run new -- <span class="string">&quot;文章标题&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>会生成 <code>source/_posts/文章标题.md</code>，用任意 Markdown 编辑器写就行。<br>写完本地预览：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run s</span><br></pre></td></tr></table></figure>
-
-<p>打开 <a href="http://localhost:4000/">http://localhost:4000</a> 看效果，满意了再发布：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm run go</span><br></pre></td></tr></table></figure>
-
-<p><code>npm run go</code> 等于 <code>hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</code>，会把页面生成到<br><code>public/</code> 然后推到 GitHub 的 <code>gh-pages</code> 分支。</p>
-<h2 id="放图片"><a href="#放图片" class="headerlink" title="放图片"></a>放图片</h2><p>因为开启了 <code>post_asset_folder</code>，新建文章时会同时生成一个同名文件夹，<br>图片丢进去，正文里直接写相对路径即可：</p>
-<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">图片说明</span>](<span class="link">图片名.png</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="代码高亮"><a href="#代码高亮" class="headerlink" title="代码高亮"></a>代码高亮</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">hello</span>(<span class="params">name</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">`Hello, <span class="subst">$&#123;name&#125;</span>!`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">hello</span>(<span class="string">&#x27;world&#x27;</span>));</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>模板搭好了，接下来把 <code>_config.yml</code> 里的站名、<code>_config.butterfly.yml</code> 里的头像和社交链接换成自己的就行。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>折腾</tag>
-      </tags>
+    <title>a</title>
+    <url>/czyyy_nlw/2026/10/18/1/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="058f01c621b76f82fcbaaa51207f5bc9ee8c19ebe3252cb5fc5f265d93588902"
+     data-nonce="ef7ab1b98d42e30b4d6ec65e"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    965635d89084c8db91228fa3fad96fd343ab8572c4366e9927f64f624a82dac09b2786e7d6779af2cbaea22c5bb5f979f5dbe6521b9021739af3b2af9c3d75d22405133d96f24fc45aab423684d33307c54b5a27f33c7389ca26519f616a422b884a6dd7a0cb92b29e47b03563dd4ac4a6458192fc1732a69332b9e2d123a444725c3a453f39e9d2508a420e9d5b04f3ef2f8d6167864efac7bd69a87f64ef1bb196c9f6918ea322af8fc846efd56f9d9e9adb84801df09ff65d641f1daca578089e0313a5479cb058228eac6bc58e2139eb32812a56200d410d61bd52ff98324009724e6f4a8134301e944c82db8a81bcf556f1cb6049683cc3fc4b602e8731c347b33590b271fe4b3ac3e0652e710754bb910e1dd07e533b5ce25bb9dbcbc4042c0aa5b83ec7d15fe1da0b2e20ef25063d04
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
 </search>
