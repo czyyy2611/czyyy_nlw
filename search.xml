@@ -1,6 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>a</title>
+    <url>/czyyy_nlw/2026/10/18/1/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="ed5930c6b3c1ab73adbdf1b74cfb637d4e0c6e031691785334c963babb5e5b5b"
+     data-nonce="ae097726d171d72924d5cc26"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    f56780fe09ee7e3ea0a9f55a2eb6a8119396acc54e1d6af5ff6054a69b4876925a303d1e194d1dd804f990df69e12d80ebbc7a2a9441dbbe1a393c2804956c6eba803b7cd199e33c8ef0d32f90c5fbf332038997c90b9704adb2b95c08f1b0f87ac5833dd47bb7337cf96341d4afa3d6230371bf8b3dbb325eda9a38b689d1327eb86ac67175b122c990453afa1677e010af9d15856ba188a49d6153c34030348d734c31dcb851b6350256ef6411713d184c674ba7c036f2779e3e1327dd772d5972d3a6ac4e5c10454535514b5d8bac9e01af43ef05ba26ca536c17edf2cffce79272adf2e5ef3e23b1332575d0a8cccb1fd564eaa2190f61d9757c48d5c07a496d8b50e4c0c84de4091e9d89b03bccb3493698be8f3ed46349f07f649aad3a79796f05f342dffcbdb8393b6e362ffb47a037
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>Learn Markdown</title>
+    <url>/czyyy_nlw/2026/10/19/markdown/</url>
+    <content><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
+<li>语法：使用 <strong>#</strong> 创建1-6级标题</li>
+<li><strong>#</strong> 号和标题文字之间必须有一个空格</li>
+<li><strong>#</strong> 号必须在行首，前面不能有其他字符</li>
+</ul>
+<hr>
+<h1 id="文本格式"><a href="#文本格式" class="headerlink" title="文本格式"></a>文本格式</h1><ul>
+<li>** xx ** 表示 粗体 <strong>xx</strong></li>
+<li>* xx * 表示 斜体 <em>xx</em></li>
+<li>*** xx *** 表示 斜粗体 <em><strong>xxx</strong></em></li>
+<li>~~ xxxxxx ~~ 表示 删除线 <del>xxxxxx</del></li>
+<li>三个以上的星号、减号、底线来建立一个分隔线</li>
+</ul>
+<hr>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><ol>
+<li>无序列表<ul>
+<li>使用 * 、 + 或是 - 作为列表标记（建议使用 - ）</li>
+</ul>
+</li>
+<li>有序列表<ul>
+<li>数字 + .</li>
+</ul>
+</li>
+<li>任务列表<br> - [ ] 未完成的任务<br> - [x] 已完成的任务<ul>
+<li><input disabled="" type="checkbox"> 未完成的任务</li>
+<li><input checked="" disabled="" type="checkbox"> 已完成的任务</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h1><ol>
+<li>单级引用<ul>
+<li>段落开头使用 &gt; 符号 ，然后后面紧跟一个空格<blockquote>
+<p>这是一段引用</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>多级引用<br>&gt;最外层<br>&gt;&gt;第一层嵌套<br>&gt;&gt;&gt;…<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>…</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><ol>
+<li>行内代码 使用 ` 包起来 `printf`<br><code>printf</code></li>
+<li>区块代码 使用`&#96;&#96;包裹<br> `&#96;&#96;<br> 这是一段代码<br> `&#96;&#96; <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一段代码</span><br></pre></td></tr></table></figure></li>
+<li>语言表示 语法高亮 高级特性</li>
+</ol>
+<hr>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><ol>
+<li>[链接名称](链接地址)<br>[链接文字](链接地址 “可选的标题”)<br><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接名称</a><br><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80" title="可选的标题">链接文字</a></li>
+<li>&lt;链接地址&gt;</li>
+<li>锚点链接 ： <ol>
+<li><p>[第一章：介绍](#第一章介绍)<br> <a href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E4%BB%8B%E7%BB%8D">第一章：介绍</a></p>
+</li>
+<li><p>锚点规则：<br>标题会自动生成锚点<br>锚点名称通常是标题的小写形式<br>空格替换为连字符<br>移除特殊字符</p>
+</li>
+<li><p>手动创建锚点：<br>&lt;a id&#x3D;”custom-anchor”&gt;</a><br> ## 自定义锚点位置<br> [跳转到自定义位置](#custom-anchor)</p>
+</li>
+<li><p>页面顶部返回链接：<br> [回到顶部](#)</p>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><ol>
+<li>![替代文字](图片路径)<br>![替代文字](图片路径 “图片标题”)<br>其中图片路径可以是相对路径，也可以是绝对路径；</li>
+<li>图片尺寸控制<ol>
+<li>使用HTML img 标签<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” width&#x3D;”300” height&#x3D;”200”&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” width&#x3D;”50%”&gt;<br> &lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” style&#x3D;”width: 300px; height: auto;”&gt;</li>
+<li>图片对齐<br>&lt;!– 居中对齐 –&gt;<br>&lt;div align&#x3D;”center”&gt;<br>  &lt;img src&#x3D;”image.jpg” alt&#x3D;”居中图片” width&#x3D;”400”&gt;<br>&lt;&#x2F;div&gt;<br> &lt;!– 左对齐（默认） –&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”左对齐图片” style&#x3D;”float: left; margin-right: 20px;”&gt;<br> &lt;!– 右对齐 –&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”右对齐图片” style&#x3D;”float: right; margin-left: 20px;”&gt;</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1>]]></content>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/czyyy_nlw/2026/10/16/hello-world/</url>
     <content><![CDATA[<p>欢迎来到我的小站 👋</p>
@@ -29,34 +144,5 @@
       <tags>
         <tag>折腾</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>a</title>
-    <url>/czyyy_nlw/2026/10/18/1/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="6067ded28844222029a505fca3519346583bc3e2795711367c5e88f16f8ac9ee"
-     data-nonce="23065d9bda4eee61bb68dd62"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    54c67c4889eb6d730055ef8d73277dec5e87a03024aa9ee597ac3862f041bbc9b430c25257cc4cac59677800aca12608351c321dcb6ac415e901a977ffbbc1671516c7db67dcf22bd8d3f599f693fc93da8c7cf5469b7eb3d82f039b9358b51277bb6473fb3dce425e95d2e6ef85e71eb109e4c1a83a6fc47440c5bb08bcb0e315980aaa59515714e23927006de9aabd4a3ab38c40554213a6fc2b4095cee552d0aaeb474b141dbeff0dacfc8e6bbf16ae0dc2ac138b3d1f1e0ad57917212582bc9e6be79c194688d4b052cfd76ffc6cc15df940578e569409c65a7fd3a4e7835038198490a4ba3d4f6ece1d91fbf9cf62fc11c96eb1735b2c72c7458cb7454eb4688bfc76c414aa094334e13c53545491b7edfe2126db4c17261020ef8d0516a21ba8e26c11612494a48d5d47da2dcb3b0c21
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
 </search>
