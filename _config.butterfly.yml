@@ -64,7 +64,7 @@ avatar:
 disable_top_img: false
 
 # If the banner of page not setting, it will show the default_top_img
-default_top_img: 
+default_top_img: /img/雷赛.jpg
 
 # The banner image of index page
 index_img: /img/雷赛.jpg
@@ -1061,6 +1061,20 @@ inject:
     # - <link rel="stylesheet" href="/xxx.css">
     # 告诉搜索引擎不要收录本站（配合 source/robots.txt 使用）
     - '<meta name="robots" content="noindex, nofollow">'
+    # 文章页/归档页头图与整站背景无缝衔接（说明见 README 2.6）
+    - |
+      <style>
+        #page-header.post-bg,
+        #page-header.not-home-page {
+          background-attachment: fixed;
+          background-position: center center;
+          background-size: cover;
+        }
+        #page-header.post-bg::before,
+        #page-header.not-home-page::before {
+          background-color: transparent !important;
+        }
+      </style>
   bottom:
     # - <script src="xxxx"></script>
 

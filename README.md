@@ -283,7 +283,7 @@ npm run s
 | `pjax` / `snackbar` / `instantpage` / `lazyload` | 991-1020 | 无刷新跳转、提示条、预加载、懒加载 | 全关 |
 | `pwa` / `Open_Graph_meta` / `structured_data` | 1025-1052 | PWA、社交卡片、结构化数据 | PWA 关，OG 开 |
 | `css_prefix` | 1055 | CSS 兼容前缀 | `true` |
-| `inject` | 1059-1065 | 往页面塞自定义代码 | head 里有 noindex meta |
+| `inject` | 1059-1078 | 往页面塞自定义代码 | head 里有 noindex meta，以及头图与背景对齐的样式 |
 | `CDN` | 1069-1136 | 资源 CDN | 内部本地、第三方 jsdelivr |
 
 > 记住一个判断方法：**在文件里搜键名**（VSCode 按 `Ctrl+F`），比记行号可靠。行号只是方便你现在按图索骥。
@@ -396,7 +396,7 @@ index_layout: 3
 
 ```yaml
 disable_top_img: false              # 第 64 行：true = 关掉所有大图
-default_top_img: /img/奶龙图片.jpg   # 第 67 行：没单独设置时的大图
+default_top_img: /img/雷赛.jpg       # 第 67 行：没单独设置时的大图
 index_img: /img/雷赛.jpg            # 第 70 行：首页大图
 archive_img:                        # 第 73 行：归档页大图（空）
 tag_img:                            # 第 76 行：标签页大图（空）
@@ -429,6 +429,40 @@ background:
   - /img/雷赛.jpg
   - /img/奶龙图片.jpg
 ```
+
+#### 文章头图与背景“接上”
+
+文章页顶部大图（`top_img`）默认高 400px，会按这 400px 的框自己裁切；而整站背景 `#web_bg` 是按整个视口裁切的。同一张图因此会显示成一大一小两截，页面往下看就能看到接缝和重影。
+
+修复方式是在 `inject.head` 里追加一段样式（`_config.butterfly.yml` **第 1064-1077 行**），让头图也按视口固定定位，参数和 `#web_bg` 完全一致：
+
+```yaml
+inject:
+  head:
+    - |
+      <style>
+        #page-header.post-bg,
+        #page-header.not-home-page {
+          background-attachment: fixed;   # 跟着视口定位，而不是跟着 400px 的盒子
+          background-position: center center;
+          background-size: cover;
+        }
+        #page-header.post-bg::before,
+        #page-header.not-home-page::before {
+          background-color: transparent !important;   # 去掉头图那层 30% 黑色遮罩
+        }
+      </style>
+```
+
+| 选择器 | 作用范围 |
+|---|---|
+| `#page-header.post-bg` | 文章页 |
+| `#page-header.not-home-page` | 归档 / 标签 / 分类 / 普通页面 |
+
+两个注意点：
+
+- 头图必须和 `background` **是同一张图**才会重合。如果某篇文章在 front matter 里单独写了 `top_img:`，它只会按视口定位，不会和背景接上——这是预期行为。
+- `background-attachment: fixed` 在移动端 Safari 上支持不好，手机上可能仍是错位的。桌面端不受影响。
 
 ### 2.7 换配色
 
@@ -544,7 +578,7 @@ aside:
 | 图片放大 | `lightbox` | 917 | 空 = 关 |
 | 提示块样式 | `note.style` | 979 | `flat` |
 | 懒加载 | `lazyload.enable` | 1014 | `false` |
-| 自定义注入 | `inject.head` / `inject.bottom` | 1060 / 1064 | head 有 noindex meta |
+| 自定义注入 | `inject.head` / `inject.bottom` | 1060 / 1078 | head 有 noindex meta 和头图对齐样式 |
 
 ---
 
@@ -1248,7 +1282,7 @@ console.log('hi')
 | 文章里引用同目录图片 | 相对路径 | `截图.png` |
 | 本地预览地址 | 带仓库前缀 | `http://localhost:4000/czyyy_nlw/` |
 
-> 以后**改仓库名**，三处要跟着改：`_config.yml` 第 17 行的 `url`、`_config.butterfly.yml` 第 1060-1065 行 `inject` 里的路径、`source/robots.txt` 第 2 行的 `Disallow`。
+> 以后**改仓库名**，三处要跟着改：`_config.yml` 第 17 行的 `url`、`_config.butterfly.yml` 第 1059-1078 行 `inject` 里的路径、`source/robots.txt` 第 2 行的 `Disallow`。
 
 ### 6.7 一篇完整示例
 
