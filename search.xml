@@ -7,12 +7,12 @@
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="1192779bcf6b64be3fabaa3485012157c774b3e2eb672a124fb9d20bad4783b5"
-     data-nonce="adb63f20ed273a1e0b05c6d4"
+     data-salt="061191852e692ffdbbaf3734cb2ce5ff4576a5c0d884c770bb1c655f7fbbf970"
+     data-nonce="83cddb301e95d0534d06d63f"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    316ca852f470404e3632c67ab514e292caaf8b5e67525d8cb09a34fb636cb6a475761e6d125d864c38ad3642c24d38992aadae5370df2b3627e03e2aebcaa2e4ec05d3675adebf0615455215a2b9f9c12368631143eebbc690751c917bc53b55e9890642f62f920778e64ade9014fcceb75419fe1d818e0ce08ed9a4f91edaa3bd68a073e4d9ee9a2dcce30644d7efacff045fb8d3c7d09ad104ea3a9bb5711504d4bb8d400304ca7b76137889d99080f619cba131be093933cb25be5f78f4876c1ae335626a40a5bd7a9114b78340eeac0249207805e64e5421c4e1b56d7747165ec84fdb4cc9b4f6b1bbcdd661d2d97efd330cb4509d28ed4360656cb2b2ed23f5f0f58e2ebb192efc2a2ea8a6ef49269cfdd9c5e21511d626c828d80c7e85c736510aba6d7c11eb7a2ea3db9f62da6b334c
+    7bceecfde9954a1c5a7020d9382c375555a7626d66592122e048cc65849607d8889f018da8f5417d69ccdb1d541d2699c37c337c987f97ccd67e373e9a8714c2746c505e857f50a37467366eaae42a66260442961a5bf8d26ac7561ba2922ca8aa4fecc15d1da581acb190fbc8ba50463bb9c97c5926eaa09f232b1b8fa510c7c8815727b720ec7f1577e90766b67517a5dbf7686b1c93ff9b1c0f0959160a0e7e22900d8cb91c454ddf6a0610aee2ce9344a8f895e24737d314a6c0ee36e0221a15398c3c824ca05c2c31d698a2718fe8130717e517096aac8fc62097d9d49e4a388fb0d5924f9b138fe0695cc2893304ac56e5cb44f055b1837ac407e61d64a9528bae8a8123cbff01317dbef44e83f8006a61412d82a846bfaf7651a4084dc864061f2dd9d6461ef518a2b844967b4d04bf
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
@@ -30,31 +30,20 @@
 <script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
-    <title>奶蛙游戏合集</title>
-    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
-    <content><![CDATA[<ol>
-<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
-<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
-<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
-<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
-<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
-<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
-<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
-<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
-<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
-<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
-<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
-<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
-<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
-<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
-<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
-<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
-<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
-<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
-<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
-<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
-<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
-<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
+    <title></title>
+    <url>/czyyy_nlw/2026/10/20/MIPS/</url>
+    <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
+<li>输入 <figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="meta">.macro</span> input(%in)</span><br><span class="line">    li $<span class="built_in">v0</span>, <span class="number">5</span></span><br><span class="line">    <span class="keyword">syscall</span></span><br><span class="line"><span class="keyword"></span>    <span class="keyword">move </span>%in, $<span class="built_in">v0</span></span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro print(%out)</span><br><span class="line">    li $v0, 1</span><br><span class="line">    move $s0, %out</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印换行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro println()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro printspace()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 32</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>计算二维数组字节偏移量<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro calc_addr(%dst, %row, %col, %rank)</span><br><span class="line">    multu %row, %rank</span><br><span class="line">    mflo %dst</span><br><span class="line">    addu %dst, %dst %col</span><br><span class="line">    sll %dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>读数组元素 arr[index] -&gt; %val (用到$t8 $t9)<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro lw_arr(%val, %base, %index)</span><br><span class="line">    sll $t8, %index, 2</span><br><span class="line">    add $t9, %base, $t8</span><br><span class="line">    lw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>写数组元素 %val -&gt; arr[index] (用到$t8 $t9) <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro sw_arr(%val, %base, %index)</span><br><span class="line">    sll $t8, %index, 2</span><br><span class="line">    add $t9, %base, $t8</span><br><span class="line">    sw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="循环的写法"><a href="#循环的写法" class="headerlink" title="循环的写法"></a>循环的写法</h1><ol>
+<li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
+<li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
   </entry>
@@ -161,6 +150,35 @@
 </tbody></table>
 <hr>
 <p>参考： <a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>奶蛙游戏合集</title>
+    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[<ol>
+<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
+<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
+<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
+<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
+<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
+<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
+<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
+<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
+<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
+<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
+<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
+<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
+<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
+<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
+<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
+<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
+<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
+<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
+<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
+<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
+<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
+<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
+</ol>
 ]]></content>
   </entry>
 </search>
