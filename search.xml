@@ -1,38 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>a</title>
-    <url>/czyyy_nlw/2026/10/18/1/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="b00770e1496f8867b4f3714e87f44d21b8a6a86d74b0fcca28542ff21efd8f80"
-     data-nonce="36d4a02645b5a9afc6e53a3a"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    7d3c384a971c00e50a4a0d56996b3d9e6d2bd20dc81bd65bcfa51d837b2b655c594a7de560559137d3ce648914ff49a1c60bdbb02446bf6aeb5ac4f72f630fcd32859e20df41d019c5761b6bfc443d52ec56e986ecdad56dff0d7938b01e7a0888f52db02e73cd5c214bebe550c44fe954dab9f0e006a1d56687a334d14b4927e80348f00a2b150541a64de25441383524d86eab5a676bfe6a7dedd20f2e978967f777f223c6f2d9c33568fa7c8de5a9334ea5c3fbb4c0f407ce6ba03b889b00dbbafd2a41d0aef9fc00702eabed0a5945ad01e1513900b0848598d1ee93f7a424e89a58748dfa8b692013e013d724f394fef2b5df5b9b0e96e0f697797cd44a90e50c2768b2dfc810f270bad3877248c29ea81c9be0e5008cfce23f56f7b4a1d568a02e37b5805514765fc1d7ac89a63ef032
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
     <title>Learn Markdown</title>
     <url>/czyyy_nlw/2026/10/19/markdown/</url>
-    <content><![CDATA[<h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
+    <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
 <li>语法：使用 <strong>#</strong> 创建1-6级标题</li>
 <li><strong>#</strong> 号和标题文字之间必须有一个空格</li>
 <li><strong>#</strong> 号必须在行首，前面不能有其他字符</li>
@@ -113,6 +84,54 @@
 </li>
 </ol>
 <hr>
-<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1>]]></content>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>\ |  表头   | 表头  |<br>|  —-  | —-  |<br>| 单元格  | 单元格 |<br>| 单元格  | 单元格 |</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody></table>
+<hr>
+<p>参考： <a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>a</title>
+    <url>/czyyy_nlw/2026/10/18/1/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="b0b08cf7e002111805234b2c3bc28c9da3093104a36e16aee34c11926f5ee994"
+     data-nonce="09c021f1af17c27385243b4a"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    b58aeae1eec549a052803f3af0bff0a511a1d37b90fb9c6d3966deb17b58962bb19948e644d4cd91165976b12d1204b1449f563fd50fab6ea4e0346f01e3e97a4d1f25645e0b4815937ce184c47bcd22e87dfb2789efdfbb93d94d694cc880b6d25923e17266db05147ccc026bde7c2b6f3ee925636bcf52185ceaeb6821510e7c9cbd272a7e1ef3eae862947c7c4dd2e4634f636c2141d32973328701c2982952f712c7e58a984174e79d3de349e9d0c67d46b4576c27b2614a570d22cf951324509377221e951e5709d86c7f52f5d064a809a9abe650bdde2daff8ef6aa26f3fffac495ab47f787d6306db97bc2060f883363e1f3be4db39a8938f63265113be265943a0633cb0c9550d0f4644a07141900466afd163115647d6df811b7c70ea9fff2c2612d9edf5212fda60a2c688a21bee
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
 </search>
