@@ -1,6 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>a</title>
+    <url>/czyyy_nlw/2026/10/18/1/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="1192779bcf6b64be3fabaa3485012157c774b3e2eb672a124fb9d20bad4783b5"
+     data-nonce="adb63f20ed273a1e0b05c6d4"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    316ca852f470404e3632c67ab514e292caaf8b5e67525d8cb09a34fb636cb6a475761e6d125d864c38ad3642c24d38992aadae5370df2b3627e03e2aebcaa2e4ec05d3675adebf0615455215a2b9f9c12368631143eebbc690751c917bc53b55e9890642f62f920778e64ade9014fcceb75419fe1d818e0ce08ed9a4f91edaa3bd68a073e4d9ee9a2dcce30644d7efacff045fb8d3c7d09ad104ea3a9bb5711504d4bb8d400304ca7b76137889d99080f619cba131be093933cb25be5f78f4876c1ae335626a40a5bd7a9114b78340eeac0249207805e64e5421c4e1b56d7747165ec84fdb4cc9b4f6b1bbcdd661d2d97efd330cb4509d28ed4360656cb2b2ed23f5f0f58e2ebb192efc2a2ea8a6ef49269cfdd9c5e21511d626c828d80c7e85c736510aba6d7c11eb7a2ea3db9f62da6b334c
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>奶蛙游戏合集</title>
+    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[<ol>
+<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
+<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
+<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
+<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
+<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
+<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
+<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
+<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
+<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
+<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
+<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
+<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
+<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
+<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
+<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
+<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
+<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
+<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
+<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
+<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
+<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
+<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>Learn Markdown</title>
     <url>/czyyy_nlw/2026/10/19/markdown/</url>
     <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
@@ -104,34 +162,5 @@
 <hr>
 <p>参考： <a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>a</title>
-    <url>/czyyy_nlw/2026/10/18/1/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="866beb6d37d06b0972625ccfaf5769d8a68983c4f5f59bb4bf22164d25aa8023"
-     data-nonce="616fefd7d7152eed262d3871"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    e7d1593acb27281f4d9be17a425a798720e3bd912a488ae3eb6c8816443e69873fc5a255cfdbcc71544a7915dddb0e2c3af7676b5e91faf3c11716526a3ab9930257f4d471c74842514ffb3499f6469692387d71f091b9860b50aa402be0700b715596606b67204274e8da845d22641ffcf2e69814c0d5b4fc7b47a08c4600012a4d6a5ef9cbf0ae7837658ecf83faf316a30a614a5f0d974720a2db7f07b272afbbd3b5c630e282d19506eac3c5f90a014486c9a6d5816001fb3bec9102901c052e018a7b0d6f0436ebc35750cbf6704a3fc0e40cf19bbccd16340135400a4996d7c01328c165e5f49bbc6db7bbdef82845440e60e41e9b89a65dfabeeeee7b7b41d773d54e6cf6696f55e7d8162c3fc2951e6355eeb5a84599b6729a00c1d408f897d5b54dccf25eb5b10ab46e061f6ec78d
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
 </search>
