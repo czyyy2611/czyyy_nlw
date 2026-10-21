@@ -1,64 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>奶蛙游戏合集</title>
-    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
-    <content><![CDATA[<ol>
-<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
-<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
-<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
-<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
-<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
-<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
-<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
-<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
-<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
-<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
-<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
-<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
-<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
-<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
-<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
-<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
-<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
-<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
-<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
-<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
-<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
-<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>a</title>
-    <url>/czyyy_nlw/2026/10/18/1/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="245e63d24af3ae258672de30af329163aca642e5d50f2aee45981382090d19d9"
-     data-nonce="8a713c974d148320be472c64"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    45de15c2d1c389ed608ccdd99cbbce419ab97ce1044890af99dcd5ccb05a4482fc1abfce742fa296a6d97143ea9d737bd65e231f8ca765dbe86ab1d3d7ef08718d2a1da3f6270400d7c5e683ec09ecf97f3450837086606a7ccc63ec6f1e77313b9099d0bad79db3905c92ead0c1f2d798d6d2aaca7674a29352716bf02e93e03801cd26ea03ae45c979355ac6b5e12440e35822e830ea1171ed1ecb044b532c5991ac25c4d01de2a7246a3080847b03b6fb8df89134343863dbf0d4c22fce6db92470b6ad4f2894c1fca80afa63b13694f5ea7a40be2591672dc5a729495600eec383d1b0a2adca1d943588ff358b5fbfa4e280de9c86e2952417f135d48069bd25bd94010504aaac9ce552b9bfcb6b928faa99e8f41d3b48801daa0ea98db8a5978a90f659df4b239c4427633b4c92fd0cfc
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
     <title>MIPS ?</title>
     <url>/czyyy_nlw/2026/10/20/MIPS/</url>
     <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
@@ -76,54 +18,6 @@
 <li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
 <li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure></li>
 </ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>learn c++</title>
-    <url>/czyyy_nlw/2026/10/21/c++/</url>
-    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
-<li>格式<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespcae std;</span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>输入输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
-<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
-<li>结构体<br>省去了typedef</li>
-</ol>
-<hr>
-<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
-<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  for(auto p=q.begin();p!=q.end();p++)//这个就是迭代器</span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;&quot; &quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>vector</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   vector &lt;int&gt; q;//创建名为q的一个int型动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; a(10);//创建一个长度为10的动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; b(10,2);//创建一个长度为10，元素值均为2的动态数组</span><br><span class="line">   q.resize(10);//为q分配10个空间</span><br><span class="line">   q.push_back(1);//往q里增加一个1</span><br></pre></td></tr></table></figure></li>
-<li><p>set (会按从小到大自动排好)</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set &lt;int&gt; s;</span><br><span class="line">s.insert(4);</span><br><span class="line">s.find(2);  //find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span><br><span class="line">cout &lt;&lt; (s.find(2)!=s.end()) &lt;&lt; endl;</span><br><span class="line">s.erase(2);</span><br></pre></td></tr></table></figure></li>
-<li><p>map</p>
-</li>
-<li><p>stack</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">s.push(1);</span><br><span class="line">s.top();</span><br><span class="line">s.pop();</span><br></pre></td></tr></table></figure></li>
-<li><p>queue</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">q.push(1);</span><br><span class="line">q.front();</span><br><span class="line">q.back();</span><br><span class="line">q.pop();</span><br></pre></td></tr></table></figure>
-<p>栈和队没有迭代器</p>
-</li>
-</ol>
-<hr>
-<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
-<li><p>sort</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sort(a, a + n);</span><br><span class="line">sort(v.begin(), v.end());</span><br></pre></td></tr></table></figure>
-<p>用cmp自定义排序顺序</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool cmp(int x, int y) &#123;    //只能有 &gt; &lt;</span><br><span class="line">    return x &gt; y;   //从大到小排</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>cctype</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">isalpha();</span><br><span class="line">islower()</span><br><span class="line">isupper()</span><br><span class="line">isalnum()</span><br><span class="line">isspace()</span><br><span class="line">tolower()</span><br><span class="line">toupper()</span><br></pre></td></tr></table></figure></li>
-<li><p>bitset</p>
-</li>
-<li><p>C++ 11</p>
-<ol>
-<li>auto</li>
-<li>for(int i : a), for(int &amp;i : a)</li>
-<li>to_string(),  stoi(), stod()…</li>
-</ol>
-</li>
-</ol>
-<hr>
-<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
 ]]></content>
   </entry>
   <entry>
@@ -229,6 +123,154 @@
 </tbody></table>
 <hr>
 <p>参考： <a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>learn c++</title>
+    <url>/czyyy_nlw/2026/10/21/c++/</url>
+    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
+<li>格式<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespcae std;</span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>输入输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
+<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
+<li>结构体<br>省去了typedef</li>
+</ol>
+<hr>
+<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
+<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  for(auto p=q.begin();p!=q.end();p++)//这个就是迭代器</span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;&quot; &quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>vector</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   vector &lt;int&gt; q;//创建名为q的一个int型动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; a(10);//创建一个长度为10的动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; b(10,2);//创建一个长度为10，元素值均为2的动态数组</span><br><span class="line">   q.resize(10);//为q分配10个空间</span><br><span class="line">   q.push_back(1);//往q里增加一个1</span><br></pre></td></tr></table></figure></li>
+<li><p>set (会按从小到大自动排好)</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set &lt;int&gt; s;</span><br><span class="line">s.insert(4);</span><br><span class="line">s.find(2);  //find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span><br><span class="line">cout &lt;&lt; (s.find(2)!=s.end()) &lt;&lt; endl;</span><br><span class="line">s.erase(2);</span><br></pre></td></tr></table></figure></li>
+<li><p>map</p>
+</li>
+<li><p>stack</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">s.push(1);</span><br><span class="line">s.top();</span><br><span class="line">s.pop();</span><br></pre></td></tr></table></figure></li>
+<li><p>queue</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">q.push(1);</span><br><span class="line">q.front();</span><br><span class="line">q.back();</span><br><span class="line">q.pop();</span><br></pre></td></tr></table></figure>
+<p>栈和队没有迭代器</p>
+</li>
+</ol>
+<hr>
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
+<li><p>sort</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sort(a, a + n);</span><br><span class="line">sort(v.begin(), v.end());</span><br></pre></td></tr></table></figure>
+<p>用cmp自定义排序顺序</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool cmp(int x, int y) &#123;    //只能有 &gt; &lt;</span><br><span class="line">    return x &gt; y;   //从大到小排</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>cctype</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">isalpha();</span><br><span class="line">islower()</span><br><span class="line">isupper()</span><br><span class="line">isalnum()</span><br><span class="line">isspace()</span><br><span class="line">tolower()</span><br><span class="line">toupper()</span><br></pre></td></tr></table></figure></li>
+<li><p>bitset</p>
+</li>
+<li><p>C++ 11</p>
+<ol>
+<li>auto</li>
+<li>for(int i : a), for(int &amp;i : a)</li>
+<li>to_string(),  stoi(), stod()…</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>爱有万分之一甜</title>
+    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
+    <content><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><pre><code>东溟大陆，共分三十四区块。
+
+自踏上修真之路起，六年练气，三年筑基，又三年结丹，一路走来，终于得以结婴。
+
+化神丹，服用此物者，可在元婴的最后阶段帮助修士突破，顺利突破化神。
+
+突破化神所需灵力之磅礴与修炼之艰苦，不在结婴之下。化神丹，成为修士竞相争抢的对象。
+
+我出了神...毕竟，我也只是一个普通修士，努力修炼，却也只是为了在这弱肉强食的修真界存活罢了。
+
+“陈屿！”
+
+我的通信玉简闪过一道光亮，是卢阳的传讯。
+
+“恭贺道友突破元婴！”， 卢阳嬉笑道。
+
+“你还道友？！”，我回趣，“平时可不见你这般客气啊！”
+
+卢阳，我在浦流宗的好友之一。
+
+“对了，你在布宜大陆近况如何？”，卢阳自我闭关冲刺元婴之际，远赴布宜大陆寻找机缘，如今我顺利突破，倒是很好奇他的近况。
+
+“此处修士与我语言不通，我正尝试学习他们的语言”，卢阳笑道，“先不说我，倒是你，听说你准备加入北涵宗了？”
+
+卢阳的语气带着几分担忧。我笑道，“是啊，北荒州北涵宗炼魂部，离我们的闽翠州可足足有两千里”
+
+“陈屿，我在布宜大陆人生地不熟的，许是没机会了...”，卢阳嘴角上扬，坏笑道，“倒是你，去了北涵宗，看上哪个仙子就快去追！元婴期可是结成道侣的最佳时期，哥们看好你”
+
+我一脸无奈，却暗暗叹出一口气。与仙子们结识，或者有一段奇遇，分明可遇不可求，至少对我来说。我从不是一个外向的人，修真界像我这样的修士是很难有机遇的。
+
+许是察觉我的心情，卢阳突然严肃了起来。“加油，一定要争取突破化神啊！”
+
+化神么...你这家伙...我会达到的。
+
+我微笑。
+</code></pre>
+<hr>
+]]></content>
+  </entry>
+  <entry>
+    <title>a</title>
+    <url>/czyyy_nlw/2026/10/18/1/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="813c2e937811b987a3296f3ce57540f6ac9769c25a596eb4b857a5d2a16470df"
+     data-nonce="22aca80a83ac350a2f3fa51e"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    b53f892a5cb2765f56207dae550b8d84acf5341a2e734f2a1c36e4c5da6c3ab459b3992282bd8d9e77e74435422125acec2bb527455eebf23596d4f5407b5ec0e2dcddbb1bdab9ccb5ff514d256a39b3c56f700602cec46daecd13ed8c717886cd5bc3b814b9fdfafe133aef93804f9767e43777be8726b13b17286ef95e3fa9118c3c0cd13899812b58c85abf34a97944b13bf91422b4fdcb35333e39d5224096ed2d72cc7633bcbaa758a9c67e9f9e52f61d3e761d0035e33a0a682529dc071b9c21e0481a957fd62efd6571bec77bbcbd3404033b1d179247c3be41e98df78d6c7b67a0ea3032567cabc4cb63cd271fff63bb3fef01e41f14e568eb4a42fe731b9b70bdbc3db01a16664c9f9978a904ecd71e3b79585bdae977fa603534d6fe9a4542c4329f1c84bb9e893fc565205d43cc
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>奶蛙游戏合集</title>
+    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[<ol>
+<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
+<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
+<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
+<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
+<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
+<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
+<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
+<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
+<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
+<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
+<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
+<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
+<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
+<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
+<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
+<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
+<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
+<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
+<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
+<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
+<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
+<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
+</ol>
 ]]></content>
   </entry>
 </search>
