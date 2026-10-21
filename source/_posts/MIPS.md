@@ -1,3 +1,6 @@
+---
+title : MIPS ?
+---
 # 常用的一些宏
 1. 输入
     ```Mipsasm
@@ -11,7 +14,7 @@
    ```
     .macro print(%out)
         li $v0, 1
-        move $s0, %out
+        move $a0, %out
         syscall
     .end_macro
    ```
@@ -56,6 +59,7 @@
         sw %val, 0($t9)
     .end_macro
    ```
+   ---
 # 循环的写法
 1. 单循环
     ```
