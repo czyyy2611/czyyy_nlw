@@ -7,12 +7,12 @@
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="aa96232148114fcc39d89883eefcf9bdb38d598a3e3e739470a7e20d58264c17"
-     data-nonce="9ba1d65aeed20210a4687103"
+     data-salt="83f5e1e100c3d87991545fcbfecd429b5e07ccd378ffc48d671ccf576ab5f348"
+     data-nonce="463dcdabb30d2444e273a699"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    5e5e6f19ea7f1c6c3b67fb9661883f5f21fe20de374b8232246056542cefe2c08f5256bf0bbeb851f54f433fdf5e6249a494925f7ac877ae17636cab63351f68f31f91d0f5de5a7dd46293aa3280dc3bef0352493194a453849337a122e12041b5e7417f6e02c856e4d871fcd5e7ed886a428e3acbd52918cfc26ed70062ca43e7045150901f78ee7e0139d85c8679c3a1005e3de0e719d180459bafe8a24cc61ece708bb8e7883b87e23634d54722eb30f227b28959edf5779ef7f278a10abb1d216dcc308baba1ede20fb63169a243179d8015ff26a7a068a3937c7a9c6e3f2dd0d8255571e3474548cd3e31cd43271d706619e9afa32fad73e38e5050ed09f4e2b5f61965b532a1d8e6de3a2c004ff35b4d8398e26aac3aed583d5c46e31f7d154d5a884d1979e5da7478a09ff8e48763ae
+    7f8fb27c782bf9f3db2a5d0d8c6ac4f835976b65a07c9ede38563cae27343add3fb130f44d6580e52b9e20d2559c7e99c0d36b63bdface05f7b752ac825491e8542b16c100fd91022d2b56844c22087345c3b4e81adf4bd889c5c91bbd9d50586d71ec5ddc9007d5f67ba1e51ee9a60e24be22311eb2a0464f146a3499af10b15cabf3a0d95d0c5e135b8055ba62330535499623a952597602c828eacf78f17fbcf097f39ff28f9cf4f6dbbc43642ee91aabac4e3ea186d81b9da723aed0a808eb34f348514916434a2b84aa71f7a89bc97ef9cfbf09eea40c39ca2293bbb0b0c4cfef0efb7faed90c40aab6f1fc3dc8ed244de853b89b44fbb200109cab4a4326c0d82b409fe639f9eea2c126871985f1cf7504f9fedb3f57f769779a1b4bed1206e83ab26c5f4cd2e6ed3598530d0bddb241
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
@@ -28,6 +28,115 @@
   </div>
 </div>
 <script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>MIPS ?</title>
+    <url>/czyyy_nlw/2026/10/20/MIPS/</url>
+    <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
+<li>输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro input(%in)   #输入一个整数</span><br><span class="line">    li $v0, 5</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_char(%in)   #输入一个字符</span><br><span class="line">    li $v0, 12</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_str(%addr, %max_len)    #输入一个字符串</span><br><span class="line">    li $v0,8</span><br><span class="line">    la $a0, %addr</span><br><span class="line">    move $a1, %max_len</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro print(%out)  # 输出一个整数</span><br><span class="line">    li $v0, 1</span><br><span class="line">    move $a0, %out</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_char(%out) # 打印一个字符</span><br><span class="line">    li $v0, 11</span><br><span class="line">    move $a0, %out</span><br><span class="line">     syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_str(%addr) # 打印一个字符串</span><br><span class="line">    li $v0, 4</span><br><span class="line">    la $a0, %addr </span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印换行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro println()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro printspace()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 32</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>计算二维数组字节偏移量<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro calc_addr(%dst, %row, %col, %rank)</span><br><span class="line">    multu %row, %rank</span><br><span class="line">    mflo %dst</span><br><span class="line">    addu %dst, %dst %col</span><br><span class="line">    sll %dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>读数组元素 arr[index] -&gt; %val (用到$t8 $t9)<br>字符串：去掉sll，lw -&gt; lb<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro lw_arr(%val, %base, %index)</span><br><span class="line">    sll $t8, %index, 2</span><br><span class="line">    add $t9, %base, $t8</span><br><span class="line">    lw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>写数组元素 %val -&gt; arr[index] (用到$t8 $t9)<br>字符串：去掉sll，lw -&gt; lb <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro sw_arr(%val, %base, %index)</span><br><span class="line">    sll $t8, %index, 2</span><br><span class="line">    add $t9, %base, $t8</span><br><span class="line">    sw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+</ol>
+<h1 id="循环的写法"><a href="#循环的写法" class="headerlink" title="循环的写法"></a>循环的写法</h1><ol>
+<li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
+<li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+</ol>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><ol>
+<li><p>可分为线性递归，树形递归，循环递归</p>
+</li>
+<li><p>入栈出栈宏</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro push(%src)</span><br><span class="line">    addi $sp, $sp, -4</span><br><span class="line">    sw %src, 0($sp)</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro pop(%src)</span><br><span class="line">    lw %src, 0($sp)</span><br><span class="line">    addi $sp, $sp, 4</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li><p>写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func:</span><br><span class="line">     # 1. 基线条件处理(停止递归)</span><br><span class="line">     beq $a0, $zero, base_case</span><br><span class="line"></span><br><span class="line">     # 2. 压栈</span><br><span class="line">     push($ra)</span><br><span class="line">     push($a0)</span><br><span class="line"> </span><br><span class="line">     # 3. 递归准备与调用</span><br><span class="line">     addi $a0, $a0, -1   # 修改参数，准备下一层的入参</span><br><span class="line">     </span><br><span class="line">     jal func    # 递归调用</span><br><span class="line"></span><br><span class="line">     move $s0, $v0   #存值（如果第二次还要调用）</span><br><span class="line"></span><br><span class="line">     # 恢复参数</span><br><span class="line"></span><br><span class="line">     # 4. 合并结果</span><br><span class="line"></span><br><span class="line">     # 5. 弹栈</span><br><span class="line">     pop($a0)</span><br><span class="line">     pop($ra)</span><br><span class="line"></span><br><span class="line"> base_case:  # 出口设置</span><br><span class="line">     xxx</span><br><span class="line">     jr $ra</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>learn c++</title>
+    <url>/czyyy_nlw/2026/10/21/c++/</url>
+    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
+<li>格式<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespcae std;</span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>输入输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
+<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
+<li>结构体<br>省去了typedef</li>
+</ol>
+<hr>
+<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
+<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  for(auto p=q.begin();p!=q.end();p++)//这个就是迭代器</span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;&quot; &quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>vector</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   vector &lt;int&gt; q;//创建名为q的一个int型动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; a(10);//创建一个长度为10的动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; b(10,2);//创建一个长度为10，元素值均为2的动态数组</span><br><span class="line">   q.resize(10);//为q分配10个空间</span><br><span class="line">   q.push_back(1);//往q里增加一个1</span><br></pre></td></tr></table></figure></li>
+<li><p>set (会按从小到大自动排好)</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set &lt;int&gt; s;</span><br><span class="line">s.insert(4);</span><br><span class="line">s.find(2);  //find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span><br><span class="line">cout &lt;&lt; (s.find(2)!=s.end()) &lt;&lt; endl;</span><br><span class="line">s.erase(2);</span><br></pre></td></tr></table></figure></li>
+<li><p>map</p>
+</li>
+<li><p>stack</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">s.push(1);</span><br><span class="line">s.top();</span><br><span class="line">s.pop();</span><br></pre></td></tr></table></figure></li>
+<li><p>queue</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">q.push(1);</span><br><span class="line">q.front();</span><br><span class="line">q.back();</span><br><span class="line">q.pop();</span><br></pre></td></tr></table></figure>
+<p>栈和队没有迭代器</p>
+</li>
+</ol>
+<hr>
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
+<li><p>sort</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sort(a, a + n);</span><br><span class="line">sort(v.begin(), v.end());</span><br></pre></td></tr></table></figure>
+<p>用cmp自定义排序顺序</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool cmp(int x, int y) &#123;    //只能有 &gt; &lt;</span><br><span class="line">    return x &gt; y;   //从大到小排</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>cctype</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">isalpha();</span><br><span class="line">islower()</span><br><span class="line">isupper()</span><br><span class="line">isalnum()</span><br><span class="line">isspace()</span><br><span class="line">tolower()</span><br><span class="line">toupper()</span><br></pre></td></tr></table></figure></li>
+<li><p>bitset</p>
+</li>
+<li><p>C++ 11</p>
+<ol>
+<li>auto</li>
+<li>for(int i : a), for(int &amp;i : a)</li>
+<li>to_string(),  stoi(), stod()…</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>奶蛙游戏合集</title>
+    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[<ol>
+<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
+<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
+<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
+<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
+<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
+<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
+<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
+<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
+<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
+<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
+<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
+<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
+<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
+<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
+<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
+<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
+<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
+<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
+<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
+<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
+<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
+<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
+</ol>
+]]></content>
   </entry>
   <entry>
     <title>Learn Markdown</title>
@@ -135,54 +244,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>learn c++</title>
-    <url>/czyyy_nlw/2026/10/21/c++/</url>
-    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
-<li>格式<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespcae std;</span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>输入输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
-<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
-<li>结构体<br>省去了typedef</li>
-</ol>
-<hr>
-<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
-<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  for(auto p=q.begin();p!=q.end();p++)//这个就是迭代器</span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;&quot; &quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>vector</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   vector &lt;int&gt; q;//创建名为q的一个int型动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; a(10);//创建一个长度为10的动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; b(10,2);//创建一个长度为10，元素值均为2的动态数组</span><br><span class="line">   q.resize(10);//为q分配10个空间</span><br><span class="line">   q.push_back(1);//往q里增加一个1</span><br></pre></td></tr></table></figure></li>
-<li><p>set (会按从小到大自动排好)</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set &lt;int&gt; s;</span><br><span class="line">s.insert(4);</span><br><span class="line">s.find(2);  //find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span><br><span class="line">cout &lt;&lt; (s.find(2)!=s.end()) &lt;&lt; endl;</span><br><span class="line">s.erase(2);</span><br></pre></td></tr></table></figure></li>
-<li><p>map</p>
-</li>
-<li><p>stack</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">s.push(1);</span><br><span class="line">s.top();</span><br><span class="line">s.pop();</span><br></pre></td></tr></table></figure></li>
-<li><p>queue</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">q.push(1);</span><br><span class="line">q.front();</span><br><span class="line">q.back();</span><br><span class="line">q.pop();</span><br></pre></td></tr></table></figure>
-<p>栈和队没有迭代器</p>
-</li>
-</ol>
-<hr>
-<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
-<li><p>sort</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sort(a, a + n);</span><br><span class="line">sort(v.begin(), v.end());</span><br></pre></td></tr></table></figure>
-<p>用cmp自定义排序顺序</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool cmp(int x, int y) &#123;    //只能有 &gt; &lt;</span><br><span class="line">    return x &gt; y;   //从大到小排</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>cctype</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">isalpha();</span><br><span class="line">islower()</span><br><span class="line">isupper()</span><br><span class="line">isalnum()</span><br><span class="line">isspace()</span><br><span class="line">tolower()</span><br><span class="line">toupper()</span><br></pre></td></tr></table></figure></li>
-<li><p>bitset</p>
-</li>
-<li><p>C++ 11</p>
-<ol>
-<li>auto</li>
-<li>for(int i : a), for(int &amp;i : a)</li>
-<li>to_string(),  stoi(), stod()…</li>
-</ol>
-</li>
-</ol>
-<hr>
-<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
-]]></content>
-  </entry>
-  <entry>
     <title>爱有万分之一甜</title>
     <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
     <content><![CDATA[<h1 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h1><pre><code>东溟大陆，共分三十四区块。
@@ -222,55 +283,6 @@
 我微笑。
 </code></pre>
 <hr>
-]]></content>
-  </entry>
-  <entry>
-    <title>奶蛙游戏合集</title>
-    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
-    <content><![CDATA[<ol>
-<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
-<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
-<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
-<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
-<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
-<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
-<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
-<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
-<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
-<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
-<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
-<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
-<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
-<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
-<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
-<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
-<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
-<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
-<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
-<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
-<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
-<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>MIPS ?</title>
-    <url>/czyyy_nlw/2026/10/20/MIPS/</url>
-    <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
-<li>输入 <figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="meta">.macro</span> input(%in)</span><br><span class="line">    li $<span class="built_in">v0</span>, <span class="number">5</span></span><br><span class="line">    <span class="keyword">syscall</span></span><br><span class="line"><span class="keyword"></span>    <span class="keyword">move </span>%in, $<span class="built_in">v0</span></span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro print(%out)</span><br><span class="line">    li $v0, 1</span><br><span class="line">    move $a0, %out</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>打印换行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro println()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>打印空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro printspace()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 32</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>计算二维数组字节偏移量<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro calc_addr(%dst, %row, %col, %rank)</span><br><span class="line">    multu %row, %rank</span><br><span class="line">    mflo %dst</span><br><span class="line">    addu %dst, %dst %col</span><br><span class="line">    sll %dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>读数组元素 arr[index] -&gt; %val (用到$t8 $t9)<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro lw_arr(%val, %base, %index)</span><br><span class="line">    sll $t8, %index, 2</span><br><span class="line">    add $t9, %base, $t8</span><br><span class="line">    lw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>写数组元素 %val -&gt; arr[index] (用到$t8 $t9) <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro sw_arr(%val, %base, %index)</span><br><span class="line">    sll $t8, %index, 2</span><br><span class="line">    add $t9, %base, $t8</span><br><span class="line">    sw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
-<hr>
-</li>
-</ol>
-<h1 id="循环的写法"><a href="#循环的写法" class="headerlink" title="循环的写法"></a>循环的写法</h1><ol>
-<li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
-<li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure></li>
-</ol>
 ]]></content>
   </entry>
 </search>
