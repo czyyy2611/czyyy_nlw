@@ -43,7 +43,14 @@ title : MIPS ?
         syscall
     .end_macro
    ```
-3. 打印换行
+3. 退出程序
+   ```
+    .macro exit()
+        li $v0, 10
+        syscall
+    .end_macro
+   ```
+4. 打印换行
    ```
     .macro println()
         li $v0, 11
@@ -51,7 +58,7 @@ title : MIPS ?
         syscall
     .end_macro
    ```
-4. 打印空格
+5. 打印空格
    ```
     .macro printspace()
         li $v0, 11
@@ -59,7 +66,7 @@ title : MIPS ?
         syscall
     .end_macro
    ```
-5. 计算二维数组字节偏移量
+6. 计算二维数组字节偏移量
    ```
     .macro calc_addr(%dst, %row, %col, %rank)
         multu %row, %rank
@@ -68,8 +75,8 @@ title : MIPS ?
         sll %dst, %dst, 2
     .end_macro
    ```
-6. 读数组元素 arr[index] -> %val (用到$t8 $t9) 
-   字符串：去掉sll，lw -> lb
+7. 读数组元素 arr[index] -> %val (用到$t8 $t9) 
+   字符串：去掉sll，lw -> lb, 没有$t8
    ```
     .macro lw_arr(%val, %base, %index)
         sll $t8, %index, 2
@@ -77,8 +84,8 @@ title : MIPS ?
         lw %val, 0($t9)
     .end_macro
    ```
-7. 写数组元素 %val -> arr[index] (用到$t8 $t9)
-   字符串：去掉sll，lw -> lb
+8. 写数组元素 %val -> arr[index] (用到$t8 $t9)
+   字符串：去掉sll，lw -> lb, 没有$t8
     ```
     .macro sw_arr(%val, %base, %index)
         sll $t8, %index, 2
@@ -91,6 +98,7 @@ title : MIPS ?
 1. 单循环
     ```
     # s0 = n 
+    # 初始化
     li $t0, 0  # t0 = i = 0
     for_loop:
         beq $t0, $s0, end_for
@@ -106,6 +114,7 @@ title : MIPS ?
    ```
     # s0 = n
     # s1 = m
+    # 初始化
     li	$t0, 0	# t0 = i = 0
 
     loop_i:
