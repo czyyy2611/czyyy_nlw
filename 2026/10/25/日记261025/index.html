@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>diary1 | czyyy_nlw</title><meta name="author" content="czyyy"><meta name="copyright" content="czyyy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="这篇文章已加密，请输入密码查看。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="diary1">
+<meta property="og:url" content="https://czyyy2611.github.io/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/index.html">
+<meta property="og:site_name" content="czyyy_nlw">
+<meta property="og:description" content="这篇文章已加密，请输入密码查看。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://czyyy2611.github.io/czyyy_nlw/img/zy%E5%A4%B4%E5%83%8F.jpg">
+<meta property="article:published_time" content="2026-10-25T08:16:56.532Z">
+<meta property="article:modified_time" content="2026-10-25T08:43:12.099Z">
+<meta property="article:author" content="czyyy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://czyyy2611.github.io/czyyy_nlw/img/zy%E5%A4%B4%E5%83%8F.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "diary1",
+  "url": "https://czyyy2611.github.io/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/",
+  "image": "https://czyyy2611.github.io/czyyy_nlw/img/zy%E5%A4%B4%E5%83%8F.jpg",
+  "datePublished": "2026-10-25T08:16:56.532Z",
+  "dateModified": "2026-10-25T08:43:12.099Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "czyyy",
+      "url": "https://czyyy2611.github.io/czyyy_nlw"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/czyyy_nlw/img/favicon.png"><link rel="canonical" href="https://czyyy2611.github.io/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/czyyy_nlw/css/index.css?v=5.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/czyyy_nlw/',
+  algolia: undefined,
+  localSearch: {"path":"/czyyy_nlw/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'diary1',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="robots" content="noindex, nofollow"><style>
+  #page-header.post-bg,
+  #page-header.not-home-page {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+  }
+  #page-header.post-bg::before,
+  #page-header.not-home-page::before {
+    background-color: transparent !important;
+  }
+</style>
+<meta name="generator" content="Hexo 7.3.0"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/czyyy_nlw/img/%E9%9B%B7%E8%B5%9B.jpg);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/czyyy_nlw/img/%E9%9B%B7%E8%B5%9B.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/czyyy_nlw/"><span class="site-name">czyyy_nlw</span></a><a class="nav-page-title" href="/czyyy_nlw/"><span class="site-name">diary1</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div></div></nav><div id="post-info"><h1 class="post-title">diary1</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-10-25T08:16:56.532Z" title="发表于 2026-10-25 16:16:56">2026-10-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-10-25T08:43:12.099Z" title="更新于 2026-10-25 16:43:12">2026-10-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="c1dbefd66c2bae02f8273b5ec4e7fb1d9160cab401f36338198a35a23be3c141"
+     data-nonce="e406e28b2ee2503254e89024"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    5c7f0208ca504288e4d758904c3af8c85fa5769ac18869e7a04bb2e277b7c21893e9fc3719563fdf9e19ab6f5485b8e26a20d42f37aee38d1de3a4bf59d95984fee1f2258cd7e184b62e7b5fde4e0df86655416062ba706f5e809226c3a3664a1123f2dffb07eb8746056b3af5fb9167b6dc01ad044f1a26a4293085b73677849fb22f6e4b846f28eb04704f060f95eec91815c7ba07ec1b0fb26dc7d54b17693d3b1dc097ef680019f080d8909b3c446f8264ecd81cb65e0659ee1a22233fd42cd2b1c5d7010dd45100c2f149b1cfbd20499abd9e87de1bc8ad2dd1d7c2634be2bb5cf5be6f96e808a6c4fc66ff8dcb8155e44cb12e4f0554e17496ea76a65b818c44c6adf200e8d9a50a1d093589a76356b0126cbcb098e760a95e1f5000f4f267dfb9692586734cd6fd602c5bf6ef3728b175f8bbd04b7b2713610f40ea8feebe96c8fb8b09c6eaaab04a9f662ca358437723f9570762f876b07b17488962bc9d6c257acee176a090e897b992c1546d7b6c244cf10d5828115d1a8cdfc3ae4a7ccd394877b7cc08d303cf3fa4373416c3ed226f1f78cba5d664b620f8c743150e0e60ba2be26a891d7f90f39b66bd091aa0e84a65735250d77440e7aa37b9b8c5afc165ac935004e41dbd531e2d69e754eba1b629d763a76d5fc5c60aeedced55398b42282432691f1ee4f2fad007c9e2839815f7d7c59305cdd0f00282cbfcaf328311062148ed897002559040f0b46e90aa5d19a76866ba231f8bcda72cc6535d23bda9eda9d7a35079bb238ec1e8e4c93e9573d8bff428e45743107ee00ee61d402fd3fcd8d1a3cea67e7eca990a9c9f742795f40ca8c3e0116f0b76cd5f91efb5582f2fbed610a494504cfc24db866e4018242764e77932e7fe6d0b9f20a1613d62bfc3beab58e2887956e4a2d4def6b65a25552fe5a4e64ba8633ab6ab4c567f2673024c08dc05a0413dbccbf405d40b2af84e1d4f48890f2f9fea66e036ebdd3230df428b425711775b8c92646ddf5705df038f262ce0a47adf8ace91fb155573e18de594c11b03144da4a2d78f129eede02b46c743859ec2cb2695fb26825d7cdbc8b77503b1bca495e35a5c0da031b5026b39af6aef92cca368d304a8c9aa32fbba718c2fb8b3589838118d9ab5ab6c8ffa48f97b7e1d938bd10ff2fedb416ae095493141aaaba6152452823ea882f0ac600406cacfeb40c16d7043c0e4e2faaf4772b60f39597d9561f1de446da0d6b91a797d738ea612d5f4a8a8d19051601693c476e09819c698623fe9c98b98d5eaeac3cdc30fd6b35cddb80b4739646eeda3ec388c761f36f4488257d84962ffaa89be30bf0b20ac93f8c1053aeb0690228152cc54ee9f36359aee68f99811a11c4e371a5f95e512cf1979356d10ff0680054474e84c173681667b09973bf415eef80be674f63ff27ecba9b635b9371bdd55c1378ff88e2319481de8ba0a53147959c4a9d5faa62c78f0b3ffdbdee92462f7be16a92bf8cef0abc9013b39f6fad55bbc05cdec785a2190f98995384f8195156d4b72e270c21548f8d31e51b6100c1b75396a905a5e3ab4286eb9ed10fc26c54a01c9849f0e45280e41af0022eabc90dcf5b64c185d259a9a7e46b342599f02727e828d4a83100352989b650c43e1bd28f8bcc3c8038506da71c6760c1e752e8ca6d09bd19236cb1824f1f620a683d1ac637665273bf6ac3150001a203a829021af44a6467c8f665386ffe6887f7a65e1acb822a68809b9d3687ab66748d98ddc7bf87bce064037b9290c89278657b57b5de97b0b9dd7475204471d3035d8a105bccfd861330a3824836835e932b415c4166aab0fcde943999dbad51711728152fceebbd57b38dec18c5a4ec25ca4a344f72b17a997ad1da8766578f895c330ddcfadc02cf11eb6b2b91971020c2a0fcd52e39eeca4126fa4feb9284f730aa7a8d6b856553f5db6d427e8457a4638ea796957b2502a271cc6d44679b48d4f59efffad9e018361b8787ffe92b94905162dc3fbc6a27b17b4f30cf796895a64f374d7ff04dc5c34f871eb600c3228672c0d730b783c60da3e9810dede9a3a639782c6ac1efb4cb1844ffadb83d6c34eb028f04fe1a7f334838ceec7ef8a6ad364e3d7eda3c46c3bde07bba9c5b7b8d0bdde7c644ee8c9b60cd29a587c816b7d27666105905992976dd1d3e1289bd8790e02153cf950d627e8e9594912b660ef480c1964146fecf4582a960e7c6d2c14f4a67a4e5c26976e69f8fb1543af8c58b31def9162cb10e4d49fb80985d288bbcb530066dd40f11b523c69d5d68ffe7b27ef02bc918361a3adbd18c89b505a5ef5dff17a36c702e975e2338a2adf8e1ef307835578ab377685c26e53911d05bef61c2b5d74beef36015524e5bdd95eb881dd87edf23e4055630ba4b4b26402ab420f7f40d4a83b6dea70af8b1bfa5a01c66bb252cc29fbee1fd7cf6033e175e07e66d9277cbbc185fe485a72cb1c612e683d006121c1389441a8af1ac679f4673464217ce119a4f5c44a2ea3bd009457e6fb517d348a277e44432fa85ee57dcd50fe108f6a99b291b1f726ba7ee2c4af95020d78dff0ed8ac3ac679ace31957cc5eb42b54b8aefa48545c8b4a854a21c267946b00726d3e88bfd81963a871fb9e833abbfe33aef1fd587a4ec4602bfd5164d9f8cd9cd941be5530a1ec67799706bb34b792eb09cff84c82b0a2ebaba1cf0b9c2fa61198207184e80fcd22e89be0ab5897c4bc38619cd7f7b22b713fc19d765f39f905b9287b9958d5c516e908c0c282c9a2cca63612f0f0d586ff214697a6622a53cde3243a15c2e1a36106e7b62f9704c11788be7def374702e976fb00a851af7b44e0eadd79887c3fc4fc09b5c96d510b76ad3e51b33f787764a3254b0ff3f476d756d28cae29ad5be7e07b8169f10737d8f867d6383cbad0f0f42104a1e07644df93d178969e116a575cf70852cd1ad414628847b256f18bcb5893081a8d781b570a65826c8f5b7d2c8d89a558734dc7ccad2a13e8c1b1fc48ad592fac7a44dd0a730e79edad9dcafaa2b6034aff448efb62bf1bcd59f62b04f2cee8d905e976205ab623db1987f2ff353d13359169be0c5e39d4910a0fb6de63da4b20c704d60472f5dc3e8a1d035071d1b0491e8e4ccf1dcb1fd444c4ec96652fc40b95d965319ef9097b1b628f5f13efff775cd2bc3e151597b0c1fc1badf6146e46ffcdc56d6a15878f1a92bdc01c638386f9f026861b4f1c6aa2b5110a9578114c2655c270f76a7018543de0b577f1d5c2781d59b1f3d52cbd5846f4a9f8753917b7b6713800da044dd0c2c483491d6d1ad6ebd81b43ed6398608d6a6cb99532e0e2838424a263d658a3976a77b8d91e6fd072cb757bbf2b662880199e2632405199c0cfa4be31be28653e47530ea63b4c58dfb919b57260f37b9f5a5e69d2ebe1028f6ce488709520b6cd3e9c520425ab817fd06723cb3593259fc9814cf1bd89671de7a48b843cb8ca75480bc39dc7cda047a4abb9bfe4e2b7dddfca921152ff59687cb5582a64b81afa95ce22d74b5c455e164d89ab1f776b6f6f2aa4f4ab1b86297d988
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://czyyy2611.github.io/czyyy_nlw">czyyy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://czyyy2611.github.io/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/">https://czyyy2611.github.io/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://czyyy2611.github.io/czyyy_nlw" target="_blank">czyyy_nlw</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/czyyy_nlw/img/zy%E5%A4%B4%E5%83%8F.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/czyyy_nlw/2026/10/24/%E7%AE%97%E6%B3%95-%E6%97%A5%E5%B8%B8/" title="日常"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">日常</div></div><div class="info-2"><div class="info-item-1"> 幂和对数 用pow(n, m)来计算n的m次幂 用log2() log10()来计算以2，10为底的对数；用换底公式来计算其他数的对数 判断一个数是否是n的次幂：记得加一个精度，避免精度损失导致取整出错   </div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/czyyy_nlw/img/zy%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/czyyy_nlw/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">czyyy</div><div class="author-info-description">岁月失语 惟石能言</div><div class="site-data"><a href="/czyyy_nlw/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/czyyy_nlw/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/czyyy_nlw/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content toc-div-class" style="display:none"></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/" title="diary1">diary1</a><time datetime="2026-10-25T08:16:56.532Z" title="发表于 2026-10-25 16:16:56">2026-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/czyyy_nlw/2026/10/24/%E7%AE%97%E6%B3%95-%E6%97%A5%E5%B8%B8/" title="日常">日常</a><time datetime="2026-10-24T08:54:38.671Z" title="发表于 2026-10-24 16:54:38">2026-10-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/" title="爱有万分之一甜">爱有万分之一甜</a><time datetime="2026-10-21T14:22:18.264Z" title="发表于 2026-10-21 22:22:18">2026-10-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/czyyy_nlw/2026/10/21/c++/" title="learn c++">learn c++</a><time datetime="2026-10-21T12:00:53.450Z" title="发表于 2026-10-21 20:00:53">2026-10-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/czyyy_nlw/2026/10/20/MIPS/" title="MIPS ?">MIPS ?</a><time datetime="2026-10-20T06:58:53.244Z" title="发表于 2026-10-20 14:58:53">2026-10-20</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By czyyy</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div><div class="footer_custom_text">Good Bye</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/czyyy_nlw/js/utils.js?v=5.7.0"></script><script src="/czyyy_nlw/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="/czyyy_nlw/js/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章…" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/czyyy_nlw/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>
