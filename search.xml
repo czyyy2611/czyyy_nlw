@@ -7,12 +7,12 @@
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="b5602cf93106cfdea3bb3575a236cf57da33e8e55cdb1c7bf1ca5a6040342aac"
-     data-nonce="c5197ed4804c312722f9b20e"
+     data-salt="67c0989ab70bfd204f236486e04f4e1bca691e111728f61a4516c069acefb74f"
+     data-nonce="828fc4d7428d28da98ac58b5"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    ea35fc83d33def1f23c0d165841d6c2135629060c3e7114a81af80e07baf455f41e90ef9feab873e88e3328689a73b17d14a3264542adeb18562e127e488fa5316e17c3fb1ea3c4b628ae9982a136703524ca70726d869cb7c3d19a4bf4fddb2bec65e91f38c34b5c4bdd701466733a5e8bf35458da1f7b47d4c2766d698f17014ffe13407ec86918bfefb1f5acd96067370c1ace7d50bc929267c50bbfc6abe3f7359c76ac793ccf51916609c950f5bcc0a5ff148c9dd082d8a7200298178efb438d882f243fcd9e01539efd34a508975663e3bcc86d05d177d8673e371830107ed01367997175c2a46c387f7c723e728de0e5ace023032c3895a59e1f74cf7d10434c586ccbab86b7703fefdc45601a990acedb1e0a60afa9d40937d7844523568645f76a1fe106220c100d7ff0ae8dd4bf9
+    68d53b7aa744db06945e8fb6bb60d0d27a0dae3472114007ac6686e4c538d85a078ccd5a6e8748ea93bb46f9b6121a851c22e944e8e215a44dbc8223c6fa278c5f362951b50cc0444f6d7ded38a8f597ee29eb086330ee662feafd995ab77663d6a2f6d01df5398621a93bda4e2ed1acfdd2db1d59f2e4ece490dc19e8ca1f0cf222e40a3a3945c0fbc264068f6069ba70e6131e4b726bd7155b5c758e90fbb2e46e8589a7229bfe26b206676f95043cbb2795cb8eba0aa56983cbaf67d221d06dff2bb19473cc6b743f363379b3e68d733e40ee02e83d001de797a783f92598531604d94a1e6721e55c411fa4471d19e9686eb05158f9837e92b0fabb95fcdd42b5bbc2b4a228151432fda3f5dd7717fc3beb22d463aa986e45cf75402048f6ddb8d603dc5f0b31734983ca2ba4c8519944fd
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
@@ -30,51 +30,36 @@
 <script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
-    <title>learn c++</title>
-    <url>/czyyy_nlw/2026/10/21/c++/</url>
-    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
-<li>格式<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespcae std;</span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>输入输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
-<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
-<li>结构体<br>省去了typedef</li>
-</ol>
+    <title>MIPS ?</title>
+    <url>/czyyy_nlw/2026/10/20/MIPS/</url>
+    <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
+<li>输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro input(%in)   #输入一个整数</span><br><span class="line">    li $v0, 5</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_char(%in)   #输入一个字符</span><br><span class="line">    li $v0, 12</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_str(%addr, %max_len)    #输入一个字符串</span><br><span class="line">    li $v0,8</span><br><span class="line">    la $a0, %addr</span><br><span class="line">    move $a1, %max_len</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro print(%out)  # 输出一个整数</span><br><span class="line">    li $v0, 1</span><br><span class="line">    move $a0, %out</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_char(%out) # 打印一个字符</span><br><span class="line">    li $v0, 11</span><br><span class="line">    move $a0, %out</span><br><span class="line">     syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_str(%addr) # 打印一个字符串</span><br><span class="line">    li $v0, 4</span><br><span class="line">    la $a0, %addr </span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>退出程序<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro exit()</span><br><span class="line">    li $v0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印换行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro println()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro printspace()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 32</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>计算二维数组字节偏移量<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro calc_addr(%dst, %row, %col, %rank)</span><br><span class="line">    multu %row, %rank</span><br><span class="line">    mflo %dst</span><br><span class="line">    addu %dst, %dst %col</span><br><span class="line">    sll %dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>读数组元素 arr[index] -&gt; %val (用到$t9)<br>字符串：去掉sll，lw -&gt; lb<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro lw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    lw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>写数组元素 %val -&gt; arr[index] (用到$t9)<br>字符串：去掉sll，lw -&gt; lb <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro sw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    sw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
 <hr>
-<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
-<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  for(auto p=q.begin();p!=q.end();p++)//这个就是迭代器</span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;&quot; &quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>vector</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   vector &lt;int&gt; q;//创建名为q的一个int型动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; a(10);//创建一个长度为10的动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; b(10,2);//创建一个长度为10，元素值均为2的动态数组</span><br><span class="line">   q.resize(10);//为q分配10个空间</span><br><span class="line">   q.push_back(1);//往q里增加一个1</span><br></pre></td></tr></table></figure></li>
-<li><p>set (会按从小到大自动排好)</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set &lt;int&gt; s;</span><br><span class="line">s.insert(4);</span><br><span class="line">s.find(2);  //find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span><br><span class="line">cout &lt;&lt; (s.find(2)!=s.end()) &lt;&lt; endl;</span><br><span class="line">s.erase(2);</span><br></pre></td></tr></table></figure></li>
-<li><p>map</p>
-</li>
-<li><p>stack</p>
- <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">s.push(1);</span><br><span class="line">s.top();</span><br><span class="line">s.pop();</span><br></pre></td></tr></table></figure></li>
-<li><p>queue</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">q.push(1);</span><br><span class="line">q.front();</span><br><span class="line">q.back();</span><br><span class="line">q.pop();</span><br></pre></td></tr></table></figure>
-<p>栈和队没有迭代器</p>
 </li>
 </ol>
+<h1 id="循环的写法"><a href="#循环的写法" class="headerlink" title="循环的写法"></a>循环的写法</h1><ol>
+<li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line"># 初始化</span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
+<li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line"># 初始化</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure>
 <hr>
-<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
-<li><p>sort</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sort(a, a + n);</span><br><span class="line">sort(v.begin(), v.end());</span><br></pre></td></tr></table></figure>
-<p>用cmp自定义排序顺序</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool cmp(int x, int y) &#123;    //只能有 &gt; &lt;</span><br><span class="line">    return x &gt; y;   //从大到小排</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>cctype</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">isalpha();</span><br><span class="line">islower()</span><br><span class="line">isupper()</span><br><span class="line">isalnum()</span><br><span class="line">isspace()</span><br><span class="line">tolower()</span><br><span class="line">toupper()</span><br></pre></td></tr></table></figure></li>
-<li><p>bitset</p>
-</li>
-<li><p>C++ 11</p>
-<ol>
-<li>auto</li>
-<li>for(int i : a), for(int &amp;i : a)</li>
-<li>to_string(),  stoi(), stod()…</li>
-</ol>
 </li>
 </ol>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><ol>
+<li><p>可分为线性递归，树形递归，循环递归</p>
+</li>
+<li><p>入栈出栈宏</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro push(%src)</span><br><span class="line">    addi $sp, $sp, -4</span><br><span class="line">    sw %src, 0($sp)</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro pop(%src)</span><br><span class="line">    lw %src, 0($sp)</span><br><span class="line">    addi $sp, $sp, 4</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li><p>写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func:</span><br><span class="line">     # 1. 基线条件处理(停止递归)</span><br><span class="line">     beq $a0, $zero, base_case</span><br><span class="line"></span><br><span class="line">     # 2. 压栈</span><br><span class="line">     push($ra)</span><br><span class="line">     push($a0)</span><br><span class="line"> </span><br><span class="line">     # 3. 递归准备与调用</span><br><span class="line">     addi $a0, $a0, -1   # 修改参数，准备下一层的入参</span><br><span class="line">     </span><br><span class="line">     jal func    # 递归调用</span><br><span class="line"></span><br><span class="line">     move $s0, $v0   #存值（如果第二次还要调用）</span><br><span class="line"></span><br><span class="line">     # 恢复参数</span><br><span class="line"></span><br><span class="line">     # 4. 合并结果</span><br><span class="line"></span><br><span class="line">     # 5. 弹栈</span><br><span class="line">     pop($a0)</span><br><span class="line">     pop($ra)</span><br><span class="line"></span><br><span class="line"> base_case:  # 出口设置</span><br><span class="line">     xxx</span><br><span class="line">     jr $ra</span><br></pre></td></tr></table></figure>
 <hr>
-<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
+</li>
+</ol>
 ]]></content>
   </entry>
   <entry>
@@ -183,37 +168,81 @@
 ]]></content>
   </entry>
   <entry>
-    <title>MIPS ?</title>
-    <url>/czyyy_nlw/2026/10/20/MIPS/</url>
-    <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
-<li>输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro input(%in)   #输入一个整数</span><br><span class="line">    li $v0, 5</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_char(%in)   #输入一个字符</span><br><span class="line">    li $v0, 12</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_str(%addr, %max_len)    #输入一个字符串</span><br><span class="line">    li $v0,8</span><br><span class="line">    la $a0, %addr</span><br><span class="line">    move $a1, %max_len</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro print(%out)  # 输出一个整数</span><br><span class="line">    li $v0, 1</span><br><span class="line">    move $a0, %out</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_char(%out) # 打印一个字符</span><br><span class="line">    li $v0, 11</span><br><span class="line">    move $a0, %out</span><br><span class="line">     syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_str(%addr) # 打印一个字符串</span><br><span class="line">    li $v0, 4</span><br><span class="line">    la $a0, %addr </span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>退出程序<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro exit()</span><br><span class="line">    li $v0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>打印换行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro println()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>打印空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro printspace()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 32</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>计算二维数组字节偏移量<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro calc_addr(%dst, %row, %col, %rank)</span><br><span class="line">    multu %row, %rank</span><br><span class="line">    mflo %dst</span><br><span class="line">    addu %dst, %dst %col</span><br><span class="line">    sll %dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>读数组元素 arr[index] -&gt; %val (用到$t8 $t9)<br>字符串：去掉sll，lw -&gt; lb, 没有$t8<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro lw_arr(%val, %base, %index)</span><br><span class="line">    sll $t8, %index, 2</span><br><span class="line">    add $t9, %base, $t8</span><br><span class="line">    lw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>写数组元素 %val -&gt; arr[index] (用到$t8 $t9)<br>字符串：去掉sll，lw -&gt; lb, 没有$t8 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro sw_arr(%val, %base, %index)</span><br><span class="line">    sll $t8, %index, 2</span><br><span class="line">    add $t9, %base, $t8</span><br><span class="line">    sw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
+    <title>learn c++</title>
+    <url>/czyyy_nlw/2026/10/21/c++/</url>
+    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
+<li>格式<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;bits/stdc++.h&gt;</span><br><span class="line">using namespcae std;</span><br><span class="line">int main() &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>输入输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
+<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
+<li>结构体<br>省去了typedef</li>
+</ol>
 <hr>
+<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
+<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">  for(auto p=q.begin();p!=q.end();p++)//这个就是迭代器</span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;&quot; &quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>vector</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">   vector &lt;int&gt; q;//创建名为q的一个int型动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; a(10);//创建一个长度为10的动态数组，默认值是0</span><br><span class="line">vector &lt;int&gt; b(10,2);//创建一个长度为10，元素值均为2的动态数组</span><br><span class="line">   q.resize(10);//为q分配10个空间</span><br><span class="line">   q.push_back(1);//往q里增加一个1</span><br></pre></td></tr></table></figure></li>
+<li><p>set (会按从小到大自动排好)</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set &lt;int&gt; s;</span><br><span class="line">s.insert(4);</span><br><span class="line">s.find(2);  //find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span><br><span class="line">cout &lt;&lt; (s.find(2)!=s.end()) &lt;&lt; endl;</span><br><span class="line">s.erase(2);</span><br></pre></td></tr></table></figure></li>
+<li><p>map</p>
+</li>
+<li><p>stack</p>
+ <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">s.push(1);</span><br><span class="line">s.top();</span><br><span class="line">s.pop();</span><br></pre></td></tr></table></figure></li>
+<li><p>queue</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">q.push(1);</span><br><span class="line">q.front();</span><br><span class="line">q.back();</span><br><span class="line">q.pop();</span><br></pre></td></tr></table></figure>
+<p>栈和队没有迭代器</p>
 </li>
 </ol>
-<h1 id="循环的写法"><a href="#循环的写法" class="headerlink" title="循环的写法"></a>循环的写法</h1><ol>
-<li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line"># 初始化</span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
-<li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line"># 初始化</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure>
 <hr>
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
+<li><p>sort</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sort(a, a + n);</span><br><span class="line">sort(v.begin(), v.end());</span><br></pre></td></tr></table></figure>
+<p>用cmp自定义排序顺序</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">bool cmp(int x, int y) &#123;    //只能有 &gt; &lt;</span><br><span class="line">    return x &gt; y;   //从大到小排</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>cctype</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">isalpha();</span><br><span class="line">islower()</span><br><span class="line">isupper()</span><br><span class="line">isalnum()</span><br><span class="line">isspace()</span><br><span class="line">tolower()</span><br><span class="line">toupper()</span><br></pre></td></tr></table></figure></li>
+<li><p>bitset</p>
+</li>
+<li><p>C++ 11</p>
+<ol>
+<li>auto</li>
+<li>for(int i : a), for(int &amp;i : a)</li>
+<li>to_string(),  stoi(), stod()…</li>
+</ol>
 </li>
 </ol>
-<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><ol>
-<li><p>可分为线性递归，树形递归，循环递归</p>
-</li>
-<li><p>入栈出栈宏</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro push(%src)</span><br><span class="line">    addi $sp, $sp, -4</span><br><span class="line">    sw %src, 0($sp)</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro pop(%src)</span><br><span class="line">    lw %src, 0($sp)</span><br><span class="line">    addi $sp, $sp, 4</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li><p>写法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func:</span><br><span class="line">     # 1. 基线条件处理(停止递归)</span><br><span class="line">     beq $a0, $zero, base_case</span><br><span class="line"></span><br><span class="line">     # 2. 压栈</span><br><span class="line">     push($ra)</span><br><span class="line">     push($a0)</span><br><span class="line"> </span><br><span class="line">     # 3. 递归准备与调用</span><br><span class="line">     addi $a0, $a0, -1   # 修改参数，准备下一层的入参</span><br><span class="line">     </span><br><span class="line">     jal func    # 递归调用</span><br><span class="line"></span><br><span class="line">     move $s0, $v0   #存值（如果第二次还要调用）</span><br><span class="line"></span><br><span class="line">     # 恢复参数</span><br><span class="line"></span><br><span class="line">     # 4. 合并结果</span><br><span class="line"></span><br><span class="line">     # 5. 弹栈</span><br><span class="line">     pop($a0)</span><br><span class="line">     pop($ra)</span><br><span class="line"></span><br><span class="line"> base_case:  # 出口设置</span><br><span class="line">     xxx</span><br><span class="line">     jr $ra</span><br></pre></td></tr></table></figure>
 <hr>
-</li>
-</ol>
+<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>diary1</title>
+    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="a24761370c92a98091987a194f829bbe585b326342537ecbd6ba17f3325baa36"
+     data-nonce="9f3feae9ee80939bfed346f2"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    1cd5fa48108210c204681ee0803e756702913721dcd573cf055b1da41e61f4e524b75961e8a8aae0471d7c4c670c94ea1b657badb6b82ab39a8cd8fc6c8b8ac17cd3643ea9e8b1351aa959edb2f2167a655002fe7da28f806eebb47f8f2401bf2b50a2eda74b80e6469835f4bdbc4b25931e774ef71b9a748a51a01448664da76e9ff03fb796c86313ac384e1cf75c9af19e5a9baaee9da710ae0b8fa5d7b76e9efccc9d741671c88b8bf01b4aaf1a8c29a1cd2065c652257e9d3037fde98de19cfd1b5a7d855d9fac9b636a7a8cb6d1b949a1cdc4c2a11ecf41ec8289e75a6c9a046e90298bc30fcad2cc74a561a4d59f874539f089b25c8f02ad5201446bbd1d04ec0bb925cf4bb4e1976c04f53ae452a2b2dac63c398b9b1fe3852604dc9623822a643ac9d5ff200261657139efc317669b1869c8eea531434f8e51e4cdf146536ea249e0bbc39075fb148e704245e424c1cabbaa1c5b98d887116fb7c612a5f975ba9a7cafe4cb2d69a5bec205a2c005e89dc725835e241aa096f845828ae543a9590aca989e3248520a78ab6d1614c681a8cc0dfc85e4c3a64a2d6c24f87b9320e5777afe432dcfb3dd1a961e0febb3be16e8f357ced9b2ccdc394be7cdf25c16ddd74bda3fb992079bc7d4a5f6c690f2563bcd39354fda403dcfb5b43d12236635e291a73779b2040777dae937e2d39a4db7e1dc671fa215e8df3a57e14bc2d09d9ffd4373024dd80e25a9bf61d62093191131061627af7533acb7c19dd3522bf7f11d96f23d66662248dc0d6bd92005031b09feb345c3cface3e8690fd7191e5a663d6804a3e6e4f93068d635cdfc5c55d1ceb1820a428e61e7c84cefb772c131395e019fd184d4727b00061c90429fb2819776574e36e9d119868313a53acf5b880f2ef910fbbb99010b414bd9feef195f2fca556011fe097f9117b8ccb773a6d3eaa5f934f841ca18b9d7b6ddb88bdf00b9a4f67afc3b06776e07044138baf24bcb56edf7a66c7bb365b052a74861811dc6f8706f9a0ddf1028ac0024745db1e4d591ecdf8353522516cced164dfbff1090a2aa8bf5598cf81f81e7a0446d40b370f77a0c79ac1a0478ef4f709a953eaf3725b85ed6b2ef93b10d558524feaac97a12fae8a09874c0040ea4cc779afebd8d6ee97dc76a02823a7d89eee5059e86f051d8ed5eb700954c17b9a49511b1d6d00048d8bacde66d94625c68e828b0e192b63c1f79255efb242af4b03a717bc893d2418da39e644daff43092d280fdae656120241453a65411e4c61ae0ff5d6350dccd98bdbd5aff8c2c5b7febe0ab49ca6e8798ab72813e55efef878838e5d7dbc2d82694b3640a7fc3f93825867bf6a019307a78bbd910c13cea46d2ab812e65b094ae8116bfe751db5a35c4976083244701b389343636a056c897771f3e86f9f22178e6420eed286c995dbb63f35c9ecd461d748a35bd9e6f1c18efde731001bde5fd440c7203e581dc33f41927617eeb254a9d44b928175c9100a538ab4e995caabfa6742950645825135dbb874bccb8fb8813d597fe864eeb2cbd1209ea17211057e7d3f8109cdb8c886e09c69b0020f296ab3cc93e4cd6e8511060e3998b493f8f1692e92f081ded7c7bcfe83c9789e858f9458da5f599b7b5538545f7b96034f980cea714bd0dabd657a69c98eec1fa1c12f38a09516e824f2fbbe7ae0325ab129d2919fc750a6faa0b90712a7eb26e749dd4a8bf42bae3d30197ec7c28c1b7a84f4ef62a2192a92822fa01863e3d03f8c41f25cd39bfc0d57d2e7375d731233c8e1c2881aef298da7702791a68102437486a16a875c9a0596e01a4e140826b31ea002688eac37358e72de372071b27beadffbf88de785f06fe0c20c48d38517df9e5c318262f6234afe69b71c0fa4e8f9b5c7d5adb989e21b5d9beaf6c5249dbe23df41506394d3948138d5ab794c0a968a81657e24e44f9f8d5e4ce79965473e4b51220a89023a135eec0df9ca2d59e1c19fc10017ba88fdbc2b7cad6e3dc6f80cca90af7c1aa0979c0b2b57248191305e4a6115944d384954ed18a1c322ca59b2835c3260a1ac7fcc7f36625d496fc365032be196f216fc4d5858b309faf06d825b2a4ad6de904529d32cb9d696c89eff2b7434ba6550373900d488e04138588f72c057319875dbfd8f7f1bf4c4e0de732f620cd0eb88330ed373000d8f3c7656c686c6c379e5b58e152f5ec57ef21ac883db2aa3c1e99fb33d7a61c70c9ea2b135e8e94098ee6493437b667264f677cf5a7699e859a53dbc1e1837807b3a7294cdf1c54d04bfae3f4c66abf99f2a6abae673765683ec572fd0d706c36fbc68720033c2322932a26a2e6bfed5791a9eb5617f0b634bbb85ea3e1cc042c06df9f930d1aaadbf8f84a3fdb49796f919eb4557a423356bbda70763e63260ba33d779614e3997dd4310db265ce0a8b5182c38527fc5f76130b5863c57d82f5816c93b7d3d28926380c9dd36d5d0749d8c6a037eaa588620e2cfad08d5c474b0a778116093ddfb5335f8a713831bd03f2f129d9e0e7338aaaa2b962e50e92d24af1dc8a6a889463d8f1f596319cab7e524a55ad98f8c263fe6a8e4cb83d198656f10a56d26856f767f6da5b63668bdf7d05554bf3d49ce2ce419688129b64c4b5ae1682e3338c68046c0812c3d38205273bd68d3da87e8fb49fcb8ee370ac7e99582f66686ba5f310094dbdc2809f768c602cf5fa7824f3f4a43b493f1d28d9d9e643f467c9c914c918381a72bedb23b03fed2f16783fafb9ffc9d71308a9153e4e5c7c4f04f7d4b311eb72d56fe09853bea3bf2b63c35113a6e79a299a5cac3320182050362aa9561bea9fae95fda26976800546c41819512944e26bc596d3622ab03d1541ebf255ca48332911d7f6664666e5f9cdbe317a0a172ff43b14b3e1aae65b9d2d65105ac53b7fc3a3dd8bae1a86ec7f606f9332e019bb424c498b2008f5062d5d1e41af3df99c7bc72aa2036d8cfc8788501a0f7fc31d3c5d84f43d9cd27bd6fa457bf6d87b4cd0fd921420ee92b2121f2c648d39469efa0ac86d5e1ef0f1b7771e0c3717f8ced87490d2966ac270c490da0d9c74df2b4b4b9b572843a7fef365271710fdd0e223f5396fe6ab919e16af59683716e906f5b39ca75f342f31601f65e4d411bb9ec3ff7e0a06420f86e7c209ebe203a4b5f128b76f6367cf0af05b36626537c7d4f978648ef853b4b092df4dff49d68c79c7826e490b565bfea940e1c3446777c4f2719dbecde3899e3da53a4047046ced294d2c30e3ba07e4750bcca1d310e307fb818c97b8ab0ecb487c1e99bc7d88fbff2db61caaa42068cd1b825f70bf35a13e92d4b04ca886604ff69f128af05398eef1b4c5b24e5d2e340e7ee597d4a1309d3c15a88270e97b72d79d09cfebfb22f52b76a10c18fac6a5cd70085d3bf4805a837dcb51bda19da4c4752e76dbd67d79ab94019ce5b21ea07c15e38613aecc7ac198579b59883ca131ca562afaea5421686910288f0f9526a0462acc6b30b2dcfe72e60450e3f60caf9ad9302edb6f086316dcaf90c3d1a554bfaf327175eb8b19e62b8e832dbc8f27b5be6896c99e402f52a91198fa283e31e90a2fa28943cbbf4b715ab7ee0b31bab1bb63f7af8f58b589b085897aede783a952c99de7ab866408f38e86b5cced2fd29a3902a702ffc348ad4ed2a65f2b37be75305c168375223b3d5e0cac70a6160117246f7c12ec68b51f9e8657715593429e68d6f380a448ab8db24672d8a63818ad1f8b4aa9a9230c4258caa819e57a92ef35413b40002f35b281ced2050dd246f9c12f0912298db45cc30f75ec6bd999be4aacc34780f2c5d2960c168e830682031b46e8bbd0c73d4a912bdd856ee813466b7203eb
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
     <title>奶蛙游戏合集</title>
@@ -251,12 +280,12 @@
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="f0272665c94bb0c5c38f16e8609f7aae33ee6d35123281c3c5663c3d3de607be"
-     data-nonce="60def79ec8169401695659bf"
+     data-salt="95a0eedf28d7fb2697b938fa4fc23a65db8240ada75a1e363997a4decad1a0ab"
+     data-nonce="b481c7531d21c237ac9fd6c3"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    5b21c737baf46d667b44f5382347d5afe56fde5cda7507fe463a8a87c5055b91823391a92abe7f3f99434e941446d94167001c68743610b945f41182e3c2adcf479b883581130e54045e7de1402a783e934aa2689fad955a4c53de87bb7e243cd1f943a0eb15b4760f791f901b8c35d0e8204d063e2120bcfa6f83ac1f87555053adee59d0ba3ef91432bb3f1a13eec729d4e4a3256212cf8b2820a27475e8e5071ddae7e3d60d4f6ae036821d5bd7569a0316862cc672100247cae179b7a46aaec4cc622a1fd5a10a232995285cc10067c1e4657cbd8820008fb00b75a0ebfab4a0b7b1d85801d8b1540c734c011845908de15d92729c7116c1d230b03f1f442b3f02ba0740eee82797f23570c95e3e2ebdae5f51de864cdbe07c6bd946986f0fd6d347cbbf8237f92149e07657e0f5312ad295380f9ff486ecffbc8117c8166fc6712fd5ede03a0427fefcc051dfb61987bb9d978456d05fd54e169124f57d71a995d64bc5237e14406ec6dba480d45699b8a99f6f39c21159c830da4f7e14d7cf7cc81b4aad8189e310853ef218a91fbaf139d16d83ddf385888f66050ca5b343e9f7b89e2aa85d93d8f83e09618b42898e23b67e08ba1b6ca25cde4bdbc81f13377f14e03f62efa058fd115fbd4e2c0ff4da5cfdb8b8c644b195476077a600700fd567911ef64b69945d3f18cc6c603f883a9c908a63946bd38250db57ef8c2b06d65172d6cf8d3493b470bc521394ec274e4be620439adc62ae59e72738d66777bda5179c51e5ede761fe9c1c571ba2259d9769490b274036fe149d09d9fdd4be058fe21d97159769013e78860e1a6c99050a53e6433d35332bd5535a307023c8142b8f7b7c81a94430edd71e8ede92f7c75a27334f38dbca678ecb0fdc0f7534559f27d75eed8e1f13018fd075d29ada50fef1ac951ffad2c300e0293b99cca6d52f6a128b0d5bde3061de0afc128ad0b87a6349982c3bb6348388a0fa0be32d20864089182b065443b59914ad0f05e9a7d569587607aff43e8f7b0f9edb27bcbff3bdcdb98c9639e521e569eba7f516c6d58124b5fe06413f40d8f69b59806fabfe8d2b4b6c279b244fc0c5b525fd32403e21877ace6d352a740da02b5b2ff6e8f815e8cef9358798f4aa2e99f8c2f9bbee9db8251b84fc77665876d80ede7d97e7c718bbfb95b4e04e2845dec2d67fbfcf3de09f15fc8b4efdc8eaeab838475018c85eeb92ce1bf10b627d8e0f7e6628eaf96ec4b96e21b425b9e8a6efa8f6524487fb90d506a53168f2bd4fe20f77080a7a8c10906fef2531c898300189aaf479d2854d5c20c3ba659a0d1e9312c7535a9fca5551465658782375cb0bcdb3cebb915a41627e23eb995b69f8d64366c8e06beb9659a7fcde7a334a6e56cc2919f82f6e5408c094b8afd4bf2af60aab3005dc3ce50c27e9228b0fa7818ae4c632db4db8c939795aa522097f2cf4fcf4a9a7d6ccb9bf5fdced5a03908d856d30e1ad39cb6a0bb280cf5dbcd844a4f6ca7f10cc6bad56673752007e011a5f477c6c7531000bbd67367f92498e431bb556cd7cc65fcefcca4fba5f7369bd72006758d0585f986c338aa187a352c6de2983f43bfb3b13b813d5dace53af4fbd82c1fcdaabc5d0ab118cc0a774b7ca6880bffbc66ea0af8d22b818e051f05ed43f3614800c0fcd9a1d6ef86e3af8e84efb792d44e97de75ecce71d43cddd232fe2266f447d3bb04059f10af7cf3bce1f1b76f03e591077b3052347483165c21eead720f6af7506a9bbcd2fe7d69144034e712de2149b986e1775c6a14e8348318ed307b87b79982d23a52868fc985932cc60ec1ed3df61bab9be4420ec423e96beabfbc7f6f2e14d6889e3c158c7a1c415f9dd14fbccfc160cdcb50fce49a691b5d540947f5cfd9b8d055ebb513a0fdd32f8066551308c7b1dfe94fd4682417c9b81fcf840685419db1448ba0335ede28f15873bd12314216a07410f0a87e62c0c6232e8a07d121757f0850ba9c3d04e3e438b7bd171bffe3374dc6ea2fed280102ed93fe7cfab9d4236178455cdb5627d576d49274913c970272d5ebbf3635c5cc92e7248ac8aa799433650a66a8361f91c86c9b6060a835b43193d0b4737202f5d252d8df1173fca95886d6a293af5ffbc2a2aa4d22c2d3729234a9d8bb0316ebc3833138130e10065d3cc2c7a534be6169dab2f940379622d28d64543bb5da1990eeb18cfb16576875e866b145cc084c637c21be48036d19d1b337881de8fe506bf1f70683f149662ac01f65fc509d3a3c645ea3f76fac345d159764e89c8309667e097fdb9a6b1ab8ffc21a6a8e5ab7dc3af4e858081932464de2ea2da4a803f75ce9a544bbfda2c3a20b93db4a9f7647c1875ced9306bae12b81166d7b4fde1279a76df6c8ecf2a7633a86c1c81e28a9aa8541609e66649ebf6f292066c38114117650410d8004cf06539cf30e60b754c099b38a1c3b072b81ca3bf20a5c2ded25970aa6ee39601b0592d081c7525c38dcbe9f075b856cb41decd4d3eea4e13db125890afc3a2b9da7639bfbcb555f47703855b70433dfced1ff393b55ff84c5fc7ef7d2166bdf12f6b6204d9fbc164d65e7742b16cf36715754e85f4a08b0d5b98b69b09c8cd4ab24cba5a34ccfecada5c7b7dc54f34c944be240481bc61688b712113c6e240c57d60c5f8f6e91a1ff7ea37de719b46535bc4cd7483cedf27d4e1816930ce1b4e22d4e2c1eb004524636cdad09530c98da17e3b67004c68a323d0229e4848a7bfdd0bb2454b1054c678941ba9e01f8a5cd62bfc8ab96420407b173e1362cd9885d1e4af5ab9b4e807a029be8d62272d40cdfc4eb163fda22291942472db7946646a812eb6228b6e0bd05fadf883b27a414cf23012b36a6a102d39783d6567d18e19708dc9e76962cd70185964bc2b76945864cdfb880fd72498820b0ca1a8661111f1085de301043536fe3800b7f7a12ecccf6610935035cb8fda30a08d8e0cc97ba185fae4829874
+    588fe94c7ec9494786cade1640503a193b98d2e29a16db1c1525323ebfda07bb668e153925d4535c395287d3a949dcacf66456ee6c10236013c6ad01b417d7d8b26f651286f61a2c798bc7ddee308ff4def3766a80d3e55174e75beb9ac458dc10ee82b2d71e52ff44536a07ad23c7ff610165035b8e2fc105bad32395f0cd5a8ce5141576ff55782a82f5fd99af51f0fc13aa4a34dcb75d82ba27c324b1b37a6ec33421bac362959e2f947b6e3da3e11882bd21ad9ae138df1c4d0866e39114bcd45b3b4e9c37c1961bbf911bc1ec99980b09c6ec522efaea4ed9261e8c6fc7d8773abd3daf3360d8835724280cd53bedd0054f9c78d52363150a3867e9c88427b87ca685979cafc84a6b4b7b10f2c7adfb63f6882b0ea9ee14b17da318a6fef966f52937f70d55f088daa95a43614c7f8b58ab7671271922b31a5bd459085e20c16f9a12c7497517a51355ed03c4fb94a812fdbe4686e3739e9af7a083a0a8aa29092f0e39512d7ae0ebe470ce9a13a21e137ac200002304e6abf8f1e94decb726d6489c17eac653df91945146740f317975d85f0da2f30511a68e4552fc0e16ee190351c1afd364021e44e18c7c5cca509fd9900b65cbc4cf56d56d4e375d196daf4966b07058692eb257e3180c745240cfd8fac0f97a0b12ae2b638265b240ed197a3487fd0afa5b8f0ef37f9d8d080d8d4c6cacf1d73c9e52c010e55e634455d8d4ae8e923d47b5d972e55c017fc75d1143dba652cb8253fa525b6f3ebc9f935b0e34135742ac4cd2425c3853cf131d301286a3b4042543acf90f81902ab218cf7940978d527fccd62aec31f0a2c8ddcc1bff56d663975b2687bcf43bc35c1cc31f7c11ed5b9fc4c9bcc68e4f9418903d2377937367be871753a7446b59df3ca01756b22f0f0f0b71b01f366f8e7c7b4a3e48452ca9c752ec488f0b8bdb2a7ac584833f834378f5268f21a65bc5413209adb30f790da29f360dd14087b4c60213cc0258c9d744a8209825d1a45a6d02209dfe1bb7d7e9de9b961e99c5de5cd19b6fd8459c615347e31b654ac36a2f5236f4d27f26825ada81ab95325b24d007b5ec4d2d1e126a8805286c2a4c65ba4f945fe5b4ad772bfc70ff6a223e0906a8ca96151e40a582ed22957febde36f570e7bf48f6b404e230b182cd3e14838396cad197de517c01acc507c90bf69b3d27f25657b1310cb4865e1219c3cab2b431f4cca104ace9f1669e48136bac5406e4c7ccb292463deda18aa8b708ecdba9019cd4cdff1fe6a88e39b03373c3411a339deb57bf037b998e4a3684ebaa6f14d645e070e3fb1b90ce8c00521015468c1ff9eb46de6d6e01bdd88132671f5b963af47d0551e1fd26e7789764ffaaf4894f16b7a2a49b14215a00b1ef7a448c5c4962eedfeee8196b02a7bc58b0bce9e350c88e855106504f92a3ec903411a4432f2134e20bc813eb24ee92d290d17a55a869934d0da7c547cf77c3b29265c6e79ef1ad6f2edf1a1f4bc62b6db9bf1ebea4757dd674bc8f3ae57cf441a04be4567bd59a294c7c2e9e5a5314068fe5e0c6eeca6ff640cae1903565a92c1e48f30e0d7080e5de7e48acd2ea8f5d16156a3f2a3867fa499fff55da348de42dddb035b8e98e841f913eca02b13cf9b26d77ab9fcd48d633d49e3c7b54aa998620761abe4792421bc5f38ffa16ab067a2dfb0b84c10661c33b2c1a3ade83eba1ebba0ad7567d0f4c6fd6ac827e2e9617976ab7892119eef3b5f3a963e7cd7821cf1a802d726550d2e7f83d6217d77e58df01bb6fac03e2ef72c5c599b11c78ca7bfe319a1b8bd03775e46fdd62cee194f92166475015fa5ed59624a585628c4a6d0eaa95b5b0c2f9a111da7e52cebff9c272a33e657994855433c2033257094c84f403ae58e7ca2871acd95d44c745a0f9b2772efaafc16cca2e216bce7b9b2a6c6b5eea7bec67bafc1b6b9ef3083adacbcc8d60f695bf2ce2edecd82cb0d86db615fdb95095885b2c3282fd827ab9576838636026308f8ddea3ea5d7899d42b51b7b920f923bf6dc595ccbdc40658e544e00e29855678985521f2096a09ef9f4c158b86c47a2e2574b1b8fb2e6d73e7f05cbb3788012f41b109a7617ef253a2153709617c2af99af449001f9be384696a936e41716203a94ee057af4ec5446ba3e118309ae07370f39d74d02cab686e37ea78aed7a3fc5e54e297916c3b89a3830124ef9ded26d57a1e0bc3e52e05494156347a7eca0b0a0408ea8824c68367e8e9d37c8d90190e2deaaeec8124e836baa26748ccc3b08efd6661c6cf9b8957b006e711bdfe405f78b98752ad56ac083f82c59d2710a882518abe0365a32a5378c355aef880f069a9a4f708ca4d580fdd7e1e0f48124d39940db88ad728307053c284d491d44f7782200f0b28378ce4d1c016713d70dc985234e1f94b3fa03f6958d6aa9166bd6dea44180e4484bcfdb7e5b2b96dc2c72660a6384a5356d919b299fc2099560a5edc201c74f0e1c53796421c4434f9072b902f5b7702632af23e1cbb7625c8a524e59d8a0ad3e44859af11be6a4b4995404a5dcbc6d162adab1ce28b51cbdd64a52e281cf38f55d5a27482a2d1845a240b6826e4e17b8fdd0ba1bbf97f17dc308b4e8d2cc52f07fb548be3ca77fafc06f9d79d324d9090dd13adca40a484f41b2afde1acf8ffe05e353f240a4120011f023d3d9c24188c32b4e916f88a960fafe79c040c45b974cabd1916ca8bf549e9d2080a3de3ca973da67c8703b1fd854671f70dec1618d0f58f50a087897741d25e8fee89a1f3e41d9c954aa7ee3a5281e1aa8746573b50f50095933e25c354081a60fca47c1ce478e74bc497f08aa60ac1485a348aa0f120569d604f76f0b674576da0ee49a4610dc6a9f6a27d245aeeb2d57739ac8d67dc9c78a01188cfc873618e5072836781d60523110830bcd3e4717cd6e38bd1a1ff3461ed7b9dde73a4cb2c0a42546cb51d77a297f6906e535d227074599f8979b24d24e42f0547
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
@@ -284,34 +313,5 @@
 </ol>
 <hr>
 ]]></content>
-  </entry>
-  <entry>
-    <title>diary1</title>
-    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="10d7236d776c8140237a0df7547fb39c879972d43b97427d60fc18e90c90bc9f"
-     data-nonce="b92b49b7fc19cf6cd19dd17a"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    e78fa767bf09b4032506ee67d164cc657d0935962646e914ebb10d8c9f02be6621e2eddfd787f7ec9c7ba8baf6805284831e5cc4d79eb69ccac1e5d7a4b0c3b40b9ceb68eb45c35afbe0f86186e52d6b121a7cb0e4a0d35ed60f307981fd9f4dfc0d1da9fe787b112b4f9695cc9c606323b944ff8e1edafbd86531b7bf49efdc3ae17581ec10709e8492f013e15ac3df435fe86e0ecc88966158f909874eb6ca81b6e7efe3840a3ac5c618e5698847a6dbe4add90a7f86337c0c8bcc73a82d07b65eaa70255d8fde1edda84437362ef533b0f10e18dc10f76b856452db0f5e7695ce8afa82ec20fb07f612cdfab5579817b4130cf26acceac63a4dc09100e08bea7d50d80746a822cadca02b86ae9373e8c400305a255a3787d20f9356f7da05d84790737461ca20aa6cda21bb285159e50772b28bf99fb95e3d22967e6f2280127f151fbc65f915189e3328aabafbd4d8bbfae3e8655c64aa5c8fa4d8dce7978adcc5ca252769a63c62cbbfe51b57c963e38121825388ca4329dd979a9717ef6a41bb3f88123ef29f092ffb44d108bcd7a2e17dfe5908a64b1753bd2e35f180046b556c687cb292f95e0e278476f9ff468741792771a3d67effd126debd4cfdeb7defa8ca4fd9b99ecb80819dfff88ca16e1dc9c54e5030cf0a1d079bba6afe918d40196604f5ee714c82884aa88e1bb920488732ca1b5a8b34952ea9614c8f2213dc13e29a8281d3a9f0ea6de3b595cab9be696f610ce4778831d82d43d2a6d31f34a3969984059eea092834aabb60c7d3b253a1bd532e1a0a9abcde58e1447eb8c2313beed06879f3070554303ae62dc5015b4c24124efe816300c44e47e1b6ef0c97c9c6fb11817d87fb8804e0c8f3cfe16c2c9a90b2bd7a9441a50b8b2f8476ff9f53f1cf24a0ca3eb709693d1aaf5d484dc7e163081061df066917a14fa467aaeeb30b1c17aca5a377e957193f9f668ee1339ce7098d4f9ce2099af5ee11ea12929eee294c5f5091c3a71dbf40414f7f71ea0b28e1915009eb3a630838a4902766762ab1e4234d3d30fb1c77df4af07b2ac17732acff5ee79355ac80242f6bf952ecacb0df25250fcb643d13d2a725160e181badf5f39bb207d5901430daade3fc7b40535cb212c655d1c29211879b7940bde8325fdfaed12c241f382d387513effacb48f9070d512d8aedfe25b24776082ae6be217d563a28053c1518280cf2f5377ed37d67f7522450c2b96fa230d7104b3546140c3fb9a53f0f00992b2087bae5ceb581034469474dc448ca0282746c57935a8e3ca7d2b38d9757d5173d601cb45b8c48654050656d2e810e76bcef265e4ff6471d71182be87994b82a8fc9fdf2f4680ceafe6384e034c72f8dbc8c643dfe66137b0a099ff383cafd08d985576dcacc5b0a97965db1794cdeb5dd581ead9e9877bb9a9b2555c95e95c1ca3b22b8c0132255d6a7c0df4429db2fd8f66acc62353d4ab20cc574d4e561428b11a40ca00a4c722a4bf4c7c98128149dde41833e4b9c28abc7d0ac78f99c4e14d6e50372db449a77888599d305058914a2d34582b062f94c65c04c87afe774383f71fc370261d99357ee48976fc3fb03f21e14e5a8cc89fae35d0436f4f08d422720e3bfbb85ca0d12eadbe2dcd8f56fb0c0c8de4c763b00e2af6ba84458cc56b3336910eafa93024cbcc3be9eaff586547bbd691da589f6b4ae2255cfa1b1d0c4f9c295aee26a131f01c45dd66927c2c02f1cd5e81797ecb547ff1eac372f3b364c850b0b41fd60f6044e1da6f39bc1d0382b3bd1241392ea953f937d04f50e6d46f60780090d2a0e9669d1de8b829c91cfdb3db0ca80dfa4bf23b48ff9878659e259fa7ff3c93b6cb1b86611e04d9827aa50827f8c52160396b80b7d35ce8c53287f672dd38c594689bc3b6253553577cbfc2d18f3776f348a9d92b8edb7d0471f4fea8465310720d1f5206a625ff5776f729b7b7377dd3fef74479d434143b5dafe4508bf7db2fcd2d0b0391a51fd09516387da276197a48d90318c26fd9f491f6c007aa4c14f135e55fd7dbc3022c695ed781beefd399d366f0deb69aedd65b91ac128b9a68d57473668f5e9f2d9816fe8ba8a4c7ecfd155b6eae1c3bb9ef10d256bbadfbbe5686806331ea1fd787448950f75f8baf0ee0c1b73e5ac31460b9e0aeeb9c777483f6cb6312be80e45f89ba9fd6ce61293ac88eb7e056a38f6958c1a933b232339e177e97fba3c3c5a2d6e015f95c47660e047b82d4440f9bd508a8559e83fa89e9181ea259db6f8aa9544f27fccc99890babfdeacecc9cac95ce9e2fc75fcc0b23c20e6843a4a04ee4a22f6f9ee7c10898d9b611bf43597c6082ffa22af784bcc2c8bd1fdf4894a465961a3a943411c46a995c838b2f567d018b4260e09d51337e9f44354f1505edb4d8d3b1f755ff365f33f6b4abdd468104148c269b5b42b89ceec1a67fec12e8e3dd7fb662bb0441c6de8ca1dfc5f8dbc0d981332e28750433b76a3e1c7f5fc9b47123e323926907d07ceb6ac08796a24d1022a8c928245cffb6b15e95a4a8c1c1b1738a18864a55b11176efb66e933ad63afcc28e0ee994ead36fc82cde3efdd6aee38da9673018447472bd922065f11dc7aeca19754290231b0b05d9d723b34e2eb49d6de155de0ac520b2b6533a5de714d9293fa9afa9b3355e0fc69fcefcb37bbf4dfeb54ab0be16d5f43e2632d3ba0d13a3a7c3a2fd0b30592a080265a1f05ca091412652aa4012a24fcc22c9adfc38663f04a4e417f107537be46b10f537c3e0ed72748aeb4358dbe4a2bc8c76b1da2a4f9724668bb000976dcb7219c7b80a1e584c60c14ff2a38f4acadc66ff213cfcfa5080501696d01023fa7f35a43a4210a19d39d88d8d047b77300550dee1d3336ddffaeeed306634c38b5fdf449dc6ef18c12a00907a75ea318b1eb8b6bee6591e9986eadd954a91a76568574e135d55c5f1df5c48fe0ac107a0eef65d57c2833ded7f6991558da912d78a518c5d696b0f37c90a8bc348df24144926a8682a708d6ed46ba85a3ef2265ceb93d35749a803092300ae631e29879aebae585d0a9bb03994eb052880b41550b0a173e0d68ca7c89d568538aec86612db0ead388634e0fcfe8b7ea6d6262706d71abd45a7eb18f70cda359b9d6a5b03fc1bc21afb76bd3766e457852843a7c196acd420b0a554d8700559a3ac8cd4a2943141897faa4c7c2da2394ed4d0a9cf4979ccc9432f7591f4fe458e2fbc0a75d3b0a04589a7be8a11bf033c879f85eafa1c93685b72eece3ad85dab911aacbb58a526ca1c974719d2aa4f5d35971866b7bb2dff85f7ed212b8ff13623b6ffb6660fe4ab34e0abf2d48039afc39cb759aadfbafd7f1958895361e2d0404cc7b49b99b53f6b6436e10e77be42f15c04c63bf739254f5f7f8bd804da4b5c19028e2de179a41f742d4ac1668d8de1ba1bea047012139aff05d69c1c4ac7129b6beecbf047889e1ce2b3d55c8f7990b090452fcd952318c593fe6846d7277fb0d0dd86e4884247f8438b8b4e5ac1cc478c1365b032bdeddccb88f306d5e8cf9d05cc7822156fb94bd891f7890f3854602466b7788e4f5e468fbcbc80fcdf8737ec5ea33e94f93ecc11fbe8a2912c8075fa631a7ed2faea0070ddad3b372eb9ce765e55eb2ae980b6c1058b1baac0a4f7382b40fa58354e5ad09e2abb11eae9372b3ab76e7e523045702657bf8a43ccaa01592818b9777303fc55de5939d029587d518c791255fa29ef3bb685261cdcdc80ff0ab8e976d488b6d7c9e950ea40fde48d44651a0bed1cd748728adf840c9f441ed13538f7cb113ac9a93810cbd076c01af09879a4eebe7ba4996358482295c562e0695e083136da6ca2a5e05cc6ad5b688f118f3b2
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
 </search>
