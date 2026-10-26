@@ -3,7 +3,7 @@ title : learn c++
 ---
 # 基本语法
 1. 格式
-   ```
+   ```cpp
     #include <iostream>
     #include <bits/stdc++.h>
     using namespcae std;
@@ -14,7 +14,7 @@ title : learn c++
     }
    ```
 2. 输入输出
-   ```
+   ```cpp
     cin >> a >> b;
     cout << a << b << endl;
    ```
@@ -33,38 +33,45 @@ title : learn c++
    计算长度用 .size()
    定义方式 STL容器名 <类型> 名字
    迭代器 (c++ 11)
-   ```
-   for(auto p=q.begin();p!=q.end();p++)//这个就是迭代器
+   ```cpp
+   for(auto p = q.begin(); p != q.end(); p++)//这个就是迭代器
 	{
 		cout<<*p<<" ";
 	}
     ```
 2. vector
-     ```
-    vector <int> q;//创建名为q的一个int型动态数组，默认值是0
+     ```cpp
+   vector <int> q;//创建名为q的一个int型动态数组，默认值是0
 	vector <int> a(10);//创建一个长度为10的动态数组，默认值是0
 	vector <int> b(10,2);//创建一个长度为10，元素值均为2的动态数组
-    q.resize(10);//为q分配10个空间
-    q.push_back(1);//往q里增加一个1
+   q.resize(10);//为q分配10个空间
+   q.push_back(1);//往q里增加一个1
     ```
 3. set (会按从小到大自动排好)
-    ```
+    ```cpp
     set <int> s;
     s.insert(4);
     s.find(2);  //find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出
     cout << (s.find(2)!=s.end()) << endl;
     s.erase(2);
     ```
-4. map
+4. map (会按从小到大自动排序)
+   ```cpp
+   map <string, int> m;
+   p->first //键
+   p->second //值
+   ```
+
+5. unordered_set, unordered_map;
    
-5. stack
-    ```
+6. stack
+    ```cpp
     s.push(1);
     s.top();
     s.pop();
     ```
 7. queue
-   ```
+   ```cpp
    q.push(1);
    q.front();
    q.back();
@@ -74,18 +81,18 @@ title : learn c++
 ---
 # 常用函数
 1. sort
-   ```
+   ```cpp
    sort(a, a + n);
    sort(v.begin(), v.end());
    ```
    用cmp自定义排序顺序
-   ```
+   ```cpp
     bool cmp(int x, int y) {    //只能有 > <
         return x > y;   //从大到小排
     }
    ```
 2. cctype
-   ```
+   ```cpp
     isalpha();
     islower()
     isupper()
