@@ -75,21 +75,21 @@ title : MIPS ?
         sll %dst, %dst, 2
     .end_macro
    ```
-7. 读数组元素 arr[index] -> %val (用到$t8 $t9) 
-   字符串：去掉sll，lw -> lb, 没有$t8
+7. 读数组元素 arr[index] -> %val (用到$t9) 
+   字符串：去掉sll，lw -> lb
    ```
     .macro lw_arr(%val, %base, %index)
-        sll $t8, %index, 2
-        add $t9, %base, $t8
+        sll $t9, %index, 2
+        add $t9, %base, $t9
         lw %val, 0($t9)
     .end_macro
    ```
-8. 写数组元素 %val -> arr[index] (用到$t8 $t9)
-   字符串：去掉sll，lw -> lb, 没有$t8
+8. 写数组元素 %val -> arr[index] (用到$t9)
+   字符串：去掉sll，lw -> lb
     ```
     .macro sw_arr(%val, %base, %index)
-        sll $t8, %index, 2
-        add $t9, %base, $t8
+        sll $t9, %index, 2
+        add $t9, %base, $t9
         sw %val, 0($t9)
     .end_macro
    ```
