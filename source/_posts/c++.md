@@ -1,5 +1,6 @@
 ---
 title : learn c++
+date : 2026-10-21
 ---
 # 基本语法
 1. 格式
@@ -46,6 +47,12 @@ title : learn c++
 	vector <int> b(10,2);//创建一个长度为10，元素值均为2的动态数组
    q.resize(10);//为q分配10个空间
    q.push_back(1);//往q里增加一个1
+   q.pop_back();//删掉最后一个元素
+   q.size();//元素个数
+   q.empty();//是否为空，空返回 true
+   q.clear();//清空
+   q.front();//第一个元素
+   q.back();//最后一个元素
     ```
 3. set (会按从小到大自动排好)
     ```cpp
@@ -60,6 +67,8 @@ title : learn c++
    map <string, int> m;
    p->first //键
    p->second //值
+   m.count("apple");      //1，判断键是否存在
+   m.erase("apple");      //删除这个键
    ```
 
 5. unordered_set, unordered_map;
@@ -84,6 +93,7 @@ title : learn c++
    ```cpp
    sort(a, a + n);
    sort(v.begin(), v.end());
+   sort(v.rbegin(), v.rend());  //从大到小，不用写 cmp
    ```
    用cmp自定义排序顺序
    ```cpp
