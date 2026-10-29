@@ -7,12 +7,12 @@
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="d726c082b50b0a1d00235cbeeadff78a106351edbe32b59f222504b89a9a08ae"
-     data-nonce="05c961fa2613b74c8e28750b"
+     data-salt="ac695470bd6c9310383c9f83b5881b62bf9436ebae19ef3fa7dcb5c02d6b9226"
+     data-nonce="2a5c22e72272ec62c2ecbc49"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    e7c80e17e687efe671758786b6f504652747d59a2291d5b770efed75d4776430739705bcbb41c2675c6ff80926a46a69aa4af58c0b792447ade34d345815e9edeff81f1cc3cea94300e8ea91591c7cd792a0bc51abdc1db59ba0b03f822c5eafd1201c7b9bf2aff81c8755a9398b59c1e4fa08b7fbd9ca3ad4e09612ff0f11879ddc2cd1212c1c0c98131830f83de9a294216315017c3d684859bc2d9b53b3e879d8593eb59d66ebce97d03a26472291354ed4e381265856cce7fc709c1088f444ed8d9ca16784f19ee310f2d0e4d9c12c1fb02fe4d0646bb79fa8090faedf9463f2b8d8b0930b465b7bac6ac4833b67fbed83614792f2b573c926bc53d091a9bfcaeb28f9403552cdefcc9394a31d61e56fc2d5d41385ba0a26c46bc9013ec656b40fb221233565ee3ed2fb07a787b3e436ca
+    cd36f972b92a0245d68b38a82d6ebe4a8903a20b823469b3375d6a35500add4a18508795eb72832e7c012880c305b27db96d4a883204d1b8bff1439a90ace7958547338ede572d5788ea930bc94dc15a66526a0814c4606e9576501633591fa4197e0f6248f14f6e1fcf7fe53663581ed08bfac5c6c192b9268e54d9de19ee67c90cddde4c4de68e09ec2212676ac408b6749f3480af7c524aea275bbc54efcc9c1db3c6ef18ee41537e2a836c54f1543a40027e276a313047c08f907994ec6269ce6f72d1443092d2dc75254bf9623b480a0be9740559eb078c5febebacbbde4b2ae8ce4420163ce9ad31cfbadd7167d71fb6a3a3b0fb03002be6eed48b73c3a0beb0c72ab1ba1db64281c3f61414f783273e9b1acc17ea222d94d1498666cb7704439f95e84edc9a27b6d7cfad91352b1392
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
@@ -28,6 +28,111 @@
   </div>
 </div>
 <script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>Learn Markdown</title>
+    <url>/czyyy_nlw/2026/10/19/markdown/</url>
+    <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
+<li>语法：使用 <strong>#</strong> 创建1-6级标题</li>
+<li><strong>#</strong> 号和标题文字之间必须有一个空格</li>
+<li><strong>#</strong> 号必须在行首，前面不能有其他字符</li>
+</ul>
+<hr>
+<h1 id="文本格式"><a href="#文本格式" class="headerlink" title="文本格式"></a>文本格式</h1><ul>
+<li>** xx ** 表示 粗体 <strong>xx</strong></li>
+<li>* xx * 表示 斜体 <em>xx</em></li>
+<li>*** xx *** 表示 斜粗体 <em><strong>xxx</strong></em></li>
+<li>~~ xxxxxx ~~ 表示 删除线 <del>xxxxxx</del></li>
+<li>三个以上的星号、减号、底线来建立一个分隔线</li>
+</ul>
+<hr>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><ol>
+<li>无序列表<ul>
+<li>使用 * 、 + 或是 - 作为列表标记（建议使用 - ）</li>
+</ul>
+</li>
+<li>有序列表<ul>
+<li>数字 + .</li>
+</ul>
+</li>
+<li>任务列表<br> - [ ] 未完成的任务<br> - [x] 已完成的任务<ul>
+<li><input disabled="" type="checkbox"> 未完成的任务</li>
+<li><input checked="" disabled="" type="checkbox"> 已完成的任务</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h1><ol>
+<li>单级引用<ul>
+<li>段落开头使用 &gt; 符号 ，然后后面紧跟一个空格<blockquote>
+<p>这是一段引用</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>多级引用<br>&gt;最外层<br>&gt;&gt;第一层嵌套<br>&gt;&gt;&gt;…<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>…</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><ol>
+<li>行内代码 使用 ` 包起来 `printf`<br><code>printf</code></li>
+<li>区块代码 使用`&#96;&#96;包裹<br> `&#96;&#96;<br> 这是一段代码<br> `&#96;&#96; <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一段代码</span><br></pre></td></tr></table></figure></li>
+<li>语言表示 语法高亮 高级特性</li>
+</ol>
+<hr>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><ol>
+<li>[链接名称](链接地址)<br>[链接文字](链接地址 “可选的标题”)<br><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接名称</a><br><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80" title="可选的标题">链接文字</a></li>
+<li>&lt;链接地址&gt;</li>
+<li>锚点链接 ： <ol>
+<li><p>[第一章：介绍](#第一章介绍)<br> <a href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E4%BB%8B%E7%BB%8D">第一章：介绍</a></p>
+</li>
+<li><p>锚点规则：<br>标题会自动生成锚点<br>锚点名称通常是标题的小写形式<br>空格替换为连字符<br>移除特殊字符</p>
+</li>
+<li><p>手动创建锚点：<br>&lt;a id&#x3D;”custom-anchor”&gt;</a><br> ## 自定义锚点位置<br> [跳转到自定义位置](#custom-anchor)</p>
+</li>
+<li><p>页面顶部返回链接：<br> [回到顶部](#)</p>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><ol>
+<li>![替代文字](图片路径)<br>![替代文字](图片路径 “图片标题”)<br>其中图片路径可以是相对路径，也可以是绝对路径；</li>
+<li>图片尺寸控制<ol>
+<li>使用HTML img 标签<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” width&#x3D;”300” height&#x3D;”200”&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” width&#x3D;”50%”&gt;<br> &lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” style&#x3D;”width: 300px; height: auto;”&gt;</li>
+<li>图片对齐<br>&lt;!– 居中对齐 –&gt;<br>&lt;div align&#x3D;”center”&gt;<br>  &lt;img src&#x3D;”image.jpg” alt&#x3D;”居中图片” width&#x3D;”400”&gt;<br>&lt;&#x2F;div&gt;<br> &lt;!– 左对齐（默认） –&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”左对齐图片” style&#x3D;”float: left; margin-right: 20px;”&gt;<br> &lt;!– 右对齐 –&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”右对齐图片” style&#x3D;”float: right; margin-left: 20px;”&gt;</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>\ |  表头   | 表头  |<br>|  —-  | —-  |<br>| 单元格  | 单元格 |<br>| 单元格  | 单元格 |</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody></table>
+<hr>
+<p>参考： <a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></p>
+]]></content>
   </entry>
   <entry>
     <title>MIPS ?</title>
@@ -112,6 +217,35 @@
 <hr>
 <p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>diary1</title>
+    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="4ac8304a396b045ef74e03a8dd4e62decb3a92c1c34b13227fb5f2086b0fdb4b"
+     data-nonce="e3311abdc314eff722b8b480"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    0a4ee77f29c2f90acd105b6a6afedc58847fb1ef84fa2eafd28251483836bf2ccd7b9d9c60ad6838592569d9da77974e5a3a247b7b5f5f819d2cc300368874059e41d5281522ccbee6267eac780749a1e772cbde25cf1058453c6427ed3df4b60f923a82bbd646d29210c4866b14971c27f0dd9a792a09e2b6567cf9e90305f3f1a865667046502234a379c1ea8a402fdd97668589dfc7097b32dd092569367464958d2c7955a79cb806fd3a47dce5b00b9df27e893018ae4f375f028be4716911bc01e1114e35e124cddb79ec3102fa5facbdd3ad7b9d5cc8088889667094d576bea35b1c3c1f64f2ff1d03857575e671623e5e72841a97f7cec32086770a4a5b2e0716864e11b7d5578f30e14d8d2a6ac04396e35c67a2fc2f837d82c52d1f99ee05d3524ef7e3a165ed2c8e0edd7f3bd563a7fe5a471dd75e09b1742d680bdb02de6eb379eb41ee677c95e1ef1f75161f99d8a9eeebd908f6e083dcfe73ffa8fdadcde4b21a7ab6f40c085649de8712602ea6aad48d62d46f0f9cf3a2e8285c181bc28579914cbd00d9a720c3c593728829f4fe479ea745fa93e5dcc33de787ec67f98f3eba9e4253c1812c07376f3cd51dd5f1c7672edc9d1a39b4499e5a18fb837ddb510613791472e8b7f8cf9d139efc48ae802eb1122457ef06e8a2be28f41f2a2002d6e53f9c6e531ed6d0068e71077f4334cad3f16a0a2ff3afaca43a4b44cfc9b93a8c179eb0dc7c2839bc179266e7178f4641dea6a1e7950809eba88164249d0bd6fd90330b220c00147de6a6aa84e9c8962b20aa6ddb97e127a685b800b686a54b3349530ed0f5294ee4d221a8dd070071a7aebaccb94f89993f8fe445e69f61691f5556708a24288391fa0e3444c091766f7e4a598c9b1726667d21ceb9e908867b2b3636859410cabac43ad88da0ccfdca1db36ab706043a05ecde0ee706842b1fccc6172fcacd9ffe83c7d2b8471429d04307aa10e5d9948ee46fe400857c0a6169cb940a58baae3e440c219b946eb78c8d242b30b79023eed8d732ddfece3fd903c9853b707c19ef374135754fbe16cf69c5e6eb38b16009dc8a8b4032ea6b673d2ef9ab8d9fef9158afaa5920720b4b997959e4c3b7ced16dc0669b5cb73796cc65a2884f5e8bbe40a488ba356ad1378c16fb4546fcdc6a66e2a8fc4d9ba28f95e3b1abdf06e2e3cba806ae4e6c9b8f9da7b754d89872f876588454584caff0d5e0b2013e64f7d752b53fed52d73a24f70649988135d2d70a1dec18b00f8781a5cc445f8586556c4862e8c5d86e5d3af45136b3c8ae7ddb9b6a560a111218614c8c752575c2d3cdf980f6737e055be54d45a39ff34abe28dfc604a51694ab3598980ab2b806caaf61e78a1500f57778813ea4dc72998c1d53cf04915e00e2fdf16decd428e2212ff6c1be50eb14ade788bcf26144e19ca3c4801600d67a31fc7c4aa8caecebd4803e1f36397be0028f823598327daf376fe492fd8438393c18e833ed67b2466a8d2f14b05bb91422f6520a760607b0daac613747e147af91132f5b17b70248ed9fa9113037ca23f53684aa4023c9a64ff1722c12845a0a4fc9955de0ac47658b25e140bf6e71612d5dd0442dd5a054e68b7ccf9b2912c4c9d9234dbbddab56d191785a0c0358f4d80ae6772456abe5bc9383d5ded6e3027596f7959efffaa9d805304a5957fc0e85408ee8859d3d7cfb5ab26c17fc6ce03743fbcf5cf8cd4d878884806595ea0887209305751b5cdf1b4d7730b9a8b58ecb3d878d6f0c9669ea71a676fed64f2ca6ae87b6139b526ab526d4c171ec294c868b28cde6a84db0e6feb4abdcc61822ce2a549dc810dd163403dd36349626e5f0acc08cf4b30f63f6b81343562a0ac2cfdf4bac659d13f1f166a7f1cfb354985ae589fedb626013fc61b0b05d37b0b992e496f0e24f2ba5d0fb9a7ac540b7f7df63f2ea41a365634bbc7887d1079c937c8e2965db36b775cc78ffb5e53c0bb722324e12a78392362dfe74ac2b73d3f7afa9e33aa367bd877c5c2b5970bcbf5a89c8d92e635f503532df8435b5b51552452b89995590183a9eb14a103c0412b9fd35c40638342b28d480ae36c45cc1b9e723e5851505c83d62f2495610035154fe21efeb90aec6b79f3aad79f92669b289e8bd74dca3f23e82030ef6ee882866a2bb9803b92e4db46c1a8ccfbaa8495b065137d7591dafd1311ed35157b8b953f1bceb0da7686cb2962c2be578e7c8acd2533a50bd67eedefed6369acd50b0283f0299dac2070eec5dde0aeb6bb8b4c72027041f8c3d571b034172954dd5b060cf5457ecf00bc4d152c1d3aad03f964cc6eb4cc536acc4b4266df80b7491a9211dde266465a4470ed0fe40412c9081dc37d65cc9e32b471c81373448a68884e071e36a60a5ad2eb9f7ef4af02f23009b6f61add9a4a0017b14bbf449c21336c96cdb0710e0670602151a34c3e96e0102445a6e7df97237e87712775903b46874e6f6fafb9ce31ef9e2826cf9b61af987eff8f367a14509a8830e6756bbac0bc6657c9468e1c5139fcb197dd8c89cc01dcfc8a8069284c8f1aca8727861492954c23f183e6a772884c3c8e3842f51c27c4468c0f14c77425b9634480d232bbb0ca8884e5d1f789e388122f70f62fd29c1a6d1c10a5b2a38777f058986e1b8e3b415d34fa5068d34c8280844a8c95b4e5f4e48e8afd93c1f4283ac65cb76ad3c4d2db8af8d03643831d8c281d8850c1f087c8fe7c702fc523a4aa980b77ad491ef6aabc014dbc5223b873dc5addc1e39b22db9abf19f8aa52c05c2f116acbf926c2120240a6aa31f4498c5a70c754ad5fe3bd36f617c2a896ce82615ed7f1b9ee040ac0b236d6e60c5a7a4b3e9a1b226dc3519cb0d9b72169b76ca9833eef496e57b1d0dd6c358ceaef6d1b1793347841ee3e07425ea8bd58a4df31e2842e10119ce0120231f3c220826f221644e35411f428871885e2c351a9fd86993439e4fd38211be94fc3e8e71259f97fa5769783b72545254d06928e9a371c5ca9e18f992674e2fc1bf92ca19b811b03bbcd4719ecfe06d1390d2b4fd16a5fdbf47fa6a95a446244df252e2ab9dcdecad15f7174efcd8cf54171f6a7b3fd394b3e13b59619efb316ba39ed6bbbe0fb2e20015bcbe2e066eab72a11b39099c59fa96e50fc7f61a4ffe100a29af9fbc34bc8227fea47acbd2d05802d193265546efcd553c18e98e7e8b15d593d5b2484f4d33f324822b6eedfc07a7d41ab7d442c82a9e941a5dd669acf29af9aca4b4c9cd784ff5028eb805e4813480eb04c94ad96c4dd9a2ee13f25ac3a8951c728c3dffc865c3db87dc388f95bb5a0352df4864975777a80e6ba84b816a4309e96c64a793c55a7b25aa772c61b0cbdb71e8359fcf75d015c7f0a73f2b1d51b6018dcad5367ac1ed776f7dd60435abc3c59120f3050bfc8305d0b955ccf1df7ea52c7e7b2a27026a8bebed194104af8729ce4f0a2ea7b7c83fcba0bf73ac16c21351f3d34a7fb664eb50924fb73f683b5dbc338389a5e6522772f6dd819af12976647ef2b7ce27587f2570233c156361b292bf1697143f412ed0e3358d0fd9d8b9363c4bae1e8d2aa2d68f14c1e955960633507392f785a1121bf5482d640d37c7c03998bb1934eadedb5511ea926796da5eebcd77c2d6737d3eff252b717c70925c90123d0ed100c0df6f307330b2a9924c2d32a44d184b2c9b7db498f309b13f7f911a867b0f3288aba591db06b97503e072017e677e98a1a4ae0b14ea6abe72640d12a9920042b89d1443f719bdc8fa58433567fba5d9b44f453242e08c1b99d423d0c5026a06f8399e67c4b37541bcc7e127b25679ab2d90bd444c72845a04f5c600beeb6a375fdabbf58e452812737ab05782
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
     <title>P3 设计文档</title>
@@ -595,18 +729,18 @@
 ]]></content>
   </entry>
   <entry>
-    <title>diary1</title>
-    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
+    <title>爱有万分之一甜</title>
+    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="b12fa5690afc6394fc0c56bebec3ac5f33c93acabfd06ffb93158d7dfac36532"
-     data-nonce="0128df491ca37e849d356966"
+     data-salt="e73a4c6285c4108f6c192bd81407531e99d45ef1ce260eb2fb92bc618b144cf1"
+     data-nonce="276d8ad863d513f634931e97"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    abf48516eb35a44d989e9d2725df041d6b6f63dcebbc5a7ac8bd51f132a8fe58d270b1ece1277e09cf68647cc6b7c6ac386fa0cba6d1c801bea61a43dc2e9cec8523a4fa5917ddf22feb228f65f0087e2277d8c21bbb47e067a186b0392bd8084ab499e5753dad6428a4b35292c3dcddcd678354080fe48cd256fbe341fb243758c59e78c6840a937dd6b109429594d3441f34a5c6b78d7ea864d3d3e3e6896d7c5f80690f8fc4c23953752fe6b15a03426ae99d40991990b69f6f77aaff5f8373570497137f88fa80cc5fa589bee13fc3cae39e8caf8dbd48b75e37868469cb84e4dc85ac4b548689939947dcb46540ac22d490cf08da827f9dda392ee3b126a1bd1c743f4099319e2ee90df4ee1fe3f5e0244bd8b90f248f90e56d8fbd9c6fc7dc543086ca411b5ec450b77268349cb0294cb366b7cd563fbbdf4df40071b0d4bb3daac1e3827348cecf1d7c7c8ff2461b24c56bce61269dced6b4a5398faba65fb1febe6f67472fe64bdee24f7fca2cf71084c3730173a896d61b9b045a37adb4675e7e8d9df1150a4a196469c99c59a92648e545724b9cf11022a717fd1f9239848d328e14a24a95229532966adc4972f0c431d8284e3a0404656f0630cf257e1fb8521a2071ba2778838ec874f289bb2c4e5dfdf27eda36d41203e6a46ce2bbb137c5ecabf0db5c0fd1b2325aa0398a8f03f5baf623a2df1afd2857e6ae1e20cf14a0f0f1d44c42497f2546d3ef7b5385463bb007f94148fef0cc33d1a773d5a47f60d6b513fa984bed55072c92f9092b667bfb0906156c2606c0c67eddc390bdc13fc93c39bf8246b3a71444e2af28691018cd2e81976381c2a0a63e3dcaed0ebf7b4803d6d782e505f1facead11f62582cca943eefb209491db155cd411d76233db487771490cb34efb098e4e9baadaeaa16e0fe52feb7673a40c74316f9381231ec6f81161af2909b8f7b5571a900a6585f208fb2333c39be8cca6cab74d4aaa8d395d2feb08ac9aa7a191b4e56ff1e3b6a6fea6096e9c585ed6625074033b8f9cf14afdbfed768e231956551a051420a192afb694c1ceca68e9f58b7cd4b61c1c39d83b18a97e203824d63c50371c588e54a6b74ea212e6c2908fe9080862e1b07c04c0e6fe1027dc5b5811fb41a25ef0b422a79882103c9699bd61c163500a6430acb16810307d16f0d6faf99c02e41c45deffe8c016c03525dbaa9b8f0921823af86caff40b25512e00ad689c72bc97da95ee5ab1bffed16f52c204b9b6fd71bd3eff0100a0fcdb232d09b0697f1185cf802670055eec86a90b6c34ab39e7504f808ead9bb9fe5c3f81f60f4e400290b3d79cd2ea3299249fd93ff1f272135d47a89c7389d136ec752c21f1a10976f04322a9ed23ef1c0e89393a95f71cca775db3869be23fb54f97290b4b30701b2b4ddfbd342a49016bc703213fcc0dc786c357e7c6e42ab20db071ac51a7d274c526aa618467283d9071fa335469994a1a0e442a21bd81355abe785b9d7aec7d1b425e25a7ca4f7eac0b9754c42550c0f51c47e95485bafd501ee948de09e697da63f002c230128784e6b606f148c43539c6adae1a67f100c70bf8e912b660b8a8a4a4d14903b6a85cc0ef8a336982c3afcf78471e9cbac4f198a811c5bf4c9de09b4d900e4515187847936f0937c0da9e50a09ab18a2b348b2d3e50dc43e214d0db25ebab01c34f8f45fa0900032db4cdaa442f605eb2d80dedc70728970e931dab49a163c3065f228fafbe43fef25eb23b1da7c55e3542d98a5c43b3b011a752d5933afb0f705eccf11e25b9e0ee58bf5fa1a86c69f59320888de9d073688143a4b4fadcef964d8e98eb13bfce86164ab3b6879d528f55587ed837906230d5ca88a684068520f030c3e2b17f110a39afb3b46266396c6be043d669f5892b3fca820ad36d963bab6b4f67d2f4604020001b2ef192f69943e4cd3e3895573d6c0f12d351774dff89942272296e7cdb26e093d78a8ebd00b7aa4384779af0ccf1237d10a3e0993791504bcea691711182c330d3bf7845209346595bb9020185907f9db70fcdcabc617a4758ae5c3c09836c1d8e800756ea6639a636522a8e3d109520b3ce56babeb2b4d48415ad900115bb903e15b5aa19dab2a9c7fffde1989130481adf807dfc47666f8fb7e4d238ed03778ede15692587ef6f70128f3b68797a432d129ea4e5b507ee7c796cc5cbc8b9730ece03da45b610b5957cafe54846d4a9d95d2daaebdf1bb6eabcbf53e6492e9c3a17194f3ddd34e1ee66e13a31af1fa33787f63713a63a1088cfa47d165719c0655437b11a8d32e5dacd8f4c6cc25d7fdc2e7483dbe5aa057349568ae04d3ec2178eadaaa8ccbb8f9d4bcf1e509992420b4c3543f702e4853c082d89fe1e0b3e400d45dcb856f54fc30b0b72bd03e741894314f22642536ccf4e6de3bfd2a498c61e84604ddae5586ec6636849560157c4e2af1d83308f5b5b5fa65b56549c1aa1783d67cc68405ea6737d400f6a5561f0d4736783b3665ee343a3ee5e0a3100c23a003f9fb6cc0201dd9b79bdeea9e0d21d9cdace79e92ff62565202b8d4b2ade0c0baa533afda7c2d5b1af89254635dbb0b8c073585ee80ebd52b141bf9291c2e682eaf31e281a0de27f3e5244d63b43108ac40083c2934e4a976c377381f917634e8507d9c26965ff1e1e1744c474ab4f989c8977ea6d659bd780bdc1a8c16882e99187e542edcdfa0854d0629d1ed781c788c8082be20182c5ca08aaf8ebb6d0f5d879e1aefd7202d0709826ca004162cbfc2c7acb53e5b5301e10671502e9d853056e3b4b6bc034fec75fde7347637c1579a0b0cc7befad808f4a075583dc84d40d9262b05c470aea643faf4159154c7478c65f81ec7ebcaf444d785e4ba36a3714416522010b004076112e1cccc86a56c8653ba7ffe6d6d08326d0c240e2b72e60badcadb0c84e0496f066426afc2d691a986171040aa4c0f188971df1a635a3f637aa75b0eadeb5f413a809eb75b4df5864de2e1207b57c94a4dffb309e1d00fe240069b2951f8b0eed81b00da2c21704eb7183db809405b96a7d466421654368bf69d35caec8b63a92246c7024729bbc0a516f86ec59e2a84d287e6fb34128e92e5626134822f7a344c0e6241772cc0181abe6496b699e669eeb6de12cc7a8fce3602b8758bf58a9b69a47fafbbc60993d1ac21408b6168739ac91ad1e6194ffe92b9904f77b85ef9c148bae50e5cb811840ed6d9d6b8e2ce8563ef36661db08ca06f2eae9bc7cc31061df03d0499102d6a160659878560f70f315f701eab17032d07093a83d1909b6d7e69b67d9c761db22f9ff821884fa294fb93365130086b0cecb5fb2bbe145107cb3eacc3a8e549182fe3bd04b4be7c363b5d7e922324307e08a0dff8cbc322b6e84a36235a54a2329c0a600a76544e79ca52bf0e223c7249c039e794d0ec000ee20150b58fe365ff65810e14799a74c7f8f4ef4fd15f5ad7342071ab8e34b654cf94931dd7e8afa7751199fe846936e2662213add5fd06fdea3392d9cbdf8107a1791c7ec72e5d58d6c780e0b3dcde43e35c71a2e48dcc9ed88095a321c101ac43aefd07ca3f05246f2631459aa724a0a0e6257928a3866502f28b6e75877f21729632cc861914a799d456b11a33b542e743392c2b764119ac5b76f3551ba8f5615e3ebcf53a65405b6b093401c8d87b33affd9e4b666111ab4d97377bee79447d2ac1dc5fb986378c07821521050835294cc1c9419a061e94245200f6bf7cc7c63ebff2bfa23c24592f16c5541643c99e9538542dbfc7f3243f73231070331aae40a9f41e30a44fdfd9c08265b84d55aadf08eb2684436185386d607a1f77e9dd08ac78be1e02b26c4a9f98030c482
+    3b39801f2905bd54c55d59597a08a2eb17b0d479294fe60383e46de107bb7ec91583fabb3c3261707e8d6d52251cd50a136c3aba9dc3663541df506d4cebec7c230786be8cf708f2ffbabb2540bdadccd2eadf4aa1e939b281dd9e306a4275562e00c9ae88fc564f6e6b79df1adf7d73976b2149da042ba9e3f548c113d844f991bd5b68f689208a4ef0b1c9247909a412b7ba4860aa56332346ba045dcbc313aabf3c8d6e9e074cc37029bdb2f1fd6727549ea90fdd4401466ae3795931d60abd68297b11d6cd72acce8817aad93e76691eb40c2862a2135c99891082053193b4c7a8a28c5ae9fd66a56b811913f13afb951086d3b913784e1a2bfe13f7f0e3c5d853fb00508936be2720ed5220f73bcfe1ba3ff8685c8331410d2a27822f7ff37a8f5f50cbd306440ae4da5d6b4fefc2e14334e9d09f04ae3adf95d5a79db0fcbf1495f4ff4317a7f2fc8acf074b1f0a2f138a82095c4cf2bd640effb01b3e16c15c31f8de34df5e15f6c837c5613bced94df982ba92380e9d66086dfb108f6bf305f9542823e743603992c697e1be2cd9b82a8dae31ba5f23621c7595c085edb780932007cb3a469092b3e80ccff0a254f4600cf44d6d06372cf57aff77b60acdeb6fb5cf9e96a922fb6f3c10312f6276a2d047e9c400d04fe86ee07fd6ca8aa442dd54b21372a9549a99be692046f00c185699f909f099fd5a94e5f2325be78b8e609ef8327f9292710eeb2e0ac568a6c929f78dfd0f133d4c3d4c0bda70afbe7fc54197b21a671b52b7f28015bbc498c6453a09d6b98b498824fc76767488c76ab225a467688ef7c5bce2013a77c2344d381e1b458889a10a2cd9c4680f63a26bdad64f0a354cb8d83b3dddfa8803e1aa027ad954e4c6b66161c82f220b1d3faa93f70f28a2e842395177a203d6234b4ce2d292d04a7f4ce8791992e8993a6a1174d1d66475602cc95d8f3a4f756705f36968f7f7a8229ab5162970f4e832caa70a94818f6fdbb50eadf51eb6ef4f7695081d1f490cd1baf72b1c5373d9ab23fa56b5b41bd19b80eb3f821885c667bf31c6f9cc284a4e5e1acabd1cd1348eb99f11d90574b7020d06a54cfe6a530c823f0f3b919341339f6595908b1ca01f83d555f6273110be72f55b7b32a30c15ee01cb44f639bf9663e2fae3c555593ad0a8ec0beb410829bcd1a9c43afcf15de5168682811f455f317c28c83bcc7b333303340e55855431433a464c6b71051339da8f5bd7756ae7e2f64a175218c248edea1d2a8074032cccc0f79e917f1735a679c62a71e2748c49319de97fc3e3e47851e2af11a578bfb468fbf745012931fad42f6bc41cfcd54e864f167cd45acdd6b587175998aab27c6300d27b0a3df5bdb96b8bb2f31d770d44286560d2308fc8888b9c702aabc8e272ca4c15f385835b98ec9837872b66a9fa7e662bb5e9810ca86677f5eafc57271b4d1eeb416cf2eac8e9bc196fb9d3b69f29b98a5202455f4677b9381d0b662859c59fbcaa3ab468f0c68ce0acfc0a1cc332c4eb1528b8da1f4ba054e82e9f3b7751d3076a1d45245cbd2133a9b2630cc5793545a4b544c9a94485538731a4076606f1c5b0fb60be36a7c152c2ea5bdbe6dafb968a3b0380d9ef0005644653572453cc9312c9e40b60fb3d86a9afac0ed749ccfd7af08166fac35bcd77a445d9d29e2b4196d96bb80224901ddb1111762dc8f34af153d6cb5e525826f830def11ca1667b2d034f58274cf705026377fcc10cf5cb9b32c1aa0f4b6c0e39d430953ba450789f42d0e1c88a79f6ef16d830151e30ab462661fd8f8bc0904c6014942d6a824edff0e9ac2e61e4cd105e894980fd20cd75e1837de5bee65666a33811ba476b98ba04e6b2ad7b2f895d6ff960f7387eec7a078fbc7a1a38fc0266e4f68b1a9ed6e909ab9716e2c5c6aedd59f31d7f51473e8194186fba9cd7732008eb0a9dc3333eec689b2171899ed45217781839b9a8c5dd5293e943081344f24c2187eba9941e1c979a7769492da4f1b25d6dcb57505753bc9ee26d92e67b09237427f9d2da844835f56bbbf8fde1425b538cabcff392076be9b6f7486f2771d67ba930febbf781e62f62e019e9d6f1c35a496e5d4406fc140de4273b7226ac3f7e05bc2e8a5bad0e603817b600cfc63c8bf8969d75f486a64034c13d655659e94115062cb651d243bce0e6beb943b69c6e62419ced97a4d715aba23df88d15c06de92e113b566fd4ce9e5e803db2bb1fc533756eb1f8c86f956b2263c88f16908c0ab7035e9ce3b74e202c8c880467505da56cb9c45ad705ba8bb5f58864e4005e2b3ee7756a6c91782df9a78bc44d8b8514749776ced6e800f8ab799869d266e1b518704d15d61a28ab493d0ca8065cdb97c58dfba595a337e54078c1a3544fcaa97a0cd9337867d58b8de11a4ec6ac89e81ee78a4f4a044b04a1538af7ab098d241cc87cd59009410e0ea54c475d6dfd55e2ad8cac15c61c45dc105c10c18fce705e8d305a8d91f64bb8b9bb475a83eb6f894d84c57246281da4f8c59626ecb08a16c2f3586ed560703e2aa36bd0352348e302a75850f9cb2ee75dd39b1f28f66c3a5965ce2abb6f5a3e6a92ac28e132ecf9219116261fd22bff14854fa1f9c70cb545510c39e79849ee41062a2a50af76d8477ae22fbd191704127adbaa092eb8540d6d957d301e7122bc2c7e8cf1b4825c97eaca9aa2b8006a6350113910396ae982fa83d13ebd6944ea7206cbe640f1b206e87f65ebb7ecf65d1e7685327660cca1179ca59d9263cf5273e44b548b8dd82a831076a15754029e6ba024c5dfb50415a21270fa03573a4085afaf86998810c8be8e5faf436b91ebb30affc0a32d63544e235a1002352cdab83b8669b326bf9133eab26086f028187f9b65f367dca35581d74e4df9b5b7ec7d826641dc2e8fcd4e9eb37502ad641ce4defa19733726c5d645acb85b25e81ea5281a979947ef1608f550910cbfd91750ecbad3c1ee559eddc5910153cf
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
@@ -622,131 +756,6 @@
   </div>
 </div>
 <script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>日常</title>
-    <url>/czyyy_nlw/2026/10/24/%E7%AE%97%E6%B3%95-%E6%97%A5%E5%B8%B8/</url>
-    <content><![CDATA[<hr>
-<h1 id="幂和对数"><a href="#幂和对数" class="headerlink" title="幂和对数"></a>幂和对数</h1><ol>
-<li>用<code>pow(n, m)</code>来计算n的m次幂</li>
-<li>用<code>log2()</code> <code>log10()</code>来计算以2，10为底的对数；用换底公式来计算其他数的对数</li>
-<li>判断一个数是否是n的次幂：记得加一个精度，避免精度损失导致取整出错</li>
-</ol>
-<hr>
-<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ol>
-<li>原地旋转矩阵<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">   <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">rotate</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; matrix)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = matrix.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n / <span class="number">2</span>; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; (n + <span class="number">1</span>) / <span class="number">2</span>; ++j) &#123;</span><br><span class="line">                <span class="type">int</span> temp = matrix[i][j];</span><br><span class="line">                matrix[i][j] = matrix[n - j - <span class="number">1</span>][i];</span><br><span class="line">                matrix[n - j - <span class="number">1</span>][i] = matrix[n - i - <span class="number">1</span>][n - j - <span class="number">1</span>];</span><br><span class="line">                matrix[n - i - <span class="number">1</span>][n - j - <span class="number">1</span>] = matrix[j][n - i - <span class="number">1</span>];</span><br><span class="line">                matrix[j][n - i - <span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<hr>
-<h1 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h1><ol>
-<li>C(n, m) &#x3D; C(n - 1, m - 1) + C(n - 1, m);</li>
-</ol>
-<hr>
-]]></content>
-  </entry>
-  <entry>
-    <title>Learn Markdown</title>
-    <url>/czyyy_nlw/2026/10/19/markdown/</url>
-    <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
-<li>语法：使用 <strong>#</strong> 创建1-6级标题</li>
-<li><strong>#</strong> 号和标题文字之间必须有一个空格</li>
-<li><strong>#</strong> 号必须在行首，前面不能有其他字符</li>
-</ul>
-<hr>
-<h1 id="文本格式"><a href="#文本格式" class="headerlink" title="文本格式"></a>文本格式</h1><ul>
-<li>** xx ** 表示 粗体 <strong>xx</strong></li>
-<li>* xx * 表示 斜体 <em>xx</em></li>
-<li>*** xx *** 表示 斜粗体 <em><strong>xxx</strong></em></li>
-<li>~~ xxxxxx ~~ 表示 删除线 <del>xxxxxx</del></li>
-<li>三个以上的星号、减号、底线来建立一个分隔线</li>
-</ul>
-<hr>
-<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><ol>
-<li>无序列表<ul>
-<li>使用 * 、 + 或是 - 作为列表标记（建议使用 - ）</li>
-</ul>
-</li>
-<li>有序列表<ul>
-<li>数字 + .</li>
-</ul>
-</li>
-<li>任务列表<br> - [ ] 未完成的任务<br> - [x] 已完成的任务<ul>
-<li><input disabled="" type="checkbox"> 未完成的任务</li>
-<li><input checked="" disabled="" type="checkbox"> 已完成的任务</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h1 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h1><ol>
-<li>单级引用<ul>
-<li>段落开头使用 &gt; 符号 ，然后后面紧跟一个空格<blockquote>
-<p>这是一段引用</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li>多级引用<br>&gt;最外层<br>&gt;&gt;第一层嵌套<br>&gt;&gt;&gt;…<blockquote>
-<p>最外层</p>
-<blockquote>
-<p>第一层嵌套</p>
-<blockquote>
-<p>…</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-</ol>
-<hr>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><ol>
-<li>行内代码 使用 ` 包起来 `printf`<br><code>printf</code></li>
-<li>区块代码 使用`&#96;&#96;包裹<br> `&#96;&#96;<br> 这是一段代码<br> `&#96;&#96; <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一段代码</span><br></pre></td></tr></table></figure></li>
-<li>语言表示 语法高亮 高级特性</li>
-</ol>
-<hr>
-<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><ol>
-<li>[链接名称](链接地址)<br>[链接文字](链接地址 “可选的标题”)<br><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接名称</a><br><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80" title="可选的标题">链接文字</a></li>
-<li>&lt;链接地址&gt;</li>
-<li>锚点链接 ： <ol>
-<li><p>[第一章：介绍](#第一章介绍)<br> <a href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E4%BB%8B%E7%BB%8D">第一章：介绍</a></p>
-</li>
-<li><p>锚点规则：<br>标题会自动生成锚点<br>锚点名称通常是标题的小写形式<br>空格替换为连字符<br>移除特殊字符</p>
-</li>
-<li><p>手动创建锚点：<br>&lt;a id&#x3D;”custom-anchor”&gt;</a><br> ## 自定义锚点位置<br> [跳转到自定义位置](#custom-anchor)</p>
-</li>
-<li><p>页面顶部返回链接：<br> [回到顶部](#)</p>
-</li>
-</ol>
-</li>
-</ol>
-<hr>
-<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><ol>
-<li>![替代文字](图片路径)<br>![替代文字](图片路径 “图片标题”)<br>其中图片路径可以是相对路径，也可以是绝对路径；</li>
-<li>图片尺寸控制<ol>
-<li>使用HTML img 标签<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” width&#x3D;”300” height&#x3D;”200”&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” width&#x3D;”50%”&gt;<br> &lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” style&#x3D;”width: 300px; height: auto;”&gt;</li>
-<li>图片对齐<br>&lt;!– 居中对齐 –&gt;<br>&lt;div align&#x3D;”center”&gt;<br>  &lt;img src&#x3D;”image.jpg” alt&#x3D;”居中图片” width&#x3D;”400”&gt;<br>&lt;&#x2F;div&gt;<br> &lt;!– 左对齐（默认） –&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”左对齐图片” style&#x3D;”float: left; margin-right: 20px;”&gt;<br> &lt;!– 右对齐 –&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”右对齐图片” style&#x3D;”float: right; margin-left: 20px;”&gt;</li>
-</ol>
-</li>
-</ol>
-<hr>
-<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>\ |  表头   | 表头  |<br>|  —-  | —-  |<br>| 单元格  | 单元格 |<br>| 单元格  | 单元格 |</p>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody></table>
-<hr>
-<p>参考： <a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></p>
-]]></content>
   </entry>
   <entry>
     <title>奶蛙游戏合集</title>
@@ -778,32 +787,23 @@
 ]]></content>
   </entry>
   <entry>
-    <title>爱有万分之一甜</title>
-    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="b86a966f897279b1929716c372b6602099131440120a09c87f8e63e01249e187"
-     data-nonce="b47fc232c83be685ef98626c"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    29789ef6e75f203b5ba8199286d833fe6f9a84328f5388611be0b198f91f0034329d11febcdb781828c97cd0f4e4d5d11f49b0b38ae8aebcd56aada71a00befbbac1b05182ea5cfa6a151e32dce9554a4abad7dd992e0de0f390cf0dfeb58829cbeda3b099d4f582d026c838e6c769429e0ae5270e90654d9ef96a0ae499f619af25a0b9f105d98934173825c787325f529d853915301dcc246df2b62d4acb73370749fc7d340f0caf168ca17df05aa2eed87d012cc85fe0a5c6d1243063899147a1e18189fd5243bba46c9ad00cfc6120bcef8718432ec188e08ea540addc7a0a8670c6ae4662f6c5e53c39f3eeb999d2cdf98957d5b7b93862eec306c5970f5f0dfec973aa56e1b54d2a69931e9c55c190be893632da4f3f482bb074c5714494100a1c2e19627f21bc910d59aa93134c2c6ef389ad8224293a00e0b92af6e1caeb43148c6c3ec49af44057f3156e39d5d3c52a272b9b48ac708c77045c4ff5a3102f2c02eff6eb9e48d1b9641170129ce3aa56e8b863f983ff1e7200235fe97b34e12d75cf735416eb30d79403f3ba5319beb5b53de05484c999305142ad582f00e496745f1c4f9d712083142e10ef7a326fce32373ffa8816188ef64c146cc81c0ae8de943235570528a667dc5695cd1d5679c60128c3ef69792ab1525bb89c8e474a8491ba15167d885e4cc5a00876f0df2ccb79c8d1bf8691903f18f0d58aef1165b2d30a8f22c0d871b2970942a2c68410aa7725845872bcdf8dcf3c6a32b9bee0a32dfaef0df3cf38c57097e44b489a7352ecabc27000dc1f363db4201ec84bb260d87199ead7ac34d4833cf39d85942adeabbd106a5100a31ac314d0ee7b2fae6a6004e061cfa160444175ec21c50f01b419d2f26f36fb5e4a84107bdc63d8fc5de60447d86ab4ecaaa0c6c7d2f0a4f56c979c4ad471d5063c370cf1ea70df7c026902e00c2097f65309179601743235788271755b768dadface13dec8c4589db61d2f74fd835e4f972a01e9c60086f375d5f3c342b29207da47ea54ed2d986c4f6df3961dacb05f668a38e43d2062a2a9cbc793bb14589416712d2cfd2f6909392a8736a39a9e3100b073d34e760a9154f72e7f9341beb9bacc181679e07168509dec9e085e266c68c1e605a73b84711f918c5ff701942b35601ee9b60385211effeaaafa96f6282705b6d72bb7109dccaeb10fc0700b85a4f98f48365394125303313c7c093f9e494bedee2237dc3d010321915564d5e0da6a805d91788425d0418aacddbe33c6d6ad3ca16428ec1816e35641a51f8edd2d6730a92e5193e9a15ef080090265d085ff2cb41e007f7af3584cf34f08787a8d1681d8b0e059ab9a26d63a9f190734df2a9cd9828a70bcb014544018a9226a3e8fadd9da263890172b350ea8147a24fe63cc30dd9283c87ad313785041daa2450a475c42916f431878deb97bdc8ee4789ca8e6f0b391ad59cca12d89415828d58d75b2dbff11537147c1a95d55f928336f71574c04b11afeb10b95794fcd6aefa460dcde1e926e56c06cbd4a4ef7658c9b562a0d93b7742f2b8945dc8892da01b6f2a6b441f8c8f1afa7afeb5221eaa0c715657e66fc88a06524e922957c0e84951fb5ba9067276ade88b5169aa0a3af468b536d4d2e6b1d81e293ecead0d5980e250e78234ec0855a61bb42ef15f9f25f39485526291d4cfc5e7993a3bb953f9defca1d7e7a92331947da32c0d88317cf3fd79bb9b11ca7067a0169c80adc158c88bebd1a43644f90648acfb72cee02ba30f0aad25a863cf3a04799f6108cff553e0dff84873d59ef7b1024e72168bf8beb564c7f08427d65a57348beab33e30208ce416975651631c22ef79cc315a2e50a8c856b53550d954305c121c7cad66515abe2a2f1c2b2f8ff0a30180dd1909fe5356599d15f217f829a6ac9804ac136d88e56ae06f1825db1deba23970b9c703387beeef2b5cc262f97a5f9b1351e837266be735ec21630498e6788140afe30742d53d78477a70e67cc624135c34378052c9f40dcf03fd1b4c83a1bf29234e116c6be65160669e75b98a366c0538a9c2b2380b6e7b6c0d6445c2e7a64e946af593b59147c50d1d0cbdc47dd93e090f6ba1d59c8301e560c16f43f8625cd53037b57e09c4391c1e20c70909bec61bf33216424c6f639f534db92855891ad77458b4e790915f3e2b172093b033271f555da88ac91c6c03f1289c3892e98216dfcd07ab575cc1727689b696d9a886a7ee1f9c8a3538eab4fa9fc858ed593ced9bb29ab37406b0caa6336dcf1fab4c0214922edb08182be8824c2926304846ace00a6a5e84b2c2661e31e62720a2fe1586c70a6b2897c30a2eb414a33dcac9c201352aacb334f9ff6ca58707704dfffc27bc5021689ce449af5f92f4fe9a7bf0b032c6b692aa56c38bc7437c0bc6719551e029f8dc9eddfbc9469996af73c78e915b36943673a938aceda69378c4b5660ed6c585bc893adf0c549f471f2d57267c431fe8db45605362e0aabcdef3e3590fd5440fb7c8489a79c7edc4a0b3c3aa1650364bcf8d193004e71dd0fa66b3d83c5c8985f5c8faa855b9e9f011644416c51382ac62c7ed4ad5fb672d61927af534f70e290d7f68e1ecafecebabfb3403d9f684cf251941243622de6b9f63242b8d006104e79e575c5d8694f65c474d5e512a542f57ef1bcb02fd4c41bb115267804d1946d33b589980ce29ac9a64b84246b50c1a9646d9cf34d0195ed43522a160a10c4c736c41a933b55d51fb32913e39bd878113ab599de93c449195e65adc95276b8974b361723f71b07de5a8751e0d9112f93bfa84d4e0cf43bb241c2f4f58546c0bf971493486307c4e5a8b4e716cdc777c0327f5b9c47dcabe721ef5d3d0970d41631d8fbcc5614e193921fc102cfd17c540591144700e95b358089a9dc24a24ac04af56198ad55f14b05db1749d742832e7b73720566465ea8029412412662b21647dd1ff61a53b1179c97cab66c43023c5760
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>日常</title>
+    <url>/czyyy_nlw/2026/10/24/%E7%AE%97%E6%B3%95-%E6%97%A5%E5%B8%B8/</url>
+    <content><![CDATA[<hr>
+<h1 id="幂和对数"><a href="#幂和对数" class="headerlink" title="幂和对数"></a>幂和对数</h1><ol>
+<li>用<code>pow(n, m)</code>来计算n的m次幂</li>
+<li>用<code>log2()</code> <code>log10()</code>来计算以2，10为底的对数；用换底公式来计算其他数的对数</li>
+<li>判断一个数是否是n的次幂：记得加一个精度，避免精度损失导致取整出错</li>
+</ol>
+<hr>
+<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ol>
+<li>原地旋转矩阵<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">   <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">rotate</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; matrix)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = matrix.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n / <span class="number">2</span>; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; (n + <span class="number">1</span>) / <span class="number">2</span>; ++j) &#123;</span><br><span class="line">                <span class="type">int</span> temp = matrix[i][j];</span><br><span class="line">                matrix[i][j] = matrix[n - j - <span class="number">1</span>][i];</span><br><span class="line">                matrix[n - j - <span class="number">1</span>][i] = matrix[n - i - <span class="number">1</span>][n - j - <span class="number">1</span>];</span><br><span class="line">                matrix[n - i - <span class="number">1</span>][n - j - <span class="number">1</span>] = matrix[j][n - i - <span class="number">1</span>];</span><br><span class="line">                matrix[j][n - i - <span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h1 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h1><ol>
+<li>C(n, m) &#x3D; C(n - 1, m - 1) + C(n - 1, m);</li>
+</ol>
+<hr>
+]]></content>
   </entry>
 </search>
