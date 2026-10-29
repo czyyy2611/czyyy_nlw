@@ -7,12 +7,12 @@
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="4df24888660882b726fc5223779cd8954bb308e7af19fe5ef62e4c7223e5c64a"
-     data-nonce="bad67381cb53a6068d6f8ea2"
+     data-salt="490ee0faf224ed91c82d1fb9a511e7f2851cce6c2292baf6088a2126560b770a"
+     data-nonce="98f5e0628b787b362b434c0f"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    2ff052627b588253d7619e57ec84c6f5b51871eb6456340234a7c26bf728b70d45c71888aaf5e9f95cd10e998d841d27649f0fca767cca2b8fe7f8090f9efc5071bd8d5df0b67a6d6a62d2c57b70b67c8ad6c2071cb01905f7d09df9126c9ef94aca21561e427587655fea5e2183226c4f90581ec574e27e8e1f68662d669d2d3ac5ec3e191a6c86f38031ac66d41b50d13e637ea4d2b58fea81ec0c015898d862007edf5a7a21aadb5b31f1e484dc1d846d088c6f1d94d9abc07b0320902792c5ba190f8e42f18c10dd1f1729c6d7840d832f21564487133c2fc5795d2983140fcc19013a9c10150c3bc9627b4be54bddab3a222f440a119fc1807ff90ea6519b3a83e9f01adf50243778f7ff4057311a847f596c7feeabf9f9c57cba58a1da3807ef15225cf2757247d0ed6d837873367523
+    046b5490fba8553ce1093bca93e4ce28266deaf2c6549e1d39a91553b413aba86f4ca8bdd63ce7d96af29378226367a09c993283206801f4ecf7517519013ddb3455794ce5858b47d988d2685733e6286a586b101d3f81ce33fdc2de82ef8469fb9367d920679c573e44ddec681b3d4e427e8ad687d2b598a7405c371fe25447cb86690686a287cc7b90ac049d5b79aeb4cf2e36804cbb1fa689090258403d6971850a0f25bc45b15de5a74e59677c0476be7fd8ae02a9adeca979940b2613e7ecbf044b74f44a2d7fd345722fd2aab67fee1e04a31117bec760aebaa883e155f50e94427491d62f91ae13a47b4df4832a152b32c53b68feda1f56f0f4f26b320c7837a71da2fce224c181a31f594fe081c86b10b987e97cf27c7557d7652cf21df9aa045ac6f8b2d11250ce58b73e7ff8448a
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
@@ -523,7 +523,9 @@
 <p>ori $29, $0, 0<br>lw $29, 44($8)<br>sw $29, 72($8)</p>
 <p>ori $30, $0, 4321<br>sw $30, 88($8)<br>ori $31, $0, 0<br>lw $31, 88($8)<br>sw $31, 92($8)</p>
 <p>ori $3, $0, 1<br>ori $2, $0, 2<br>ori $1, $0, 1<br>beq $3, $2, loop1<br>beq $3, $1, loop2<br>beq $0, $0, loop3</p>
-<h2 id="loop1-sw-3-76-8-loop2-sw-2-80-8-loop3-sw-1-84-8"><a href="#loop1-sw-3-76-8-loop2-sw-2-80-8-loop3-sw-1-84-8" class="headerlink" title="loop1: sw $3, 76($8)loop2: sw $2, 80($8)loop3: sw $1, 84($8)"></a>loop1: sw $3, 76($8)<br>loop2: sw $2, 80($8)<br>loop3: sw $1, 84($8)</h2><h2 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h2><ol>
+<p>loop1: sw $3, 76($8)<br>loop2: sw $2, 80($8)<br>loop3: sw $1, 84($8)</p>
+<hr>
+<h2 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h2><ol>
 <li><p>上面我们介绍了通过 FSM 理解单周期 CPU 的基本方法。请大家指出单周期 CPU 所用到的模块中，哪些发挥状态存储功能，哪些发挥状态转移功能。</p>
 <p> 存储：IM，GRF，DM<br> 状态转移：IFU，ALU</p>
 </li>
@@ -649,35 +651,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>奶蛙游戏合集</title>
-    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
-    <content><![CDATA[<ol>
-<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
-<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
-<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
-<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
-<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
-<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
-<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
-<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
-<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
-<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
-<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
-<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
-<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
-<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
-<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
-<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
-<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
-<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
-<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
-<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
-<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
-<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>learn c++</title>
     <url>/czyyy_nlw/2026/10/21/c++/</url>
     <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
@@ -729,6 +702,93 @@
 ]]></content>
   </entry>
   <entry>
+    <title>diary1</title>
+    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="9059066263beb72a2892c2d52bdfdf186759bff7cfec15b126bc96f0e3d5c8c8"
+     data-nonce="aa87af8854d00b5652e13ff5"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    1eac560729ef24044e91d721948b6ecffbda7bcafe174cd18f29f5730df0ed3ebcceef0823ba9241197597336d93ef19b58b7e04a98e96c5481f1fb9546e273e1d53ae38ace13f27633ca17a8bf8d273e74417de9d8baaea9df69f4b97c3798a42d0dd7c97188086bb9e0fd91d0ae27a1f7fc55c84ffa56fb7294f0bfdf4e02325c9ed64e9be92144a7d7c9623537061d8cdd698cae14d1c318660cca87e90d96539ba6a11fe3fe9529c052e3143ed9ed9f679e2b359360b2d895c663ca013cf2c4e20b730d58e1351603bc89af7c5c22290a23c3d01f639d7c4bd4ae4c720f7f2e69e1817eb9a98ab9e525528fc846427f1ae9dc7ef99b646453ab9ea760e0c2c55ea101806efb7c605fd0034373c6877bf0fb41dba3bcaffbd5ec357f29e6a1825e35c63b33ab09aca0da191395b89bd7456e72c782fab3d878f4931793ff68a67127f8c8088ce952a79265aa22ff58d450c2e880d9bc952afa68d47d7b28c55b742190b293765e585299ee3082bea5cc7c05c7a84bc1fecb2a4d27a93ab0bf34e8e53a7f6b9ca4e231c967a7cbac6b8b866da23731e67b03c953cc80fd52748a423d37e509ac3193cc44c988abb7462e1b0f933b1122768a5790819736ebf14fb8f89cdaf354efedffaee948caa52f9e16932cdb7e0356d0f63c009d53a0b4e88cc0bad57ee76af2b928d5c501ecaab1cc17e137ca7b0521c38b08ae97f4cc0edd9ba84c46f108941ff2a2c9e1897d388a589954024f50ed1991c28fa91e9fbfc07e511adeceb181f7e6e296c15b332f2ff3ce5c5d28bb53fa7cd02da43cb7f7d34236b3405218afc4d534a5854a0c0c90bc122442bf2501aeb79c8d70dbc5b88266ba7da2f468a3fdfc7d1875676e60a27221b9e4db37c60449a147b2aa515926b25586e268f374982405eb8aaaf97c780b632929919560c246e67554332c864d9744dd55545ec84a6ba9b9c9c4e5d96091f53c5dc8e433d0bb8312e8613a60a97ef2e84dbb527e5a7c5d4aea2725f517f743720ff3b7d406d43f2254e4d645b9072db6a80fb599f5481cb9a99d8a2c29e3838a436071d0819b4f87b365ec5f944adc1931954ba9b6dbd007f38a5c963aa34c26393c70357276a7ade8aaf0f07869497aed34ee2339c3db93a27ad3f0ed7f528bc7d50caac76ba3d26c0435bd2d07a41530ce539becd37ffaf9be59c7b42464edde1c6364573db799828a610ffcbaaaaa4ade59273cefe595cb27e253f7cc327beff66fd5c2454f1ae0d56c0a4a380776630fc2d9070d5c8347624accc3a50cb0ab71ff6b1fba56194c3999b5276f474f6233995df803f11036946cbc519daee1e13a8a9f37dea90e769c7d3080d96e0a7ce6410444d8bd5bbfcc7d6ae3ba1bf5eaac8ce8e2b46260f203519a4a9d001db99d9ec0e7f3ea53561471cb6b4f72a8fdc175f36a3c4951455e0d79720ff47a36e920b9d085590906fed86499ef32a615a07318daf60bd0c29e0bb2fdd7301beb57c81cafaa1d930e2d0d60da294c2ed66c50fe3cbd63ca68d3aae989d54ef61205ef172cc96c4e04f2b52cee413491074ee7c92f2a42bace3129232c7bec927c98ef0a40cd2324256cf3251020b1b8086327d035200431d48a870a6b3c3d7e1d1aed9054114aeeacaf253d14d560f525be0325d817c4fe20b4b5796dad6761a5da7b367a83add906b507e63d930afdcc7948a4a70479abaebd1c8cbeae8c7cf64d7269b206a859d33c904fbaa77d711747ed195537b91287e29bc4636a319db8b7e535f5bb613231cdfa8094ef18782ef5971da74a1c1bffdd95d58834e369cdc87d7e06c8d01a893d3bb0867056d0423e8f243c6249b848632a4f28e945435680986ca4b1906817b523f823b2242bd7eb7d5a1517b0aa0f3de09084f6a6129eba1cf2b4f9cf8396154a9bb942f1cf7be91fccec4d6898f5c46ba632cbd21835d20dc5a535a87f7d0073c61850dc6373f446714fe7b9de97a3ff73f1be03240ca7e4f293ba64d328e4f9126591c7a7f6ebe8c73252ac2fd9b2d001730259c8d5a9b3c3f6cd8a497b7a307dd2f453446047c3d25b8233de1362f71c5f5ea5cbf3a4a5d4aef3b6fcd260867dcba3d739472be43bdcfe08b6e84747c8a9dd5416a9294af797d3d7424c94661509ba553490a5b57a0a5c3da1b17b9d576cc486f5ec80d347e8cfea6a589889991c1c1d8a17c7aa4bdd9e810bd12e2653e4d41877d27cc8225f1a67d1d7a3f050a2845a3df75249748bfe869012cc4f32042f951398ab33fd06f1a74b8d0565c8b41db32c514f017f8cb2900adcb0c482f00a2c51d05717084c77fb32aa5dd3be47400bf4d8a4e9f8c9332d4e673fb73700682867f182143053762b6a01b5f52dca869972e7a15a396aa3e77cbe4077de9d0bfec6d65eb05c6055ffc3c7d09ad58b0cdceb322c41ef0a668ea4fde74fc108a4c8207aed6314398cd78125a9d125b34c8f631f75590f632f836b84100d4cc587ff174d75b085398c3d7bfc392433ca95f9d38bfbf51a2b87354536a9c0af26854e18927f5ffafb719755a6778afc0e5b7fd17d28b47bfec6243351a55a39bf13a098affe1d6294873cd388e6da57ea0d510785484ced57f2782bccfa870b50a5dc7b1ba6e5afbc411f39255356de0818335fa8ce0862e2ba9dd059cc458f1f956a639523751c802ede36e8ef10b607623863c880ed9b9bc131ddb927d62f4c7c526baa5898927a85f5eb4b6ae1505bb204040f21f9196b562e782b52159733aa9ba8416f34e09038768f243d5a2b22387ba3f36747a112a23d8a662704dba84fce81feb603df1e8eb700bc24db7d0895bf98358956dd79c890fd21e5cef3ce43ce30fc0163b3943b10c067e414761f047137aee0055e9a6ee06cdbc13b7181ab527b9cc77e9ffc97fcb5bdf0d245484fbc37ad80480f13cd48664c425b58dd485361a0f2cb264aa1675ff81be61cda7e13c96febaadb8fbbf225050e38a104a3dcef29b472662d20e66c6dbb0a8efc59efdef6c7360d191f6c6afa2d66a8ad5e7b24cc693c1d670026c3183d1e2a9f367b722c362e24ff02b0fcdad154c4ff621375003d649911713384049c94416c7269b83d41ef27fd1c95601e6b36674b2e94bcfe16efa6cd5b461ea2bcb92ada89e2b2e6b8cc4fa17dfe9dd888dc1c66c380a7144e1893f705c01d5474231571572ac17eee4e9b2769e680fa1a44a20946f6799e15b39f0a844c9587552a6e752274284bd31b35bc22aa0aee92ec8633911de80c029fb6dae80debcc55698a99a35b25aded3fa2dc8979e550e582a19a8a89d42a0900055efd95cf1fa6629d3ea6c6f200f8e44c023a93351d548771311c93756f38fbf0e71cf49d5819cafbb7cebb0f86ffe83ecb0f5f19bdee9ddebde438969b541a031176bb59997504a38d99ad95d445fffd1bc3da008d43e873f63a9260da592424f6883e90fb629f70629d62e0316d6256b74477c5d4b059fce99836e4f42fbe1892684b6d0ec262c6d5227928bee961056d6e42572bfe191dac90b46881385dc7e805242470018452a3b52dbcf142b1da0a19d3b3c8a2bf266979242f24028e9b47fa3e17fd04aad3f0c5627e9de8d446719d56e6fbcc7171942a00d2086e41c566d9fd42fa3042398bb6c9cfba24a4addc4996773bd1695fe1ab8dfea64ef354c1ee718b56eb732604f6145743b33f848b8f5b1ae5ff557b710bd0998f9a4a07fc916dae42e9c621e39f102422611acfe5938568c01a79a7bcafce3116eee711444519abdde713ee67bbe4e9dab497524648e1d1a8eec7b78dd0440b391329fda3497b21a0990636b305456fefa344c69e43249d744e79002340beb67bfd2419b3938bfa31244c6492acd05be44724ffdc5daae1bab8c9f782e
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>奶蛙游戏合集</title>
+    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[<ol>
+<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
+<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
+<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
+<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
+<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
+<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
+<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
+<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
+<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
+<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
+<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
+<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
+<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
+<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
+<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
+<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
+<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
+<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
+<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
+<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
+<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
+<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>爱有万分之一甜</title>
+    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="68a7c3d941e28e37ca0e432496dbdcb30cd26b96513c247ea6e5ca5b3c07b906"
+     data-nonce="e7ebe188b73abf425aa296b0"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    f1d2e608715934b0716a001780e9156acca79f9ad6d65aa48edbd3bc6edf898d595b0ac361f4d6223b4c4fc40b5840e8ef782a68a71bc2ea41f38c78552bfe76523233437f230a4e77c5eda0b9e54385537597be2992cc037b0f0c023dd9d001a40b8bb03947b577b32a9a1808cc97e70c5c39e5df33b4c41a58d6c5e805436dfb8d9f3232ab38adf494512d62f900030f119591f86c537be743dd67e83e79e6069028438157e7347e6287c0d73be505b437a6203189850c35d786bc1e91748319b72787776a6a3710d3245d4656f96874128488b8191067b555066f40f9de1789c398c29e70c7fae526119881ed063131154dbcae102b88e94ea12474d9c2cf2113e09cc593285fef67b8d740d282b18033ac8d632ac9482ad7be08c4f188b05b2e0ea5703aa1ec03d59da8bb822676128a3669d82be80e1373e2d3ae7fd85b57bee052b3248007d7d5211ab4fb793d444647a52d3299844a108cb074a2c9e6387e2003eaef3d00c816902213e97eab656b417a8f35f6332717d91e14c38057d456b272be6825f2346ccefb8c2e7aabef793f97568fa387ec3c798b1deba1f8a1da47c799808359c679fdcd81138c640ede1cab548cb40e74077db9a2da94b99671d3150c95ad3d16b5230b36a0f124e4448c4c1a4d0306b6e57482278cad771e3ac52fbdef2778b8e374fbc8c3bc88dc3c49eb6ce84a7b641ddccad1c43eb666e7e2c81d7cff55edbd7430c535a0efbee32e817f24ce0c745bc4f9010fb513ee6767f551a14c09b55c5a6d91cbdbb89f450caa7c1fc4807fddf21190666cda848a5d0760d8240c7e655f8d40ef335a25171f8a1437eeb21da80c392c421c5dba7a6afce7a5337dcbceaba0cd1439a4f4bad812155a2c6cdc106e60d48a006ee0210b9b14e7dcf1aee146e16844ad5cfceea2b7ad9b50e363724d32560d929cb157c10206deac2d3dafe1d9f827a59f5ea7cea74901d72daebabbda9d9e54d2fe4a49f7db1eb497e357ddcd7078699ff10693393258812812fdc698e4019e43cc60c5e00838462dde99a20203e52bd153764dd5acabfb256c7623f86ce1e772d2605338861755b20565f06a6461dcd6fc24be668817e5cfe3ca8888374857747447d86a1423309a99044031373a16a273701bb8c50300941630ae9c69308fc4e35e1de707917b610ed80bb65cf2ef0b86f134b768f6369d5dd2d9bfbca3cd90ef913b15d05e45080e811ad1f7f3455e386759d65b84b5bb86be40993bc7e8599208871a0e845e9f173ad38ae46c7018f9147da1c158dc036cdf4d4b102220edd089a8041b77d929381d3f1119918e1b103351c03bdf38ff0e2d923a7f21d7fdd0b2d0371e988ef833100eb85fbfce4e5382c59d8dd0e9371978238ebc94ab9cfdc2e6576fe7a573f367bd179b58743c60a8e7c1999a44fff29c1ccb564bb703cdc57f2b18bea1b5eb9886709b71831d05112f7bacb680687a4a9f4ec2d230e7de4d42183bc3b0259fd77931b9935f6ff7661f38cc71779c58ab4b33eaff6b644199ffb6bab38e11f2c949c4c04ab226d3d93aeb5845824458e14deb43528f9cf3aa817012964f764004653dfe92a44cdec6d02653a40b90f3aef7aba98a9f4ac4263435fb7faa2aa4ef457f8bfd000feb094e2e446ee7c86ce70e21f18e126fef406236654d58eb15c9b7f867ee01dae32ea290df12ae2c8ced42750f38c573ef7bc5d21176da0bb49d57f001746d8e2e37cfeda0f9debb8ed98b6815e2cab6820b0d56989d9381d92ffc0bd0d0089900c23548e8ee69cd9a19c5e3d2ef58272ae6f52e4dc684706e9346d1a5d482a59454faf5735ff76e5cbc15ebe36d6485cfe6799f387a6d636f7ae842d0fadf7c9bb32786e4c5a389671f722260f79cb9fd3c094792fbc1216bcaa8a20b46423909693e6d3557148574128e85df66d703e766eea0572ac130b2ad51d11f9da084348d625fcf9a32e23154381400ce2ca600f6abd68f8d206c12d6a47d6e42bbff9fcc6e392ce9993ef86455f85e8a64edc6a4bab42f63f5cf5fbdefde168940fe034adeac626fc944a353153358a4f52b83637597bcf3b85b6ff625c38bb1d90dfa90cdc0e1e74636b16805b995ae38e0e2e152e1279b45b216c763216a2545fc4f2d62e62941ccf4b33c101c285bf7b795803eba9827a0d9bc022c3baee7274d66887d7515dd8624025706087386f3c05c0964829c3d454135197228dec21e06f4e3f6da15d8ae661eae17d3b15ac7c46600d8103258e18d84fbb0a54bac89e7e002cb33f5da83d32a42b24a41a5fc42a9c3547db95e9155ff3b4605ffe5867d744975b3ffb277b9e296177edce1d6ae5de717fb67dade1d69d421942c8a3827b1a1897cb60924713ab6e631c58da5a918670c92040d359fe1733272b19f75cbfb4d628905bc99ac7dcae7483929120a26786ad54497957fed90c9df8070262c289cfc6e59d14e1ea0a46121fb4b7d1d21aa2b389e62c9027ca9354dd3914b5311a6bb218f73567dc0a386adf7d07bdcde8fa37b7b76b458c8b853f116802f10dc0c0c040b11f41704cbc3be34429fc3698c05b45beb1b483e7ffbd2607d74f7970ab934a34c4a71a01cca95f79ba1dfab1cdd98ebb01110f6e30302837fca54a1d4144d798eee98f1bade7fe7daf654cd8dcf6a9efd2be51d3298e5b4b36931c6113127a29cc44243315f2c9992fe9da8c16ee8b8396bacfd81fcb4a449200f57642e054a1b248b3a5d253b8ccdb84cf696aea9be2375676a250050b1d765f0451e01858036c1697500ebade1d4c61446caa82343e61759f5bb55637b7d2200b7958ac60fc4885220830f184fc4eecf9eae40db2f1923618bdb205d30c5b3800916148aa805693d7b3c75e56040aebc6eae3ef91cd4b21d8785ae4428beadfa7a1cddb42f5eea05d1d00ae0be43f029d27efeaaf140499cc630d005cb6c3d9176400be1ee4de950e7f397c39b2040c08898267273ad4f9243cff19a08e5f9d5bdc13a
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
     <title>日常</title>
     <url>/czyyy_nlw/2026/10/24/%E7%AE%97%E6%B3%95-%E6%97%A5%E5%B8%B8/</url>
     <content><![CDATA[<hr>
@@ -747,63 +807,5 @@
 </ol>
 <hr>
 ]]></content>
-  </entry>
-  <entry>
-    <title>爱有万分之一甜</title>
-    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="77933c3f5e8f9cf511fabe0b13e5c8550c6b2199711a4f4c86ed09e86ed6109c"
-     data-nonce="a6a5dfb031776922304e98b0"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    541bf21f7ad92ed8d35b061bf133a5d3f868a5bc4f8fb1f91732a6072a676542ed0ed251a586324d3e3762475152c6673c7d2619862bce9b3517704ea0eca4c8904ad621b70b0b2d0516683e642f65682e4cb9c6c16759a2811a6872f8b1f8cf0c26289d6f096c82d3c1c33f958786ed650db5365cd788a001605d83a5665f9c91735a01eebb805d06ef2bb426e1c972105869183bd7ecb3af41529e9725e7b7fe34fa0aea6adf2f24bf5eb698dae3beb834513bb05796d9e0631867eef71d4c9f4b95622b81271c246211bbcef3e4d8abf99ddd2cedcdb331e2a42e42764717e88e5124e28641c367fd345c815571df6d3aaa07b4f590486c8eae01d14a02d846990ca1666183ac3d43e599b1b671dc3f02c3287501ab1a600494e1a0f5f467b925610dcd857231ff8641fb888b804a68c7ac5ba376106d20cb40c8223f8c1fbb2664e077da1599198a3959685facd1ef0250c33fa400f362d39f4f6389878ed81abcfa2191144589d2df9603984a3e45f174c19e695fd1f06d1bf78dc703d53b1546075e5e7ca06191b80b168f2518f4fb762976c1fde1a2709089c8de085fd3674980f87d664e84b113f98fd7e46ebd4d7d0d35e7bbe51d4e184cbafb7a9a56c411a7c20957408290aa1e74cbaf3077f2e6f86f6da4401622db2e1bf34be1129d3a537b4239346953cbb0c00eeb7f2c581d3fbbdebe23a86d51b788109de31a6bb0e2eda892cfb8b28c461d5f0dafdae2878a2b2543a4fd23be3db42f85d07fc476ceccd953da1f5eefcfbb47f773c84012c6e160c61623c149598952600e2c18b57fcfd3ceba6f7d387f16c0fd8529057668bf0336ada679285c5860301c2077bbd0c02c124c6d1849bb7701ee2804146f59b7e1fb4c5c82341edb044280e93e907b7ae1746ad721af1b350cfb16cda21f3d0b8db561b0f222325a403eee804bd0fab95b0c3645f14a904bf90c0096220d4a438fb65586e8d570e6f804ffec28da4e7f138be7c22a8ed2b3e4117d942726c6a6a0740b04446155e45b702152a0c60e0698deaaeecde831b46901dd6ab042976ac5f58b5e4430e8805b54c85dc1dbe2c69dc32eb3cc6e722b56fafa8c52116ebe9b7f4af40551e235edcca525940879885ec1f15f05e8d80eaf506fce0a2c0acf33d33e2cb7d595603f02d38c5c8962cddaad1ae99a60b198a66e2bba1b83c802f1ca07be21fb83e06695d7bf9f5db979b21a6f760796a27dccfc83f7dd53ccd1b1d40db94649c803bcad6ed70fe446c8dcd2ca501a921e76090427a2610ed0641a2fe0fa16d764f7445a53e527b08327b5b7558b80083d6fd9765be64e9c24cc66e376fd91951a2d1fc16397563dd055db95079b1e3ff938c8a521cbc55724b18ae4db44b20bc2d7821e6f85d9c9d7045a7d4359835c87df4b575a864b0161c9bbdb871de9dc43dac5bf469888364b6e8ceb2a1c3e651ca7b7c19b364e49b2209131b2d15ab5adc94ff11049f0c450ea46d370014d77e984dbb783a9694dd34feb52b04130ad9968b63be87886669e50cba6ae3eafb002bfefe46a44c3ab1cda06281e63599b5497ea403ebac2b4241080a163224201d81be09268766725292cd5f4c424192130df077c5ca375a9d324fae9d434aae645679f20f7b9af87933839f705dd38d78fefcf9aebbde22ab6c3d0945f509e6cfb94427f18386b2d06d0cce744ba18bb1f345434ffcdb167e6833c355866dd20c3fa4d67b14d4ddcaa547366070f96498ea50c9dd60ce48e03687b44f09bdcf235599a24134096259aee16d616ce037fa5d604c02048cd755caaf37abe5c56089f6edd2a8c80a6442aca4a3a9323b84c463bef1db152c6bcc6b54081fb995c393d2cbed7fa94387669a52cf4210d2f1a7ecc723f6bc0711d9b794c37f954fae49373422e93f5f9f2e16f11cc814839389e2fe07281d98538189905d7d9e227f7e596e518b2465ec7058e99dff9ffea6d64288f0ce83e7c69147f88da171d8d2ef50219e5f1144004a2b217bf964318195463b33e83d45558f687f52810108f9bf97715ea98d5b0cdb82e18f5c1f70cb582ec5ece99418da93d26d09d49366904a84cf4b8a6f1be524f571012130ef37fdd26fff0babfc160b9267ae26e03f219408371236a33294c6be3b22773cf3dd0c4cfd2c4a3d470911dd71a35a9030349bee4c666d46802472f815c4df9569ed091790d736360fb374c0caae4c194ebd56c1542802a12a5db3bc7686798d9c93f2dd9f76545d51add33f7af90589556b4a1f9c752481cf0361ea26b6049fd4c38c8ad7119ea760cdce8ab6eaef3f642d3bb62ef13edb99695c3b253ec38140f65767788daf16f70309c3fdfaeaa85819cfd018df5056ebc97650f64fc61a3f431cdac48b51847e65a926ed5716f274a5694d66485edfd3baa351b7a6e10ce38eea4d3f75a42c731544612dc348e49406c21c5991062543e3de6ecdf9d7136d650bc36c2e2df346495fde0af871ff45f4ef1f6135a74b885c302f74e5bc88c272dfa3753b12817323d8f012482eb5a1c00e4463ab5a1392178ee04a5f8fb7bc5a2b41496ba70a45f7c2877bfc36521dd0d7fa925ab63859cf0599901dcf358a868779c165e379326a8500246e44891e94d0283d334d2795b90184e3e0ee3b8ca0750d3a2fb46b050cce76cd7e28f78c08b2022a18590c55e045891be22b93c7df577daf4b30474db0e1d0719986d4ab3d8e43076fb9587d406193aa03cb1515dacbf7b7fab07dad0fa8297e17f1d6efe18c1d674a1a633b622ccd0fff13b939eb1fce941bf6c7ff80b59b39f429ed3306c2775526a4694372cee3659559735fbc37eed1dcd0f5af57e967f7b28b005c181042efdf6aa29b94a1baf242ec741f71fcb1fc9a789a9b1bc60b42e744718858c214badc7ef30a68a8a2bc42a925c2783c17b6524acf80220d0de8d093bca07e2340df23ce65121f60e312872b0058e3f974fed07ac1dba289059d9271256c36c75204dd31937d2f6
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>diary1</title>
-    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="08021ad9311f7c657aa6d1a8ad8a9b143ef885dc0b510db73e62a1faadcfcc63"
-     data-nonce="2e349d8776c574fda0a5d296"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    5010b552ad21972aa6d848638924c3674668db43764b56fe158ef073d595ca5a4cd6186cfb2979d5023b95e7a9b1ea069e0cd0b5871a6f8251eafabe3aeb785352f35583faa34b43ea1992b44242b9419c0656f2d04abb7820dbdbecda895316f80f139c287c5e2b9c8b6aba90bb6922f2a737c157a40920f7ff97253e2e90cf7f0a772707213244a3970057d7f8e85ac52c2805e6ff8617c5e6797ea3271f036b9f98e5d12e52533d40f8fc390af35955fc4861ab70fc48a623e7745563af747d42467d552032e0f183ca1b4c24108ebfe1936ca80bfc4d107f5f544c5ea1279f95cb0163749e86fe6acaae5b1aa77a45ffa239f4201394d65ddb4377c43a59ad1ea34d797f837a073cae5d97207005511cf08c24eaffe13de569f70db4f38ba4fd5ce2edd51515462ddb793463ebbd0d49d49e916e3f7bacffde098145ba18f5dbcc64dd27b978503a67e09467ac9a53552c33ab11d2c80a6400a6aef9fda2c9ed8742cd376ff9b64d17d063e2528338bb22a277c867692f457c5ea6866db18d29c6b86667cfccf8fd8367ccbc212c0beed503ef2b536399be2a4083271864079601742bc9e19e5ac273a954570c3b08cf8cd6e9a7f7af656a54d57fdb76cacadd83de50ad5a034707ca4cc3c39e40825084f460e211736cd85ce78ed38cc18fd05ec80d637dc3014829f1e278eb9884bb767bbfe5a15b4d0829d75483f920c99a8facbc4017514a76d60a054aa4469b356dcb978152880ea06fb0ee58403ff8607728419a8c51ccbe05185f2e3c17c52f812ab08568b856143bc8b8a436b065c49410fdb7fb2f29e06cb5d3d6f4ea5174ee7383bf1c21ab7b0d006d7addf19eb242416a33dbf4b9f8df8326fbd33f570dd425950be5a5ec716f3e1632a8db2eb1a9cfaa0f87de90961ab4775fd8333dac04ea7bf1d39d41e5e092dc8611e8c16b633d52e9481f667e7f9b694174ce2d1e98d69a2523d6de0edeca59139621b8547a7721009c3610dc9fcf5297a79c93064597672b3f169308c7fd9842adbf35a2f401ccdcf1926c86bd1b3922e8d06ccb89fc3ecefc3b15ed6966e5eae61cd86aa14fc2ab58c83184d4bfa44228b4ce39ad2db75f0d21bb1e0150828ea9a8537015709b628196401e4ccea0fb34038ca437da380a99372fa3ff43fc02a3e01d68b49784a9cf1c02378c51f765a35debaf63fcf88f334d9de89669b1c51e0d679081759d3ae3a44b4fcfc5b024d510234a1ab9321621577981871a8f31ace602b98c37f541744f24d4727329a338d409d20545727b041b29d286f02b4f0e992f1acae6c2909bc9ba8704694d8cf9e894abc116ea2f906c30f0adbb25a61173a6a9cdb1f91ea0296d409285a81736d0310bc1811dec1d5d487dcd607d9901a465632eb805e1fbab73a898f40a4e46040c489f9df1d6c6bfcb50d24a5de998ec23b28a0bdbca9cc82dd64ad753bac0d7a61613dfcb9b23e75055796400e93075638177610da61c90c7d0ad0b366d3f13b76c0e2cdc8c1bf2bc90025d1664acc32c3a0bf308420404bc146422abaaecceea3a1239758ed59f4d975f2fcdd4f9caa631971fc77054e21a709a6c6037e5f302d03b5c2839426a9a8652ee5bccc3db516c2ede7e0da9fd6a4b0d6ebe456f8ca74cefdcfe06659c86a803f10133e6ce933a0f6ea132a3ce450c1a50e0bf5059c183d195263f95f1f0a8d65b3a5d0c5c6d218d1d6c8d4d94e1ee78093e9f28aa0d80485e1de734a2e3dc27ea4fdff4d8fa7726b09ef1d8be69cd8d50ed124de57b1bcfe47a5ec5213aef5deeb10871a7c688db3db4f460e550b6cf2dd06adcae1ffad163e89d43c173c5a0c56bc8c579301f1c1083497b60bfda93ef7104b2c3292baa9a7055d0131499db8a6302a7f9cecd5bee561053a468bb108604f5dd7f37e7778179dfefcd059dbe6a800f018ed7ba24448ae7b21941f062c9cf2b0339ca71560df4fd20d7fff3dcf0f73f662556ade33557525b10de0277a773b00c7a8ee9ee22d1ed454c0fb9142697291a6d8721b05d646d059566e1768ec29cf108f1bbc93c8613eef5a4e2d6498461bdaa3bdc1593c303079aa6234e48c9887199c24575b48847a609ff8fcc53141af4ea1321a292797b1cf47102f2dd8fe13415b48eb3520266b8167609a8271e5c72c8f1916898d7f277d8b36496f6c8339106e287cab9c185f64d54f797c74029eebd33785bcb57335179db76dabb4b4b11c00f1909b2500f491570d1d8891eac92b076f0412478e1b4b55fee49d67a86e929ee6a1c23cc3024b6bdbf7eac06bffbcb434cb35f01ec77da39187ab5cf9462b138ef008e5beac6a42176d6944a25b388eae7e2f8cc930431ac27a240677b7153ef166e34aae0cde492030e9873436beaa7009974e7511f91461fb965e28213d599efaa95c84fceab928feda47cf7e6b5012148213da7b1dbba8fad67016dae07106e5e18578526a6909f17eb480a4279c7b3eb4924efd03f86979a4f43a992883a278875ff34da475e2418c3b3f9d7668576f8ceaab58b50e2d25c5f24cec5e2620a4d460351f621e4493c21013a2523b8df40fdd328f72d31d97be5a0d9870cab53fafb7dc6826f5f30ed33753d89bdc45279e8d7f91e835d38a48edd21f5b6045cc3b6a78477647b00303939f9b8a11b6431723f6a967f2531ad763d3edbd6fcd962434476b70e56899d1718e0a5e899c51a8529172f1216aa38016ea72b0133d17517a46ada70b212891c115192038e680f6c24cbfc01c723a88cac693b08c6f178b6ceb6f68bfc824302ee10e9728972f3e6826e99066868dcd439de3ad9cd9294b61912b304e22393dbcf1fd5625ff3ae762482db49ea5bcb6be217160594422ca32ab9d6a4ea6a69fb4783989d9d7e45c802f273dbba2244f3512753ef0870ff52234f98e759bff483c5a9a48f52d31b20e1d338532e813f94a73527bc0e74e6f6e4c8154f98b4be548958c1deb9032d99ed61a3c1c8922bd0a73b4a3617745151d4f5b24d5c82dd141745cea15a743d5930d1c22bf7ca1e757a5335a40c19288db4b78c776234198ac3575b8921bd9c9b4e5b917a99bf802ed727949d2686287a79d2c4329c072aff6a0a1e7b13c50f3c68f07da2443daf5d807cd36356847966bb2310c873444986f11dfb9fc71158bfc5cd12ba858a738bb42ce52a6bf8c0cc5358e04a892d326fcb0e4fce9e7a9c40197b93a3e6bdd71ff357769e4dd3595b6c6f00792420afcefe7db24f59bb9e200634dcb7c6ada821cf06964c311a2ed05bd62a2f0260b08e2da1dfd8c1dd947d034980f34b8a92a8eb9f1b0e218b8cfd571324c6a64dca7900c45e5d828f3cc107bf59310dc59faa613f7773d7667a41708d9aaf4c8340e4c8ba36bf4db3fa178d9223187a1e28f239cb2d8c5916b2cc428f78f8cac24769bb137569ee8ac12cb1b96c0ded20820641efa3d543756350feb7767219e495c0b93e06832fcd49392ed2d5a6126bfdad8d6621f744104e8ef0f78cbbd1d71ce3d770a768f490bf6e2e2d49855057421608678c10fa6bf7d50bb987d0787857d112d1d23988eb5361ef55d6623d54bc4705edbb0d956d6d7d4207f827d1d1dfc7823e921841bd9f09b86c166c7f3e23e3f7b9dc259d1240f9f8bd9b428ecd9f1f4fce129fbc52e4904c4354aa1f478d2107cb068db41beb32875be41bb0394fa77e59254e82be1dfd1a4b90d195e44abbe60f9328301dade5267ff231a470282772661555296d2cfd0984213b2053b573bd912d012bbc90141df548185c7694b5c8eba57922ed92de5a9e6c8732c1e48915fd3a1893496eecedf3967fb13074a9d624cb4e37d7c47cdb3b7445292f79d014e5600a5c33fa7d8a6785f1595cfcfc9bf7fc871ce7f2
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
 </search>
