@@ -1,68 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>a</title>
-    <url>/czyyy_nlw/2026/10/18/1/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="490ee0faf224ed91c82d1fb9a511e7f2851cce6c2292baf6088a2126560b770a"
-     data-nonce="98f5e0628b787b362b434c0f"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    046b5490fba8553ce1093bca93e4ce28266deaf2c6549e1d39a91553b413aba86f4ca8bdd63ce7d96af29378226367a09c993283206801f4ecf7517519013ddb3455794ce5858b47d988d2685733e6286a586b101d3f81ce33fdc2de82ef8469fb9367d920679c573e44ddec681b3d4e427e8ad687d2b598a7405c371fe25447cb86690686a287cc7b90ac049d5b79aeb4cf2e36804cbb1fa689090258403d6971850a0f25bc45b15de5a74e59677c0476be7fd8ae02a9adeca979940b2613e7ecbf044b74f44a2d7fd345722fd2aab67fee1e04a31117bec760aebaa883e155f50e94427491d62f91ae13a47b4df4832a152b32c53b68feda1f56f0f4f26b320c7837a71da2fce224c181a31f594fe081c86b10b987e97cf27c7557d7652cf21df9aa045ac6f8b2d11250ce58b73e7ff8448a
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>MIPS ?</title>
-    <url>/czyyy_nlw/2026/10/20/MIPS/</url>
-    <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
-<li>输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro input(%in)   #输入一个整数</span><br><span class="line">    li $v0, 5</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_char(%in)   #输入一个字符</span><br><span class="line">    li $v0, 12</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_str(%addr, %max_len)    #输入一个字符串</span><br><span class="line">    li $v0,8</span><br><span class="line">    la $a0, %addr</span><br><span class="line">    move $a1, %max_len</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro print(%out)  # 输出一个整数</span><br><span class="line">    li $v0, 1</span><br><span class="line">    move $a0, %out</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_char(%out) # 打印一个字符</span><br><span class="line">    li $v0, 11</span><br><span class="line">    move $a0, %out</span><br><span class="line">     syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_str(%addr) # 打印一个字符串</span><br><span class="line">    li $v0, 4</span><br><span class="line">    la $a0, %addr </span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>退出程序<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro exit()</span><br><span class="line">    li $v0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>打印换行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro println()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>打印空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro printspace()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 32</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>计算二维数组字节偏移量<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro calc_addr(%dst, %row, %col, %rank)</span><br><span class="line">    multu %row, %rank</span><br><span class="line">    mflo %dst</span><br><span class="line">    addu %dst, %dst %col</span><br><span class="line">    sll %dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>读数组元素 arr[index] -&gt; %val (用到$t9)<br>字符串：去掉sll，lw -&gt; lb<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro lw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    lw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>写数组元素 %val -&gt; arr[index] (用到$t9)<br>字符串：去掉sll，lw -&gt; lb <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro sw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    sw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
-<hr>
-</li>
-</ol>
-<h1 id="循环的写法"><a href="#循环的写法" class="headerlink" title="循环的写法"></a>循环的写法</h1><ol>
-<li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line"># 初始化</span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
-<li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line"># 初始化</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure>
-<hr>
-</li>
-</ol>
-<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><ol>
-<li><p>可分为线性递归，树形递归，循环递归</p>
-</li>
-<li><p>入栈出栈宏</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro push(%src)</span><br><span class="line">    addi $sp, $sp, -4</span><br><span class="line">    sw %src, 0($sp)</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro pop(%src)</span><br><span class="line">    lw %src, 0($sp)</span><br><span class="line">    addi $sp, $sp, 4</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li><p>写法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func:</span><br><span class="line">     # 1. 基线条件处理(停止递归)</span><br><span class="line">     beq $a0, $zero, base_case</span><br><span class="line"></span><br><span class="line">     # 2. 压栈</span><br><span class="line">     push($ra)</span><br><span class="line">     push($a0)</span><br><span class="line"> </span><br><span class="line">     # 3. 递归准备与调用</span><br><span class="line">     addi $a0, $a0, -1   # 修改参数，准备下一层的入参</span><br><span class="line">     </span><br><span class="line">     jal func    # 递归调用</span><br><span class="line"></span><br><span class="line">     move $s0, $v0   #存值（如果第二次还要调用）</span><br><span class="line"></span><br><span class="line">     # 恢复参数</span><br><span class="line"></span><br><span class="line">     # 4. 合并结果</span><br><span class="line"></span><br><span class="line">     # 5. 弹栈</span><br><span class="line">     pop($a0)</span><br><span class="line">     pop($ra)</span><br><span class="line"></span><br><span class="line"> base_case:  # 出口设置</span><br><span class="line">     xxx</span><br><span class="line">     jr $ra</span><br></pre></td></tr></table></figure>
-<hr>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>P3 设计文档</title>
     <url>/czyyy_nlw/2026/10/27/P3%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/</url>
     <content><![CDATA[<h1 id="P3-设计文档"><a href="#P3-设计文档" class="headerlink" title="P3 设计文档"></a>P3 设计文档</h1><hr>
@@ -546,6 +484,266 @@
 ]]></content>
   </entry>
   <entry>
+    <title>MIPS ?</title>
+    <url>/czyyy_nlw/2026/10/20/MIPS/</url>
+    <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
+<li>输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro input(%in)   #输入一个整数</span><br><span class="line">    li $v0, 5</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_char(%in)   #输入一个字符</span><br><span class="line">    li $v0, 12</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_str(%addr, %max_len)    #输入一个字符串</span><br><span class="line">    li $v0,8</span><br><span class="line">    la $a0, %addr</span><br><span class="line">    move $a1, %max_len</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro print(%out)  # 输出一个整数</span><br><span class="line">    li $v0, 1</span><br><span class="line">    move $a0, %out</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_char(%out) # 打印一个字符</span><br><span class="line">    li $v0, 11</span><br><span class="line">    move $a0, %out</span><br><span class="line">     syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_str(%addr) # 打印一个字符串</span><br><span class="line">    li $v0, 4</span><br><span class="line">    la $a0, %addr </span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>退出程序<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro exit()</span><br><span class="line">    li $v0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印换行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro println()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro printspace()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 32</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>计算二维数组字节偏移量<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro calc_addr(%dst, %row, %col, %rank)</span><br><span class="line">    multu %row, %rank</span><br><span class="line">    mflo %dst</span><br><span class="line">    addu %dst, %dst %col</span><br><span class="line">    sll %dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>读数组元素 arr[index] -&gt; %val (用到$t9)<br>字符串：去掉sll，lw -&gt; lb<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro lw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    lw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>写数组元素 %val -&gt; arr[index] (用到$t9)<br>字符串：去掉sll，lw -&gt; lb <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro sw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    sw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+</ol>
+<h1 id="循环的写法"><a href="#循环的写法" class="headerlink" title="循环的写法"></a>循环的写法</h1><ol>
+<li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line"># 初始化</span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
+<li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line"># 初始化</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+</ol>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><ol>
+<li><p>可分为线性递归，树形递归，循环递归</p>
+</li>
+<li><p>入栈出栈宏</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro push(%src)</span><br><span class="line">    addi $sp, $sp, -4</span><br><span class="line">    sw %src, 0($sp)</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro pop(%src)</span><br><span class="line">    lw %src, 0($sp)</span><br><span class="line">    addi $sp, $sp, 4</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li><p>写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func:</span><br><span class="line">     # 1. 基线条件处理(停止递归)</span><br><span class="line">     beq $a0, $zero, base_case</span><br><span class="line"></span><br><span class="line">     # 2. 压栈</span><br><span class="line">     push($ra)</span><br><span class="line">     push($a0)</span><br><span class="line"> </span><br><span class="line">     # 3. 递归准备与调用</span><br><span class="line">     addi $a0, $a0, -1   # 修改参数，准备下一层的入参</span><br><span class="line">     </span><br><span class="line">     jal func    # 递归调用</span><br><span class="line"></span><br><span class="line">     move $s0, $v0   #存值（如果第二次还要调用）</span><br><span class="line"></span><br><span class="line">     # 恢复参数</span><br><span class="line"></span><br><span class="line">     # 4. 合并结果</span><br><span class="line"></span><br><span class="line">     # 5. 弹栈</span><br><span class="line">     pop($a0)</span><br><span class="line">     pop($ra)</span><br><span class="line"></span><br><span class="line"> base_case:  # 出口设置</span><br><span class="line">     xxx</span><br><span class="line">     jr $ra</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>a</title>
+    <url>/czyyy_nlw/2026/10/18/1/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="b0439e14b602184ea40eb853cf13be7f3390235051764bb954b809de985cd945"
+     data-nonce="dd587b001ac568b431b777fb"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    967aefd1c3981dfc81c35f96378eb6e0b367baf6a347d9544aeb800e14666cfce375e4743ec36d57535cf8954e218f134bd66af21e29e1bcb89d49619fc5200c10061f2b45d00ecaf7c22cb19927d4b6cad59a76e41166b1f7932f5526dff51d8f8c1beafbce76caffb2ce205cdbf9e1de56b306cf0b63f2f52ab9e73e2425a9daa3544eaa819d94244cc633fb991909685392cfca4123b5a7ff44d12acf72199030db46ab6bf59a0b66690bce01dc3941d96324e403821fcaf3cb0f8ed99e587062bb2db7375e18abb47feb02624eac847a12ac0d6376d64e0b9d2a79c2fb59f5812e05ecd67a80668f92d348bc8adfafcf4d5b058e5d410ddbc660c4ac14fc8e2969e59b296b7743763bc4dd22275d12a3560eaffd4f9c7487e502e349ec44c1c824a9cb5e408784df36caf86bcd9dcbe87d
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>OOPre</title>
+    <url>/czyyy_nlw/2026/10/29/OOPre/</url>
+    <content><![CDATA[<hr>
+<h1 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h1><blockquote>
+<ol>
+<li>Java基础</li>
+<li>类与对象</li>
+<li>继承与接口</li>
+<li>错误分析</li>
+<li>容器与层次化</li>
+<li>设计模式</li>
+<li>递归下降</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><ol>
+<li>输入 Scanner<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner</span><br><span class="line"></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line"><span class="type">double</span> <span class="variable">b</span> <span class="operator">=</span> scanner.nextDouble();</span><br><span class="line"><span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> scanner.next();<span class="comment">//next以空白符为分割</span></span><br><span class="line"><span class="type">String</span> <span class="variable">d</span> <span class="operator">=</span> scanner.nextLine();<span class="comment">//nextLine以换行符为分割</span></span><br></pre></td></tr></table></figure></li>
+<li>输出 System<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println();</span><br></pre></td></tr></table></figure></li>
+<li>访问权限<br>public, protected, private</li>
+<li>static<br>用于声明类的属性和方法；静态属性可以被类的所有对象共享访问；免实例调用</li>
+<li>final<br>不可变；不可重写；不可继承</li>
+</ol>
+<hr>
+<h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><ol>
+<li>主类<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">void</span> <span class="title function_">main</span><span class="params">(String[ ] args)</span>&#123;</span><br><span class="line"><span class="comment">// 程序入口</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
+<li>构造方法<br> 与类同名；用 this. 构造</li>
+<li>get方法与set方法</li>
+</ol>
+<hr>
+<h1 id="继承与接口"><a href="#继承与接口" class="headerlink" title="继承与接口"></a>继承与接口</h1><ol>
+<li>抽象类，方法<br><code>abstract</code>，不能实例化</li>
+<li>重写<br><code>@Override</code><br>要求方法名称，参数与返回类型保持一致；重写的可见性&gt;&#x3D;父类方法</li>
+</ol>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
+<li>继承的写法<br> 使用 <code>子类 extends 父类</code></li>
+<li>访问权限<br>子类不能访问父类的private字段，需改成protected</li>
+<li>构造方法<br>可以用<code>super(...)</code>调用父类的构造方法；若显式调用，<code>super(...)</code>必须是子类构造方法的第一条语句</li>
+<li>其他方法<br>可以直接通过<code>super.</code>调用父类方法</li>
+</ol>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ol>
+<li>接口的写法<br><code>interface 接口名</code><br><code>类名 implements 接口名</code></li>
+<li>接口方法<br>隐含为<code>public abstract</code>，实现类的对应方法也必须是<code>public</code></li>
+<li><code>instanceof</code><br>检查是否是目标类型，可以用以检测是否为接口的实例</li>
+</ol>
+<hr>
+<h1 id="错误分析"><a href="#错误分析" class="headerlink" title="错误分析"></a>错误分析</h1><ol>
+<li>基本类型和引用类型<br>基本类型直接存<em>值</em>，引用类型存的是<em>引用地址</em></li>
+<li>引用赋值<br><code>Book book2 = book1</code>，两个变量引用同一个目标，相当于形成别名</li>
+<li>浅复制<br>新旧对象共享同一个内部对象</li>
+<li>深复制<br>新旧对象完全独立，互不影响；所以对容器的深复制需要遍历所有对象，逐个深复制</li>
+<li><code>==</code>与<code>equals</code><br><code>==</code>用于判断二者是否指向同一对象，也就是地址是否相同 <code>equals</code>只判断内容是否相同</li>
+<li>Scanner常见问题<blockquote>
+<p>Scanner.next() 读取下一个以空白字符分隔的内容，Scanner.nextLine() 读取当前行剩余内容。混合使用时，前一个读取操作留下的换行符可能使 nextLine() 立即返回空串。</p>
+</blockquote>
+</li>
+<li>遍历删除错误<br>不要在增强for循环中增删改变容器的状态，因为删除方法不会改变迭代器的状态，导致迭代器状态与容器状态不一致从而出错</li>
+<li>下标与substring<br>subbstring(beginIndex, endIndex)是左闭右开区间</li>
+</ol>
+<hr>
+<h1 id="容器与层次化"><a href="#容器与层次化" class="headerlink" title="容器与层次化"></a>容器与层次化</h1><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><ol>
+<li>需要 <code>import java.util.ArrayList</code>（对应）</li>
+<li>ArrayList<br>基本用法：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ArrayList</span>&lt;Potion&gt; <span class="variable">potions</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();<span class="comment">//创建</span></span><br><span class="line">potions.add(potion1);<span class="comment">//加入一个元素</span></span><br><span class="line">potions.set(<span class="number">1</span>, potion2);<span class="comment">//修改下标为1的元素</span></span><br><span class="line"><span class="type">Potion</span> <span class="variable">potion</span> <span class="operator">=</span> potions.gets(i);<span class="comment">//访问下标为i的元素</span></span><br><span class="line">potions.contains(<span class="string">&quot;A&quot;</span>);<span class="comment">//是否包含某元素</span></span><br><span class="line"><span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> potions.size();<span class="comment">//大小</span></span><br><span class="line"><span class="keyword">for</span> (Potion item : potions)&#123;</span><br><span class="line">   <span class="comment">//遍历</span></span><br><span class="line">&#125;</span><br><span class="line">potions.remove(i);<span class="comment">//删除</span></span><br><span class="line">potions.clear();<span class="comment">//清空所有</span></span><br></pre></td></tr></table></figure></li>
+<li>HashMap<br>存储无序<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashMap</span>&lt;String, Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="comment">//&lt;Key, Value&gt;</span></span><br><span class="line">items.put(item1.getId(), item1);<span class="comment">//加入，用的是*put*</span></span><br><span class="line">items.get(item1.getId());<span class="comment">//访问key值对应的value</span></span><br><span class="line">items.containsKey(item1.getId());<span class="comment">//检查是否存在key对应的映射关系</span></span><br><span class="line">items.containsValue(item2);<span class="comment">//检查是否存在value对应的映射关系</span></span><br><span class="line">items.size();</span><br><span class="line"><span class="keyword">for</span> (String key : items.keySet()) &#123; <span class="comment">// keySet 可以获取所有 key 组成的集合</span></span><br><span class="line">      </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (Item value : items.values()) &#123; <span class="comment">// values 可以获取所有 value 组成的集合</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">items.remove(item1.getId());<span class="comment">//删除一个映射关系</span></span><br><span class="line">items.remove(item2.getId(), item2);<span class="comment">//删除一个键值对；仅当该 key 当前映射到该 value 时才能删除</span></span><br></pre></td></tr></table></figure></li>
+<li>HashSet<br>本质是只保存key的HashMap<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashSet</span>&lt;Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">items.add(item1);</span><br><span class="line">items.contains(item1);</span><br><span class="line">size(); remove();</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="层次化对象管理"><a href="#层次化对象管理" class="headerlink" title="层次化对象管理"></a>层次化对象管理</h2><ol>
+<li>组合关系<br>多个对象组合形成一个更大的对象；这是一种整体与部分的关系</li>
+<li>聚合关系<br>相互独立，弱关联</li>
+</ol>
+<hr>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ol>
+<li>工厂模式<ol>
+<li>简单工厂模式<br>定义一个类（工厂）负责创建其他类的实例；由产品抽象父类Product，具体产品ProductA，工厂类Factory：public static Product create(String type)构成；</li>
+<li>工厂方法模式<br>定义一个用于创建对象的接口，让具体工厂子类决定实例化哪个产品类；构成：工厂接口 Factory，具体工厂 FactoryA</li>
+<li>抽象工厂模式<br>提供创建一组相关产品（产品族）的接口；构成：产品族，工厂接口 Factory：声明多个创建方法，具体工厂</li>
+</ol>
+</li>
+<li>观察者模式<br>被观察者Subject，需维护观察者列表，增删观察者，事件触发时发出通知；观察者Observer，提供响应方法，收到通知后响应<br>定义被观察者和观察者接口；具体实现类实现接口；</li>
+</ol>
+<hr>
+<h1 id="递归下降"><a href="#递归下降" class="headerlink" title="递归下降"></a>递归下降</h1><ol>
+<li>词法分析Lexer<br>把Expr拆成Token，一般有peek(), next()方法</li>
+<li>语法分析Parser<br>以下内容来自指导书<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">parseExpr:</span><br><span class="line"> 新建一个Term的容器T</span><br><span class="line"> 调用parseTerm获得一个项t</span><br><span class="line"> T中加上parseTerm返回的项t</span><br><span class="line"> <span class="keyword">while</span> 当前token是+:</span><br><span class="line">     跳过当前token(+)</span><br><span class="line">     调用parseTerm获得一个项t</span><br><span class="line">     T中加上parseTerm返回的项t</span><br><span class="line"> 利用T生成一个新的Expr e</span><br><span class="line"> 返回e</span><br><span class="line"></span><br><span class="line"> parseTerm:</span><br><span class="line"> 新建一个Factor的容器F</span><br><span class="line"> 调用parseFactor获得一个因子f</span><br><span class="line"> F中加上parseFactor返回的因子f</span><br><span class="line"> <span class="keyword">while</span> 当前token是*:</span><br><span class="line">     跳过当前token(*)</span><br><span class="line">     调用parseFactor获得一个因子f</span><br><span class="line">     F中加上parseFactor返回的因子f</span><br><span class="line"> 利用F生成一个新的Term t</span><br><span class="line"> 返回t</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> 跳过当前的token(i)</span><br><span class="line"> 利用i生成一个新的Factor f</span><br><span class="line"> 返回f</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> <span class="keyword">if</span> 真:</span><br><span class="line">     跳过当前的token(i)</span><br><span class="line">     利用i生成一个新的Factor f</span><br><span class="line">     返回f</span><br><span class="line"> <span class="keyword">if</span> 假，说明是(表达式):</span><br><span class="line">     跳过当前token(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">     调用parseExpr获得一个表达式e</span><br><span class="line">     利用e生成因子f</span><br><span class="line">     跳过当前token(<span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">     返回f</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<p>参考：OOpre指导书</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>奶蛙游戏合集</title>
+    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[<ol>
+<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
+<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
+<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
+<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
+<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
+<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
+<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
+<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
+<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
+<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
+<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
+<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
+<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
+<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
+<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
+<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
+<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
+<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
+<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
+<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
+<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
+<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>learn c++</title>
+    <url>/czyyy_nlw/2026/10/21/c++/</url>
+    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
+<li>格式<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> namespcae std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>输入输出<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
+<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
+<li>结构体<br>省去了typedef</li>
+</ol>
+<hr>
+<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
+<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="keyword">auto</span> p = q.<span class="built_in">begin</span>(); p != q.<span class="built_in">end</span>(); p++)<span class="comment">//这个就是迭代器</span></span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>vector</p>
+  <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  vector &lt;<span class="type">int</span>&gt; q;<span class="comment">//创建名为q的一个int型动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">a</span>(<span class="number">10</span>);<span class="comment">//创建一个长度为10的动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">b</span>(<span class="number">10</span>,<span class="number">2</span>);<span class="comment">//创建一个长度为10，元素值均为2的动态数组</span></span><br><span class="line">  q.<span class="built_in">resize</span>(<span class="number">10</span>);<span class="comment">//为q分配10个空间</span></span><br><span class="line">  q.<span class="built_in">push_back</span>(<span class="number">1</span>);<span class="comment">//往q里增加一个1</span></span><br><span class="line">  q.<span class="built_in">pop_back</span>();<span class="comment">//删掉最后一个元素</span></span><br><span class="line">  q.<span class="built_in">size</span>();<span class="comment">//元素个数</span></span><br><span class="line">  q.<span class="built_in">empty</span>();<span class="comment">//是否为空，空返回 true</span></span><br><span class="line">  q.<span class="built_in">clear</span>();<span class="comment">//清空</span></span><br><span class="line">  q.<span class="built_in">front</span>();<span class="comment">//第一个元素</span></span><br><span class="line">  q.<span class="built_in">back</span>();<span class="comment">//最后一个元素</span></span><br></pre></td></tr></table></figure></li>
+<li><p>set (会按从小到大自动排好)</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">set &lt;<span class="type">int</span>&gt; s;</span><br><span class="line">s.<span class="built_in">insert</span>(<span class="number">4</span>);</span><br><span class="line">s.<span class="built_in">find</span>(<span class="number">2</span>);  <span class="comment">//find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span></span><br><span class="line">cout &lt;&lt; (s.<span class="built_in">find</span>(<span class="number">2</span>)!=s.<span class="built_in">end</span>()) &lt;&lt; endl;</span><br><span class="line">s.<span class="built_in">erase</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>map (会按从小到大自动排序)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">map &lt;string, <span class="type">int</span>&gt; m;</span><br><span class="line">p-&gt;first <span class="comment">//键</span></span><br><span class="line">p-&gt;second <span class="comment">//值</span></span><br><span class="line">m.<span class="built_in">count</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//1，判断键是否存在</span></span><br><span class="line">m.<span class="built_in">erase</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//删除这个键</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>unordered_set, unordered_map;</p>
+</li>
+<li><p>stack</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">s.<span class="built_in">top</span>();</span><br><span class="line">s.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure></li>
+<li><p>queue</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">q.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">q.<span class="built_in">front</span>();</span><br><span class="line">q.<span class="built_in">back</span>();</span><br><span class="line">q.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure>
+<p>栈和队没有迭代器</p>
+</li>
+</ol>
+<hr>
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
+<li><p>sort</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(a, a + n);</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">rbegin</span>(), v.<span class="built_in">rend</span>());  <span class="comment">//从大到小，不用写 cmp</span></span><br></pre></td></tr></table></figure>
+<p>用cmp自定义排序顺序</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;    <span class="comment">//只能有 &gt; &lt;</span></span><br><span class="line">    <span class="keyword">return</span> x &gt; y;   <span class="comment">//从大到小排</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>cctype</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">isalpha</span>();</span><br><span class="line"><span class="built_in">islower</span>()</span><br><span class="line"><span class="built_in">isupper</span>()</span><br><span class="line"><span class="built_in">isalnum</span>()</span><br><span class="line"><span class="built_in">isspace</span>()</span><br><span class="line"><span class="built_in">tolower</span>()</span><br><span class="line"><span class="built_in">toupper</span>()</span><br></pre></td></tr></table></figure></li>
+<li><p>bitset</p>
+</li>
+<li><p>C++ 11</p>
+<ol>
+<li>auto</li>
+<li>for(int i : a), for(int &amp;i : a)</li>
+<li>to_string(),  stoi(), stod()…</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>diary1</title>
+    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="89082b0fb0ed5ed55663d0c5a59f35cfe0a66d57a71dbcb76add5430a4b3a776"
+     data-nonce="be3a4f9b36769d3a4634270c"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    793ed94b459039c921d57ea1b7d95b50e4598e45a173e3c2347ad3c190b603a5fe2a79a804a72a0d8b035cb1dcc0243cc88e736d287e2094b1e9987841ef2c50b7ef2ba48a6f56a0c91273936a01455642922ec47d441616fa8323a033aa8952e3953528780f84845d8b887e8b0359864bfefd658b02b66b9d9a123911223746453f0b87abbf7773aef094d821ac059493e0bb4c265b52a7a07092076c04a020687412f9491c0101d2fa712fdd210d1bfeee149a51f921f0336330598927ff93e7e8eadc9ae66d451b11a29e9fe081055cec3b16aacd44ef54cdf258c32b604fbbc7da0ec5bec8737f242a96d8626c185e3ab0448543c063a137213f54fd883e114744d725a083cfc3e1e439d1c0de1e9b9ac493aa411e3365bc0bf68e45ec97952440b0e31f2d6328e73c91b8c57d0bf6709186effa5d510ad39935ff30e64082992d7349013b3c403a02379ec5a59258993cda2b7be70c9fec8e19739a895606523ed3058ee6f6f443d17e7027ffa350a7617195a82d04a6bc27606b7b5556149f5a5d1914644114143e02f6ea6d247ff3663596946c89abbdf56ac4b9d2b109240d907e022a82a7e8105bb9e0e35c66b541524094045a19881a768a078e518bcdaaeeb29ca52180acd56acb5d8cdf126127de07cff5211090dc7551f1428f81af3bd4bc732582498ca3f0e5d1599a13fb3eb9bd45297683d4a5a61767e1ba5f95a89f00c7d830f7f072bc7fd6327d0fc6f4c6e0da1be548865d0cf0475b95cd5af86dd9c0b9ca41e72deda388e6a47fe1b726257601ce9533553561e1b8e94f25a8232fdbde5129c1a5d762dbd4ab5fd3f5b7cf62203a1d050ad91b367e8479204f6fada39b827441d6c6c21af52524de89d7a286474ce05d00046357e4a378836e4e9d6eae4591fb7fab20b5857b9c48e6650df4bd4a4abcd95a52f07350e1785fb74c348d47230bb99666884b87f361d94099a9b3e280908640c0137d33c1f6dcd36a9da1cb060ed6e980b8ee66641d208e9de00bad76371bf628e816558d7c3824b5efba0589049ece9fd037dc73ebe3c4fb8e483b2c822ad979281fa140db2c60743ff31c44bc6073671300d3145f19c8d23dba2082cfe4e7ac075bfcfbf9d22dea6d8b3b8bd2bb9c055fe3efe0b79a426784ca2ce3cbcd878fbfa3024e0e3ef642a10599c621550f6244eb74ee6d8701a20570497809f688a182c40afcfdfcf7541573b61ab778040411e70b6667ed3bb3977512a539c604459f7c1e048b6492283cf518722223b95d9b3192a78da25b90c01810a3ae9bcc311dc7f10f6dd70e5a01bbac4dd1549705d536b81012a306f5015df86788c4200ce7f6d4852b83838add0d701acaaff7848056181995256bc5aaabaf068b2a7509c06f91a36f60f23ce6e832a47c19ec682504361260de965241b1e899a5ea14fab525f5779868d2cf1585211bf0892bbbc786dea108939a26eb0627e594c1bc05cd1e43fae75f07f5aac7d2ab71eb0549e8889ec4529cab1f825ef82621b55ae80b077ac7d5d97006e2288882427786ffa68c3d667ff76d2709f457f48f5cc7b23ac0598e8d90b797cecc0bec66a9c1ba04cedf78c2daa5299c5647ca2035c4213f53651f1e167a22add575e1c37e5b13fcc84c9e15bcc5b4c1424cea31bdd9490c65fb3eae1b375e59b2dac756ddc17b9b1a31d26464f1640b70cebc05853535f77025cb779d7ef9dd4a4cfb3a9e6b72580222a831d3c61f47ce091f59e39214a6d7b1f87c12d58435f0f98b35975907c0f4c3699fc3d9458ac08a270881634359f86cfce8097fb21d5ff81dcedfe71515e9049dccd79da901d5b1e7f6db0c4b94c645f6fa3c251578127142c60667f16916405f99e36562bc282390eee19cd212d5e3f5fd218ac33a852282e0a4f82e9ffd9e847ad2e57d63cf90e8560247b9af57cf199cafe72e5baffb5603a0d1c3d929b8714ef9118142f57c242f69560b9218841b97533a2bac4c64e5602c12bd4d9c746c9c2c3383b926fe2b879b9df69dcf45bd0989a2f264032f766c0cdb9ac3cf442270c91925cec703d3f11fabca00cc752b6fc91418c69fec6c6ce2510450a9afe4ff41cc62745ce7c5b7a6de6f4bf2594177acb12ce86160812b9b235fbed186ec64eb653e59c43bcd0b832130ffe096e9d23ebb0fd50c8d72474b13a443157c0181caaeaa62ce053ad0ea317bd6cb9fb511f07795da2d82d83076b1cc3fb1a5a3553c4c022f64ba19de07ed559f44ed9acf3551691b2dc2a17673164ada1d7cb47d82f2d99e9944854a2b0fb73cb818a28cc5884f98402d08f3d5a7799f26d11bf84ba632fdb58245c83f6dfa3b66b23733c680b19c4b03c39379e80576d458c9476c8bd7d815730788dbc4a228f14f032543d2a45b4535faa4ee3da4eb60e027a3251dad3d9d54f6c51df8a9b7b1e79b382cf7a035de11bdadba405714a28ffeacf92427ad2c6693c86a69e1feebbe5cd172728dc21ffcbfb600a6e7f16bd077087db74a04b3c16f9c3ccbc5679c86259ca160b40352f167c7fb02787d9d7165b345d3ef57c52ddb133eaa3ba7d82a9af4d79463e1139ec3f74ad5cd25944c1a48dda3791c88ce20723b4b512a83fdfd8a49bdad0a31c831884e67851dca45595a2bdd4759078aae32fec3791825e36a91a916e4ab369d3f2afffe83696691f4b68e6320503277dbd6b2e81f2e9faf3b84f63ca4028205b5fbb50c2a26c925c1f15d9f48b0be67b7aa7b1c2c1b450cf111b08f5d094e9b77722b1dbfd0aeb47da053fdd6b02dc8f6eb689b22727f0d3e05a2201123861b80863a3ad371759fa4dfc94f843dd6011b89819e852f7619d456e391e32718c2cb8862ba26d5361352131992b53d8dfca8a141cb371d1ff4a54e3cf39f2fa255b22e86d329e542894a9274dba034f3d4bce880c277811b2472617855e6b17e9528c0d036e367148a2860ed9d7c9c7c7493a7a216dad66d66d307404568aba62d8ad13291eb95487793e88fa62751a571cf8887a86ece381f44e97cbe896425d66e233fd0f8aedbe96cf7288045fbe602633ce46c175576d0bf5ac119583afcb936e90cb0419140da7fa96849dcaf9ed2cf727f785dda6bd84da1800383c4fe9d2bb517e206eee7a81c13e308e0cce82743fe435c8efdcb4b3c08400f19a5b49b317dbbc526d6d28b52e2971a2eeffaa06895e7fd3eddee7fb459c3f454153a103786d31fe0dafd2ca7454c0969ffe39f893461883dee390839c867214120a272c8d674ad9f34f6a8650371caab416e52b26bc28e50db515dd9f30f1c82036c02f23b3911195309d675d9db2c6c77dadea5d8fb35f067a7465bce125a97a52bb6caa0ce5e54361e0c071f67dd33fa395b9b3d77d89469519e49c7d9d8d42e1c888d15400df1661fe15c4e68c245e96bb28e5a18338852cd9dd223bc0001d4a3fe9a439998590c34c3e0d5ff37d303331ea5f3f0315fab79b5f995d0336bc6d10fa7f3e5b6cc821d0e67474fbe6dec88c4bba25a4bbcbb51aee6d75cb520d40318b8fafc8fbb8c89624383df9a35f3f658c5e3b5967be224fc00b2b2c90c27a48718e7887df326ad2d362035df847d92b7ccb473e9ab257b25f3c997b6718b355e74fbd46601a32042ec845da92e0cd37eeebf21d50e7c9872c3dac75fc301890542179bc12dba28abff12272ee964cb993d09ecde160e5b070c5bef0a92d0d061027569303af16f64a256f72ed86d6a5ce88b97d1ae4c723a8eb530d287d4c82c8502f7745a7fe09c8d1f6d3c54c6608863e47438582cbb4d367da7fd558931f935a14ccf5cb47f109fb036bc14d52d4515109e33ee2d20d474c65dda12013157b34889ad3a6a22731cdd20170bd08c0b22dc980d69e04a4c4141a8
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
     <title>Learn Markdown</title>
     <url>/czyyy_nlw/2026/10/19/markdown/</url>
     <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
@@ -651,127 +849,18 @@
 ]]></content>
   </entry>
   <entry>
-    <title>learn c++</title>
-    <url>/czyyy_nlw/2026/10/21/c++/</url>
-    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
-<li>格式<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> namespcae std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>输入输出<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
-<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
-<li>结构体<br>省去了typedef</li>
-</ol>
-<hr>
-<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
-<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="keyword">auto</span> p = q.<span class="built_in">begin</span>(); p != q.<span class="built_in">end</span>(); p++)<span class="comment">//这个就是迭代器</span></span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>vector</p>
-  <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  vector &lt;<span class="type">int</span>&gt; q;<span class="comment">//创建名为q的一个int型动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">a</span>(<span class="number">10</span>);<span class="comment">//创建一个长度为10的动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">b</span>(<span class="number">10</span>,<span class="number">2</span>);<span class="comment">//创建一个长度为10，元素值均为2的动态数组</span></span><br><span class="line">  q.<span class="built_in">resize</span>(<span class="number">10</span>);<span class="comment">//为q分配10个空间</span></span><br><span class="line">  q.<span class="built_in">push_back</span>(<span class="number">1</span>);<span class="comment">//往q里增加一个1</span></span><br><span class="line">  q.<span class="built_in">pop_back</span>();<span class="comment">//删掉最后一个元素</span></span><br><span class="line">  q.<span class="built_in">size</span>();<span class="comment">//元素个数</span></span><br><span class="line">  q.<span class="built_in">empty</span>();<span class="comment">//是否为空，空返回 true</span></span><br><span class="line">  q.<span class="built_in">clear</span>();<span class="comment">//清空</span></span><br><span class="line">  q.<span class="built_in">front</span>();<span class="comment">//第一个元素</span></span><br><span class="line">  q.<span class="built_in">back</span>();<span class="comment">//最后一个元素</span></span><br></pre></td></tr></table></figure></li>
-<li><p>set (会按从小到大自动排好)</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">set &lt;<span class="type">int</span>&gt; s;</span><br><span class="line">s.<span class="built_in">insert</span>(<span class="number">4</span>);</span><br><span class="line">s.<span class="built_in">find</span>(<span class="number">2</span>);  <span class="comment">//find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span></span><br><span class="line">cout &lt;&lt; (s.<span class="built_in">find</span>(<span class="number">2</span>)!=s.<span class="built_in">end</span>()) &lt;&lt; endl;</span><br><span class="line">s.<span class="built_in">erase</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure></li>
-<li><p>map (会按从小到大自动排序)</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">map &lt;string, <span class="type">int</span>&gt; m;</span><br><span class="line">p-&gt;first <span class="comment">//键</span></span><br><span class="line">p-&gt;second <span class="comment">//值</span></span><br><span class="line">m.<span class="built_in">count</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//1，判断键是否存在</span></span><br><span class="line">m.<span class="built_in">erase</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//删除这个键</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unordered_set, unordered_map;</p>
-</li>
-<li><p>stack</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">s.<span class="built_in">top</span>();</span><br><span class="line">s.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure></li>
-<li><p>queue</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">q.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">q.<span class="built_in">front</span>();</span><br><span class="line">q.<span class="built_in">back</span>();</span><br><span class="line">q.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure>
-<p>栈和队没有迭代器</p>
-</li>
-</ol>
-<hr>
-<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
-<li><p>sort</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(a, a + n);</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">rbegin</span>(), v.<span class="built_in">rend</span>());  <span class="comment">//从大到小，不用写 cmp</span></span><br></pre></td></tr></table></figure>
-<p>用cmp自定义排序顺序</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;    <span class="comment">//只能有 &gt; &lt;</span></span><br><span class="line">    <span class="keyword">return</span> x &gt; y;   <span class="comment">//从大到小排</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>cctype</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">isalpha</span>();</span><br><span class="line"><span class="built_in">islower</span>()</span><br><span class="line"><span class="built_in">isupper</span>()</span><br><span class="line"><span class="built_in">isalnum</span>()</span><br><span class="line"><span class="built_in">isspace</span>()</span><br><span class="line"><span class="built_in">tolower</span>()</span><br><span class="line"><span class="built_in">toupper</span>()</span><br></pre></td></tr></table></figure></li>
-<li><p>bitset</p>
-</li>
-<li><p>C++ 11</p>
-<ol>
-<li>auto</li>
-<li>for(int i : a), for(int &amp;i : a)</li>
-<li>to_string(),  stoi(), stod()…</li>
-</ol>
-</li>
-</ol>
-<hr>
-<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>diary1</title>
-    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="9059066263beb72a2892c2d52bdfdf186759bff7cfec15b126bc96f0e3d5c8c8"
-     data-nonce="aa87af8854d00b5652e13ff5"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    1eac560729ef24044e91d721948b6ecffbda7bcafe174cd18f29f5730df0ed3ebcceef0823ba9241197597336d93ef19b58b7e04a98e96c5481f1fb9546e273e1d53ae38ace13f27633ca17a8bf8d273e74417de9d8baaea9df69f4b97c3798a42d0dd7c97188086bb9e0fd91d0ae27a1f7fc55c84ffa56fb7294f0bfdf4e02325c9ed64e9be92144a7d7c9623537061d8cdd698cae14d1c318660cca87e90d96539ba6a11fe3fe9529c052e3143ed9ed9f679e2b359360b2d895c663ca013cf2c4e20b730d58e1351603bc89af7c5c22290a23c3d01f639d7c4bd4ae4c720f7f2e69e1817eb9a98ab9e525528fc846427f1ae9dc7ef99b646453ab9ea760e0c2c55ea101806efb7c605fd0034373c6877bf0fb41dba3bcaffbd5ec357f29e6a1825e35c63b33ab09aca0da191395b89bd7456e72c782fab3d878f4931793ff68a67127f8c8088ce952a79265aa22ff58d450c2e880d9bc952afa68d47d7b28c55b742190b293765e585299ee3082bea5cc7c05c7a84bc1fecb2a4d27a93ab0bf34e8e53a7f6b9ca4e231c967a7cbac6b8b866da23731e67b03c953cc80fd52748a423d37e509ac3193cc44c988abb7462e1b0f933b1122768a5790819736ebf14fb8f89cdaf354efedffaee948caa52f9e16932cdb7e0356d0f63c009d53a0b4e88cc0bad57ee76af2b928d5c501ecaab1cc17e137ca7b0521c38b08ae97f4cc0edd9ba84c46f108941ff2a2c9e1897d388a589954024f50ed1991c28fa91e9fbfc07e511adeceb181f7e6e296c15b332f2ff3ce5c5d28bb53fa7cd02da43cb7f7d34236b3405218afc4d534a5854a0c0c90bc122442bf2501aeb79c8d70dbc5b88266ba7da2f468a3fdfc7d1875676e60a27221b9e4db37c60449a147b2aa515926b25586e268f374982405eb8aaaf97c780b632929919560c246e67554332c864d9744dd55545ec84a6ba9b9c9c4e5d96091f53c5dc8e433d0bb8312e8613a60a97ef2e84dbb527e5a7c5d4aea2725f517f743720ff3b7d406d43f2254e4d645b9072db6a80fb599f5481cb9a99d8a2c29e3838a436071d0819b4f87b365ec5f944adc1931954ba9b6dbd007f38a5c963aa34c26393c70357276a7ade8aaf0f07869497aed34ee2339c3db93a27ad3f0ed7f528bc7d50caac76ba3d26c0435bd2d07a41530ce539becd37ffaf9be59c7b42464edde1c6364573db799828a610ffcbaaaaa4ade59273cefe595cb27e253f7cc327beff66fd5c2454f1ae0d56c0a4a380776630fc2d9070d5c8347624accc3a50cb0ab71ff6b1fba56194c3999b5276f474f6233995df803f11036946cbc519daee1e13a8a9f37dea90e769c7d3080d96e0a7ce6410444d8bd5bbfcc7d6ae3ba1bf5eaac8ce8e2b46260f203519a4a9d001db99d9ec0e7f3ea53561471cb6b4f72a8fdc175f36a3c4951455e0d79720ff47a36e920b9d085590906fed86499ef32a615a07318daf60bd0c29e0bb2fdd7301beb57c81cafaa1d930e2d0d60da294c2ed66c50fe3cbd63ca68d3aae989d54ef61205ef172cc96c4e04f2b52cee413491074ee7c92f2a42bace3129232c7bec927c98ef0a40cd2324256cf3251020b1b8086327d035200431d48a870a6b3c3d7e1d1aed9054114aeeacaf253d14d560f525be0325d817c4fe20b4b5796dad6761a5da7b367a83add906b507e63d930afdcc7948a4a70479abaebd1c8cbeae8c7cf64d7269b206a859d33c904fbaa77d711747ed195537b91287e29bc4636a319db8b7e535f5bb613231cdfa8094ef18782ef5971da74a1c1bffdd95d58834e369cdc87d7e06c8d01a893d3bb0867056d0423e8f243c6249b848632a4f28e945435680986ca4b1906817b523f823b2242bd7eb7d5a1517b0aa0f3de09084f6a6129eba1cf2b4f9cf8396154a9bb942f1cf7be91fccec4d6898f5c46ba632cbd21835d20dc5a535a87f7d0073c61850dc6373f446714fe7b9de97a3ff73f1be03240ca7e4f293ba64d328e4f9126591c7a7f6ebe8c73252ac2fd9b2d001730259c8d5a9b3c3f6cd8a497b7a307dd2f453446047c3d25b8233de1362f71c5f5ea5cbf3a4a5d4aef3b6fcd260867dcba3d739472be43bdcfe08b6e84747c8a9dd5416a9294af797d3d7424c94661509ba553490a5b57a0a5c3da1b17b9d576cc486f5ec80d347e8cfea6a589889991c1c1d8a17c7aa4bdd9e810bd12e2653e4d41877d27cc8225f1a67d1d7a3f050a2845a3df75249748bfe869012cc4f32042f951398ab33fd06f1a74b8d0565c8b41db32c514f017f8cb2900adcb0c482f00a2c51d05717084c77fb32aa5dd3be47400bf4d8a4e9f8c9332d4e673fb73700682867f182143053762b6a01b5f52dca869972e7a15a396aa3e77cbe4077de9d0bfec6d65eb05c6055ffc3c7d09ad58b0cdceb322c41ef0a668ea4fde74fc108a4c8207aed6314398cd78125a9d125b34c8f631f75590f632f836b84100d4cc587ff174d75b085398c3d7bfc392433ca95f9d38bfbf51a2b87354536a9c0af26854e18927f5ffafb719755a6778afc0e5b7fd17d28b47bfec6243351a55a39bf13a098affe1d6294873cd388e6da57ea0d510785484ced57f2782bccfa870b50a5dc7b1ba6e5afbc411f39255356de0818335fa8ce0862e2ba9dd059cc458f1f956a639523751c802ede36e8ef10b607623863c880ed9b9bc131ddb927d62f4c7c526baa5898927a85f5eb4b6ae1505bb204040f21f9196b562e782b52159733aa9ba8416f34e09038768f243d5a2b22387ba3f36747a112a23d8a662704dba84fce81feb603df1e8eb700bc24db7d0895bf98358956dd79c890fd21e5cef3ce43ce30fc0163b3943b10c067e414761f047137aee0055e9a6ee06cdbc13b7181ab527b9cc77e9ffc97fcb5bdf0d245484fbc37ad80480f13cd48664c425b58dd485361a0f2cb264aa1675ff81be61cda7e13c96febaadb8fbbf225050e38a104a3dcef29b472662d20e66c6dbb0a8efc59efdef6c7360d191f6c6afa2d66a8ad5e7b24cc693c1d670026c3183d1e2a9f367b722c362e24ff02b0fcdad154c4ff621375003d649911713384049c94416c7269b83d41ef27fd1c95601e6b36674b2e94bcfe16efa6cd5b461ea2bcb92ada89e2b2e6b8cc4fa17dfe9dd888dc1c66c380a7144e1893f705c01d5474231571572ac17eee4e9b2769e680fa1a44a20946f6799e15b39f0a844c9587552a6e752274284bd31b35bc22aa0aee92ec8633911de80c029fb6dae80debcc55698a99a35b25aded3fa2dc8979e550e582a19a8a89d42a0900055efd95cf1fa6629d3ea6c6f200f8e44c023a93351d548771311c93756f38fbf0e71cf49d5819cafbb7cebb0f86ffe83ecb0f5f19bdee9ddebde438969b541a031176bb59997504a38d99ad95d445fffd1bc3da008d43e873f63a9260da592424f6883e90fb629f70629d62e0316d6256b74477c5d4b059fce99836e4f42fbe1892684b6d0ec262c6d5227928bee961056d6e42572bfe191dac90b46881385dc7e805242470018452a3b52dbcf142b1da0a19d3b3c8a2bf266979242f24028e9b47fa3e17fd04aad3f0c5627e9de8d446719d56e6fbcc7171942a00d2086e41c566d9fd42fa3042398bb6c9cfba24a4addc4996773bd1695fe1ab8dfea64ef354c1ee718b56eb732604f6145743b33f848b8f5b1ae5ff557b710bd0998f9a4a07fc916dae42e9c621e39f102422611acfe5938568c01a79a7bcafce3116eee711444519abdde713ee67bbe4e9dab497524648e1d1a8eec7b78dd0440b391329fda3497b21a0990636b305456fefa344c69e43249d744e79002340beb67bfd2419b3938bfa31244c6492acd05be44724ffdc5daae1bab8c9f782e
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>奶蛙游戏合集</title>
-    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
-    <content><![CDATA[<ol>
-<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
-<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
-<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
-<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
-<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
-<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
-<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
-<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
-<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
-<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
-<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
-<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
-<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
-<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
-<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
-<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
-<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
-<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
-<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
-<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
-<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
-<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>爱有万分之一甜</title>
     <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="68a7c3d941e28e37ca0e432496dbdcb30cd26b96513c247ea6e5ca5b3c07b906"
-     data-nonce="e7ebe188b73abf425aa296b0"
+     data-salt="61cfe7166a23c2b43bdb7d3b3ab245321d264a14f84963fa2f928a902069710d"
+     data-nonce="c85ee48e361b6b47cbf4cefd"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    f1d2e608715934b0716a001780e9156acca79f9ad6d65aa48edbd3bc6edf898d595b0ac361f4d6223b4c4fc40b5840e8ef782a68a71bc2ea41f38c78552bfe76523233437f230a4e77c5eda0b9e54385537597be2992cc037b0f0c023dd9d001a40b8bb03947b577b32a9a1808cc97e70c5c39e5df33b4c41a58d6c5e805436dfb8d9f3232ab38adf494512d62f900030f119591f86c537be743dd67e83e79e6069028438157e7347e6287c0d73be505b437a6203189850c35d786bc1e91748319b72787776a6a3710d3245d4656f96874128488b8191067b555066f40f9de1789c398c29e70c7fae526119881ed063131154dbcae102b88e94ea12474d9c2cf2113e09cc593285fef67b8d740d282b18033ac8d632ac9482ad7be08c4f188b05b2e0ea5703aa1ec03d59da8bb822676128a3669d82be80e1373e2d3ae7fd85b57bee052b3248007d7d5211ab4fb793d444647a52d3299844a108cb074a2c9e6387e2003eaef3d00c816902213e97eab656b417a8f35f6332717d91e14c38057d456b272be6825f2346ccefb8c2e7aabef793f97568fa387ec3c798b1deba1f8a1da47c799808359c679fdcd81138c640ede1cab548cb40e74077db9a2da94b99671d3150c95ad3d16b5230b36a0f124e4448c4c1a4d0306b6e57482278cad771e3ac52fbdef2778b8e374fbc8c3bc88dc3c49eb6ce84a7b641ddccad1c43eb666e7e2c81d7cff55edbd7430c535a0efbee32e817f24ce0c745bc4f9010fb513ee6767f551a14c09b55c5a6d91cbdbb89f450caa7c1fc4807fddf21190666cda848a5d0760d8240c7e655f8d40ef335a25171f8a1437eeb21da80c392c421c5dba7a6afce7a5337dcbceaba0cd1439a4f4bad812155a2c6cdc106e60d48a006ee0210b9b14e7dcf1aee146e16844ad5cfceea2b7ad9b50e363724d32560d929cb157c10206deac2d3dafe1d9f827a59f5ea7cea74901d72daebabbda9d9e54d2fe4a49f7db1eb497e357ddcd7078699ff10693393258812812fdc698e4019e43cc60c5e00838462dde99a20203e52bd153764dd5acabfb256c7623f86ce1e772d2605338861755b20565f06a6461dcd6fc24be668817e5cfe3ca8888374857747447d86a1423309a99044031373a16a273701bb8c50300941630ae9c69308fc4e35e1de707917b610ed80bb65cf2ef0b86f134b768f6369d5dd2d9bfbca3cd90ef913b15d05e45080e811ad1f7f3455e386759d65b84b5bb86be40993bc7e8599208871a0e845e9f173ad38ae46c7018f9147da1c158dc036cdf4d4b102220edd089a8041b77d929381d3f1119918e1b103351c03bdf38ff0e2d923a7f21d7fdd0b2d0371e988ef833100eb85fbfce4e5382c59d8dd0e9371978238ebc94ab9cfdc2e6576fe7a573f367bd179b58743c60a8e7c1999a44fff29c1ccb564bb703cdc57f2b18bea1b5eb9886709b71831d05112f7bacb680687a4a9f4ec2d230e7de4d42183bc3b0259fd77931b9935f6ff7661f38cc71779c58ab4b33eaff6b644199ffb6bab38e11f2c949c4c04ab226d3d93aeb5845824458e14deb43528f9cf3aa817012964f764004653dfe92a44cdec6d02653a40b90f3aef7aba98a9f4ac4263435fb7faa2aa4ef457f8bfd000feb094e2e446ee7c86ce70e21f18e126fef406236654d58eb15c9b7f867ee01dae32ea290df12ae2c8ced42750f38c573ef7bc5d21176da0bb49d57f001746d8e2e37cfeda0f9debb8ed98b6815e2cab6820b0d56989d9381d92ffc0bd0d0089900c23548e8ee69cd9a19c5e3d2ef58272ae6f52e4dc684706e9346d1a5d482a59454faf5735ff76e5cbc15ebe36d6485cfe6799f387a6d636f7ae842d0fadf7c9bb32786e4c5a389671f722260f79cb9fd3c094792fbc1216bcaa8a20b46423909693e6d3557148574128e85df66d703e766eea0572ac130b2ad51d11f9da084348d625fcf9a32e23154381400ce2ca600f6abd68f8d206c12d6a47d6e42bbff9fcc6e392ce9993ef86455f85e8a64edc6a4bab42f63f5cf5fbdefde168940fe034adeac626fc944a353153358a4f52b83637597bcf3b85b6ff625c38bb1d90dfa90cdc0e1e74636b16805b995ae38e0e2e152e1279b45b216c763216a2545fc4f2d62e62941ccf4b33c101c285bf7b795803eba9827a0d9bc022c3baee7274d66887d7515dd8624025706087386f3c05c0964829c3d454135197228dec21e06f4e3f6da15d8ae661eae17d3b15ac7c46600d8103258e18d84fbb0a54bac89e7e002cb33f5da83d32a42b24a41a5fc42a9c3547db95e9155ff3b4605ffe5867d744975b3ffb277b9e296177edce1d6ae5de717fb67dade1d69d421942c8a3827b1a1897cb60924713ab6e631c58da5a918670c92040d359fe1733272b19f75cbfb4d628905bc99ac7dcae7483929120a26786ad54497957fed90c9df8070262c289cfc6e59d14e1ea0a46121fb4b7d1d21aa2b389e62c9027ca9354dd3914b5311a6bb218f73567dc0a386adf7d07bdcde8fa37b7b76b458c8b853f116802f10dc0c0c040b11f41704cbc3be34429fc3698c05b45beb1b483e7ffbd2607d74f7970ab934a34c4a71a01cca95f79ba1dfab1cdd98ebb01110f6e30302837fca54a1d4144d798eee98f1bade7fe7daf654cd8dcf6a9efd2be51d3298e5b4b36931c6113127a29cc44243315f2c9992fe9da8c16ee8b8396bacfd81fcb4a449200f57642e054a1b248b3a5d253b8ccdb84cf696aea9be2375676a250050b1d765f0451e01858036c1697500ebade1d4c61446caa82343e61759f5bb55637b7d2200b7958ac60fc4885220830f184fc4eecf9eae40db2f1923618bdb205d30c5b3800916148aa805693d7b3c75e56040aebc6eae3ef91cd4b21d8785ae4428beadfa7a1cddb42f5eea05d1d00ae0be43f029d27efeaaf140499cc630d005cb6c3d9176400be1ee4de950e7f397c39b2040c08898267273ad4f9243cff19a08e5f9d5bdc13a
+    e821310b86e24fb881ac1fbe633472ff961e9d603b5fce1929b8a99a3682d06c1307e41b193eeec11184c376df627fd471748ba39e4cfadb0f409bafae8a8c213850de2dedd94f3d6c9bbf6dece2043ec8b8a2f86699d1594cc0237bb17e6db82ca983b623821c2a659291c3dd4050b37e463686627457c11de0c66569a49ad5946d6b80d74e6d4dfbac78f0ac68e2784a3bf4e46a9bd1aba1f9b5fec6b0b8a103d88a5c5237a221ea6ad90d0206e93ce5aa3504cded82ea1b479820cfeb1356ab276c2a325142a4cfbc4737f4dc1d893004942d683fe6c999ee738a99dbf7a5660a54e470e5016316a293aa4f4089eb12869c0401c7e0630e6e9796322a4487e52afa22681a837680b0b7bf53a396417df4e21b27563d7d4fddc9c3755a6a8fb462350c1f2cf2be41291c0b590828eaf0118b436e85537cedc1220b1318d408de690d06a651f4de4547c1b9040c9a07ca4292b7d37b59778e44c88f45a3ecece8bce8579463a5e96eb32a10a905044174b047bab50604b1d69dc2b53fa4e9375e6637aa7e655be816012fb847a0bd959b2e7a162764c8c13794c19d141bbd17b721b887ee8dc7335188c609a0d7f1e318bd4a73c9ef1b89f6ab0ae07ba8da0f52363d99d86e07b810483c4d27e6eec38244789a84d110b439d38c3ae5fa45aa6d9034ec162ec27714cbf2a1ddfb46bf22eb28e7a4c1179ea0fa1b56fa50af3506dea91beea81a49040a586bee23df9b091d35f6ac44176d8f296f89ad72843c13d3ec13d162a22117169bbc33445b34305c0a214de058f3dfdbe37133954a3395522ef8f5fd5005134d4e395733d890cf3d19d59ade18751600634d5ef223f3e4446ae938ba7381eaead0aa1214c9ba5fef8172bdf7866bc371c90db10920df4872fb1dcbfd9d57727d7860c178608c5d6f128924630038522f3237ae9a2198f45727be6b9f276b0cd0ba30a89cdc0d61d4b613d8de7b578ba04a47a2ff8eee156ab83162fab417dab96f1c581853ae0064968f8e97ea0cb4dfa864f93df41326365e5d8c74c7da14c246806d13f7bd934b6d87f0d14f3b4f8e4f3bf5648d1082fb754537ca4c9ee07b59480dd736570c95d9d3e22f15d18952b60c77a87189e728678158e9b91038c38cf0a62a5d4badde1817fcb8ca419bf3b2448f60e67a20d7c47efd97de5b0999bf7766a6c1a8e4d2f091ef44014a8e5115157ac68679dce3e4f048bd9137c6e3c383f657a1b9cb3c7f96bf91b55d1dec8aff8bbaaadc9148849d8b350b39eff7e03e731ea91a78b9f44b2c03195b303cef557a661f7fd123254a3af1274a17a4a5556123d9fa9e2fb29f561ad4dde2abd8bd909c3820edbf50ac9bb88256a2d4ec8cfa00b3924dc3ae82088fe6e12bb6681d7803e1bce41443a5db44c76b1f82ca78bc0f9956cf44dc303926140b80b766862ed25864f0ccfb4c3512a4b803e9835b5ab56c23ee7812a94f6a6ff9ddd4162b972182bd84c57b665f5fa19624e68280a73d90874e7e5e1cba6168d5c7f0fd23a271942fe40f55ad2d11b211f418a68d86a637b1526903441d49db78274585ba9c154fd82d5e1d83e891ee4bedaf5178e9f1c28f6949c161eaa228431b33c8f8c1b8e06752dfab519e46352230779ac997c6cc4ebd5ee741137e040802897da3efcd96e6339bfffa6e632342719e9fc99b6c941c3d192a0280742a9717ee87bbb408f81cecc35172ee0c155a4e81ec4d7c96d1253157aedbbfe01211b0961cd2e8619a1a9f68acb892ac1eb33299c5a4b3fc03bb98a2f76d7bc14175c9a52f28cbd6695d8ba2ef4d3ddaa0c80887d8eb3c744570bf4fdc2e2d124e4080db6d1f5ec261d9d234e1ed50264fe877da315999eb9747eb3a76759b669010c0c350a11de2e7948828b082fface6c3aed610055ebdb9b569f07a8fbc5a66d6462d0fd5fa957a430658b99075fd78b29223563d24f20c377a36135b4052e1633a514fa702e7fde2c22289f1138da1e3e9bc4b5d4ae8ddaa4348c1f2f549151e8254acfcc340c8a73def527b33f3ed004ddf731e9b513a8cc7e48744b79dfca659011786f2ab27da73e6fca7b1a474954543977da41e495f53088e0b661ef720d8a08bf71217d66e0b29bfd30338e3f0aee2d5b69ff911b9beadf4ce77a144b1b6487880a622ad52eff53d8773889f38618be678b0d88dac8ec7797bd2d7d58e2cf814bbc560997dd0718b40ac3c79d70678a65cc06f6aff55420d26586798cddb52f740cbf76f6d877b9534195bc605808d1a0381f89d746dd1124739805ab848f4c3fcae7700cb4df8aa631f0673dad5b78f3600bf5846afaea0ba42f67722f12407d1a30915ca7a82e08f1ff0a0d9e1c6b52109dededc3afd4fabc01dbd8a89cb7eb5270ac36a315c4349d8fcd70be38f70c90ffa6607654df6ba5fa5206a3af223e2f4cb236eabf542e2f4ea1c499c8b4e7223c3c0bfc950b676fbc56ca5863becce7a54c72be0989a8ed0a23004c1b1100bf3fa6103d07c522e2bc98435fe8dcdd6033a08262d5f78ef252113cc665bbab40e3ffb61e2fb3fc0296a71f35de3e7a4ed9bcdf9bf11efa98bc64a42d7b140fa4f35281eb87acfad69620e3bfdea6e1d06ee2cebc508b9c21f7dcc5c61dbd31c24ffdc6ba1311c66d670f89eb28707e8179ba250fba51b76e5036bdeec7fa78cd11a3e9340e3ac9da4a0ea692b4ea4b0548fe4ef577da277acdc47e2594d4156b96e7b63a1e54e16a94c26312a0b20dc71c5e045e925803cb13878564e8050c9f953f073a16391b1be3be02278ecda031a72f03747dfbcb8ac31d57e7e23cfbba8104db2e70504e125ddf1b1d796440581a0423cb911f4290877fa9db6f5e65fd27947a7689062d08feef858756ca934968cb6e420b0c2c1c0e8ab43f2fc6dbf75d92c355c484c587e11f3a7d04d943209e08e5f36236064e6d6af5d3e097a7e1c6bc724340eac5b1698a6cab45eb6bac82da3af14b824b995ba3ab84d4c7e984a1b7e6ef9f968
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
