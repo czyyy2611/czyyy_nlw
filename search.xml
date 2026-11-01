@@ -1,6 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>a</title>
+    <url>/czyyy_nlw/2026/10/18/1/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="c4cbfc69cbe484997beb646fec2d2ce98fc56b79eb037da438c41922df389e52"
+     data-nonce="76b740a890dd95b3bb76ded4"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    7629db803eb7ac7634067b9ce443357f54550d95024ee0aea98f9ae53e691ce21648a8135f29406a84d409053a79ef7018827598d0f18cc251627d57c5ad0b4e9b80df7ac2f1846a64b8c0048a5dfb3fbfb498ffa149fe974a1ea33d02f9d1e3d9cb605055e472b6312922cae13e59a24f8953a53ad2d6736a3609efbb2c5ae85e0f3b107281366fab0712c8cadd8f53d03e9205186e9716571bdee171283f7ecf8ad9b506ca3c00161fbd662baab69d67ac146ce9a2fe442428448bc7c5f972064ce769544e469aabc01fcc47e92d9eba236178f4004a4d4c9663894a4c799d0dba75db6e9bb342176d4f3d7286d7be891d183f5e366012685a39ec0a885300d1801e05420a0b95c19909fcea029d19fc9b91c84e71688bcec63ded3d46a6eab8783c7a2bbdd43a00ea74e6c5aa36766851f1
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>OOPre</title>
+    <url>/czyyy_nlw/2026/10/29/OOPre/</url>
+    <content><![CDATA[<hr>
+<h1 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h1><blockquote>
+<ol>
+<li>Java基础</li>
+<li>类与对象</li>
+<li>继承与接口</li>
+<li>错误分析</li>
+<li>容器与层次化</li>
+<li>设计模式</li>
+<li>递归下降</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><ol>
+<li>输入 Scanner<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner</span><br><span class="line"></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line"><span class="type">double</span> <span class="variable">b</span> <span class="operator">=</span> scanner.nextDouble();</span><br><span class="line"><span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> scanner.next();<span class="comment">//next以空白符为分割</span></span><br><span class="line"><span class="type">String</span> <span class="variable">d</span> <span class="operator">=</span> scanner.nextLine();<span class="comment">//nextLine以换行符为分割</span></span><br></pre></td></tr></table></figure></li>
+<li>输出 System<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println();</span><br></pre></td></tr></table></figure></li>
+<li>访问权限<br>public, protected, private</li>
+<li>static<br>用于声明类的属性和方法；静态属性可以被类的所有对象共享访问；免实例调用</li>
+<li>final<br>不可变；不可重写；不可继承</li>
+</ol>
+<hr>
+<h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><ol>
+<li>主类<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">void</span> <span class="title function_">main</span><span class="params">(String[ ] args)</span>&#123;</span><br><span class="line"><span class="comment">// 程序入口</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
+<li>构造方法<br> 与类同名；用 this. 构造</li>
+<li>get方法与set方法</li>
+</ol>
+<hr>
+<h1 id="继承与接口"><a href="#继承与接口" class="headerlink" title="继承与接口"></a>继承与接口</h1><ol>
+<li>抽象类，方法<br><code>abstract</code>，不能实例化</li>
+<li>重写<br><code>@Override</code><br>要求方法名称，参数与返回类型保持一致；重写的可见性&gt;&#x3D;父类方法</li>
+</ol>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
+<li>继承的写法<br> 使用 <code>子类 extends 父类</code></li>
+<li>访问权限<br>子类不能访问父类的private字段，需改成protected</li>
+<li>构造方法<br>可以用<code>super(...)</code>调用父类的构造方法；若显式调用，<code>super(...)</code>必须是子类构造方法的第一条语句</li>
+<li>其他方法<br>可以直接通过<code>super.</code>调用父类方法</li>
+</ol>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ol>
+<li>接口的写法<br><code>interface 接口名</code><br><code>类名 implements 接口名</code></li>
+<li>接口方法<br>隐含为<code>public abstract</code>，实现类的对应方法也必须是<code>public</code></li>
+<li><code>instanceof</code><br>检查是否是目标类型，可以用以检测是否为接口的实例</li>
+</ol>
+<hr>
+<h1 id="错误分析"><a href="#错误分析" class="headerlink" title="错误分析"></a>错误分析</h1><ol>
+<li>基本类型和引用类型<br>基本类型直接存<em>值</em>，引用类型存的是<em>引用地址</em></li>
+<li>引用赋值<br><code>Book book2 = book1</code>，两个变量引用同一个目标，相当于形成别名</li>
+<li>浅复制<br>新旧对象共享同一个内部对象</li>
+<li>深复制<br>新旧对象完全独立，互不影响；所以对容器的深复制需要遍历所有对象，逐个深复制</li>
+<li><code>==</code>与<code>equals</code><br><code>==</code>用于判断二者是否指向同一对象，也就是地址是否相同 <code>equals</code>只判断内容是否相同</li>
+<li>Scanner常见问题<blockquote>
+<p>Scanner.next() 读取下一个以空白字符分隔的内容，Scanner.nextLine() 读取当前行剩余内容。混合使用时，前一个读取操作留下的换行符可能使 nextLine() 立即返回空串。</p>
+</blockquote>
+</li>
+<li>遍历删除错误<br>不要在增强for循环中增删改变容器的状态，因为删除方法不会改变迭代器的状态，导致迭代器状态与容器状态不一致从而出错</li>
+<li>下标与substring<br>subbstring(beginIndex, endIndex)是左闭右开区间</li>
+</ol>
+<hr>
+<h1 id="容器与层次化"><a href="#容器与层次化" class="headerlink" title="容器与层次化"></a>容器与层次化</h1><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><ol>
+<li>需要 <code>import java.util.ArrayList</code>（对应）</li>
+<li>ArrayList<br>基本用法：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ArrayList</span>&lt;Potion&gt; <span class="variable">potions</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();<span class="comment">//创建</span></span><br><span class="line">potions.add(potion1);<span class="comment">//加入一个元素</span></span><br><span class="line">potions.set(<span class="number">1</span>, potion2);<span class="comment">//修改下标为1的元素</span></span><br><span class="line"><span class="type">Potion</span> <span class="variable">potion</span> <span class="operator">=</span> potions.gets(i);<span class="comment">//访问下标为i的元素</span></span><br><span class="line">potions.contains(<span class="string">&quot;A&quot;</span>);<span class="comment">//是否包含某元素</span></span><br><span class="line"><span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> potions.size();<span class="comment">//大小</span></span><br><span class="line"><span class="keyword">for</span> (Potion item : potions)&#123;</span><br><span class="line">   <span class="comment">//遍历</span></span><br><span class="line">&#125;</span><br><span class="line">potions.remove(i);<span class="comment">//删除</span></span><br><span class="line">potions.clear();<span class="comment">//清空所有</span></span><br></pre></td></tr></table></figure></li>
+<li>HashMap<br>存储无序<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashMap</span>&lt;String, Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="comment">//&lt;Key, Value&gt;</span></span><br><span class="line">items.put(item1.getId(), item1);<span class="comment">//加入，用的是*put*</span></span><br><span class="line">items.get(item1.getId());<span class="comment">//访问key值对应的value</span></span><br><span class="line">items.containsKey(item1.getId());<span class="comment">//检查是否存在key对应的映射关系</span></span><br><span class="line">items.containsValue(item2);<span class="comment">//检查是否存在value对应的映射关系</span></span><br><span class="line">items.size();</span><br><span class="line"><span class="keyword">for</span> (String key : items.keySet()) &#123; <span class="comment">// keySet 可以获取所有 key 组成的集合</span></span><br><span class="line">      </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (Item value : items.values()) &#123; <span class="comment">// values 可以获取所有 value 组成的集合</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">items.remove(item1.getId());<span class="comment">//删除一个映射关系</span></span><br><span class="line">items.remove(item2.getId(), item2);<span class="comment">//删除一个键值对；仅当该 key 当前映射到该 value 时才能删除</span></span><br></pre></td></tr></table></figure></li>
+<li>HashSet<br>本质是只保存key的HashMap<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashSet</span>&lt;Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">items.add(item1);</span><br><span class="line">items.contains(item1);</span><br><span class="line">size(); remove();</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="层次化对象管理"><a href="#层次化对象管理" class="headerlink" title="层次化对象管理"></a>层次化对象管理</h2><ol>
+<li>组合关系<br>多个对象组合形成一个更大的对象；这是一种整体与部分的关系</li>
+<li>聚合关系<br>相互独立，弱关联</li>
+</ol>
+<hr>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ol>
+<li>工厂模式<ol>
+<li>简单工厂模式<br>定义一个类（工厂）负责创建其他类的实例；由产品抽象父类Product，具体产品ProductA，工厂类Factory：public static Product create(String type)构成；</li>
+<li>工厂方法模式<br>定义一个用于创建对象的接口，让具体工厂子类决定实例化哪个产品类；构成：工厂接口 Factory，具体工厂 FactoryA</li>
+<li>抽象工厂模式<br>提供创建一组相关产品（产品族）的接口；构成：产品族，工厂接口 Factory：声明多个创建方法，具体工厂</li>
+</ol>
+</li>
+<li>观察者模式<br>被观察者Subject，需维护观察者列表，增删观察者，事件触发时发出通知；观察者Observer，提供响应方法，收到通知后响应<br>定义被观察者和观察者接口；具体实现类实现接口；</li>
+</ol>
+<hr>
+<h1 id="递归下降"><a href="#递归下降" class="headerlink" title="递归下降"></a>递归下降</h1><ol>
+<li>词法分析Lexer<br>把Expr拆成Token，一般有peek(), next()方法</li>
+<li>语法分析Parser<br>以下内容来自指导书<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">parseExpr:</span><br><span class="line"> 新建一个Term的容器T</span><br><span class="line"> 调用parseTerm获得一个项t</span><br><span class="line"> T中加上parseTerm返回的项t</span><br><span class="line"> <span class="keyword">while</span> 当前token是+:</span><br><span class="line">     跳过当前token(+)</span><br><span class="line">     调用parseTerm获得一个项t</span><br><span class="line">     T中加上parseTerm返回的项t</span><br><span class="line"> 利用T生成一个新的Expr e</span><br><span class="line"> 返回e</span><br><span class="line"></span><br><span class="line"> parseTerm:</span><br><span class="line"> 新建一个Factor的容器F</span><br><span class="line"> 调用parseFactor获得一个因子f</span><br><span class="line"> F中加上parseFactor返回的因子f</span><br><span class="line"> <span class="keyword">while</span> 当前token是*:</span><br><span class="line">     跳过当前token(*)</span><br><span class="line">     调用parseFactor获得一个因子f</span><br><span class="line">     F中加上parseFactor返回的因子f</span><br><span class="line"> 利用F生成一个新的Term t</span><br><span class="line"> 返回t</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> 跳过当前的token(i)</span><br><span class="line"> 利用i生成一个新的Factor f</span><br><span class="line"> 返回f</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> <span class="keyword">if</span> 真:</span><br><span class="line">     跳过当前的token(i)</span><br><span class="line">     利用i生成一个新的Factor f</span><br><span class="line">     返回f</span><br><span class="line"> <span class="keyword">if</span> 假，说明是(表达式):</span><br><span class="line">     跳过当前token(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">     调用parseExpr获得一个表达式e</span><br><span class="line">     利用e生成因子f</span><br><span class="line">     跳过当前token(<span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">     返回f</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<p>参考：OOpre指导书</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>learn c++</title>
+    <url>/czyyy_nlw/2026/10/21/c++/</url>
+    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
+<li>格式<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> namespcae std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>输入输出<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
+<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
+<li>结构体<br>省去了typedef</li>
+</ol>
+<hr>
+<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
+<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="keyword">auto</span> p = q.<span class="built_in">begin</span>(); p != q.<span class="built_in">end</span>(); p++)<span class="comment">//这个就是迭代器</span></span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>vector</p>
+  <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  vector &lt;<span class="type">int</span>&gt; q;<span class="comment">//创建名为q的一个int型动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">a</span>(<span class="number">10</span>);<span class="comment">//创建一个长度为10的动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">b</span>(<span class="number">10</span>,<span class="number">2</span>);<span class="comment">//创建一个长度为10，元素值均为2的动态数组</span></span><br><span class="line">  q.<span class="built_in">resize</span>(<span class="number">10</span>);<span class="comment">//为q分配10个空间</span></span><br><span class="line">  q.<span class="built_in">push_back</span>(<span class="number">1</span>);<span class="comment">//往q里增加一个1</span></span><br><span class="line">  q.<span class="built_in">pop_back</span>();<span class="comment">//删掉最后一个元素</span></span><br><span class="line">  q.<span class="built_in">size</span>();<span class="comment">//元素个数</span></span><br><span class="line">  q.<span class="built_in">empty</span>();<span class="comment">//是否为空，空返回 true</span></span><br><span class="line">  q.<span class="built_in">clear</span>();<span class="comment">//清空</span></span><br><span class="line">  q.<span class="built_in">front</span>();<span class="comment">//第一个元素</span></span><br><span class="line">  q.<span class="built_in">back</span>();<span class="comment">//最后一个元素</span></span><br></pre></td></tr></table></figure></li>
+<li><p>set (会按从小到大自动排好)</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">set &lt;<span class="type">int</span>&gt; s;</span><br><span class="line">s.<span class="built_in">insert</span>(<span class="number">4</span>);</span><br><span class="line">s.<span class="built_in">find</span>(<span class="number">2</span>);  <span class="comment">//find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span></span><br><span class="line">cout &lt;&lt; (s.<span class="built_in">find</span>(<span class="number">2</span>)!=s.<span class="built_in">end</span>()) &lt;&lt; endl;</span><br><span class="line">s.<span class="built_in">erase</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>map (会按从小到大自动排序)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">map &lt;string, <span class="type">int</span>&gt; m;</span><br><span class="line">p-&gt;first <span class="comment">//键</span></span><br><span class="line">p-&gt;second <span class="comment">//值</span></span><br><span class="line">m.<span class="built_in">count</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//1，判断键是否存在</span></span><br><span class="line">m.<span class="built_in">erase</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//删除这个键</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>unordered_set, unordered_map;</p>
+</li>
+<li><p>stack</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">s.<span class="built_in">top</span>();</span><br><span class="line">s.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure></li>
+<li><p>queue</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">q.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">q.<span class="built_in">front</span>();</span><br><span class="line">q.<span class="built_in">back</span>();</span><br><span class="line">q.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure>
+<p>栈和队没有迭代器</p>
+</li>
+</ol>
+<hr>
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
+<li><p>sort</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(a, a + n);</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">rbegin</span>(), v.<span class="built_in">rend</span>());  <span class="comment">//从大到小，不用写 cmp</span></span><br></pre></td></tr></table></figure>
+<p>用cmp自定义排序顺序</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;    <span class="comment">//只能有 &gt; &lt;</span></span><br><span class="line">    <span class="keyword">return</span> x &gt; y;   <span class="comment">//从大到小排</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>cctype</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">isalpha</span>();</span><br><span class="line"><span class="built_in">islower</span>()</span><br><span class="line"><span class="built_in">isupper</span>()</span><br><span class="line"><span class="built_in">isalnum</span>()</span><br><span class="line"><span class="built_in">isspace</span>()</span><br><span class="line"><span class="built_in">tolower</span>()</span><br><span class="line"><span class="built_in">toupper</span>()</span><br></pre></td></tr></table></figure></li>
+<li><p>bitset</p>
+</li>
+<li><p>C++ 11</p>
+<ol>
+<li>auto</li>
+<li>for(int i : a), for(int &amp;i : a)</li>
+<li>to_string(),  stoi(), stod()…</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
+]]></content>
+  </entry>
+  <entry>
     <title>MIPS ?</title>
     <url>/czyyy_nlw/2026/10/20/MIPS/</url>
     <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
@@ -32,35 +201,6 @@
 </li>
 </ol>
 ]]></content>
-  </entry>
-  <entry>
-    <title>a</title>
-    <url>/czyyy_nlw/2026/10/18/1/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="00f8aee496ea3411463a01459bc1717241fd97c1cb684c7ac93ebd20aae2416b"
-     data-nonce="f5c4fd80f77274feabde1049"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    0bcbfa77165ac49d1d29458a575192182c150192e57dcbe69761a89e2b8a067467c8ddf409db604b2d1a99e4fd231ed31242281029c98bd855e9d80386ecfbf37bae0782f7e66d30d885b93aea710738173d8855ea8cacb48db2ed14b5f9fefd378f4a467f985ea2e88814f92cbc6a7c134d812740073fa31942ffca0043627928cb2e162ead9a2e9866d8f9b4b7fb2d93c585686fb98915336eb9a3a252e96bc4b892b0f2af1a677383ff59a9b1093fdc1b20dfd6a1a58d95d63f0f802fb4785eb9f7f60bbee8e8413e6ddf3dcd4c3ff5c339e3d593fa7b11a33e33a59e4d19b1d7afa9ccc04a660a9430d25238e452617b40a1710540378bfd07dc40075dcbda1d9f0f420b8010cec8868cb34937a9ddb3f34d03f4dc060a7978c46db96d1d7ebb67a3f803b2c551ecf36932a02acc8abf36
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
     <title>P3 设计文档</title>
@@ -645,57 +785,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>learn c++</title>
-    <url>/czyyy_nlw/2026/10/21/c++/</url>
-    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
-<li>格式<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> namespcae std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>输入输出<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
-<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
-<li>结构体<br>省去了typedef</li>
-</ol>
-<hr>
-<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
-<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="keyword">auto</span> p = q.<span class="built_in">begin</span>(); p != q.<span class="built_in">end</span>(); p++)<span class="comment">//这个就是迭代器</span></span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>vector</p>
-  <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  vector &lt;<span class="type">int</span>&gt; q;<span class="comment">//创建名为q的一个int型动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">a</span>(<span class="number">10</span>);<span class="comment">//创建一个长度为10的动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">b</span>(<span class="number">10</span>,<span class="number">2</span>);<span class="comment">//创建一个长度为10，元素值均为2的动态数组</span></span><br><span class="line">  q.<span class="built_in">resize</span>(<span class="number">10</span>);<span class="comment">//为q分配10个空间</span></span><br><span class="line">  q.<span class="built_in">push_back</span>(<span class="number">1</span>);<span class="comment">//往q里增加一个1</span></span><br><span class="line">  q.<span class="built_in">pop_back</span>();<span class="comment">//删掉最后一个元素</span></span><br><span class="line">  q.<span class="built_in">size</span>();<span class="comment">//元素个数</span></span><br><span class="line">  q.<span class="built_in">empty</span>();<span class="comment">//是否为空，空返回 true</span></span><br><span class="line">  q.<span class="built_in">clear</span>();<span class="comment">//清空</span></span><br><span class="line">  q.<span class="built_in">front</span>();<span class="comment">//第一个元素</span></span><br><span class="line">  q.<span class="built_in">back</span>();<span class="comment">//最后一个元素</span></span><br></pre></td></tr></table></figure></li>
-<li><p>set (会按从小到大自动排好)</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">set &lt;<span class="type">int</span>&gt; s;</span><br><span class="line">s.<span class="built_in">insert</span>(<span class="number">4</span>);</span><br><span class="line">s.<span class="built_in">find</span>(<span class="number">2</span>);  <span class="comment">//find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span></span><br><span class="line">cout &lt;&lt; (s.<span class="built_in">find</span>(<span class="number">2</span>)!=s.<span class="built_in">end</span>()) &lt;&lt; endl;</span><br><span class="line">s.<span class="built_in">erase</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure></li>
-<li><p>map (会按从小到大自动排序)</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">map &lt;string, <span class="type">int</span>&gt; m;</span><br><span class="line">p-&gt;first <span class="comment">//键</span></span><br><span class="line">p-&gt;second <span class="comment">//值</span></span><br><span class="line">m.<span class="built_in">count</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//1，判断键是否存在</span></span><br><span class="line">m.<span class="built_in">erase</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//删除这个键</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unordered_set, unordered_map;</p>
-</li>
-<li><p>stack</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">s.<span class="built_in">top</span>();</span><br><span class="line">s.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure></li>
-<li><p>queue</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">q.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">q.<span class="built_in">front</span>();</span><br><span class="line">q.<span class="built_in">back</span>();</span><br><span class="line">q.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure>
-<p>栈和队没有迭代器</p>
-</li>
-</ol>
-<hr>
-<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
-<li><p>sort</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(a, a + n);</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">rbegin</span>(), v.<span class="built_in">rend</span>());  <span class="comment">//从大到小，不用写 cmp</span></span><br></pre></td></tr></table></figure>
-<p>用cmp自定义排序顺序</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;    <span class="comment">//只能有 &gt; &lt;</span></span><br><span class="line">    <span class="keyword">return</span> x &gt; y;   <span class="comment">//从大到小排</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>cctype</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">isalpha</span>();</span><br><span class="line"><span class="built_in">islower</span>()</span><br><span class="line"><span class="built_in">isupper</span>()</span><br><span class="line"><span class="built_in">isalnum</span>()</span><br><span class="line"><span class="built_in">isspace</span>()</span><br><span class="line"><span class="built_in">tolower</span>()</span><br><span class="line"><span class="built_in">toupper</span>()</span><br></pre></td></tr></table></figure></li>
-<li><p>bitset</p>
-</li>
-<li><p>C++ 11</p>
-<ol>
-<li>auto</li>
-<li>for(int i : a), for(int &amp;i : a)</li>
-<li>to_string(),  stoi(), stod()…</li>
-</ol>
-</li>
-</ol>
-<hr>
-<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
-]]></content>
-  </entry>
-  <entry>
     <title>Learn Markdown</title>
     <url>/czyyy_nlw/2026/10/19/markdown/</url>
     <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
@@ -801,93 +890,33 @@
 ]]></content>
   </entry>
   <entry>
-    <title>OOPre</title>
-    <url>/czyyy_nlw/2026/10/29/OOPre/</url>
-    <content><![CDATA[<hr>
-<h1 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h1><blockquote>
-<ol>
-<li>Java基础</li>
-<li>类与对象</li>
-<li>继承与接口</li>
-<li>错误分析</li>
-<li>容器与层次化</li>
-<li>设计模式</li>
-<li>递归下降</li>
-</ol>
-</blockquote>
-<hr>
-<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><ol>
-<li>输入 Scanner<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner</span><br><span class="line"></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line"><span class="type">double</span> <span class="variable">b</span> <span class="operator">=</span> scanner.nextDouble();</span><br><span class="line"><span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> scanner.next();<span class="comment">//next以空白符为分割</span></span><br><span class="line"><span class="type">String</span> <span class="variable">d</span> <span class="operator">=</span> scanner.nextLine();<span class="comment">//nextLine以换行符为分割</span></span><br></pre></td></tr></table></figure></li>
-<li>输出 System<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println();</span><br></pre></td></tr></table></figure></li>
-<li>访问权限<br>public, protected, private</li>
-<li>static<br>用于声明类的属性和方法；静态属性可以被类的所有对象共享访问；免实例调用</li>
-<li>final<br>不可变；不可重写；不可继承</li>
-</ol>
-<hr>
-<h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><ol>
-<li>主类<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">void</span> <span class="title function_">main</span><span class="params">(String[ ] args)</span>&#123;</span><br><span class="line"><span class="comment">// 程序入口</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
-<li>构造方法<br> 与类同名；用 this. 构造</li>
-<li>get方法与set方法</li>
-</ol>
-<hr>
-<h1 id="继承与接口"><a href="#继承与接口" class="headerlink" title="继承与接口"></a>继承与接口</h1><ol>
-<li>抽象类，方法<br><code>abstract</code>，不能实例化</li>
-<li>重写<br><code>@Override</code><br>要求方法名称，参数与返回类型保持一致；重写的可见性&gt;&#x3D;父类方法</li>
-</ol>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
-<li>继承的写法<br> 使用 <code>子类 extends 父类</code></li>
-<li>访问权限<br>子类不能访问父类的private字段，需改成protected</li>
-<li>构造方法<br>可以用<code>super(...)</code>调用父类的构造方法；若显式调用，<code>super(...)</code>必须是子类构造方法的第一条语句</li>
-<li>其他方法<br>可以直接通过<code>super.</code>调用父类方法</li>
-</ol>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ol>
-<li>接口的写法<br><code>interface 接口名</code><br><code>类名 implements 接口名</code></li>
-<li>接口方法<br>隐含为<code>public abstract</code>，实现类的对应方法也必须是<code>public</code></li>
-<li><code>instanceof</code><br>检查是否是目标类型，可以用以检测是否为接口的实例</li>
-</ol>
-<hr>
-<h1 id="错误分析"><a href="#错误分析" class="headerlink" title="错误分析"></a>错误分析</h1><ol>
-<li>基本类型和引用类型<br>基本类型直接存<em>值</em>，引用类型存的是<em>引用地址</em></li>
-<li>引用赋值<br><code>Book book2 = book1</code>，两个变量引用同一个目标，相当于形成别名</li>
-<li>浅复制<br>新旧对象共享同一个内部对象</li>
-<li>深复制<br>新旧对象完全独立，互不影响；所以对容器的深复制需要遍历所有对象，逐个深复制</li>
-<li><code>==</code>与<code>equals</code><br><code>==</code>用于判断二者是否指向同一对象，也就是地址是否相同 <code>equals</code>只判断内容是否相同</li>
-<li>Scanner常见问题<blockquote>
-<p>Scanner.next() 读取下一个以空白字符分隔的内容，Scanner.nextLine() 读取当前行剩余内容。混合使用时，前一个读取操作留下的换行符可能使 nextLine() 立即返回空串。</p>
-</blockquote>
-</li>
-<li>遍历删除错误<br>不要在增强for循环中增删改变容器的状态，因为删除方法不会改变迭代器的状态，导致迭代器状态与容器状态不一致从而出错</li>
-<li>下标与substring<br>subbstring(beginIndex, endIndex)是左闭右开区间</li>
-</ol>
-<hr>
-<h1 id="容器与层次化"><a href="#容器与层次化" class="headerlink" title="容器与层次化"></a>容器与层次化</h1><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><ol>
-<li>需要 <code>import java.util.ArrayList</code>（对应）</li>
-<li>ArrayList<br>基本用法：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ArrayList</span>&lt;Potion&gt; <span class="variable">potions</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();<span class="comment">//创建</span></span><br><span class="line">potions.add(potion1);<span class="comment">//加入一个元素</span></span><br><span class="line">potions.set(<span class="number">1</span>, potion2);<span class="comment">//修改下标为1的元素</span></span><br><span class="line"><span class="type">Potion</span> <span class="variable">potion</span> <span class="operator">=</span> potions.gets(i);<span class="comment">//访问下标为i的元素</span></span><br><span class="line">potions.contains(<span class="string">&quot;A&quot;</span>);<span class="comment">//是否包含某元素</span></span><br><span class="line"><span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> potions.size();<span class="comment">//大小</span></span><br><span class="line"><span class="keyword">for</span> (Potion item : potions)&#123;</span><br><span class="line">   <span class="comment">//遍历</span></span><br><span class="line">&#125;</span><br><span class="line">potions.remove(i);<span class="comment">//删除</span></span><br><span class="line">potions.clear();<span class="comment">//清空所有</span></span><br></pre></td></tr></table></figure></li>
-<li>HashMap<br>存储无序<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashMap</span>&lt;String, Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="comment">//&lt;Key, Value&gt;</span></span><br><span class="line">items.put(item1.getId(), item1);<span class="comment">//加入，用的是*put*</span></span><br><span class="line">items.get(item1.getId());<span class="comment">//访问key值对应的value</span></span><br><span class="line">items.containsKey(item1.getId());<span class="comment">//检查是否存在key对应的映射关系</span></span><br><span class="line">items.containsValue(item2);<span class="comment">//检查是否存在value对应的映射关系</span></span><br><span class="line">items.size();</span><br><span class="line"><span class="keyword">for</span> (String key : items.keySet()) &#123; <span class="comment">// keySet 可以获取所有 key 组成的集合</span></span><br><span class="line">      </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (Item value : items.values()) &#123; <span class="comment">// values 可以获取所有 value 组成的集合</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">items.remove(item1.getId());<span class="comment">//删除一个映射关系</span></span><br><span class="line">items.remove(item2.getId(), item2);<span class="comment">//删除一个键值对；仅当该 key 当前映射到该 value 时才能删除</span></span><br></pre></td></tr></table></figure></li>
-<li>HashSet<br>本质是只保存key的HashMap<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashSet</span>&lt;Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">items.add(item1);</span><br><span class="line">items.contains(item1);</span><br><span class="line">size(); remove();</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="层次化对象管理"><a href="#层次化对象管理" class="headerlink" title="层次化对象管理"></a>层次化对象管理</h2><ol>
-<li>组合关系<br>多个对象组合形成一个更大的对象；这是一种整体与部分的关系</li>
-<li>聚合关系<br>相互独立，弱关联</li>
-</ol>
-<hr>
-<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ol>
-<li>工厂模式<ol>
-<li>简单工厂模式<br>定义一个类（工厂）负责创建其他类的实例；由产品抽象父类Product，具体产品ProductA，工厂类Factory：public static Product create(String type)构成；</li>
-<li>工厂方法模式<br>定义一个用于创建对象的接口，让具体工厂子类决定实例化哪个产品类；构成：工厂接口 Factory，具体工厂 FactoryA</li>
-<li>抽象工厂模式<br>提供创建一组相关产品（产品族）的接口；构成：产品族，工厂接口 Factory：声明多个创建方法，具体工厂</li>
-</ol>
-</li>
-<li>观察者模式<br>被观察者Subject，需维护观察者列表，增删观察者，事件触发时发出通知；观察者Observer，提供响应方法，收到通知后响应<br>定义被观察者和观察者接口；具体实现类实现接口；</li>
-</ol>
-<hr>
-<h1 id="递归下降"><a href="#递归下降" class="headerlink" title="递归下降"></a>递归下降</h1><ol>
-<li>词法分析Lexer<br>把Expr拆成Token，一般有peek(), next()方法</li>
-<li>语法分析Parser<br>以下内容来自指导书<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">parseExpr:</span><br><span class="line"> 新建一个Term的容器T</span><br><span class="line"> 调用parseTerm获得一个项t</span><br><span class="line"> T中加上parseTerm返回的项t</span><br><span class="line"> <span class="keyword">while</span> 当前token是+:</span><br><span class="line">     跳过当前token(+)</span><br><span class="line">     调用parseTerm获得一个项t</span><br><span class="line">     T中加上parseTerm返回的项t</span><br><span class="line"> 利用T生成一个新的Expr e</span><br><span class="line"> 返回e</span><br><span class="line"></span><br><span class="line"> parseTerm:</span><br><span class="line"> 新建一个Factor的容器F</span><br><span class="line"> 调用parseFactor获得一个因子f</span><br><span class="line"> F中加上parseFactor返回的因子f</span><br><span class="line"> <span class="keyword">while</span> 当前token是*:</span><br><span class="line">     跳过当前token(*)</span><br><span class="line">     调用parseFactor获得一个因子f</span><br><span class="line">     F中加上parseFactor返回的因子f</span><br><span class="line"> 利用F生成一个新的Term t</span><br><span class="line"> 返回t</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> 跳过当前的token(i)</span><br><span class="line"> 利用i生成一个新的Factor f</span><br><span class="line"> 返回f</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> <span class="keyword">if</span> 真:</span><br><span class="line">     跳过当前的token(i)</span><br><span class="line">     利用i生成一个新的Factor f</span><br><span class="line">     返回f</span><br><span class="line"> <span class="keyword">if</span> 假，说明是(表达式):</span><br><span class="line">     跳过当前token(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">     调用parseExpr获得一个表达式e</span><br><span class="line">     利用e生成因子f</span><br><span class="line">     跳过当前token(<span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">     返回f</span><br></pre></td></tr></table></figure></li>
-</ol>
-<hr>
-<p>参考：OOpre指导书</p>
-]]></content>
+    <title>diary1</title>
+    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="d5ab5fea223327a863fa8bd28c8c6bea1632a7a45ff841aceddc422804eaae41"
+     data-nonce="2a50a33359bae52e5c4484c0"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    b4bc355fd4601ae07d7e92788f9669945c3f18659505c6afcc1c3c0df2aea52ad3d0cbc53f6e1a7a75bb81b95aea0273f5bca53294a3e4e77e95e9957cf712200d52343961faa467f4fd5259ebca753135d92c7d728e6c1b2b15ce24afc607057b04b8894232e32211d6d6207691b82ccb1fa2c3f56b919e984a6c74a364de67cf9cc028a77bc78970780670608e7815b1bd4a4885e8122dc98e767a4c9121cf3000350a082e1baa166e50342ce52b55d74cf90b6579b8ba3ad74cd90323b7e4b391f37027bc11e04bfe3aa0ffeed91ac2ab9a6446c64a0eed5ffb46490e686125a666f46fa5419e0af534e3e0c4e1726cc090c0ff5168e7b4558fcc0ed90bc05312e56c2d21f54bb4c6aaf4477f6f47625c3bcb4687dacbadbc03e806a0ce651ee4637a05a08f294a0224d816e9a9bb84391e4ce3ee6dfb70823e2b4364126a567104ee6b6876275085feb909452a2ebcd9853b1ba23039822715fb4cbe63b8c7fed3948cbf2674d912e5f21347ff13ef1c110cd5a2b22c0293a7bcd766a3bbc757a0c2e1e18ee67eba53f8c7fcffbf14ef3af0108d3d0c8629138c2d45adc6a3508de20dd26439df3efc5866e6f9ee8c4389b318ac278121a0da9f718565b77c032f1c2e628f9e57f73c36518a5b06c86e62b69776f616b03359d4eb098ea28d412c4296b84b189cd33d9255c45411016fd3f096105204ed3810719a4f0cc077656e757945b293c33e9fa4f3a79df98316f9f5fc7f0f0cc4638bc39799dc59cc904fe37db3c05446615015ca39ffe8e7e28e2e5547eea6b76840798a9a501513b15ce3d5e4551f1ae08b38f62f0fafd7a199847cc9c9ace5cf0b9d4162450123edcb8cf99eff4eb619d5504345daddb5fae6673f86afa142de8a3026793fdadd1d966b47fa44d12659ff0c45e1960bb1865497cd4a4691e8ff781bb5e11249b7e465f4dbdfce013b4f95537aff81f39661992aeee514e38b6576d44854d5a282291e3fc8bf32f735aa19a1cf81bcf3a217e9eafec29266c8fb10724c5b0f073d3c8c550c09d6ebcd9ff1a77f93039e640e517eee80cb958ec5b2b250e333d5ca4281088592cf864ec6fa327dfb2f0b77557ebe8e50ec7e2f6afb5c2441528cef618a88a1004d78392291ca446a3611c0c893e7bd9a13a6b68350333ba80d48c77f5d8c7ecdeb3a63efc7743bd9d4edfeea01839e976befd1a8d2ccd336ea604af55800693e063cc545da44830a2358e1134d1d0ec1aa7389636af354d4fe32a5d8ad874809ce2cbe4844cb13bb5fb4b0210c36ea05d34355ec64e1a5fbbba842c391638045a47c5336bcb5a2135ac7c857874e888cea440f1a997bd39a6f1e74c53be3961b12a4d2fa52e9d18ad67cb53b0a5f1fde41ac30ea59f09b280a57d22ed6313c46bdc74c7bf25f5c387f49e3d704cc642254dcc4e3dd49c8ec00a248b2e4e8ee901cef7bf3f42d0a98b589d0abd2f85f7663a7a1b9aa0099b798efd1a2a2d751888d68aafa8a931acb24bac29d013f470df595f04c2b72482d65971d85d5b22bc3d0e327821867f650c28d44b41c58649863fd6e473c7cecfa0deeccb32ee8db7810ca4b8017d4cb754864c326e5da3b6330d9e117c50505b51b423f13c4710f872c62a607f5426854c348e5b0551302495e6d841559f8ce975d2af9af532b207a1f900baee7f578460c15f8b5cbbd3f280659c0e22dc11e1e34e062804ec3fd189d19945ad6e96903f70b9f1222140de45e2d49ced114deea16d07867b3a885aaef65536fa9f260a0768ccfa64562620d95b854ae1aa36a3c07dc59d2a31f3a21eaee3dd4ef3219cc156a068f119b84eb059c139134b7231e02855b889bded4c916ee50b9cb334ea1b4245f7751269bb40218a015ce0bfe2763e9c7524b28217928c54e9c34ddc87d61d22a48dde0010c30633e68ee5a6f380853284f2cbf1b28c981a8342ffe6d46fb177c13800796ce303b7b558b99235497488daf817a1a8091fb1b3ba8327bdc3d62c8fd382916a099dac3dbbe5c255640b43ab7517e184a6dedc7bdc589e71be3a0b0c89b85043f23a8c227cd9a05d882da12806e4ce02a678edade874f1022f25ecea098270db1a711c78a26247da0ed13ff2fa4bc2db221bedc3d5f7975174fc69bb453979621cf76337d7ffd5a6796606b2f26dd15ed1a0cfaac791302efe4a446b03a9d2802b6830981a3fabab52e12ba2c7b0c8ded04d0df04cafe814628d20503d10bbc16ada79d8ad1e45e8e1fac420b283a4834ef1c78760cf43efdd94eb270c606460814123fd3a451247e3914fb6d37062e9f4cb20d4cc2f5233befbe0ccf4b124fccc623551e2f046b43ac35ebcee6e21738d9bd1b4842f304f6ec6f90912cbcb42904693864d5ebefca12bef2cc03353b8d3d5f36f70440ee6f5095d4cd73d4d536b61c56a7a41c0ebc222277ac6c11f67d590af95d1b959db3311ae2d071bac473bd400de0b593b34b7115306c6b380b5707504a7103e138eac22ed9768b3235c746070d40134ab7caccf90307b329feeb3b2ebd8129fcad9083bfa73fe8d7dbc36ea031011caa4241b81b51cd95b3454a3d9f967e05e3999faf991047461ee26f917f5534891815ae6e636da847e9be9aa651b5d21254bdc0405741e354aed402af1a37369c1d4659c094116a3b13a7a4c720575b1e8ddf71de5845e7ff8fa8475e0852cb49aec5917e9cd8b38ebc415656665887c7ac6d72496f81c992147ac7a222faed3c14a2e178ea55ad14e845a9c39a0ab95465ee78ffb4f2037917b48166990efe8074d3d3e54bca88e0b90a8fea8a7c3fdbb6321efb6d2592f9032cb6f126ddc2ba5aa6185ef04cd955bfeaf85e66e5876c55f8e8a367659a2c7a123076cad6db3886f82899d1393b652c07673a32880b9fb20b1da615edb4afdd48e87e98700071b29c7408fcda90b1bdfb0f5a80757ea8138f7da0da321b43aa482051e3056cd12f85393038b7d981c74e913ec4619384568608ee2e5fe12aa4bfec33c77771b5759ba4e322d708aa609a10ef05920ec925409c92e3fd346dbf637d7435fe696a711dd1c7fa8c8d1efe31ae39ca6f13af1df7bbdac8e4173adac021d11c337e08cd5f20c5ae51c0803c0fd0d5d1f0501517acf1311ed9eabbfffbb74ca882a632b52d8669da247d666cb2eda9f4a53f2d4eff1229656dd39e45d380122d4c70052b0b522b7d9f6a7fb03da358b49255fa9666e371d3d46f041f5c734c4512ba158474f0a07293f73a30d36eb89c5efb8c264e4bc2f034a9b1198cb1dd94cb1fb3548286d2b700dd7d6fd4948a54eb571a9d63bd9d6cb097253910d37b926396cb33df2ef20948fd732be64010ce9dc3892682a7c26cdda226cf6beaadf4ef1b09d186d4bad92f5acaa0844c7edd09330a8444673d6d9a1f4cc2496f1739b863fbb7766ee85a38a015f90f22916990f8c7428f49c8d9dab92965ddbd434eb1e7daa9ce5835e5aedfd66617cf87c32b3c2735ab9ed218c66e5a50e1804641e7ce579dfb6c7285289e470862cd0245da6463903f8d88b331e94620b1edb9f8c29e0b0f2401c77f2fef604f6fa78a5516206990d3ca7cb3da68b7a328178f5702925cf967693a4d1cdcbea2e1cd0c775edcc5da10b408b07a6f3d9b7151b231ac419bfb29be22ba912c292513556c5497b147fcdc7953910ed0b67cd558738b5e5911133174841b19bb01c574038f3e85cd44fa57941c5e59f16a48fde2bb251e05c12a0929b328ea8a73a9c74101a056107d8b5029c75dedb769c95af39743fc9f3a86617daa68dea800d5dbf3bbf6898cef6fcf7eefdf3b9f341646b96543c1cd4f6cef1d732c34aeee7d14ec489cfe23490ffea35ad156f342ed59a92583526c12ea3edcb1fe11e2bd
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
     <title>奶蛙游戏合集</title>
@@ -919,18 +948,18 @@
 ]]></content>
   </entry>
   <entry>
-    <title>diary1</title>
-    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
+    <title>爱有万分之一甜</title>
+    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="79e5b3bef8aefc85be72b4c8c3dcfb39d1afc5a4645250bcf5cb0157e64d92a1"
-     data-nonce="1d798ec7a34ed489f5275e88"
+     data-salt="4e3831f5434baf1ff46c06f1b0c9cc748dfd8635487b55165b043273bd76788b"
+     data-nonce="4651b218907df39f1e90cc52"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    769a4f1fe0ae2b96f327aedf7853f8bb0517b8cebd61db52d9d155911ac138da13ff97c575af0e93debb4d71b82a33d9d74bd79b9a2751123b67a55def2f44278f0b629f17cb1c8594eebc0d329490fca37869a8e36c8db82e79eec4bee019ffc7ba5da1928d0c3089fd9821f799aa61e7a934fa9bcedc25e4cd4db31e95ff2f840168ae4c15c6c0a41d93eba904b5e1c5fec2f4c18452d5b3585bf90f1bb7a650526ff853b66942424eb4daf3fc9b40456d77031168a2496e716fec60fd7ec5784767161d0bd205b6e9446a8df22609654a0e3445e26646957b36226809d98ce7688b689ae4a4aa907dd619653bbaa099f7123dbbc25c67f56c122cd2df2aaec9af2e2b4f3fc0c973b8c08f70e943df6df6538153ee20babc601236ecc4de8475a0d65d12c6d22406ce0134a4d53afaac47f4e55b9eda61f95553fb4f3457a23a6b886f5ca3c98ed3cb7f29c56b8d8996e84a9d44ce92c44e05d9b27be67eb161a331799a0b2930b7b9725548be19df1eda461d1a4a131454fd19a720b8a641a2eb3e27bd276c8561cae72f1c404974ebaebe9acb1819655fa66687d7cc24a77749b5ab860746694254182e106eb022033abfa9dc6a5c36acb0b3ccaed87d5530f8a4c0471e4375d3021d8a5af7bc635444e06fa942c5baf525471ae68a559e245030749042bfafd4ca60ceb5de2737f072cf4970beaee6835494df57f8d85a41863771527f6647f4fe13ba825490d4d300d0829805c253257c096f96efe78f74640df27cf6983990b09b80ac14785b7261518fc6f94bb7a5fdab9629518e503c932c5fbaa10d52995d844b7b9c84b2c4261ba30a153c5edb72d981e374f490f232ff6671a84fcff330a8f45b95d8798aad6c91e6ac94066fbb2d7aeba28586c992c3965603e77f15f37f149fb2b3a4febcb199fa46094c52a604580ae924fda9b72c2a940132eca301e4c1f0660915c34ebf9700ada06970bd142e84325eebebaa5ae783ae2114603c1f4f2f4f4acfaba343e78e2929ccec3cae5ad2915a9824ae763320aa7615d02a6e4fb8c9fb34ee810c26f68edfaeb99889bbf2a10bce7af93a77db7561932248199fe8b98c80b059e1841a2001488fb61cc77836483daec45ed75545af3cbab003e99050d79373552dd99ab0c074d621e47ac9e031c8d485ba0b12383a45c52566020c38a2835b26982b5c1b9aa6524ec8f9dc615c9d71384cdab56c2395b45b5a1627c74470451a66aa1905adcbad9c1ce64d853b9f0980cff2ef259183b9cbac0f75f4d37aaae6abfb5ecb521dd7142d50978bac6e0176a1adf91f426e8ea3af300bb6886409a9babddaa30bfd658801bc156c9c6735f5032c57e4dd7cc5fa924e2b473e6a3e9ad6ba5b05c9fa22c1a4e5ba7936295db2ac983860c4d2408ba5b7d5cf8b761cf4c6349794dfc91fc07ac869593d785ac67ed666e6f6091f3fb34fc6a2a5517b2553b9ff2b72b1ee07aca2ba2432b46d35e9b7ab5bad72cf2f096dc088a576afc14133e89abbe12bbb1d1b829c98d533924dbd6c088e0b0e3086e3b03a1e737e8dab4ffaa59e99962683b8bcc81cf41924527e8cbe425c25d8b5e74d6b5bcdd6a9405b2af627dae00662db8d508d1f3727b782b3580485a870ed2b9394dd44bf9cbe745d1145f42f6865a349d953d973b958e69f3abd3bc9863ced4ebb93f686ffa07e81b9df206099fefd3d1710a2daaf0528207c2ab8937693b935134dda2a12aa5c5534b16167443147207c31668b76fc1cbc98c672fd44f41644fa2e6e092d8b65394f422cf4ce4a49606ae22fa66ecd9a75ea85d78673451c9e643b719c226451423210f26b67967e581dd61e24af8fd7e06f2e55a8f6f620ad6aa9a68aaf9536b764503983b5d32d7fceeaaffb7b8206f6e5d205b811dbb753c23a135c0d83d456ae16ff3e43a8b75b38eea58c1e468a6e5b42a40901734d9cd411732c7b5ff2ad9d477d64e6dd0fd6d38d4bb266cfac5827afd49e201ed651003d6ec6c0e479a04744f2edc0e6a9586fde47b7871dbcf65527e1b2cafd8b16cda6181af84da0acef14a7d0e21265de37268c6bd0f843f984550d9e4ca09436d55b8fd7d6ead268ab9d16406159c9b9296b7404e374088ddf3ecc68651667d3020c9203b155b65075ecc61d416227cd21891f08585c41ff26f6b2e1215f1d3ca57925873e2491dc7126acd2657e63b4624d0b60779bd7f2d41d22e374c5ee2c97d035e3ed5a53fdb11394d14c6b22a9b7e9e8cadfa636f5264eb749197f5be83d7738f4136a940429c0d3d4d50b1ba5fafbd99caa1ee8b226e897cbb9ac2d41f8219c9f71895eb549b84ea1a726046c2c161fe0c91b7c2495af25cee8640fc83ed953a8815381c3c551bf17d476ab363552f20614b5ed29064d8f91ef54da67c1301986dea5e6e5f81653bc4c5d7cc78e443aab2719f7fddc6eb4de52a415e4fb23f81b3a8e854b6390bbee536dff283de7b0dd3a1a8c2ed5ce46fd26448f67119771ab731af2d6253430f68cdd9dcf238366e8d1ea55d6a3fab548987152df3173d165a14390da275de1d3da6008145cb63c24d9ed54bd42ec04e87715396f65d4f9b76ae2451444b29fff1f1c91339aa6524e07eb57d5340b762cd5fb63ecf0437bd546c25edb2508d6382e8707d595becb4a7942801c5a1001ea7c9c2be007213e042bd41b3160bac10cc3c334411c4e8f546f82b12430d8f342e28a89c04dea85606ffb687cc89d9ac88eb322c5c918d4a70a87a2dd8a06466052719bd98c9e7e603884564fbd6d00f646f22c8f5106669353c1b29474d528b5f980cc5fb1b411419118e6a74e6b7e9a020914bdb4a784c85cfed7f13301d077e6dc2023e8c94299f2d9f68c0eb2deb2c1801aa552d097b9bb59b8c710241ba5fe89841cc4dacd33d407f3b925575e7a733b1b8c083cfeb9ef59c63d94df6a715b04afb9627b6ef2eec521e9183c5d812608037e4f9776e191f31e1f307240741d31ae58e8b3edb67fb62b50edf0cffe02c07b392cccd896102d05ff7483540333dcde08e83ae21f0bcbcf6a59b8cd0bf61be43b96d71c24dfb257f8e483421d74780f291c96c27b007dfda7f864e1a5a6933650b3149cf18aab7f95abe6df86de2e7a862a085a3945fcd7d711380c1b1392fd4b67227ce1ecc51ee31d6ca50df8e3c14f8f713bf75fc184b57b58c9bdc1b38657d2a61f9ab08fdad1720908d91f167493f11a9b9e56421841aa465f1fdbd73ea0d002d46c916f5e851a4ef4bef83f3c73cb3de66264ac7fa17fea471c38d064d73801ac6e44e3b0f4cd9dd971cef21e1b89be008c486c9f3306f46bb352829deaef0a2aa146bf540b5458f842809a9916f7b8119fb57eb01071572a000545f06a7210c77e8a93058cfc2e5c4ed87721b53152c264150285958146a58d937f73b4c566d29cf40323271d3c3363286e826f9fa32f06571180c03f3f513af8ffd5fbd429e8428c70210cbb2acef487539b82363027c8288e4606fbd11ab43128c2fe2fcc7747200dbf9ac167a7299b93a169d0bc5f4556bd110f0e454480d8aa62296ede8869b728b46d9dd8cf5d8582e8b2bff6a452f99f21b1ecb8df6d0888eed89e606626b1a3f971b352c01c75a55da23bf3c1fbeeaa543aaecea597a5b0b713f2b2298c38333e0089bbe6200a8120fbeaf40e604ac7fe26a2bb7a3258d39f0f5c508d66c9f80e9d50ce14bc3b5fe65c4eaa455595efdd5e36fd37e4e6a30cec7351860b9d758efef811ce73c616845be890445b044fc8bfde9ba07f76ac014aea7be6c634f5947997440441b5cf031a410dc96a3fcbc8eedea196d937a0fdf8dc1a3e70128ee91226d393e88373d30dd37ec8da975171d0dda7035df7abb3a51239fc3553cc
+    a0cc98c171d0b3dc94e1af2ca95a1d961ec3744d64017bf3fb79e07b3754a811b1ef39b844d4bf3bb15d1db89dcbf0f914cec9d053ca092ffcebc537ef03e6ff4a07b580baa648fbf835aecdc7ab6f589ae65851049224e1316cd14005c463b40e1a37338ff524713b98b2cebb101682bc6fca1487f4884f3e45f62612b2610c9d434812bbcb6d3c48640d09491418cecb78b904b2e1a50731e9d3351fc07bad01474d079645c0af86de460bfd1f9e51393b3dac85a102c7279c03a94ea609bdc495284d80467f7004c6e5ab599747cfb976027465d4aef7bcd3785ad4848fb2034839ba0006736fe18dd9d3c1895d1a91198f98e84b6d339d1d65fe5f9264e9682b6cfc44433883d7d3d09b0c493caf45f72f4db578482d6ddc3cab6420584932eec3f04c9a88498fd62dd8b9862cd72f4a04658a1817b691644ff8206b4c7913c0a05027ca466cb642ddb995b557a23ccf1e07dc82bd169a94fe5da85233b3bd3aa0ca5c365a5069900f167cce06300db680b73b5de7ecc10321abfdf4313624f9e993f4d18ec9a1409cb4d419a929e64e1c11a3fb0565d07fd397fdd30337b96d8a4a1c561c7b4f6747e6cff37f290d63dc483d4d0b3d8ed55c54448917ef3c4f29ca2676b9efa2bf69c84a56859f4e871391cf5dcd8ce98530ae4798903848b1887c505f6508face6b49fa6d2a1b051803c5ccbee52e61d0521cb3bbf446db15066b754d1bfbe7abed6cdef17237528b0b348f299fb38603a498efa6442d32d4778fac01a1c0c5b6f54abf0a081c2b4019eb66e24011a4b94939897aeaa1f93d8728a1954130db4bc9fafc9c1081d3e58a345a4bab044ea97d93e638ca0a01e1f21157d19f49055843a9f16257d311476bd17a14b4d1a5adc9f54c559b3defe550d607417faec1f6887ba53c469e8ecd67b48179c01302ac2bf311b52482558c8ace3c47063ba6bd216a5015d25923fa1b4aba63cdc93cb5118c5fcdc072513a46da99d3748919a437c871ea19c072418959f1b48e355a2eae1ba2aa83b201ce48311aa6ebeffa0cd6096e1fe208aa5af16aced44efde0987d68370292904899c222be4d4cecc1094768601ce6223f1caf3e34b7f1449e4547ee147bcabb577ab9c2fb2bffecdf158e469b30ef48fab72cb08774c00c1dfe1e65a61b5be0e7fff67edaf26ab2dcb0b068badbc868a19795523a0d9ee3452c24ee5641004cd4ba5cdedfdbf5f3b2bf5212a2d72c780703b1a2d151cfce39484a117debbea4df988c13e2e34fbc6f5a967e39be93a287397df924ba72c47397d59cec9107720de4451ccd67343b4f22c3abcfe11dffd13395d59346f1bac35f5b7599646ff1de68d1f15c07876578e17505b95a4f0d199ba9c521f31e2110ae80466e50a44a90ac2d39185e1fd220a9254b454deae9d36dcf458c725c493df9a7b9d4855da521595d21f13c9b2a87c42e6a4072dfa149761bc794775a478242736e0bf2725198e5cb5ee57626735cf987c705f5ba8821974fe7cb07e6388d8a69c819416d7b726ceb626e93e43a2e14800831d2467f4361b838b534e511a107c91c878c74f23abbf716ed17869ff18fec6dfaea62e8375518007946027bf699657bf45b476cf11159dd0990abdd5be9f4758c07784ba3fc70b2ba86f60afc060ec048fb0f98e66b90aba18824d55fc5997cb2634c2c78aef82ecbf28e6bbd23c4761b307fc6a87e8a351ed6cecec50de62314f89597f620b460cf42ae660a293b916772a0b1ffc263c939f02db8170732864bca447049157a2434f98b94fdcb1fdfb5c18cb5afc7d38106e4f6c0d67a478c51edda4b8c7e69420cbbba187a9465656a0d5379c2299a20d88fa792d1b58ff171312a6c608b2a7c6e554265ebbe1dcf2f0fe75a363dc1c2df23123a9bf0eb6485dbb40b13ea8cb98d2316b66bb7e8cfdaab59ef731a3285ab50e3f3d0d8beaebbb270d76db1319a9d19140904a06efdb6298bcf0980404aa407f7869f0e88e96350db9bbaa69eb7cce48c38664f4e15e77f6caecd9e2d13852fc9363dbcb57f895f881a45cdfb28fa893f6d2dfcf0d34715ae333c3db6b418e6df6c8f27ea7430e8c67365151b3d7805f9bca034eff03f04e95aa0881435096578fe0181777ed8a6346442a1f88fa55a7cafc4750aca54d2282de0a7d92115b98e1131f01b8cc519b8df2f4f0f9d654af7a26035f511fad7b6b1beb36a4f846c03dd57e3aa0ec5456bb3d386d747907b2e2fc8d887593356ff024e448842e3d86a81b3e83a624d6c97031a57592d8978c26deb2b1b27ac163885d060d6e4fdbf6680415da49bd36be5b7a6c93c97fd951b765c6fc2543c8a7512f13d810a4df0f3505fe1ff98eaa89d5f08773a2f2efcf6b46270d60880ed531f37cdd77dc8d4f82a1a0f711a6a061df76bf84e7a33dab47b3b095b8ddf883dc375a874a02a607b516664378180a277283b378ee15ee86a65b16ead308e84e4fdbda241de69dd69e05f106a1f5ceb75ba82401aa1315eaa4f86fe6cf6e50a546819fb65c13699c1f43bc59eb7b6dd5c526d07ffe1a17cc48e502d79eb3ea2b1b8aebdb2fc8797d5faf04b0c058fe00c93b5c379f813a71dcd826d52f723cc8b5e4dc568fe7bdaee39de5a39ed40c11e843153b680ff3f6f9eec1391078d3f7745ce0d1f1da45672b3807607c6b533f538c4b4ddb3db4637a78d1c2b857c0ead6a004ec69d04fd671175e2104e1fd59b65569e9c2f528199c458ff5c7ada803654915e3876cf7eb6d7c53422ac49c370b4b0a525099ba1e590846c7154e87d5508bf1debc9153bf284b12e3180b6e0da992631ba3e9dd7edc4ea4015c8c6d8597ad5af581302ecf797afd2be5791b4948c4cd0b28337ba6f62310ff40dce442d77188e89408bffb06f1b0ebee0efeb56c70e116a24fbc2e5aff75cc91c4a088b97da433cbe037bd00a38cd93c8d32aeee03b2943a1924672ea7ca5de4f56213284e4355616be03476b3906169bcaa4170df1ff04
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
@@ -949,32 +978,242 @@
   </entry>
   <entry>
     <title>爱有万分之一甜</title>
-    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="2f6cc6e7eff05b7e7c53d3ae4f698e49840faf15be07cdc50aeb13b1096ff5fd"
-     data-nonce="e1534a5abe0d30c0fe0e94ab"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    b0ee10f14337412f9af36348e793bc801e6b8aa9876eb3824196809b108fbb3d0c28ba403421d2326ac0002b6c2d1fd93392d90fac64b3dd2e630c260a329c5aee1dce1ae9eb6f2079a6f8ce68c20f2a1662ef4320f872cbc493876c303c1e7bd5b0e2480c35795561bf2b78f93a96480c8e4c7f324e44c83cc7b5566febb0e90204154ea2ec79b354ad261dfc03b76fd46e6f2781e274d792ee45f99f1c9ffbdfabfbe2c4b9c7372d542b8d74c1a04277e1f5d61ea76f97b63b545cd57b9adae09a4c94951f4b0720c3939786cad38b054005af9f44040e1c6d76bfb22e14a066559eaf3b158cafe2941cdc9e32585fc755892e2d7e725da11d24f82e8435350b8bf90ca1653459850b10aa0d5af506734ec3956f03d7b22ffc6eddb26af35047c338c8d383581cc1e2a7a5d6ee32ed2dbe3f1f8c8ef4897c89663fca486ebe904dc4fc15d48295d0515e4a2df82e490f2da2fe29cf9656620ddf238d37a04a82b975bd7ba73da8dddea31a627ec812e198ee066308949ecc07e44b0c71e294b6d2152750a9b0ae339e273968045199de1736e7aca90b376f46cb2b534424ffa21533e7da9ab65550654bab4ac3afc8b13afd7cb20228c09425786d4ca8304498924f827e930f68ea6444e9f94d0fa072e023a60d070f3207be80ed0bad1daad19d2435a882e010201ee400f6f1d46bde2bd87d066714935f50d6a9177bb86eb730101c661ae8a6a075a814fd60e21a9682b67883acfe7cbe2072e448978671ec7cc909a406f2bfc77165d10d4ae464d79de9e02a924056116285456dd5a48848ac28cb1533b582dcf6116f20b5607c0ecb5bb3edc15f8f21ace07baddb758641ca48ea0f383db19a56fcbce247ff06af5f8addd79247fd60ff41ac71405582e2adc7def3a6ea5cc6d38e3e15ca78c21fa86c765b240f180af7880f73341fb05b379ba27e710b73a13cc89568abb4461286cc659376bd9079d0ab9e3e1f266120bb05f7549526f02154b5ff0adcfadfad14d6b9cce9658b9df040c05b3feed7a8f80291183ea560a66c5094f7539d633260fb06b4b3158c8d6089381bfcb6afb9cb685828402f602169a034fc6fa93c8003b4d8f2700a539bc5afaaefba26893174c2449d300d27c874839a4046a6e7bf2d3380db4d5fd256544f86fed31b53027d9dfdf6d1fc8f650b29b776e83068beb5643b38fa3a615f5d8c063961e2f2fe7dc8a9e32fc4a78fdb24005e772414c85593d7b7c9a24b62d9088fcf6d1d253d1fd8616db4e943c190c472da84a2251fc7d9717268765b6ed319d7ca3151b6894f360f1c0b37c66535ccb6ed389a0fc17b6bbcf6d250eb153cff248b7c086607a429aca7e74ba8f5037369449d3c21474fb653db4b1df86fb19e59539738f89ccd50df7bf33a729db64feda6a2f91f586cc32eb1c8569da1244bd447aa2c48e26bb00faf76e7f4e0a55e68e0c14144a41fe4059ed935c0b63c60b1323d925befec3c9f90d486cfb78b42267e6911da4931e027197edde33b2383feb8c836edba4ab9923a6b2b372d9c95c29f235b2b1ae98314e718fcdecb910822a7e3ba75862e5187d24bd55c51784b31b940118d64471edbdcab701e34047795b44bd3f34054025d26c67c090fee05e9803b4910bd4d9d797613d03521347f19331fb9c23267660c50a0017f741af7f59bd0b13ba864a7fd6036ac04e2e2943b07d72a6dbcd97740526ea67d0a802087286685f71f101f51db589629ebdb5dc4ec868d71d6443b2a3fd98e4b20e0e13e4537d18dd5898d7451963f56c81d769e3aa702083c67c9573b542c64f29d9f64ce6134a0607aa7f0d62ca2290e54bb780e545ba6b83f46cff433efcd66fb5586cdfdbf57c1810bdc39d492263ef7084e459f75f2a905ad7e5f358c312d50ab2f23bbc7a870ce9261809a7064b2bd7a452dbe43306d9d01aae3c9ffc59f74d57238bfd3bce52c265d0ad4c5f0fb766b5dd00a97bcdcf933d0ed012896ce868b733570ac7d49c7b3108a0c09c7a705dfd4202ac84b429f8fa4ce876f0982aa6cdf81b5c59d3ee15edf300162824d48f185d0ac0499ba413f1feebab902404a6aecf358ff09ffd09484ddcf419d36c9cbd24ed2932906214b5b00621319e20a023f3f5c558eefa880a49b6e33f581df00054866e6ec87fa46bbca2fb5f0e7a2745a84a6c7b5c594361521b2192c384b825b09fbbf23a0e37e1044abf898abc7825b39e3e5b7d396b4cdb06087788dafc080fae2f503740257fe52f320f782bc25f12db3054464358c5888324a3c1089ff25b5cc9f1173bd54e67b65e8858ac84365fc27eb6e54ffb3ee4d6b7e4172cfb54ed3ae559923df46e370afd62756248ca953c9c2c84a713c388173438dc1638a64a0189253c0ff0af81e8b654b0a50878f104feae97a848af83d2d5ff844466ac80c9d4a92c1866be420df34d2846574f5a426848aff56c3445241b39b9ed3d8a6c3d4f46a75bd2e39f50918c03364571ffb97929b231b7d17e649b7da18edb6b83abd05f91d338af316fac1420ff77491fe0d7e66c0d8fb0aa78c0c21ab01fb4a117dd496176ac7269c3fb201be1c2fc086fe13f6ae3a8608c12f0666248d47352427c99cc13fe68fa3bc9354e9b2d39c89f04215e36416092aeec6e048a0ba4f77aef9a4649d6e977929f9fbfd887b7e3d00e3ebb22de56a272c160797773b4522ddaa2d94fe0b2cb4bec0e7b0972ea4a7d092ef1b5580d993e284e6fcf329035a58acd6ff3e973cfc4c01f2ef67391085a54ef3718b05d59087dc9a7f182f55ab61c117346b6acafc90a96fe8e661f7c0384a7441a85595ab7a98c45f6a985be67a6f09739c4e3c79c3e6af7d0cd99cd3f115fe3edfcd13f30f68c30d944108fc7d1e4b7f4b82bd82f00c4cc7a7734d1d2ee28dbe06dfc142479b2dc23b301ae82eb875268af4c24a32901f60f8c20f8a78c3d6407daa8669cbda6239bddbafd8b13a31980b7248fbbad55b40393e172681bbc39088ff
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <url>/czyyy_nlw/2026/11/01/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C1/</url>
+    <content><![CDATA[<h1 id="爱有万分之一甜"><a href="#爱有万分之一甜" class="headerlink" title="爱有万分之一甜"></a>爱有万分之一甜</h1><h3 id="卷一：十月未兑酒"><a href="#卷一：十月未兑酒" class="headerlink" title="卷一：十月未兑酒"></a>卷一：十月未兑酒</h3><p>爱是海啸，而她是天生的冲浪手，从不为任何一朵浪花停留。</p>
+<p>大一的十月，北京的秋天是一夜之间砸下来的。</p>
+<p>整座大学城的空气里，都弥漫着一股被干燥北风卷落的银杏微苦，与塑胶跑道在正午烈日炙烤下的焦焦气息。</p>
+<p>那是军训接近尾声的最后一周。我站在计算机系三班方阵的倒数第二排，迷彩帽的硬质帽檐压得很低，汗水顺着我的下颌骨一路滑进军绿色的粗布领口，又咸又刺。教官背着手在队伍前踏着军靴走动，所有人身形僵直，但我眼角的余光，却始终无法自控地斜斜穿过前排男生被汗湿透的后背，落在斜前方两点钟方向的那个身影上。</p>
+<p>那是阮棠。</p>
+<p>谁能想到，这样一个姑娘会出现在男女比例惨淡的计算机系里。她留着一头极扎眼的亚麻浅黄色长发，按规定军训是要黑发的，但她不知用了什么法子，软磨硬泡让辅导员开了特例，只是把长发盘起来，严严实实塞进迷彩圆顶帽里。可即便如此，帽檐边缘依旧倔强地钻出几缕淡金色的细软碎发，在北方的烈日下近乎透明。</p>
+<p>她生了一副极具欺骗性的骨相，皮肤白得像刚剥壳的荔枝。一截细白柔韧的后颈从挽起的黄发下露出来，随着稍息立正的口令轻轻晃动。我第一次注意到她，是某天下午休息时，她盘腿坐在树荫下的草坪上，从肥大的迷彩裤口袋里摸出一听无糖茶，仰头喝水时，脖颈线条拉得极长，下颌微翘，带着一股浑不在意的散漫。</p>
+<p>她似乎察觉到了我在看她，没有避开，反而偏过头，穿过喧闹的人群，冲我极轻、极漫不经心地弯了弯眉眼。</p>
+<p>那一瞬间，我听见自己胸膛里那颗十九岁的心脏，狠狠地撞向了肋骨。</p>
+<p>我下意识抬手擦汗，指尖不经意碰到了贴身内袋里那枚沉甸甸的旧银表——那是我已故的外公留给我唯一的遗物。外公生前是旧表厂的修表师傅，这枚没有秒针、只由特殊机械发条咬合的怀表，藏着一个连卢阳都不知道的秘密。高二那年，我曾因极度惊慌无意中逆转了发条，眼睁睁看着打翻的化学试剂在半空中倒流回试管里。从那天起我便明白，它能回溯时间。我畏惧这种违背自然法则的诡谲力量，视其为一种沉重的诅咒，发誓绝不用它来投机取巧，可它却像一颗冰冷的第二心脏，日夜紧贴着我的胸膛。</p>
+<p>“别看了，魂儿都飞到人家发梢上去了。”</p>
+<p>解散哨声吹响的瞬间，死党卢阳一巴掌拍在我肩上，满脸坏笑，“咱们计算机系的系花，阮棠，四川成都人。开学第一天报到时，就凭那头浅黄头发在院系群里掀起血雨腥风了。听说追她的人能从一教排到西门，你小子倒挺有想法。”</p>
+<p>我揉了揉发酸的肩膀，低头拍打裤腿上的灰尘，耳根有些热：“别瞎扯，一个系的，多看两眼怎么了。”</p>
+<p>“装，接着装。”卢阳勾住我的脖子往机房走，“你要真想认识，哥们儿教你。这种长得漂亮又爱玩的姑娘，最烦老实人那一套死缠烂打。你要是上去送奶茶要微信，反手就被归类到备胎库里。得等，等一个不经意的借口。”</p>
+<p>可命运有时比卢阳的谋划更轻浮。</p>
+<p>拿到阮棠的微信，纯属一场荒诞的意外。</p>
+<p>国庆前夕，系里收集新生学籍档案与上机登记表，我是班里的临时学委，负责去辅导员办公室搬那一大摞纸质表格。在办公室外的长廊转角，迎面走来的一个女生低头看手机，手里的文件夹啪嗒一声掉在地上，白纸散落了一地。</p>
+<p>我蹲下身帮她捡，手指刚捏住一张纸的边缘，目光便撞见了一张两寸蓝底照片。</p>
+<p>照片上的姑娘扎着马尾，眉眼清亮，浅黄的头发在光下泛着光泽。右下角的手写栏里，字迹娟秀中带着一股狂放的撇捺：<em>阮棠，187xxxxxxxx，微信号同手机。</em></p>
+<p>那一刻，长廊的风从尽头的气窗灌进来，吹得那些纸页沙沙作响。我像是偷窃了神明信物的小贼，手心瞬间沁出冷汗，几乎是出于一种本能的肌肉记忆，在三秒钟内将那串十一位数字死死刻进了脑海。</p>
+<p>那天晚上，在宿舍熄灯后的黑暗里，我捏着发烫的手机，指尖在按键上悬停了半个小时，终于按下了“添加好友”。</p>
+<p>没有附加任何自报家门的备注，空白一片。</p>
+<p>两分钟后，手机嗡的一声轻震，屏幕在昏暗中猝然亮起，像划破沉寂的一道白光。</p>
+<p>【通过了。】</p>
+<p>紧接着，是一条干脆利落的消息弹了出来：</p>
+<p><em>“陈屿？机房坐最后一排靠窗的那个？”</em></p>
+<p>我的呼吸在那一秒彻底停滞。她不仅知道我，甚至连我在机房的位置都一清二楚。</p>
+<p>“你怎么知道是我？”我打字的手指微微发颤。</p>
+<p>对面发来一张小猫摊手的表情包，随后是一段长长的语音。我插上耳机，将音量调大，阮棠那带着川渝女孩特有尾音的软糯嗓音，瞬间包裹了我的耳膜，沙沙的，带着夜风的凉意：</p>
+<p><em>“整个系里，只有你看我的时候，眼神直得像要写进代码里。陈屿同学，明天下午没课，请我喝杯东西呗？”</em></p>
+<p>那是我们第一次单独出去。</p>
+<p>没有去烂俗的奶茶店或电影院，下午四点，阮棠套了一件oversize的洗水白牛仔外套，亚麻黄的头发松松垮垮地挽在脑后，戴着一顶黑色的棒球帽，站在学校西门那颗巨大的银杏树下等我。金黄的落叶落在她的肩头，她正低头用白球鞋碾着一颗熟透的银杏果。</p>
+<p>她带我去了海淀深处一条逼仄胡同里的小酒馆。那家店叫“浮木”，门面极窄，推门进去，暗红色的吊灯光线微醺，黑胶唱片机在低回地转着爵士乐，空气里满是柑橘皮、烘烤橡木与烟草的味道。</p>
+<p>“你经常来这种地方？”我拘谨地坐在窄小的卡座里，两只手规矩地搭在膝盖上。</p>
+<p>“心情好时来，心情不好时更要来。”</p>
+<p>阮棠熟练地翻开磨砂皮质的酒单，甚至没抬头看侍应生，“两杯干马天尼，一杯多加一颗橄榄，谢谢。”</p>
+<p>她推了一杯给我，自己端起另一杯，仰头抿了一大口。冰凉的酒液滑过喉咙，她微微眯起眼，发出一声极轻微、近乎餍足的叹息。暗红色的灯影打在她浅黄的发丝上，镀上一层毛茸茸的金色光晕。</p>
+<p>“我喜欢烈一点的东西。”她用两根纤细的手指捏起酒杯里的绿橄榄，放进嘴里咬碎，眼神直勾勾地盯着我，“味道太淡的东西，在喉咙里留不下痕迹，过一会儿就忘了。陈屿，你是哪种人？寡淡的，还是热烈的？”</p>
+<p>十九岁的陈屿，在计算机的二进制逻辑里浸泡了太久，习惯了一加一等于二的确定性。而眼前的阮棠，像一段写满了未定义变量的危险程序，带着未兑水的烈酒气味，蛮横无理地闯入了我灰白的世界。</p>
+<p>离开酒馆时已近黄昏，街灯渐次亮起。阮棠走在马路牙子上，双手平伸保持着平衡，黄发在夜风里飞扬。我小心翼翼地走在内侧护着她，影子在水泥地上被拉得极长。</p>
+<p>她忽然失足微晃，我慌忙伸手去扶，掌心稳稳托住了她纤细的小臂。隔着薄薄的外套，我能感受到她皮肤下传来的惊人热度。</p>
+<p>阮棠没有站直，反而顺势将半个身子的重量卸在我肩上，侧头冲我笑，呼出的气息里带着杜松子酒的清冽苦香：</p>
+<p>“陈屿，你的心跳好吵啊。”</p>
+<hr>
+<h3 id="卷二：暮色染酒红"><a href="#卷二：暮色染酒红" class="headerlink" title="卷二：暮色染酒红"></a>卷二：暮色染酒红</h3><p>从那家叫“浮木”的清吧出来之后，我和阮棠之间拉开了一张看不见的网。</p>
+<p>在旁人眼里，我们的关系升温得匪夷所思。</p>
+<p>那是十月末到十一月初的大课时光。阶梯教室里，几百号人挤在一起听枯燥的离散数学与C语言程序设计。阮棠总会踩着上课铃声从后门溜进来，带着一身秋日清晨的冷气，理所当然地挤到我身旁。</p>
+<p>我会在早八点之前替她占好最后一排靠暖气片的绝佳位置，桌洞里放着一杯七分糖、去冰的热红茶；而她会趴在桌上补觉，把那头浅黄色的长发铺散在我的笔记本上，发丝细细密密地缠着我的笔尖。有时她醒了，无聊地转着笔，会在我的实验报告扉页上，用红色的水笔画一行行歪歪扭扭的小乌龟，然后偏过头，从睫毛下挑剔地看我敲代码。</p>
+<p>“这里漏了个分号，笨蛋。”她伸出白皙的手指，越过键盘，轻轻敲在屏幕上。</p>
+<p>指尖擦过我的手背，微凉，却像落了一星火苗。</p>
+<p>但真正让我猝不及防的，是十一月第二周的周一。</p>
+<p>那天清晨，阶梯教室后门被推开时，整个后排发出了一阵压抑的低呼。</p>
+<p>阮棠换掉了那一头标志性的浅黄发色。取而代之的，是一头浓郁、滚烫、像深秋枫叶被烈火烧透了一般的暗酒红色。那颜色极其热烈，将她本就白皙的肤色衬得近乎妖异，长卷发松散地垂在胸前，整个人像从旧胶片电影里走出来的反叛女主角。</p>
+<p>她迎着满教室惊艳的窃窃私语，径直走到我面前坐下。</p>
+<p>“好看吗？”她把发尾绕在食指上，凑到我脸颊旁，声音低得只有两个人听得见，“特意染的。他们都说太艳了，像坏女孩。”</p>
+<p>我的喉结上下滚了滚，呼吸滞涩：“……很好看。像烧起来的火。”</p>
+<p>阮棠笑了，眼底水光潋滟：“那就只烧给你看。”</p>
+<p>那是极具杀伤力的拉扯。她总能用最轻描淡写的字眼，把我的心绪撩拨得天翻地覆，却又在下一秒不动声色地退回安全界限。</p>
+<p>某个周末在清吧的昏暗光晕里，阮棠有些微醺，纤细白皙的指尖无意间勾出了我大衣内袋垂下的银色表链。她把玩着那枚雕花古旧的银表，好奇地偏头看我：“这年头连戴机械表的男生都少见了，你还带一块怀表上大学，装深沉啊？”</p>
+<p>我握着酒杯，看着她被酒精熏得泛红的脸颊，半开玩笑半认真地说：“这表不走寻常路，能倒着走。如果有天做错了事，说不定能重来。”</p>
+<p>阮棠只当我在说某种拙劣又浪漫的情话，吃吃地笑出声来，把表塞回我胸前，指尖若有若无地划过我的前襟：“吹牛。那要是哪天我不理你了，你把时间倒回去，重新来找我好不好？”</p>
+<p>我当时只是笑，心脏被她撩拨得疯狂跳动。我怎么也不会想到，这句轻飘飘的酒后戏言，在不久的将来，竟会变成一柄将我凌迟至死的锈刀。</p>
+<p>走在银杏大道上，她会突然把冰凉的手插进我的羽绒服大口袋，甚至十指与我交扣；可当我因激动而收紧手指、想要彻底将她握住时，她又会顺理成章地将手抽走，借着接电话、低头系鞋带、或是从包里翻口红的动作，拉开恰到好处的半步距离。</p>
+<p>那半步距离，薄如蝉翼，却坚硬得像一堵冰墙。</p>
+<p>卢阳在寝室里不止一次叼着烟警告我：“陈屿，你魔怔了。阮棠这种段位，你降不住。昨晚大二的李杰又开着他那辆二手宝马停在西门，我亲眼看见阮棠从他车上下来，手里还捧着束白玫瑰。”</p>
+<p>我正在写一段死循环的代码，手指在机械键盘上狠狠一顿，屏幕上顿时跳出一长串猩红的报错。</p>
+<p>“李杰是学生会的，找她聊院刊的事。”我嘴硬，声音干瘪得像秋风里的落叶。</p>
+<p>“你就自欺欺人吧。”卢阳摇了摇头，“她要是心里只有你，能连个正经身份都不给你？你俩现在算什么？合法的课搭子，还是无偿的男保姆？”</p>
+<p>我没有回答，只是看着代码编辑器里闪烁的光标，心脏一阵阵发紧地泛酸。</p>
+<p>裂缝是在国庆长假后悄然蔓延的。</p>
+<p>十一期间阮棠回了成都老家。七天里，她像断了线的风筝，微信消息回得漫不经心，有时清晨发过去的一句“早安”，要等到深夜两点才会收到一张模糊的九宫格夜市照片，配字往往只有零碎的两个字：“醉了”、“好吵”。</p>
+<p>我在北京空荡荡的宿舍里，对着她那头新染的红发自拍看了一遍又一遍，整个人像患了戒断反应的瘾君子，焦灼得在深夜的阳台上吹冷风。</p>
+<p>假期的最后一天，北京西站。</p>
+<p>深秋的暮色苍茫浑浊，站前广场上寒风呼啸，返京的学生和旅客黑压压地挤在出站口，空气里充斥着列车制动的金属锈味与干燥的尾气味。</p>
+<p>我站在刺骨的风里等了整整三个小时，怀里死死护着一杯用保温袋裹着的热板栗。</p>
+<p>当那抹极其扎眼的深酒红色卷发从地下出站通道浮现时，我的世界突然静止了。</p>
+<p>阮棠拉着一只墨绿色的拉杆箱，穿着黑色的短款皮夹克，整个人显得消瘦而倦怠。周围人来人往，都在匆忙赶路，只有她微微仰着头，眼神空洞地看着出站大厅惨白的指示牌，像一只迷途的孤鸟。</p>
+<p>“阮棠！”</p>
+<p>我逆着人流冲了过去。</p>
+<p>听到我的声音，她浑身微震，回过头来。在看见我的那一瞬间，她眼底那些深沉的防备与散漫，仿佛被某种巨大的情绪骤然击碎。</p>
+<p>没有寒暄，没有客套。她松开了拉杆箱的把手，猛地扑进了我的怀里。</p>
+<p>那是她第一次这样毫无保留、近乎崩溃地抱住我。她的脸深深埋在我的大衣前襟，酒红色的发丝钻进我的下巴，带着四川潮湿的雨水气息与某种陌生的冷香。</p>
+<p>“陈屿……”她在我胸口闷闷地叫我的名字，声音带着隐约的哭腔和颤抖，“北京好冷啊。我好累。”</p>
+<p>我伸出早已冻僵的双臂，用力将她环在怀中。大衣很厚，但我依然能感受到她单薄的骨架在风里微微战栗。那一刻，所有的委屈、猜忌、被冷落的不甘，全都在她发抖的肩膀下化作了粉末。</p>
+<p>我以为，她这只漂泊无定的红斑蝶，终于愿意收拢翅膀，跌进我的网里。</p>
+<hr>
+<h3 id="卷三：深宵结霜"><a href="#卷三：深宵结霜" class="headerlink" title="卷三：深宵结霜"></a>卷三：深宵结霜</h3><p>十一月中旬，北京迎来了入冬前的第一场寒潮。</p>
+<p>气温骤降到了零度以下，夜里的寒风像薄薄的刀片，刮在脸上生疼。</p>
+<p>那个周五的午夜十二点半，机房刚刚断电。我裹着厚棉服正准备从实验楼回寝室，手机在裤兜里剧烈地震动起来。</p>
+<p>屏幕上跳动着阮棠的名字。接通的瞬间，听筒里传来的不是平日里清脆的嗓音，而是吹风机巨大的嗡鸣声，夹杂着她有些含糊、拖长的醉腔：</p>
+<p>“陈屿……你在哪呢？”</p>
+<p>“在工科楼下，正准备回宿舍。”我停下脚步，呼出的白汽在夜色里迅速消散，“你怎么了？在哪？”</p>
+<p>“我在东门外那家叫‘森野’的理发沙龙……我刚和几个朋友喝了点果酒，头好沉啊，吹头发吹得我想吐。”她在电话那头低低地哼了一声，像只受了委屈的猫，“宿舍门禁快过了，你来接我好不好？我走不动了……”</p>
+<p>“待在店里别动，我马上到。”</p>
+<p>我甚至来不及挂断电话，将拉链一把拉到顶端，顶着刺骨的逆风，在深夜空无一人的校园柏油路上发足狂奔。</p>
+<p>穿过东门，昏黄的街灯把地面上的薄霜照得一片惨白。理发店里灯火通明，暖气开得很足，甚至有些憋闷。空气里弥漫着刺鼻的烫发药水味、洗发水的工业香精味，以及……若有若无的酒精气。</p>
+<p>阮棠坐在最靠里的皮质旋转椅上。理发师正在用滚梳帮她吹理那头深酒红色的卷发，她闭着眼睛，长睫毛在下眼睑投出两道浓重的阴影，双颊泛着不正常的酡红，身上的黑色毛衣领口有些松垮，露出线条分明的锁骨。</p>
+<p>看到我气喘吁吁地推门进来，胸膛还在剧烈起伏，阮棠缓缓睁开眼，冲着镜子里的我弯了弯唇角。</p>
+<p>“真慢。”她咕哝了一句，却在理发师拆下围布的瞬间，像没骨头一样站起身，径直倒向我。</p>
+<p>我一把揽住她的肩膀，顺手替她结了账。店门推开的瞬间，凛冽的寒风当头浇下，阮棠冻得缩了缩脖子，整个人几乎全嵌进了我的臂弯里。</p>
+<p>“好冷好冷……”她抓着我的大衣领子，脚下的马丁靴踩得跌跌撞撞。</p>
+<p>我停下脚步，解开自己脖子上那条灰色的羊绒围巾，一圈一圈，极其小心地绕在她被风吹得冰凉的脖颈上，连同她那头红发一起裹了进去。</p>
+<p>深夜一点的海淀长街，连出租车都看不见一辆。路灯将我们俩交叠的身影拉得极长极长。</p>
+<p>“陈屿，你看。”她突然停住脚步，指着路旁一家二十四小时便利店门口挂着的小风车，在寒风中疯了一样飞转。</p>
+<p>她仰起脸看我。围巾遮住了她大半张脸，只露出一双在酒精浸润下格外亮、又格外脆弱的眼睛。红色的发丝贴在她的额前，在昏黄的路灯光柱下，美得像一场随时会蒸发的幻觉。</p>
+<p>那一刻，我十九岁的人生里所有的克制、理性、推拉与防线，全面溃败。</p>
+<p>我捧住了她的脸。隔着羊绒围巾，我的手掌紧紧贴着她滚烫的面颊。</p>
+<p>“阮棠，别玩了。”</p>
+<p>我盯着她的眼睛，声音哑得不成样子，带着近乎绝望的孤勇，“做我女朋友吧。不是什么暧昧对象，不是喝醉了才找的人。我是陈屿，我想认认真真跟你在一起。”</p>
+<p>阮棠怔住了。</p>
+<p>夜风呼啸而过，刮得头顶的梧桐树枝桠发出凄厉的嘎吱声。她的眼底极快地闪过了一抹慌乱，像是深潭里被投进了一块烧红的铁，水汽翻涌，却又在极短的时间内冷凝成了某种迷离的光。</p>
+<p>她没有回答，只是微微仰起头，踮起了脚尖。</p>
+<p>在零下三度的北京街头，在深夜无人的长街路灯下，她带着一身淡淡的酒气与理发店烘烤的暖香，主动吻上了我的唇。</p>
+<p>那一瞬间，我的脑海里像是有无数根神经同时断裂，炸开一片耀眼的白光。她的唇很软，很凉，却带着致命的引力。我几乎是失控地反客为主，紧紧揽住她纤细的腰肢，加深了这个吻。</p>
+<p>风停了，世界陷入死一般的寂静，只有我们彼此急促混乱的心跳，在厚厚的冬衣下剧烈共振。</p>
+<p>良久，她微微喘息着推开我一点距离，红发散乱，眼里浮着一层水雾。</p>
+<p>“好啊。”她看着我，嘴角牵起一抹极浅的笑，轻声说，“陈屿，那我以后就是你的了。”</p>
+<p>那一夜，我是踩着云朵回寝室的。</p>
+<p>我躺在冰冷的铁架床上，黑暗中，手指一遍遍抚摸着自己发烫的嘴唇，那里仿佛还残留着她酒红发丝的香味和唇瓣的触感。我以为自己终于在悬崖边抓住了这只蝴蝶，我以为我的深情终于融化了她骨子里的冰川。</p>
+<p>可是，青春期最残忍的凌迟，永远不是求而不得。</p>
+<p>而是他把天堂的大门推开一条缝，让你看了一眼璀璨的光，然后再当着你的面，狠狠将门摔上。</p>
+<p>这个“属于我”的承诺，保质期仅仅维持了不到二十四个小时。</p>
+<p>第二天，周六。</p>
+<p>清晨八点发出去的“早安”，如同石沉大海。</p>
+<p>直到下午三点，手机才收到两个字：【刚醒。】</p>
+<p>没有表情包，没有以往黏腻的调侃。</p>
+<p>傍晚我约她去吃那家她念叨了很久的铜锅涮肉，她说“头疼，在寝室睡觉，不想出门”。</p>
+<p>周一的大课，我照例在最后一排替她占了靠窗的位置，桌上放着她喜欢的温热豆奶。可是上课铃响过之后，后门被推开，阮棠穿着一件宽大的卫衣走进来，视线在教室里扫了一圈，哪怕和我四目相对，她的眼神里竟没有一丝温度，平淡得像在看一个陌生人。</p>
+<p>她没有坐到我身边，而是转身走向了第一排，径直坐在了几个素不相识的女生身旁。</p>
+<p>那一整节课，老师在黑板上写了什么，我一个字都没听进去。</p>
+<p>我就像一个被绑在处刑架上的犯人，死死盯着第一排那一头刺目的红发，心脏一下又一下，沉重而剧烈地往下坠。</p>
+<p>在无人注意的课桌下，我的右手伸进大衣内袋，指腹疯狂地摩挲着那枚怀表冰冷粗糙的齿轮。</p>
+<p>那一刻，心魔几乎要破土而出——如果我现在拧动发条，将时间倒回上周五的深夜呢？</p>
+<p>如果我没有在路灯下失控表白，没有亲吻她，没有逼她做出那个承诺，我们是不是还能像从前一样，在后排一起喝热红茶，任由她在我的笔记上画小乌龟？</p>
+<p>可是，指尖扣在发条上，我终究没敢用力。我还在可笑地心存侥幸，我以为这只是女孩子一时的害羞与别扭，我以为只要我足够有诚意，真心就一定能换来真心。</p>
+<hr>
+<h3 id="卷四：带刺深渊"><a href="#卷四：带刺深渊" class="headerlink" title="卷四：带刺深渊"></a>卷四：带刺深渊</h3><p>断崖式的冷暴力持续了整整一周。</p>
+<p>不回消息，不接电话，偶遇时客套得像隔着重洋。我像个精神失常的疯子，整夜整夜失眠，在代码编辑器里写满毫无意义的死循环，又在天亮前一字一字删掉。</p>
+<p>周四傍晚，北京下起了初冬的雨夹雪。</p>
+<p>湿冷的雨水混合着细碎的冰粒砸在玻璃上，发出令人心烦意乱的噼啪声。我终于在阮棠的宿舍楼下堵到了她。</p>
+<p>她撑着一把透明雨伞，穿着一件米色的羊羔毛外套，那头深酒红色的长发被风吹得有些凌乱。看到我站在风雪里，脸色惨白、眼眶通红的模样，她脚步顿了顿，叹了一口气。</p>
+<p>“去西门外的咖啡馆吧。”她说。</p>
+<p>咖啡馆靠窗的位置，暖气很足，但我们之间的空气却冷得结了冰。</p>
+<p>阮棠甚至没有脱下外套，她两手捧着热美式，目光落在窗外泥泞的马路上，自始至终没有正眼看我。</p>
+<p>“陈屿，周五晚上……对不起。”</p>
+<p>她开口的第一句话，就把我仅存的一丝侥幸打得粉碎。</p>
+<p>“我喝多了，有些冲动。”她的声音极平，平得没有丝毫波澜，“回寝室之后我想了很久，我发现我根本没想明白。我们不合适，退回原来的位置吧。”</p>
+<p>“退回原来的位置？”我死死盯着她，指甲深深陷进掌心里，声音颤抖得不成样子，“阮棠，那是接吻！你答应做我女朋友了！不到一天时间，你就一句没想明白，就要退回去？你到底把我当什么？呼之即来挥之即去的消遣吗？！”</p>
+<p>对面的女孩微微皱了皱眉。她终于转过头来看我，那双漂亮的眼睛里，没有愧疚，没有痛楚，只有一种近乎冷酷的厌倦与坦白。</p>
+<p>“陈屿，你非要我把话说得那么难听吗？”</p>
+<p>她自嘲地笑了一声，放下了咖啡杯，“好，那我就全告诉你。”</p>
+<p>“我初中和高中的时候，死心塌地喜欢过一个人三年。我把我所有的零花钱、所有的自尊、所有能给的真心全掏给他了。结果呢？他高考前劈腿了我最好的闺蜜，还在背地里跟所有人说我倒贴、说我廉价。”</p>
+<p>她看着我，眼神里有一种病态的讥诮：“从那天起我就发誓，我这辈子再也不会对任何人认真了。认真的人就是贱，就是活该被踩在脚底下。”</p>
+<p>“上了大学，我换了城市，染了头发。我发现跟不同的人暧昧太有意思了。我喜欢看男生为我争风吃醋，喜欢看你们猜我的心思、在深夜里为我失眠、为了我一句话跑遍半座城送东西的感觉……那种被捧着、随时能抽身的感觉，像毒瘾一样，我戒不掉。”</p>
+<p>字字诛心。每一个字，都像一把淬了冰的尖刀，精准地扎进我的皮肉，将我过去两个月里所有自以为是的深情、珍视与心动，一片一片凌迟处死。</p>
+<p>“所以……”我听到自己的声音在发飘，“我只是你众多鱼塘里的一条？”</p>
+<p>“你比他们好一点。”阮棠神色平静，“你很干净，对我最好。周五晚上吹完头发，那一瞬间我是真的被你感动了，我甚至以为我也能重新试着去爱一个人。可是第二天一睁眼，看到你发来的消息，我突然觉得窒息。太沉重了，陈屿！你的爱太满了，满得像块巨石压在我胸口！我只要一想到我要为了你放弃整片森林，要对你负责，我就恶心，我想逃！”</p>
+<p>“还有，”她从包里拿出手机，屏幕亮起，锁屏上弹出了几条未读消息，其中一条来自备注为“李杰”的人：【晚上定了日料，我去宿舍楼下接你。】</p>
+<p>“李杰在追我，大三经管的那个学长也在追我。”阮棠把手机扣在桌面上，神情冷漠得像个陌生的看客，“我改不了的。陈屿，放过我，也放过你自己吧。”</p>
+<p>那天下午，我不知道自己是怎么走出咖啡馆的。</p>
+<p>外面的雨夹雪越来越大，冰冷的雨水灌进我的脖领，冻得我浑身麻木。</p>
+<p>我本该体面地转身离开，可年轻时那种自毁般的执念，却像附骨之疽。接下来的三天，我像个丢了魂魄的幽灵，在图书馆、在机房、在她宿舍楼下徘徊。我固执地认为她只是受过伤，只要我足够包容，只要我不给她压力，我一定能成为那个将她拉出深渊的例外。</p>
+<p>直到周日晚上。</p>
+<p>在西门外那条熟悉的银杏大道尽头，一辆黑色的宝马车停在路灯下。</p>
+<p>李杰靠在车门旁，穿着利落的风衣。几分钟后，阮棠从阴影里走出来，她穿着黑色的长大衣，那一头酒红色的长卷发在车灯的照射下如同盛放的罂粟花。</p>
+<p>李杰笑着迎上去，极其自然地伸手揽住了阮棠的细腰，甚至低头在她泛红的耳垂上亲了一下。</p>
+<p>阮棠没有躲。</p>
+<p>她仰起脸，露出了那个我曾经以为只属于我的、微醺般娇嗔的笑意，顺从地钻进了副驾驶座。</p>
+<p>车轮碾碎地上的冰碴，呼啸而去，红色的尾灯在漆黑的雨夜里划出两道刺目的血痕。</p>
+<p>我站在数十米外的梧桐树后，手指深深扣进粗糙的树皮里，鲜血顺着指甲缝渗出来，我却感觉不到一丝疼痛。</p>
+<p>那一刻，我终于明白，深渊底下没有等待被救赎的落难公主。</p>
+<p>那里只有一头习惯了撕咬真心、以虚荣为食的兽。而我倾其所有的十九岁，不过是她战利品陈列架上，又一个可笑的注脚。</p>
+<hr>
+<h3 id="卷五：依然跌向你"><a href="#卷五：依然跌向你" class="headerlink" title="卷五：依然跌向你"></a>卷五：依然跌向你</h3><p>周日深夜，海淀的初冬下起了刺骨的雨夹雪。</p>
+<p>西门外那辆黑色宝马的尾灯，在泥泞冰冷的街道上拉扯出两道刺目的血痕。阮棠坐进李杰副驾时那漫不经心的一笑，像一把重锤，彻底砸碎了我十九年里关于真诚、尊严与深情的所有幻想。</p>
+<p>我浑身湿透地走回老教学楼的天台。夜风像刀子一样割在脸上，胸口处却一片滚烫。</p>
+<p>那是贴身放着的旧银表。</p>
+<p>从记事起，外公就告诉我，这枚怀表逆转时空的齿轮，一生只能动一次大因果，倒流的代价是不可逆的心力损耗。高二那年，我只是倒退了十秒避开一辆卡车，就高烧昏迷了整整三天。</p>
+<p>而这一次，我要倒流整整两个月。</p>
+<p>我坐在天台的水泥沿上，颤抖着将那枚银表从胸口掏了出来。表盘上倒映着我狼狈、猩红、毫无尊严的脸。</p>
+<p>脑海里忽然疯了一样回响起在“浮木”清吧的那个晚上。阮棠晃着微醺的眼眸，把表链缠在食指上，笑着用软糯的川渝话对我说过的那句玩笑：</p>
+<p><em>“那要是哪天我不理你了，你把时间倒回去，重新来找我好不好？”</em></p>
+<p>“阮棠……”</p>
+<p>我自嘲地扯开嘴角，滚烫的眼泪终于决堤而出，滴碎在冰冷的玻璃表罩上：</p>
+<p>“你如愿了。我把时间倒回去……但我不是为了去找你。”</p>
+<p>“这一世，我放你自由，也放我解脱。”</p>
+<p>我闭上双眼，不再犹豫，食指与拇指死死掐住怀表顶端的发条，顶着巨大的机械阻力，朝着逆时针方向，<strong>狠狠拧了整整三圈！</strong></p>
+<p>咔哒。咔哒。咔哒。</p>
+<p>齿轮咬合的金属爆鸣声在暴风雨中尖锐响起！</p>
+<p>轰——！</p>
+<p>漫天的雨雪在半空中硬生生定格。挂在脸颊上的泪水逆流滑回眼眶，刺耳的刹车声、风声、城市的霓虹在视界里被无限拉长成斑斓的射线，天地倒悬，整座时空如同一盘被疯狂倒带的残破磁带，将我的意识拖入了万劫不复的漩涡中！</p>
+<p>……</p>
+<p>“全体都有——立正！”</p>
+<p>刺耳的哨声伴随着教官威严的吼声，如同一记雷霆，狠狠将我从混沌的深渊里拽回人间！</p>
+<p>炽热的阳光直刺眼底，鼻腔里瞬间灌满了大一十月被暴晒的塑胶跑道焦苦味，以及迷彩服粗糙硬领磨破脖颈的熟悉刺痛。</p>
+<p>我浑身一震，猛地睁开眼，大口大口地喘着粗气。</p>
+<p>胸口的口袋里，那枚银表滚烫得像一块烙铁，秒针正在以顺时针的方向，重新“哒、哒、哒”正常走动。</p>
+<p><strong>时间，真的倒流了。</strong></p>
+<p>那场绝望的冬夜、李杰的宝马、阮棠冷酷的坦白……全被我亲手抹杀在了未曾发生的未来里。</p>
+<p>在斜前方三点钟的方向，那个熟悉的背影挺拔地站在队列里，几缕细软的<strong>浅黄色碎发</strong>从迷彩帽檐钻出来。</p>
+<p>她还没有染成酒红，还没有在清吧握着酒杯对我笑，更没有在理发店门外把初吻给我。</p>
+<p>而这一世，我拥有所有的痛苦记忆，我终于可以置身事外。</p>
+<p>“原地解散！”</p>
+<p>解散哨吹响的一瞬，卢阳如期一巴掌拍在我肩上，挤眉弄眼地朝我指：“陈屿，快看文学院那个阮棠……”</p>
+<p>“卢阳，我头晕，回宿舍了。”</p>
+<p>我没有给卢阳说完话的机会，甚至连余光都没有往那个方向分去半寸。我像一个从火灾现场侥幸生还的逃兵，低着头，死死按着胸前还在发烫的怀表，穿过熙熙攘攘的人流，快步走出操场的铁丝网大门。</p>
+<p>只要我不去捡那张散落的学籍表，只要我不去那家叫“浮木”的酒吧，只要我不碰她递来的毒药……</p>
+<p>这场由我逆转时空换来的自由，就能够生效。</p>
+<p>我踩在林荫道铺满的金黄银杏叶上，正准备长长地舒出那口憋了两个月的浊气——</p>
+<p>踏踏踏。</p>
+<p>一阵急促而轻巧的脚步声，踩着碎叶，从我身后不顾一切地追赶了上来。</p>
+<p>“同学，请等一下！”</p>
+<p>那道浸透了骨髓、带着川蜀软糯尾调的声音，就这么蛮不讲理地刺穿了北平十月的秋风。</p>
+<p>我的脚步骤然钉死在地面上，浑身的血液仿佛在瞬间凝结成冰。</p>
+<p>在上一世，这个时间点的阮棠，甚至连我的名字都不可能知道。</p>
+<p>我僵硬地、不可置信地转过身。</p>
+<p>灿烂得近乎刺眼的日光下，漫天金黄的银杏叶随风打着旋。阮棠穿着宽大的迷彩服，跑得有些气喘吁吁，白皙的脸颊上透着薄薄的粉红，几缕浅黄色的发丝在阳光下闪烁着绒光。</p>
+<p>她停在距离我只有一步之遥的落叶上，手里捧着一听温热的无糖茶，眼底满是青涩、局促与好奇。</p>
+<p>“同学……你的学生卡掉在操场水龙头旁边的台阶上了，我刚好捡到。”</p>
+<p>她把那张写着“计算机系·陈屿”的蓝色卡片递到我面前，目光在触碰到我双眼的瞬间，却猛地顿住了。</p>
+<p>风吹过树梢，吹落了一树金黄。</p>
+<p>阮棠没有像普通路人那样道谢后离开。她有些迷惘地歪着头，下意识地用手轻轻按住了自己的左胸口，看着我，眼眶里竟然不受控制地泛起了一层薄薄的水雾：</p>
+<p>“真奇怪啊……”</p>
+<p>她小声喃喃着，语气里带着连她自己都无法理解的心慌与依恋：</p>
+<p>“明明我们是第一次见……可刚才在操场上看着你的背影，我的心跳得好疼，疼得就像……我曾经把什么最重要的东西，亲手弄丢了一样。”</p>
+<p>她吸了吸鼻子，仰起那张干净得不染纤尘的脸，冲我怯生生地弯起眉眼：</p>
+<p>“陈屿同学，我们……以前是不是在梦里见过呀？”</p>
+<p>秋阳温暖如初，胸口那枚回溯时间的怀表彻底冰冷沉寂。</p>
+<p>我看着她干净明亮的眼睛，看着她掌心属于我的名字，浑身筑起的冰川与防备，在这一瞬轰然瓦解。</p>
+<p>滚烫的酸涩涌上眼眶，我终于在漫天的落叶里，自嘲又绝望地笑出了声。</p>
+<p>原来我逆转了时空，改写了因果，拨乱了天地的齿轮；我算尽了一切逃避的退路，却终究算不过早已刻进灵魂深处的引力。</p>
+<p>我逃不掉的。</p>
+<p>哪怕时间倒流一千次、一万次，只要她穿过人群走向我——</p>
+<p>我依然会心甘情愿地，再次跌进这场名为阮棠的宿命里。</p>
+]]></content>
   </entry>
   <entry>
     <title>日常</title>
