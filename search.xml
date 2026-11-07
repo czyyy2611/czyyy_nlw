@@ -1,208 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>a</title>
-    <url>/czyyy_nlw/2026/10/18/1/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="c4cbfc69cbe484997beb646fec2d2ce98fc56b79eb037da438c41922df389e52"
-     data-nonce="76b740a890dd95b3bb76ded4"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    7629db803eb7ac7634067b9ce443357f54550d95024ee0aea98f9ae53e691ce21648a8135f29406a84d409053a79ef7018827598d0f18cc251627d57c5ad0b4e9b80df7ac2f1846a64b8c0048a5dfb3fbfb498ffa149fe974a1ea33d02f9d1e3d9cb605055e472b6312922cae13e59a24f8953a53ad2d6736a3609efbb2c5ae85e0f3b107281366fab0712c8cadd8f53d03e9205186e9716571bdee171283f7ecf8ad9b506ca3c00161fbd662baab69d67ac146ce9a2fe442428448bc7c5f972064ce769544e469aabc01fcc47e92d9eba236178f4004a4d4c9663894a4c799d0dba75db6e9bb342176d4f3d7286d7be891d183f5e366012685a39ec0a885300d1801e05420a0b95c19909fcea029d19fc9b91c84e71688bcec63ded3d46a6eab8783c7a2bbdd43a00ea74e6c5aa36766851f1
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>OOPre</title>
-    <url>/czyyy_nlw/2026/10/29/OOPre/</url>
-    <content><![CDATA[<hr>
-<h1 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h1><blockquote>
-<ol>
-<li>Java基础</li>
-<li>类与对象</li>
-<li>继承与接口</li>
-<li>错误分析</li>
-<li>容器与层次化</li>
-<li>设计模式</li>
-<li>递归下降</li>
-</ol>
-</blockquote>
-<hr>
-<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><ol>
-<li>输入 Scanner<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner</span><br><span class="line"></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line"><span class="type">double</span> <span class="variable">b</span> <span class="operator">=</span> scanner.nextDouble();</span><br><span class="line"><span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> scanner.next();<span class="comment">//next以空白符为分割</span></span><br><span class="line"><span class="type">String</span> <span class="variable">d</span> <span class="operator">=</span> scanner.nextLine();<span class="comment">//nextLine以换行符为分割</span></span><br></pre></td></tr></table></figure></li>
-<li>输出 System<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println();</span><br></pre></td></tr></table></figure></li>
-<li>访问权限<br>public, protected, private</li>
-<li>static<br>用于声明类的属性和方法；静态属性可以被类的所有对象共享访问；免实例调用</li>
-<li>final<br>不可变；不可重写；不可继承</li>
-</ol>
-<hr>
-<h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><ol>
-<li>主类<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">void</span> <span class="title function_">main</span><span class="params">(String[ ] args)</span>&#123;</span><br><span class="line"><span class="comment">// 程序入口</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
-<li>构造方法<br> 与类同名；用 this. 构造</li>
-<li>get方法与set方法</li>
-</ol>
-<hr>
-<h1 id="继承与接口"><a href="#继承与接口" class="headerlink" title="继承与接口"></a>继承与接口</h1><ol>
-<li>抽象类，方法<br><code>abstract</code>，不能实例化</li>
-<li>重写<br><code>@Override</code><br>要求方法名称，参数与返回类型保持一致；重写的可见性&gt;&#x3D;父类方法</li>
-</ol>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
-<li>继承的写法<br> 使用 <code>子类 extends 父类</code></li>
-<li>访问权限<br>子类不能访问父类的private字段，需改成protected</li>
-<li>构造方法<br>可以用<code>super(...)</code>调用父类的构造方法；若显式调用，<code>super(...)</code>必须是子类构造方法的第一条语句</li>
-<li>其他方法<br>可以直接通过<code>super.</code>调用父类方法</li>
-</ol>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ol>
-<li>接口的写法<br><code>interface 接口名</code><br><code>类名 implements 接口名</code></li>
-<li>接口方法<br>隐含为<code>public abstract</code>，实现类的对应方法也必须是<code>public</code></li>
-<li><code>instanceof</code><br>检查是否是目标类型，可以用以检测是否为接口的实例</li>
-</ol>
-<hr>
-<h1 id="错误分析"><a href="#错误分析" class="headerlink" title="错误分析"></a>错误分析</h1><ol>
-<li>基本类型和引用类型<br>基本类型直接存<em>值</em>，引用类型存的是<em>引用地址</em></li>
-<li>引用赋值<br><code>Book book2 = book1</code>，两个变量引用同一个目标，相当于形成别名</li>
-<li>浅复制<br>新旧对象共享同一个内部对象</li>
-<li>深复制<br>新旧对象完全独立，互不影响；所以对容器的深复制需要遍历所有对象，逐个深复制</li>
-<li><code>==</code>与<code>equals</code><br><code>==</code>用于判断二者是否指向同一对象，也就是地址是否相同 <code>equals</code>只判断内容是否相同</li>
-<li>Scanner常见问题<blockquote>
-<p>Scanner.next() 读取下一个以空白字符分隔的内容，Scanner.nextLine() 读取当前行剩余内容。混合使用时，前一个读取操作留下的换行符可能使 nextLine() 立即返回空串。</p>
-</blockquote>
-</li>
-<li>遍历删除错误<br>不要在增强for循环中增删改变容器的状态，因为删除方法不会改变迭代器的状态，导致迭代器状态与容器状态不一致从而出错</li>
-<li>下标与substring<br>subbstring(beginIndex, endIndex)是左闭右开区间</li>
-</ol>
-<hr>
-<h1 id="容器与层次化"><a href="#容器与层次化" class="headerlink" title="容器与层次化"></a>容器与层次化</h1><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><ol>
-<li>需要 <code>import java.util.ArrayList</code>（对应）</li>
-<li>ArrayList<br>基本用法：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ArrayList</span>&lt;Potion&gt; <span class="variable">potions</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();<span class="comment">//创建</span></span><br><span class="line">potions.add(potion1);<span class="comment">//加入一个元素</span></span><br><span class="line">potions.set(<span class="number">1</span>, potion2);<span class="comment">//修改下标为1的元素</span></span><br><span class="line"><span class="type">Potion</span> <span class="variable">potion</span> <span class="operator">=</span> potions.gets(i);<span class="comment">//访问下标为i的元素</span></span><br><span class="line">potions.contains(<span class="string">&quot;A&quot;</span>);<span class="comment">//是否包含某元素</span></span><br><span class="line"><span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> potions.size();<span class="comment">//大小</span></span><br><span class="line"><span class="keyword">for</span> (Potion item : potions)&#123;</span><br><span class="line">   <span class="comment">//遍历</span></span><br><span class="line">&#125;</span><br><span class="line">potions.remove(i);<span class="comment">//删除</span></span><br><span class="line">potions.clear();<span class="comment">//清空所有</span></span><br></pre></td></tr></table></figure></li>
-<li>HashMap<br>存储无序<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashMap</span>&lt;String, Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="comment">//&lt;Key, Value&gt;</span></span><br><span class="line">items.put(item1.getId(), item1);<span class="comment">//加入，用的是*put*</span></span><br><span class="line">items.get(item1.getId());<span class="comment">//访问key值对应的value</span></span><br><span class="line">items.containsKey(item1.getId());<span class="comment">//检查是否存在key对应的映射关系</span></span><br><span class="line">items.containsValue(item2);<span class="comment">//检查是否存在value对应的映射关系</span></span><br><span class="line">items.size();</span><br><span class="line"><span class="keyword">for</span> (String key : items.keySet()) &#123; <span class="comment">// keySet 可以获取所有 key 组成的集合</span></span><br><span class="line">      </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (Item value : items.values()) &#123; <span class="comment">// values 可以获取所有 value 组成的集合</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">items.remove(item1.getId());<span class="comment">//删除一个映射关系</span></span><br><span class="line">items.remove(item2.getId(), item2);<span class="comment">//删除一个键值对；仅当该 key 当前映射到该 value 时才能删除</span></span><br></pre></td></tr></table></figure></li>
-<li>HashSet<br>本质是只保存key的HashMap<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashSet</span>&lt;Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">items.add(item1);</span><br><span class="line">items.contains(item1);</span><br><span class="line">size(); remove();</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="层次化对象管理"><a href="#层次化对象管理" class="headerlink" title="层次化对象管理"></a>层次化对象管理</h2><ol>
-<li>组合关系<br>多个对象组合形成一个更大的对象；这是一种整体与部分的关系</li>
-<li>聚合关系<br>相互独立，弱关联</li>
-</ol>
-<hr>
-<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ol>
-<li>工厂模式<ol>
-<li>简单工厂模式<br>定义一个类（工厂）负责创建其他类的实例；由产品抽象父类Product，具体产品ProductA，工厂类Factory：public static Product create(String type)构成；</li>
-<li>工厂方法模式<br>定义一个用于创建对象的接口，让具体工厂子类决定实例化哪个产品类；构成：工厂接口 Factory，具体工厂 FactoryA</li>
-<li>抽象工厂模式<br>提供创建一组相关产品（产品族）的接口；构成：产品族，工厂接口 Factory：声明多个创建方法，具体工厂</li>
-</ol>
-</li>
-<li>观察者模式<br>被观察者Subject，需维护观察者列表，增删观察者，事件触发时发出通知；观察者Observer，提供响应方法，收到通知后响应<br>定义被观察者和观察者接口；具体实现类实现接口；</li>
-</ol>
-<hr>
-<h1 id="递归下降"><a href="#递归下降" class="headerlink" title="递归下降"></a>递归下降</h1><ol>
-<li>词法分析Lexer<br>把Expr拆成Token，一般有peek(), next()方法</li>
-<li>语法分析Parser<br>以下内容来自指导书<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">parseExpr:</span><br><span class="line"> 新建一个Term的容器T</span><br><span class="line"> 调用parseTerm获得一个项t</span><br><span class="line"> T中加上parseTerm返回的项t</span><br><span class="line"> <span class="keyword">while</span> 当前token是+:</span><br><span class="line">     跳过当前token(+)</span><br><span class="line">     调用parseTerm获得一个项t</span><br><span class="line">     T中加上parseTerm返回的项t</span><br><span class="line"> 利用T生成一个新的Expr e</span><br><span class="line"> 返回e</span><br><span class="line"></span><br><span class="line"> parseTerm:</span><br><span class="line"> 新建一个Factor的容器F</span><br><span class="line"> 调用parseFactor获得一个因子f</span><br><span class="line"> F中加上parseFactor返回的因子f</span><br><span class="line"> <span class="keyword">while</span> 当前token是*:</span><br><span class="line">     跳过当前token(*)</span><br><span class="line">     调用parseFactor获得一个因子f</span><br><span class="line">     F中加上parseFactor返回的因子f</span><br><span class="line"> 利用F生成一个新的Term t</span><br><span class="line"> 返回t</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> 跳过当前的token(i)</span><br><span class="line"> 利用i生成一个新的Factor f</span><br><span class="line"> 返回f</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> <span class="keyword">if</span> 真:</span><br><span class="line">     跳过当前的token(i)</span><br><span class="line">     利用i生成一个新的Factor f</span><br><span class="line">     返回f</span><br><span class="line"> <span class="keyword">if</span> 假，说明是(表达式):</span><br><span class="line">     跳过当前token(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">     调用parseExpr获得一个表达式e</span><br><span class="line">     利用e生成因子f</span><br><span class="line">     跳过当前token(<span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">     返回f</span><br></pre></td></tr></table></figure></li>
-</ol>
-<hr>
-<p>参考：OOpre指导书</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>learn c++</title>
-    <url>/czyyy_nlw/2026/10/21/c++/</url>
-    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
-<li>格式<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> namespcae std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>输入输出<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
-<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
-<li>结构体<br>省去了typedef</li>
-</ol>
-<hr>
-<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
-<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="keyword">auto</span> p = q.<span class="built_in">begin</span>(); p != q.<span class="built_in">end</span>(); p++)<span class="comment">//这个就是迭代器</span></span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>vector</p>
-  <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  vector &lt;<span class="type">int</span>&gt; q;<span class="comment">//创建名为q的一个int型动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">a</span>(<span class="number">10</span>);<span class="comment">//创建一个长度为10的动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">b</span>(<span class="number">10</span>,<span class="number">2</span>);<span class="comment">//创建一个长度为10，元素值均为2的动态数组</span></span><br><span class="line">  q.<span class="built_in">resize</span>(<span class="number">10</span>);<span class="comment">//为q分配10个空间</span></span><br><span class="line">  q.<span class="built_in">push_back</span>(<span class="number">1</span>);<span class="comment">//往q里增加一个1</span></span><br><span class="line">  q.<span class="built_in">pop_back</span>();<span class="comment">//删掉最后一个元素</span></span><br><span class="line">  q.<span class="built_in">size</span>();<span class="comment">//元素个数</span></span><br><span class="line">  q.<span class="built_in">empty</span>();<span class="comment">//是否为空，空返回 true</span></span><br><span class="line">  q.<span class="built_in">clear</span>();<span class="comment">//清空</span></span><br><span class="line">  q.<span class="built_in">front</span>();<span class="comment">//第一个元素</span></span><br><span class="line">  q.<span class="built_in">back</span>();<span class="comment">//最后一个元素</span></span><br></pre></td></tr></table></figure></li>
-<li><p>set (会按从小到大自动排好)</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">set &lt;<span class="type">int</span>&gt; s;</span><br><span class="line">s.<span class="built_in">insert</span>(<span class="number">4</span>);</span><br><span class="line">s.<span class="built_in">find</span>(<span class="number">2</span>);  <span class="comment">//find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span></span><br><span class="line">cout &lt;&lt; (s.<span class="built_in">find</span>(<span class="number">2</span>)!=s.<span class="built_in">end</span>()) &lt;&lt; endl;</span><br><span class="line">s.<span class="built_in">erase</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure></li>
-<li><p>map (会按从小到大自动排序)</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">map &lt;string, <span class="type">int</span>&gt; m;</span><br><span class="line">p-&gt;first <span class="comment">//键</span></span><br><span class="line">p-&gt;second <span class="comment">//值</span></span><br><span class="line">m.<span class="built_in">count</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//1，判断键是否存在</span></span><br><span class="line">m.<span class="built_in">erase</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//删除这个键</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unordered_set, unordered_map;</p>
-</li>
-<li><p>stack</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">s.<span class="built_in">top</span>();</span><br><span class="line">s.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure></li>
-<li><p>queue</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">q.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">q.<span class="built_in">front</span>();</span><br><span class="line">q.<span class="built_in">back</span>();</span><br><span class="line">q.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure>
-<p>栈和队没有迭代器</p>
-</li>
-</ol>
-<hr>
-<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
-<li><p>sort</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(a, a + n);</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">rbegin</span>(), v.<span class="built_in">rend</span>());  <span class="comment">//从大到小，不用写 cmp</span></span><br></pre></td></tr></table></figure>
-<p>用cmp自定义排序顺序</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;    <span class="comment">//只能有 &gt; &lt;</span></span><br><span class="line">    <span class="keyword">return</span> x &gt; y;   <span class="comment">//从大到小排</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>cctype</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">isalpha</span>();</span><br><span class="line"><span class="built_in">islower</span>()</span><br><span class="line"><span class="built_in">isupper</span>()</span><br><span class="line"><span class="built_in">isalnum</span>()</span><br><span class="line"><span class="built_in">isspace</span>()</span><br><span class="line"><span class="built_in">tolower</span>()</span><br><span class="line"><span class="built_in">toupper</span>()</span><br></pre></td></tr></table></figure></li>
-<li><p>bitset</p>
-</li>
-<li><p>C++ 11</p>
-<ol>
-<li>auto</li>
-<li>for(int i : a), for(int &amp;i : a)</li>
-<li>to_string(),  stoi(), stod()…</li>
-</ol>
-</li>
-</ol>
-<hr>
-<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>MIPS ?</title>
-    <url>/czyyy_nlw/2026/10/20/MIPS/</url>
-    <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
-<li>输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro input(%in)   #输入一个整数</span><br><span class="line">    li $v0, 5</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_char(%in)   #输入一个字符</span><br><span class="line">    li $v0, 12</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_str(%addr, %max_len)    #输入一个字符串</span><br><span class="line">    li $v0,8</span><br><span class="line">    la $a0, %addr</span><br><span class="line">    move $a1, %max_len</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro print(%out)  # 输出一个整数</span><br><span class="line">    li $v0, 1</span><br><span class="line">    move $a0, %out</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_char(%out) # 打印一个字符</span><br><span class="line">    li $v0, 11</span><br><span class="line">    move $a0, %out</span><br><span class="line">     syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_str(%addr) # 打印一个字符串</span><br><span class="line">    li $v0, 4</span><br><span class="line">    la $a0, %addr </span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>退出程序<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro exit()</span><br><span class="line">    li $v0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>打印换行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro println()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>打印空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro printspace()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 32</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>计算二维数组字节偏移量<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro calc_addr(%dst, %row, %col, %rank)</span><br><span class="line">    multu %row, %rank</span><br><span class="line">    mflo %dst</span><br><span class="line">    addu %dst, %dst %col</span><br><span class="line">    sll %dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>读数组元素 arr[index] -&gt; %val (用到$t9)<br>字符串：去掉sll，lw -&gt; lb<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro lw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    lw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>写数组元素 %val -&gt; arr[index] (用到$t9)<br>字符串：去掉sll，lw -&gt; lb <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro sw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    sw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
-<hr>
-</li>
-</ol>
-<h1 id="循环的写法"><a href="#循环的写法" class="headerlink" title="循环的写法"></a>循环的写法</h1><ol>
-<li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line"># 初始化</span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
-<li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line"># 初始化</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure>
-<hr>
-</li>
-</ol>
-<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><ol>
-<li><p>可分为线性递归，树形递归，循环递归</p>
-</li>
-<li><p>入栈出栈宏</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro push(%src)</span><br><span class="line">    addi $sp, $sp, -4</span><br><span class="line">    sw %src, 0($sp)</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro pop(%src)</span><br><span class="line">    lw %src, 0($sp)</span><br><span class="line">    addi $sp, $sp, 4</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li><p>写法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func:</span><br><span class="line">     # 1. 基线条件处理(停止递归)</span><br><span class="line">     beq $a0, $zero, base_case</span><br><span class="line"></span><br><span class="line">     # 2. 压栈</span><br><span class="line">     push($ra)</span><br><span class="line">     push($a0)</span><br><span class="line"> </span><br><span class="line">     # 3. 递归准备与调用</span><br><span class="line">     addi $a0, $a0, -1   # 修改参数，准备下一层的入参</span><br><span class="line">     </span><br><span class="line">     jal func    # 递归调用</span><br><span class="line"></span><br><span class="line">     move $s0, $v0   #存值（如果第二次还要调用）</span><br><span class="line"></span><br><span class="line">     # 恢复参数</span><br><span class="line"></span><br><span class="line">     # 4. 合并结果</span><br><span class="line"></span><br><span class="line">     # 5. 弹栈</span><br><span class="line">     pop($a0)</span><br><span class="line">     pop($ra)</span><br><span class="line"></span><br><span class="line"> base_case:  # 出口设置</span><br><span class="line">     xxx</span><br><span class="line">     jr $ra</span><br></pre></td></tr></table></figure>
-<hr>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>P3 设计文档</title>
     <url>/czyyy_nlw/2026/10/27/P3%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/</url>
     <content><![CDATA[<h1 id="P3-设计文档"><a href="#P3-设计文档" class="headerlink" title="P3 设计文档"></a>P3 设计文档</h1><hr>
@@ -785,6 +583,520 @@
 ]]></content>
   </entry>
   <entry>
+    <title>learn c++</title>
+    <url>/czyyy_nlw/2026/10/21/c++/</url>
+    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
+<li>格式<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> namespcae std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>输入输出<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
+<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
+<li>结构体<br>省去了typedef</li>
+</ol>
+<hr>
+<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
+<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="keyword">auto</span> p = q.<span class="built_in">begin</span>(); p != q.<span class="built_in">end</span>(); p++)<span class="comment">//这个就是迭代器</span></span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>vector</p>
+  <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  vector &lt;<span class="type">int</span>&gt; q;<span class="comment">//创建名为q的一个int型动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">a</span>(<span class="number">10</span>);<span class="comment">//创建一个长度为10的动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">b</span>(<span class="number">10</span>,<span class="number">2</span>);<span class="comment">//创建一个长度为10，元素值均为2的动态数组</span></span><br><span class="line">  q.<span class="built_in">resize</span>(<span class="number">10</span>);<span class="comment">//为q分配10个空间</span></span><br><span class="line">  q.<span class="built_in">push_back</span>(<span class="number">1</span>);<span class="comment">//往q里增加一个1</span></span><br><span class="line">  q.<span class="built_in">pop_back</span>();<span class="comment">//删掉最后一个元素</span></span><br><span class="line">  q.<span class="built_in">size</span>();<span class="comment">//元素个数</span></span><br><span class="line">  q.<span class="built_in">empty</span>();<span class="comment">//是否为空，空返回 true</span></span><br><span class="line">  q.<span class="built_in">clear</span>();<span class="comment">//清空</span></span><br><span class="line">  q.<span class="built_in">front</span>();<span class="comment">//第一个元素</span></span><br><span class="line">  q.<span class="built_in">back</span>();<span class="comment">//最后一个元素</span></span><br></pre></td></tr></table></figure></li>
+<li><p>set (会按从小到大自动排好)</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">set &lt;<span class="type">int</span>&gt; s;</span><br><span class="line">s.<span class="built_in">insert</span>(<span class="number">4</span>);</span><br><span class="line">s.<span class="built_in">find</span>(<span class="number">2</span>);  <span class="comment">//find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span></span><br><span class="line">cout &lt;&lt; (s.<span class="built_in">find</span>(<span class="number">2</span>)!=s.<span class="built_in">end</span>()) &lt;&lt; endl;</span><br><span class="line">s.<span class="built_in">erase</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>map (会按从小到大自动排序)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">map &lt;string, <span class="type">int</span>&gt; m;</span><br><span class="line">p-&gt;first <span class="comment">//键</span></span><br><span class="line">p-&gt;second <span class="comment">//值</span></span><br><span class="line">m.<span class="built_in">count</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//1，判断键是否存在</span></span><br><span class="line">m.<span class="built_in">erase</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//删除这个键</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>unordered_set, unordered_map;</p>
+</li>
+<li><p>stack</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">s.<span class="built_in">top</span>();</span><br><span class="line">s.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure></li>
+<li><p>queue</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">q.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">q.<span class="built_in">front</span>();</span><br><span class="line">q.<span class="built_in">back</span>();</span><br><span class="line">q.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure>
+<p>栈和队没有迭代器</p>
+</li>
+</ol>
+<hr>
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
+<li><p>sort</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(a, a + n);</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">rbegin</span>(), v.<span class="built_in">rend</span>());  <span class="comment">//从大到小，不用写 cmp</span></span><br></pre></td></tr></table></figure>
+<p>用cmp自定义排序顺序</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;    <span class="comment">//只能有 &gt; &lt;</span></span><br><span class="line">    <span class="keyword">return</span> x &gt; y;   <span class="comment">//从大到小排</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>cctype</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">isalpha</span>();</span><br><span class="line"><span class="built_in">islower</span>()</span><br><span class="line"><span class="built_in">isupper</span>()</span><br><span class="line"><span class="built_in">isalnum</span>()</span><br><span class="line"><span class="built_in">isspace</span>()</span><br><span class="line"><span class="built_in">tolower</span>()</span><br><span class="line"><span class="built_in">toupper</span>()</span><br></pre></td></tr></table></figure></li>
+<li><p>bitset</p>
+</li>
+<li><p>C++ 11</p>
+<ol>
+<li>auto</li>
+<li>for(int i : a), for(int &amp;i : a)</li>
+<li>to_string(),  stoi(), stod()…</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>OOPre</title>
+    <url>/czyyy_nlw/2026/10/29/OOPre/</url>
+    <content><![CDATA[<hr>
+<h1 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h1><blockquote>
+<ol>
+<li>Java基础</li>
+<li>类与对象</li>
+<li>继承与接口</li>
+<li>错误分析</li>
+<li>容器与层次化</li>
+<li>设计模式</li>
+<li>递归下降</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><ol>
+<li>输入 Scanner<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner</span><br><span class="line"></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line"><span class="type">double</span> <span class="variable">b</span> <span class="operator">=</span> scanner.nextDouble();</span><br><span class="line"><span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> scanner.next();<span class="comment">//next以空白符为分割</span></span><br><span class="line"><span class="type">String</span> <span class="variable">d</span> <span class="operator">=</span> scanner.nextLine();<span class="comment">//nextLine以换行符为分割</span></span><br></pre></td></tr></table></figure></li>
+<li>输出 System<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println();</span><br></pre></td></tr></table></figure></li>
+<li>访问权限<br>public, protected, private</li>
+<li>static<br>用于声明类的属性和方法；静态属性可以被类的所有对象共享访问；免实例调用</li>
+<li>final<br>不可变；不可重写；不可继承</li>
+</ol>
+<hr>
+<h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><ol>
+<li>主类<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">void</span> <span class="title function_">main</span><span class="params">(String[ ] args)</span>&#123;</span><br><span class="line"><span class="comment">// 程序入口</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
+<li>构造方法<br> 与类同名；用 this. 构造</li>
+<li>get方法与set方法</li>
+</ol>
+<hr>
+<h1 id="继承与接口"><a href="#继承与接口" class="headerlink" title="继承与接口"></a>继承与接口</h1><ol>
+<li>抽象类，方法<br><code>abstract</code>，不能实例化</li>
+<li>重写<br><code>@Override</code><br>要求方法名称，参数与返回类型保持一致；重写的可见性&gt;&#x3D;父类方法</li>
+</ol>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
+<li>继承的写法<br> 使用 <code>子类 extends 父类</code></li>
+<li>访问权限<br>子类不能访问父类的private字段，需改成protected</li>
+<li>构造方法<br>可以用<code>super(...)</code>调用父类的构造方法；若显式调用，<code>super(...)</code>必须是子类构造方法的第一条语句</li>
+<li>其他方法<br>可以直接通过<code>super.</code>调用父类方法</li>
+</ol>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ol>
+<li>接口的写法<br><code>interface 接口名</code><br><code>类名 implements 接口名</code></li>
+<li>接口方法<br>隐含为<code>public abstract</code>，实现类的对应方法也必须是<code>public</code></li>
+<li><code>instanceof</code><br>检查是否是目标类型，可以用以检测是否为接口的实例</li>
+</ol>
+<hr>
+<h1 id="错误分析"><a href="#错误分析" class="headerlink" title="错误分析"></a>错误分析</h1><ol>
+<li>基本类型和引用类型<br>基本类型直接存<em>值</em>，引用类型存的是<em>引用地址</em></li>
+<li>引用赋值<br><code>Book book2 = book1</code>，两个变量引用同一个目标，相当于形成别名</li>
+<li>浅复制<br>新旧对象共享同一个内部对象</li>
+<li>深复制<br>新旧对象完全独立，互不影响；所以对容器的深复制需要遍历所有对象，逐个深复制</li>
+<li><code>==</code>与<code>equals</code><br><code>==</code>用于判断二者是否指向同一对象，也就是地址是否相同 <code>equals</code>只判断内容是否相同</li>
+<li>Scanner常见问题<blockquote>
+<p>Scanner.next() 读取下一个以空白字符分隔的内容，Scanner.nextLine() 读取当前行剩余内容。混合使用时，前一个读取操作留下的换行符可能使 nextLine() 立即返回空串。</p>
+</blockquote>
+</li>
+<li>遍历删除错误<br>不要在增强for循环中增删改变容器的状态，因为删除方法不会改变迭代器的状态，导致迭代器状态与容器状态不一致从而出错</li>
+<li>下标与substring<br>subbstring(beginIndex, endIndex)是左闭右开区间</li>
+</ol>
+<hr>
+<h1 id="容器与层次化"><a href="#容器与层次化" class="headerlink" title="容器与层次化"></a>容器与层次化</h1><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><ol>
+<li>需要 <code>import java.util.ArrayList</code>（对应）</li>
+<li>ArrayList<br>基本用法：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ArrayList</span>&lt;Potion&gt; <span class="variable">potions</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();<span class="comment">//创建</span></span><br><span class="line">potions.add(potion1);<span class="comment">//加入一个元素</span></span><br><span class="line">potions.set(<span class="number">1</span>, potion2);<span class="comment">//修改下标为1的元素</span></span><br><span class="line"><span class="type">Potion</span> <span class="variable">potion</span> <span class="operator">=</span> potions.gets(i);<span class="comment">//访问下标为i的元素</span></span><br><span class="line">potions.contains(<span class="string">&quot;A&quot;</span>);<span class="comment">//是否包含某元素</span></span><br><span class="line"><span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> potions.size();<span class="comment">//大小</span></span><br><span class="line"><span class="keyword">for</span> (Potion item : potions)&#123;</span><br><span class="line">   <span class="comment">//遍历</span></span><br><span class="line">&#125;</span><br><span class="line">potions.remove(i);<span class="comment">//删除</span></span><br><span class="line">potions.clear();<span class="comment">//清空所有</span></span><br></pre></td></tr></table></figure></li>
+<li>HashMap<br>存储无序<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashMap</span>&lt;String, Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="comment">//&lt;Key, Value&gt;</span></span><br><span class="line">items.put(item1.getId(), item1);<span class="comment">//加入，用的是*put*</span></span><br><span class="line">items.get(item1.getId());<span class="comment">//访问key值对应的value</span></span><br><span class="line">items.containsKey(item1.getId());<span class="comment">//检查是否存在key对应的映射关系</span></span><br><span class="line">items.containsValue(item2);<span class="comment">//检查是否存在value对应的映射关系</span></span><br><span class="line">items.size();</span><br><span class="line"><span class="keyword">for</span> (String key : items.keySet()) &#123; <span class="comment">// keySet 可以获取所有 key 组成的集合</span></span><br><span class="line">      </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (Item value : items.values()) &#123; <span class="comment">// values 可以获取所有 value 组成的集合</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">items.remove(item1.getId());<span class="comment">//删除一个映射关系</span></span><br><span class="line">items.remove(item2.getId(), item2);<span class="comment">//删除一个键值对；仅当该 key 当前映射到该 value 时才能删除</span></span><br></pre></td></tr></table></figure></li>
+<li>HashSet<br>本质是只保存key的HashMap<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashSet</span>&lt;Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">items.add(item1);</span><br><span class="line">items.contains(item1);</span><br><span class="line">size(); remove();</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="层次化对象管理"><a href="#层次化对象管理" class="headerlink" title="层次化对象管理"></a>层次化对象管理</h2><ol>
+<li>组合关系<br>多个对象组合形成一个更大的对象；这是一种整体与部分的关系</li>
+<li>聚合关系<br>相互独立，弱关联</li>
+</ol>
+<hr>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ol>
+<li>工厂模式<ol>
+<li>简单工厂模式<br>定义一个类（工厂）负责创建其他类的实例；由产品抽象父类Product，具体产品ProductA，工厂类Factory：public static Product create(String type)构成；</li>
+<li>工厂方法模式<br>定义一个用于创建对象的接口，让具体工厂子类决定实例化哪个产品类；构成：工厂接口 Factory，具体工厂 FactoryA</li>
+<li>抽象工厂模式<br>提供创建一组相关产品（产品族）的接口；构成：产品族，工厂接口 Factory：声明多个创建方法，具体工厂</li>
+</ol>
+</li>
+<li>观察者模式<br>被观察者Subject，需维护观察者列表，增删观察者，事件触发时发出通知；观察者Observer，提供响应方法，收到通知后响应<br>定义被观察者和观察者接口；具体实现类实现接口；</li>
+</ol>
+<hr>
+<h1 id="递归下降"><a href="#递归下降" class="headerlink" title="递归下降"></a>递归下降</h1><ol>
+<li>词法分析Lexer<br>把Expr拆成Token，一般有peek(), next()方法</li>
+<li>语法分析Parser<br>以下内容来自指导书<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">parseExpr:</span><br><span class="line"> 新建一个Term的容器T</span><br><span class="line"> 调用parseTerm获得一个项t</span><br><span class="line"> T中加上parseTerm返回的项t</span><br><span class="line"> <span class="keyword">while</span> 当前token是+:</span><br><span class="line">     跳过当前token(+)</span><br><span class="line">     调用parseTerm获得一个项t</span><br><span class="line">     T中加上parseTerm返回的项t</span><br><span class="line"> 利用T生成一个新的Expr e</span><br><span class="line"> 返回e</span><br><span class="line"></span><br><span class="line"> parseTerm:</span><br><span class="line"> 新建一个Factor的容器F</span><br><span class="line"> 调用parseFactor获得一个因子f</span><br><span class="line"> F中加上parseFactor返回的因子f</span><br><span class="line"> <span class="keyword">while</span> 当前token是*:</span><br><span class="line">     跳过当前token(*)</span><br><span class="line">     调用parseFactor获得一个因子f</span><br><span class="line">     F中加上parseFactor返回的因子f</span><br><span class="line"> 利用F生成一个新的Term t</span><br><span class="line"> 返回t</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> 跳过当前的token(i)</span><br><span class="line"> 利用i生成一个新的Factor f</span><br><span class="line"> 返回f</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> <span class="keyword">if</span> 真:</span><br><span class="line">     跳过当前的token(i)</span><br><span class="line">     利用i生成一个新的Factor f</span><br><span class="line">     返回f</span><br><span class="line"> <span class="keyword">if</span> 假，说明是(表达式):</span><br><span class="line">     跳过当前token(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">     调用parseExpr获得一个表达式e</span><br><span class="line">     利用e生成因子f</span><br><span class="line">     跳过当前token(<span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">     返回f</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<p>参考：OOpre指导书</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>P4 设计文档</title>
+    <url>/czyyy_nlw/2026/11/04/P4%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<h1 id="P4-设计文档"><a href="#P4-设计文档" class="headerlink" title="P4 设计文档"></a>P4 设计文档</h1><hr>
+<h1 id="基于P3的修改"><a href="#基于P3的修改" class="headerlink" title="基于P3的修改"></a>基于P3的修改</h1><ol>
+<li>因为verilog可直接切片，所以去掉了IS模块</li>
+<li>将storesrc和loadsrc封装进DM模块中</li>
+<li>新增CMP模块，集中处理分支跳转指令（ALU模块去掉了zero接口）<br>新增一个BranchType选择信号，配合zero来控制分支跳转的选择；</li>
+</ol>
+<hr>
+<h1 id="我很容易忘记的事情"><a href="#我很容易忘记的事情" class="headerlink" title="我很容易忘记的事情"></a>我很容易忘记的事情</h1><ol>
+<li>位宽不要忘了写；</li>
+<li>带符号比较和算术右移两边一定要显式加 $signed；</li>
+<li>Store 类指令和普通 Branch 严禁开启 RegWrite！</li>
+</ol>
+<hr>
+<h1 id="设计草稿"><a href="#设计草稿" class="headerlink" title="设计草稿"></a>设计草稿</h1><p>基于P3设计草稿，将其转化为verilog代码<br><img src="/czyyy_nlw/img/P3/%E6%97%A0%E7%BA%BF%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1.png" alt="无线顶层设计" title="无线顶层设计"><br><img src="/czyyy_nlw/img/P3/%E6%9C%89%E7%BA%BF%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1.png" alt="有线顶层设计" title="有线顶层设计"></p>
+<hr>
+<h1 id="测试方案"><a href="#测试方案" class="headerlink" title="测试方案"></a>测试方案</h1><figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ori </span>$<span class="number">4</span>, $<span class="number">0</span>, <span class="number">123</span></span><br><span class="line"><span class="keyword">lui </span>$<span class="number">6</span>, <span class="number">123</span></span><br><span class="line"><span class="keyword">lui </span>$<span class="number">7</span>, <span class="number">0xffff</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">7</span>, $<span class="number">7</span>, <span class="number">0xffff</span></span><br><span class="line"><span class="keyword">add </span>$<span class="number">16</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"><span class="keyword">sub </span>$<span class="number">21</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"><span class="keyword">add </span>$<span class="number">0</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">8</span>, $<span class="number">0</span>, <span class="number">0</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">16</span>, <span class="number">0</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">21</span>, <span class="number">4</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">lw </span>$<span class="number">14</span>, <span class="number">0</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">14</span>, <span class="number">8</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">1</span>, $<span class="number">0</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">2</span>, $<span class="number">0</span>, <span class="number">2</span></span><br><span class="line"><span class="keyword">beq </span>$<span class="number">1</span>, $<span class="number">2</span>, <span class="keyword">beq_fail</span></span><br><span class="line"><span class="keyword"></span><span class="keyword">beq </span>$<span class="number">1</span>, $<span class="number">1</span>, <span class="keyword">beq_pass</span></span><br><span class="line"><span class="keyword"></span><span class="symbol"></span></span><br><span class="line"><span class="symbol">beq_fail:</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">27</span>, $<span class="number">0</span>, <span class="number">111</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">27</span>, <span class="number">12</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">beq_pass:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">1</span>, <span class="number">16</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">j </span>skip_target</span><br><span class="line"><span class="keyword">ori </span>$<span class="number">26</span>, $<span class="number">0</span>, <span class="number">222</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">26</span>, <span class="number">20</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">skip_target:</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">26</span>, $<span class="number">0</span>, <span class="number">333</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">26</span>, <span class="number">20</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">jal </span>func1</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">31</span>, <span class="number">24</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">jal </span>func2</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">31</span>, <span class="number">28</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">end:</span></span><br><span class="line"><span class="keyword">j </span>end</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">func1:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">4</span>, <span class="number">32</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">jr </span>$<span class="number">31</span></span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">func2:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">6</span>, <span class="number">36</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">jr </span>$<span class="number">31</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h1><ol>
+<li>阅读下面给出的 DM 的输入示例中（示例 DM 容量为 4KB，即 32bit × 1024字），根据你的理解回答，这个 addr 信号又是从哪里来的？地址信号 addr 位数为什么是 [11:2] 而不是 [9:0] ？<br>addr 信号是ALU的计算结果；<br>实际实用是按字寻址，addr 必然是4的倍数，后两位必然是0，所以只需要[11:2]就行了</li>
+<li>思考上述两种控制器设计的译码方式，给出代码示例，并尝试对比各方式的优劣。<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">assign</span> NPC_Sel = (jal | j) ? <span class="number">2&#x27;b01</span> :</span><br><span class="line">                 (jr) ? <span class="number">2&#x27;b10</span> :</span><br><span class="line">                 (beq) ? <span class="number">2&#x27;b11</span> : <span class="number">2&#x27;b00</span>;</span><br></pre></td></tr></table></figure>
+使用三目运算符来译码，优势：简洁，易于维护<br>劣势：不够直观</li>
+<li>在相应的部件中，复位信号的设计都是同步复位，这与 P3 中的设计要求不同。请对比同步复位与异步复位这两种方式的 reset 信号与 clk 信号优先级的关系。<br>同步复位：clk &gt; reset<br>异步复位: clk &lt; reset</li>
+<li>C 语言是一种弱类型程序设计语言。C 语言中不对计算结果溢出进行处理，这意味着 C 语言要求程序员必须很清楚计算结果是否会导致溢出。因此，如果仅仅支持 C 语言，MIPS 指令的所有计算指令均可以忽略溢出。 请说明为什么在忽略溢出的前提下，addi 与 addiu 是等价的，add 与 addu 是等价的。提示：阅读《MIPS32® Architecture For Programmers Volume II: The MIPS32® Instruction Set》中相关指令的 Operation 部分。<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">temp ← (GPR[rs]31||GPR[rs]31..0) + (GPR[rt]31||GPR[rt]31..0)</span><br><span class="line">if temp32 ≠ temp31 then</span><br><span class="line">    SignalException(IntegerOverflow)</span><br><span class="line">else</span><br><span class="line">    GPR[rd] ← temp</span><br><span class="line">endif</span><br></pre></td></tr></table></figure>
+在忽略溢出的情况下，代码可以直接改写成：<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">GPR[rd] ← GPR[rs]31..0 + GPR[rt]31..0</span><br></pre></td></tr></table></figure>
+和addu是等价的</li>
+</ol>
+<hr>
+<h1 id="tb模板"><a href="#tb模板" class="headerlink" title="tb模板"></a>tb模板</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`timescale 1ns / 1ps</span><br><span class="line"></span><br><span class="line">module mips_tb;</span><br><span class="line">    reg clk;</span><br><span class="line">    reg reset;</span><br><span class="line"></span><br><span class="line">    mips uut (</span><br><span class="line">        .clk(clk),</span><br><span class="line">        .reset(reset)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    initial begin</span><br><span class="line">        clk = 1&#x27;b0;</span><br><span class="line">        forever #5 clk = ~clk;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    initial begin</span><br><span class="line">        reset = 1&#x27;b1;</span><br><span class="line">        #20;</span><br><span class="line">        reset = 1&#x27;b0;</span><br><span class="line">        #200000;</span><br><span class="line">        $finish;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="添加各种指令流程"><a href="#添加各种指令流程" class="headerlink" title="添加各种指令流程"></a>添加各种指令流程</h1><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
+<li>判断是那种类型的指令</li>
+<li>在Controller中添加指令识别</li>
+<li>修改控制信号</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>控制信号</th>
+<th>选择意义</th>
+<th>指令取值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NPC_Sel</td>
+<td><code>2&#39;b00</code> : PC+4<br><code>2&#39;b01</code> : J型跳转<br><code>2&#39;b10</code> : 寄存器跳转<br><code>2&#39;b11</code> : Branch分支</td>
+<td>• 正常顺序指令：默认 <code>2&#39;b00</code><br>• <code>j, jal</code> : <code>2&#39;b01</code><br>• <code>jr, jalr</code> : <code>2&#39;b10</code><br>• 所有 B 类（<code>beq, bne</code> 等）：<code>2&#39;b11</code></td>
+</tr>
+<tr>
+<td>RegWrite</td>
+<td><code>1</code> : 写寄存器<br><code>0</code> : 不写寄存器</td>
+<td>• 计算指令（R&#x2F;I型）、Load指令、Link指令为 <code>1</code><br>• Store 类、普通 Branch、纯跳转指令严格为 <code>0</code><br>• 条件写入（如 <code>bgezal</code>）：<code>zero ? 1 : 0</code></td>
+</tr>
+<tr>
+<td>RegDst</td>
+<td><code>1</code> : 写 <code>rd</code><br><code>0</code> : 写 <code>rt</code></td>
+<td>• R 型计算指令（<code>add, slt</code>）、<code>jalr</code> 为 <code>1</code><br>• I 型计算指令（<code>addi</code>）、Load 指令为 <code>0</code></td>
+</tr>
+<tr>
+<td>Regra</td>
+<td><code>1</code> : 强制写 <code>$31 ($ra)</code><br><code>0</code> : 正常选 rd&#x2F;rt</td>
+<td>• 只有带固定返回地址的指令（<code>jal, bgezal</code>）为 <code>1</code><br>• <code>jalr</code> 写入的是 <code>rd</code>，因此 Regra 必须为 0！</td>
+</tr>
+<tr>
+<td>PCtoReg</td>
+<td><code>1</code> : 写回数据选 <code>PC+4</code><br><code>0</code> : 选其他数据</td>
+<td>• 所有带链接功能的指令（<code>jal, jalr, bgezal</code>）为 <code>1</code><br>• 其余指令为 <code>0</code></td>
+</tr>
+<tr>
+<td>MemtoReg</td>
+<td><code>1</code> : 写回数据选内存读出值<br><code>0</code> : 选 ALU 运算值</td>
+<td>• 所有 Load 类指令（<code>lw, lb, lh</code>）为 <code>1</code><br>• 其余指令为 <code>0</code></td>
+</tr>
+<tr>
+<td>ALUsrc</td>
+<td><code>1</code> : 操作数 B 选立即数 <code>ext32</code><br><code>0</code> : 操作数 B 选寄存器 <code>RD2</code></td>
+<td>• I 型计算指令、Load、Store 指令为 <code>1</code><br>• R 型计算指令、Branch 指令为 <code>0</code></td>
+</tr>
+<tr>
+<td>EXTop</td>
+<td><code>1</code> : 符号扩展<br><code>0</code> : 零扩展</td>
+<td>• 算术计算（<code>addi, slti</code>）、Load&#x2F;Store 偏移为 <code>1</code><br>• 逻辑计算（<code>andi, xori</code>）为 <code>0</code></td>
+</tr>
+<tr>
+<td>MemWrite</td>
+<td><code>1</code> : 写内存<br><code>0</code> : 不写内存</td>
+<td>• 只有 Store 类指令（<code>sw, sb, sh</code>）为 <code>1</code>，其余全为 <code>0</code></td>
+</tr>
+<tr>
+<td>storeSel</td>
+<td><code>2&#39;b00</code> : sw (整字)<br><code>2&#39;b01</code> : sh (半字)<br><code>2&#39;b10</code> : sb (单字节)</td>
+<td>• <code>sw</code> 为 <code>2&#39;b00</code><br>• <code>sh</code> 为 <code>2&#39;b01</code><br>• <code>sb</code> 为 <code>2&#39;b10</code><br>• 非 Store 指令填 <code>2&#39;b00</code></td>
+</tr>
+<tr>
+<td>loadSel</td>
+<td><code>2&#39;b00</code> : lw (整字)<br><code>2&#39;b01</code> : lh (有符号半字)<br><code>2&#39;b10</code> : lb (有符号字节)</td>
+<td>• <code>lw</code> 为 <code>2&#39;b00</code><br>• <code>lh</code> 为 <code>2&#39;b01</code><br>• <code>lb</code> 为 <code>2&#39;b10</code><br>• 无符号读（<code>lhu/lbu</code>）在 DM 中根据扩展增加对应编码</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>修改数据通路<br>需要ALU新算子 -&gt; 改ALU<br>需要新比较条件 -&gt; 改CMP<br>需要特殊读写宽度 -&gt; 改DM</li>
+</ol>
+<hr>
+<h2 id="B型指令"><a href="#B型指令" class="headerlink" title="B型指令"></a>B型指令</h2><ol>
+<li>语义：根据寄存器比较结果决定是否相对跳转（PC &#x3D; PC + 4 + offset）。</li>
+<li>Controller 配置：<ul>
+<li>NPC_Sel &#x3D; 2’b11</li>
+<li>普通 Branch（beq, bne, blez, bgtz）：RegWrite &#x3D; 0</li>
+<li>带链接 Branch（bgezal, bltzal）：<ul>
+<li>RegWrite &#x3D; zero ? 1 : 0（满足跳转才写）</li>
+<li>Regra &#x3D; 1（写 $31），PCtoReg &#x3D; 1（写 PC+4）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据通路修改：<ul>
+<li>修改 CMP.v：增加分支判定（zero &#x3D; (inputA !&#x3D; inputB) 等）</li>
+</ul>
+</li>
+</ol>
+<h2 id="J型指令"><a href="#J型指令" class="headerlink" title="J型指令"></a>J型指令</h2><ol>
+<li>语义：无条件跳转或寄存器跳转，按需保存返回地址。</li>
+<li>各指令对号入座：<ul>
+<li>j：NPC_Sel &#x3D; 2’b01，RegWrite &#x3D; 0</li>
+<li>jal：NPC_Sel &#x3D; 2’b01，RegWrite &#x3D; 1，Regra &#x3D; 1（写 $31），PCtoReg &#x3D; 1（写 PC+4）</li>
+<li>jr：NPC_Sel &#x3D; 2’b10（跳转目标来自 RD1），RegWrite &#x3D; 0</li>
+<li>jalr：NPC_Sel &#x3D; 2’b10，RegWrite &#x3D; 1，RegDst &#x3D; 1，Regra &#x3D; 0，PCtoReg &#x3D; 1</li>
+</ul>
+</li>
+<li>数据通路修改：无，仅 Controller 改动即可。</li>
+</ol>
+<h2 id="计算型指令（R型）"><a href="#计算型指令（R型）" class="headerlink" title="计算型指令（R型）"></a>计算型指令（R型）</h2><ol>
+<li>语义：两个寄存器操作数运算，结果写入目标寄存器 rd。</li>
+<li>Controller 配置：<ul>
+<li>NPC_Sel &#x3D; 2’b00</li>
+<li>RegWrite &#x3D; 1，RegDst &#x3D; 1（写 rd）</li>
+<li>ALUsrc &#x3D; 0（选 RD2）</li>
+<li>type：分配新的 ALU 操作码</li>
+</ul>
+</li>
+<li>数据通路修改（ALU.v）</li>
+</ol>
+<h2 id="计算型指令（I型）"><a href="#计算型指令（I型）" class="headerlink" title="计算型指令（I型）"></a>计算型指令（I型）</h2><ol>
+<li>语义：寄存器与立即数运算，结果写入目标寄存器 rt。</li>
+<li>Controller 配置：<ul>
+<li>NPC_Sel &#x3D; 2’b00</li>
+<li>RegWrite &#x3D; 1，RegDst &#x3D; 0（写 rt）</li>
+<li>ALUsrc &#x3D; 1（选 ext32）</li>
+<li>EXTop：<ul>
+<li>算术类（addi, slti）：EXTop &#x3D; 1（符号扩展）</li>
+<li>逻辑类（andi, xori）：EXTop &#x3D; 0（零扩展）</li>
+</ul>
+</li>
+<li>type：分配或复用 ALU 操作码</li>
+</ul>
+</li>
+<li>数据通路修改（ALU.v）</li>
+</ol>
+<h2 id="访存型指令（Load-Store）"><a href="#访存型指令（Load-Store）" class="headerlink" title="访存型指令（Load&#x2F;Store）"></a>访存型指令（Load&#x2F;Store）</h2><ol>
+<li>共通点：ALUsrc &#x3D; 1，EXTop &#x3D; 1，type &#x3D; （？）。</li>
+<li>Load 类（读内存）：<ul>
+<li>RegWrite &#x3D; 1，RegDst &#x3D; 0（写 rt），MemtoReg &#x3D; 1（选内存读出），MemWrite &#x3D; 0</li>
+<li>loadSel：00 为 lw，01 为 lh，10 为 lb。</li>
+<li>无符号加载（lbu, lhu）：在 DM.v 中增加高位补零截取逻辑。</li>
+</ul>
+</li>
+<li>Store 类（写内存）：<ul>
+<li>MemWrite &#x3D; 1，RegWrite &#x3D; 0（严禁写寄存器）</li>
+<li>storeSel：00 为 sw，01 为 sh，10 为 sb。</li>
+<li>DM.v 内部自动支持字节&#x2F;半字写入。</li>
+</ul>
+</li>
+</ol>
+<h2 id="条件传送型指令"><a href="#条件传送型指令" class="headerlink" title="条件传送型指令"></a>条件传送型指令</h2><ol>
+<li>典型指令：movz（rt 为 0 时存 rs 到 rd）、movn（rt 不为 0 时存 rs 到 rd）。</li>
+<li>Controller 配置：<ul>
+<li>RegDst &#x3D; 1（写 rd）</li>
+<li>ALUsrc &#x3D; 0，MemWrite &#x3D; 0，MemtoReg &#x3D; 0</li>
+<li>type：ALU 直通 inputA</li>
+<li>动态写使能：RegWrite &#x3D; (movz &amp;&amp; RD2 &#x3D;&#x3D; 0) || (movn &amp;&amp; RD2 !&#x3D; 0)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="一些知识点"><a href="#一些知识点" class="headerlink" title="一些知识点"></a>一些知识点</h1><ol>
+<li>for<br>在always块中使用for<br>模板：<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">integer</span> i;</span><br><span class="line"><span class="keyword">always</span>@(*) <span class="keyword">begin</span></span><br><span class="line">   <span class="comment">//进入循环前必须初始化</span></span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i ...; i = i + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">      ...</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></li>
+<li>function<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [返回位宽] 函数名(输入端口列表)</span><br><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] abs_val(<span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] data);</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      <span class="keyword">if</span> (data &lt; <span class="number">0</span>) <span class="keyword">begin</span></span><br><span class="line">         abs_val = -data;<span class="comment">//通过把值赋给函数名来实现“return”</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">      ...</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
+<li>算数右移<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="built_in">$signed</span>(A) &gt;&gt;&gt; <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+<li>切片与掩码的选择<br>切片[base +: width] 宽度是固定常数的时候用；<br>掩码在提取长度是动态变量的时候用<br>造掩码：<ol>
+<li>种子：A :32’b1(单点定位和借位减法)  B : 32’hffffffff(整片裁剪)</li>
+<li>造低位n个1:<br>种子A左移n位，借位减1 low_mask &#x3D; (32’b1 &lt;&lt; N) - 1</li>
+<li>造高位n个1：<br>种子B左移 32 - n 位 high_mask &#x3D; 32’hffffffff &lt;&lt; (32 - N)</li>
+<li>[high : low]为1<br>len &#x3D; high - low + 1<br>造出低len个1 (32’b1 &lt;&lt; len - 1)<br>将它整体左移low位 ((32’b1 &lt;&lt; Len) - 1) &lt;&lt; low</li>
+</ol>
+</li>
+<li>bit adder<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] bit_adder;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      bit_adder = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         bit_adder = bit_adder + in[k];</span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure>
+下面这些其实可以用掩码来做吧，不管了先贴在这里</li>
+<li>区间比特倒置<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] reverse_range;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">4</span>:<span class="number">0</span>]  high, low;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      reverse_range = in;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         <span class="keyword">if</span> (k &gt;= low &amp;&amp; k &lt;= high) <span class="keyword">begin</span></span><br><span class="line">            reverse_range[k] = in[high + low - k];</span><br><span class="line">         <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
+<li>区间按位翻转<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] invert_range;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">4</span>:<span class="number">0</span>]  high, low;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      invert_range = in;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         <span class="keyword">if</span> (k &gt;= low &amp;&amp; k &lt;= high) <span class="keyword">begin</span></span><br><span class="line">            invert_range[k] = ~in[k];</span><br><span class="line">         <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>a</title>
+    <url>/czyyy_nlw/2026/10/18/1/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="b36441b65c3a50e849622b62d9e13c53586769a945adb918c3db5376594597ca"
+     data-nonce="b1293e1d2ff399ad288955be"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    c5769cb0ffad0c29ca6dcc03f3df2816daeedce27f7eabecbffd5b03cc162f232914535591fefcee5691494adcfdd29e376dcdf86355b2931169b7674b96e5159ca3c7f58fdedeb789df743ba2dffe1d5665521a15599bab0ca5f4f9f93b694b1e211111dbbc67a4bb45804a8c7d9a77607fbd0cc73d7e35b2accd45a096e4001625488016a393b1861f37ca520623b1f4e906d76c5c576d2c6322323011d4cec05fa3e49e5412dbc66b7b34e45b2a1c2f83c04cd41acf4500f3b20680e872c0568ee7f5e2a211923465aa3cf082359a7029bda7027cda7a8a08fdcc87c955a22e044bceecd22107e400e0a0217e8f285ebb2c567f30be304849d8df3618ba38d35428ef5c8b8ec511cce8264c429f85c3b124db71c1832cd946a6b838334fc313ffcbc3f689d711c3cab625dae08efb52f5dd
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>learn Python</title>
+    <url>/czyyy_nlw/2026/11/03/python/</url>
+    <content><![CDATA[<h1 id="与C的区别"><a href="#与C的区别" class="headerlink" title="与C的区别"></a>与C的区别</h1><ol>
+<li>无需入口函数</li>
+<li>使用严格缩进（4个空格），而不是{}</li>
+<li>不需要分号，直接换行</li>
+</ol>
+<hr>
+<h1 id="输入输出与变量"><a href="#输入输出与变量" class="headerlink" title="输入输出与变量"></a>输入输出与变量</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">name = <span class="string">&quot;zhangsan&quot;</span></span><br><span class="line">age = <span class="number">18</span></span><br><span class="line">price = <span class="number">9.9</span></span><br><span class="line">is_student = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p><code>print()</code>默认自动换行，f-string，变量直接放进{}</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;姓名: <span class="subst">&#123;name&#125;</span>, 年龄: <span class="subst">&#123;age&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;价格保留两位小数: <span class="subst">&#123;price:<span class="number">.2</span>f&#125;</span>&quot;</span>) <span class="comment"># 用 :.2f 类似的来保留小数</span></span><br></pre></td></tr></table></figure>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>input()统一读取为字符串,需要数字运算时，显式调用类型转换函数 int() 或 float()<br>input().split() 按空格切分，map(int, …) 把切出来的每一项转为 int</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入年龄：&quot;</span>))</span><br><span class="line">x, y = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>(<span class="string">&quot;请输入两个数字: &quot;</span>).split())</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><p>省略小括号，结尾跟冒号，逻辑与或非直接用<code>and or not</code><br>注意是<em>elif</em></p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;优秀&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span> <span class="keyword">and</span> score &lt; <span class="number">90</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;及格&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;不及格&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><p><code>range(start, end, step)</code>左闭右开</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):  <span class="comment"># 0,1,2,3,4</span></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+<p>用<code>enumerate()</code>获取下标</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i, item <span class="keyword">in</span> <span class="built_in">enumerate</span>(fruits):</span><br></pre></td></tr></table></figure>
+<h2 id="while循环条件不需要加括号"><a href="#while循环条件不需要加括号" class="headerlink" title="while循环条件不需要加括号"></a>while循环条件不需要加括号</h2><h1 id="容器与数据结构"><a href="#容器与数据结构" class="headerlink" title="容器与数据结构"></a>容器与数据结构</h1><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>变长动态数组（有点像vector），<em>能存任意混合类型</em><br>a &#x3D; [1, 2, 3, 4, 5]<br>b &#x3D; list(range(5))<br>负索引：a[-1] # 5 最后一个<br>    a[-2] # 4 倒数第二个<br>切片：左闭右开<br>a[2:6] a[:4] a[6:] a[::-1]</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">a.append(<span class="number">4</span>)        <span class="comment"># 末尾加一个</span></span><br><span class="line">a.extend([<span class="number">5</span>,<span class="number">6</span>])    <span class="comment"># 末尾加多个</span></span><br><span class="line">a.insert(<span class="number">0</span>, <span class="number">0</span>)     <span class="comment"># 指定位置插入</span></span><br><span class="line">a.pop()        <span class="comment"># 弹出末尾元素（返回被弹出的值，对标 stack 的 pop）</span></span><br><span class="line">a.pop(<span class="number">0</span>)       <span class="comment"># 弹出指定下标的元素</span></span><br><span class="line">a.remove(<span class="number">2</span>)    <span class="comment"># 按值删除：直接删除列表中第一个出现的数值 2</span></span><br></pre></td></tr></table></figure>
+<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>可以理解为只读的列表</p>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>原生内置高度优化的散列表，直接通过大括号 {key: value} 操作</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">user = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;wangwu&quot;</span>, <span class="number">101</span>: <span class="string">&quot;客服热线&quot;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(user.get(<span class="string">&quot;name&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(user[<span class="string">&quot;name&quot;</span>]) <span class="comment"># 两种查找方式</span></span><br><span class="line"><span class="comment"># 增，改直接写就好了</span></span><br><span class="line"><span class="keyword">del</span> info[<span class="string">&quot;age&quot;</span>]</span><br><span class="line">info.pop(<span class="string">&quot;city&quot;</span>) <span class="comment"># 删</span></span><br><span class="line"><span class="keyword">for</span> subject <span class="keyword">in</span> scores: <span class="comment"># 相当于for subject in scores.keys():</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> val <span class="keyword">in</span> scores.values():</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> subject, val <span class="keyword">in</span> scores.items(): <span class="comment"># .items() 产出的本质是一个个 (key, value) 的元组</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>可返回多个值</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">get_user_info</span>():</span><br><span class="line">    name = <span class="string">&quot;lisi&quot;</span></span><br><span class="line">    age = <span class="number">18</span></span><br><span class="line">    <span class="keyword">return</span> name, age</span><br><span class="line"></span><br><span class="line">user_name, user_age = get_user_info()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>参考：</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>奶蛙游戏合集</title>
+    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[<ol>
+<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
+<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
+<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
+<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
+<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
+<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
+<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
+<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
+<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
+<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
+<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
+<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
+<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
+<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
+<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
+<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
+<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
+<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
+<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
+<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
+<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
+<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>日常</title>
+    <url>/czyyy_nlw/2026/10/24/%E7%AE%97%E6%B3%95-%E6%97%A5%E5%B8%B8/</url>
+    <content><![CDATA[<hr>
+<h1 id="幂和对数"><a href="#幂和对数" class="headerlink" title="幂和对数"></a>幂和对数</h1><ol>
+<li>用<code>pow(n, m)</code>来计算n的m次幂</li>
+<li>用<code>log2()</code> <code>log10()</code>来计算以2，10为底的对数；用换底公式来计算其他数的对数</li>
+<li>判断一个数是否是n的次幂：记得加一个精度，避免精度损失导致取整出错</li>
+</ol>
+<hr>
+<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ol>
+<li>原地旋转矩阵<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">   <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">rotate</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; matrix)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = matrix.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n / <span class="number">2</span>; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; (n + <span class="number">1</span>) / <span class="number">2</span>; ++j) &#123;</span><br><span class="line">                <span class="type">int</span> temp = matrix[i][j];</span><br><span class="line">                matrix[i][j] = matrix[n - j - <span class="number">1</span>][i];</span><br><span class="line">                matrix[n - j - <span class="number">1</span>][i] = matrix[n - i - <span class="number">1</span>][n - j - <span class="number">1</span>];</span><br><span class="line">                matrix[n - i - <span class="number">1</span>][n - j - <span class="number">1</span>] = matrix[j][n - i - <span class="number">1</span>];</span><br><span class="line">                matrix[j][n - i - <span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<h1 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h1><ol>
+<li>C(n, m) &#x3D; C(n - 1, m - 1) + C(n - 1, m);</li>
+</ol>
+<hr>
+]]></content>
+  </entry>
+  <entry>
+    <title>爱有万分之一甜</title>
+    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="2bddccdabca35bc6515a8152e5e29f5cb71d5fb0a141d7a852cb117357d8b602"
+     data-nonce="4aa4aecae9e78c54d12c8937"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    e0e3fa23198b3e76c359065555af4f91c3b4a00ac96153b3a3c2b70a17c2124a42614b5eb841a668db76d0f8e3b994838d27b5f56392bf95596b63da73c38486d0103487f1252c4fc0f73fe9f6dd89f043acd984428b9373688e93471b0aca87a84e0da0779cf8d0918553f3e0b0caf058f6970cfa06e44b6ba34204280df3c2c04aa80b35c84d7a11d152a934c4c8f7936f7cd854fb2ce2177eac3627765c671b4d578a48d5ea8f95beeec57ae3f1d2ca8ceac3927d9998d521bdf2012ef30c27d752cd63187f14257f05572d7c3c3e650977e0f5b02609b813495cbdf30093cecf70e690425873b204a578608091eb5097df413baf93bf728f16af4a5df933f59cb01e351f238fed10bdd3a69beee1abb313d3d9d690808bd2840877f694f52654405ad2b8bca6bda4e783e818aaa554d571cb2b0efa7375b2c778ea36fc364928cf6fdc2b611aef3f8e15d3a4a53c0f24f8f1c94b760b45bcac0eb06cc03cf391b5bd7e3ccc439772b048975384d72dfdff8a0a52603761f964567e7269f8566233a304008a470d08a9833b42752bc80de10949a9a0fd5fbe2f4a5be5ded803287d58178bcb7be09988bae7006b409523a8427d96902d9e5d72f9b36a6e52c90d8b3dc69ff0cff8f5bdb5fbc57813b4d0254036c86aada181ff43bf869a73ad9d83ec81c8ba2ba1b5c4754db0fd829611c3a7d30ac896d8c28e87d2110235ac640ae6375959e27e3da8ce79f535e5acae2fc3ed5d61f282730f7dcba4f7cf74abc10ebda53276afd4f0682f3923dd01334325d3a318f12c406292c7d23b3b719e508088c8a81bb32a4285b9bafb7e8bbc064423c6b100ffe6ae4477352a4d31b9f47888adb34ea402b9235084ad4147a2d99f6bc8dfabef415fc1fbb84546ce5a069a7d38dcc6977034d8e3d9e0e42c490ece57b1efe040b5342ee8a45b153dfe5d517354a342cf692c9da9df3191539a6d76969283824dff91d90a21f362e3102979a4d976ddc4530af843326d02bd87cb5bf569c65063f3442bf87efdf3735df9db75425b46943ee7a01e6f81ff53d8045f82e3d894f3fa9ed86dad70845ea6771018a92fecb54e9ddf32f162eafff7f3f42fd8e16b2ca431524f74739b2be40f2dcacaf0fc9207d84f52050288316a7f002f1c3c03026afc253ceabe4a23c7a5792ddd6828a3c873515379991d2f5622e4a1e943880db66631d90cbfcf73927e60dce67407b1c156980d7a6b5c51ecc56b0fb75de8345c1f74a6fc419904767d9c0a36dc70bb4572b5b49c336833867245ea4ed0e7d095c7a3e897aabf176258c914a9517bdef4895e4c5faf60decba79fde8fbe384e09ce5d5f698e326b711afc37e154b919452f1694c35c5ea53783d98d6de7eebd8d4a9577657e9b2ef39be6464ab7f16dd99855f906adcf16a54c5563c3ed25e679f92e8094414d8c5d7625491ebf77e4b021aad143a53666b08f5e376a6efe48a5490961aa127eb5fe20f9cc30f0ddcc60281d2e9bccca263f4e1be579c19958fb6d8e83a287a1489d15afaf56948af1d4fd7b11d91d112de23f32a6a7f1acfa66b62fa9b30b5f48b4c5667bbd5a94e8aaa67e32dac12612d94933459b3e12f7eda32fcdc9dc9099bbc36da48da99be4fb43e65daf93b587f0125308f314c85824d3a5b729d887facd7b395508ffcec86926ee365d61e62dcccad37611e8e26439149c5d7fba03dc6e3869fe8603c39b4e835bd13516d3c36d1a0095b54c0dee9c13f9aca8c9b92585a950344b36f3f403701524578561b2ea42cf0fd6a30ea34732f4857652d2e899e66b75a0f4992c98b2c1d53f783237ce789f0e142e6681aff8d5a78fd9a3579b58e1bfbc4d5f5c96eca9b237afa154d0d7fd0117d8eb0503c50a1e340c59f2876bf873705f17ab41af2573aaa6a61ad7477d5b793c59a1d3d0872a78c48f6a49c4a6418bd45dd111fc661695b44db38b001f7b7ec9d9588079ac572d82ce7384aac3ad09dd2a4a0a3a829bfa69b7d99a5a7cff5aa92baad1e4c265a563a4fabe3cab441ba8f40e7c11a1ea23bd9a57d437d5df28fa7706be9c13a04d4f5cfad17aed0dba267423115c56340adc885ec36ae1bc5473f5c54c2ec3b6635d212c810226d5ea738ee4ff53e63530d9a814a80508816b9ada6dd31a036d860a2bb82bdab6e2b804442be6695b77e2f3ee8787c63e993bf20d1f47d84994dac6a49b1845f5f55d84f524aece9e6741695b6fa0f1f86bdf6b84bc6145b60871670ca1e169b7d5ec52cb590384650bf1b9f51acf6f71237db0bf4e221a9c3061d5be681901fa641d64b367f8e3736dbfcc11d31a598fd633501dbf3a9ccc38bf6e442295717e559999b2ecce4527b0ba98634119c8c7a31f184e66b594c8d00ae49deceb9a187665582cd26b921c53600a4733f17f6e8e27a9fce25dac1e56c248d960723715f75d44cd77d1c4c992d3198071c12aa9c6ddc9ac8a037bec2a02c36be1c23fbf4fd8363a5892098a787ea67f90de70c5b3d1d0288b0f2390c4e1853b41ea28a7a069ba2629542e94c554543df94bd2eaf44319dae7d098d738578dd6d6ca97535cc16ad2a0f96fe6c81d95a86c36ab3ef2e80540e4afcd0f03ac2ea58f92f25b8d92dc41cee1765b187af21cd764cc3a4bd520d918cbff882ac88018e8ae9bb60786aaa28d617d390353aa634e236addf50f672099b3f83de449e23dd7dba4b7503c42180336a8b714fcba342f2dc73f316722ac259e32b4e8d63b5fb5a1b0f2d52c47283e323eb2e3ab10d80adafacbc65cd243b7dae57d00d195cb62929d4404e1f212a0c643c8bc0f9900b82e94295ba76f2d9725d904615c5998f98def47207e58fddaf8b286c55f5c41fa2064c56fa0904354d8e534d8ded6e17b94deda87edca0a8723f855bfcf37ab7081dc0dfd540cd52e52d115244b3b19da29e8907e8e73f3f78f20e80529cbf7c2db6db79d43b1078d296843ee73b2c2267cda9ee71bc23c841f61b9a7bbbbd87c938a
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>diary1</title>
+    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="729ef55bc90fb9f4fa5901875d707834a373153bec691273e55c3291ed280458"
+     data-nonce="18d7cb4ff795d9ef8ec82936"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    b56cc008d87c65ac56d57617ac5e4c8454d7fb53d3e7967ed3f19ef335cdefb316c4ea05547ecfe9eb834d2bd4a697da992f7980471137bf13611ade0382ce8dcb5946b4addd26ea484c636e4333cddf960926c6648a4651a6ddfa01162447603d7d51125d0e4845d98d301d781fc72d56e6b03f0ddd20fba68a98d118e7843fc0d66e15df7838efbe58f9f3893104bb0cd27988cd0fb46a724fe5f49509d1cdf79cb87b70c3762b941b3dbfb3f26f39a8f26877b71f975a1ee2347414175dec2d867473f17fd5bfe19b5313605c87a51048a3cd70ac54c99936bc632ed0748886ccfed81e0712d96db1b44be848e9b6f93c99a8e819d86565a2dfce7866f17b22aa553c465eae5f61ad373773b215e7d21ef941a884b63b2e9a89ab386f2b92b0eef979c782d794bf95473b4ed6f6bb589b36281679a760f133f69295af1f1303904b3459f09e110faa41446294adf16adb1d953c165fa71a9cb6de8b2215ecf45f4fe7fc79658b7f0e539f30ff894de2e78d7124892f631e4d483df3990c9cb6e33060f0f48668e4244d1ef4b1fda24ed9e2c87d4d3c6550e8d65d07b6fd2bbc676e50d24fb5230b42683d345660c14f4235381b52e4bca0d9cff2249d804ac592717391e9e9bae82eb72e5fa2c6321d47a1a5849ac937fed8cd58884b11f16b6e7ab25cf07df9ddf0a4552534036a63770416eb8d2c12e86ebffe1df06d16e636919cc0211d100f813a5cbdd35340f52e4d9482dbd80a5a1336d86b13a2f2ddd12da9d67539589ba68d2392a0a2e7154a6f2779b235a9178b73a3a5898d65c1d00d368e5595e78d57ff52ecd15e90777bb8361be83ba0e87b0b28934a8806ffd52a6360d7d8c8924cb012a05b96fab3c4d2681854e9867f55237047de8606f87f4ab5ce1746569a90e72c3a418205c670eea4b2b3a5e34883cad82e65bad3782597780b011ee8c85daa9c00bb84023dc70ffc1901c441bfc0a6e76bf488a021dd436e73a9fe91ff8e12fa812bab31f47f1e776fd1ce3a455069ebca20569441a1682c0f9863fdeacc86e4e86781ea06e29d39d001cc3fe4c151528ca3c133f011372b859c58eb5ce4ad574a1cd7d07625356550e9262e2c7a94a204a575d4b8ab09075b5a827305f8fa0637d8725836934ef82bd3e57f127dea8983e0d8eefa72312fe6481aa5757660e54da7e953f59e1d67802418b7fa1321dd655ebf333e35363d8dc84d01cb8396ba80ffc5eae7aa27ad35d74f3265312cedf912f348e514e0676ae429e652086b051265fcdaa2f10a1cd4c7b297202822f4541d592a88a8e8b2198964bdb45785a3e41d2a00e3315099b603808c783de37eba74398b3497b20bf93b174176e026caa0462c353609d189a31c2557056c03a1a41ae29274c855ee35e418a5cbf4f912b4d5917ce28fb18be0ebb537831c527e5d706940768f4efc6a61b9b3578037a3339f2f03c9fdd7144eb5d9df6531b13474869cfa44a8f1fada3bb3b010d22767bf9c894e263439024b2e83ebca06d759f7e094ff8246661ee9320a8aaa9ada299f193503adfa6910a5bdbd24fc5d975aaa1c3c864fcded37d114d54bf4910d37b97e7e97e4bd36484f20abd8cddf25514091aeead757134f0bf7efe041a5eb667ffbc793609e8bbbf0def7d14192e1d2599109a1b9b123e0c42539b879df9a1f580f451a86754b07bad3bebf51f26e5aa9fbe41412492c7081108bee6d44c590cb451dbc8bce133f61d18aea38fd29b87d96cdac6803eda3362704072078554496689f9a340181a0a5f19005a70369d8395cc3377ea86448f461469d4efeab45831190b345573e20d3fa52ceb11e18861508ff1ea3188369c375edb67e46949cd9a993e10dba7b59c7f6782b47d378a6631fcb71a555c026e9a06657efc9937564d5c4001f8499cdb141bc568179ba3c0fcb3a5e509db2c72ecabeda1efff52d551cef04bade90b41e6575c61e1d0b518b60e84cfab98bc9ae042ceaa3244710c9065597f7f426effa020e245bc0fb0bcc8096a664cac34de1735c4633500685e82c21041db4fbd575e8818493182d373e32c9e9ad9f0c1eae1638b26aab69ddab01a9a4817578896a3ceb2d7bde6892ce71d183e11202f9394d9d134654a3c60cb29c0563aa726c07e80cf4d8a326b321c50c298f8b990cec08a5702ef6ab7393b44d89367f4abdb6a5e23d5fb31fb3c26befff83be2050a565877233555cd8bd7d0cb49d28b2657c1e4cc1b52000aeee05e9af571585537119ce648a3cac1b22266250edcdc49e18044d5d98690f3c989f89b9f6f565ba6e6ade58a1c829283836c9f6b09099071e283e6d3cbad1e6f3a08d5e77e3af73a144061103142f0f6c48d8772c55ff258258666a9999ed79d696f3f21edc7690673b0148d5bc357e99dca0bb5341c9ce9395da928731d4b5d8ca36336fb8d5ae715ad958d575078b1fa86f6ac9c67645b7c86b1ec4075fad3a841abab571739d79a162b7ca69067237b7f82ae3199e1a5e58b1ad397108297f6c113a11c7818cbbae58f64fe454f3cb20f632001e65e801f38491858437d1b9657ecb5772fa820a8c5f2725c96be2c655c3fdf971333548dce19bc1a25c8786bf2355df808a522e1ec2d1f27e10bbcaff7f54a046db53607a3d93dfdf143c3d1ea0b199767350d19271aff8cea86acd6c4f4fee762fe82c723a4781df9e40e6366c345eb23690e5728a9247efa4af430d871ab0f3542af89ad7ea3283e3c975d659096cc3b77688da33efc5d6e31af0fcb624d96d985dfd716ffa4fbd15ed2abeea4c8cac7c03563b0a03bbb7dd2a6b8d5117c10eede4ae70773ec40e92c1ba5c9c9085325cbc0a64efc8871c1d863d985b0bd9f5b216f4bc36da5ad629d446dbcdb899426e10d1914dd063fb3916ae75a052c53d2527b2e95589cb7baf1d399c095f45b254bef40b8c18c605de760976a76bfc59e951622fe40c42c33fa2475581ae873a755de7b496909f1b4f22227d3bb9837d3db27262231fb93d9df4d23d6df9822922c16657b62793f706c9f483b44d0a2b9cad189654b49307b8f0fc5aa826136e176a263f50f31b4f07c4a5b7c7a5e14b10e75d91370b5e7fe79037ad02be721c8511b6b25349835b68e9521d7054d0f5007e16cacacfd0aabc7a9f2ec3003e5394fe105ece73d145907ec9b12d7d5ab4050530691b2e80ae5475e08f72c2567287ad7d6449bdab8e7512270883eeac56c5cc372b094213f8f1f505be8cda54a329e8700d98fc8af5015cc7cb651d80177bdfe700a58fb781c721c9c6bd0e6fa2b419cb4fa989b181c147944a0b40fd6687515be6d475349c51e58bb4edc9f4e5783ad9dd43eb7f05bcb1d1434918ed2dc948086376f0f6cc057e17b761d030c25156228a952c00df7cb3a729549f849dfdf1d07b429d3536947942e3111559f85d78a211c907b623aeac8c3d0262ed9ee2c8a9a8aa07dbdbe775172c9636863db9b6a63152945c827c9fd421dbfc044217fc910f64de6235d4a34bc9d35f812656fea0f833ef70961be9babaa6d442c274660afcc9f3d6aae2976ee07e2cc710f4144b529a8df3305accdaaea01c126b88af4fac8ffd53276d1fce9b151daef975d65fd2fb7ff143bef2e55607aeda26d846377728494d5967223c2fe079a8ae60c0a5033142e5e6cd2f853b9c949347dddade0f53b6e37bcaa97b68968e5d0afc20c034cf70bdc109cc36b06adc512fe56331b4b5a88b3237e510d1c1fedc957c443077a4930318af855347d6ca591b6189d8f89eab03a2f9547f0a884413ed2b40150ba77e6ff0bd50948c018b4d4679949a38adf0418c4c759303b045f38770fafc91c6f7ab12a6854407f8b7b873f3fe9d5165e60a201f22da4398220fe25c
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
     <title>Learn Markdown</title>
     <url>/czyyy_nlw/2026/10/19/markdown/</url>
     <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
@@ -890,91 +1202,37 @@
 ]]></content>
   </entry>
   <entry>
-    <title>diary1</title>
-    <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="d5ab5fea223327a863fa8bd28c8c6bea1632a7a45ff841aceddc422804eaae41"
-     data-nonce="2a50a33359bae52e5c4484c0"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    b4bc355fd4601ae07d7e92788f9669945c3f18659505c6afcc1c3c0df2aea52ad3d0cbc53f6e1a7a75bb81b95aea0273f5bca53294a3e4e77e95e9957cf712200d52343961faa467f4fd5259ebca753135d92c7d728e6c1b2b15ce24afc607057b04b8894232e32211d6d6207691b82ccb1fa2c3f56b919e984a6c74a364de67cf9cc028a77bc78970780670608e7815b1bd4a4885e8122dc98e767a4c9121cf3000350a082e1baa166e50342ce52b55d74cf90b6579b8ba3ad74cd90323b7e4b391f37027bc11e04bfe3aa0ffeed91ac2ab9a6446c64a0eed5ffb46490e686125a666f46fa5419e0af534e3e0c4e1726cc090c0ff5168e7b4558fcc0ed90bc05312e56c2d21f54bb4c6aaf4477f6f47625c3bcb4687dacbadbc03e806a0ce651ee4637a05a08f294a0224d816e9a9bb84391e4ce3ee6dfb70823e2b4364126a567104ee6b6876275085feb909452a2ebcd9853b1ba23039822715fb4cbe63b8c7fed3948cbf2674d912e5f21347ff13ef1c110cd5a2b22c0293a7bcd766a3bbc757a0c2e1e18ee67eba53f8c7fcffbf14ef3af0108d3d0c8629138c2d45adc6a3508de20dd26439df3efc5866e6f9ee8c4389b318ac278121a0da9f718565b77c032f1c2e628f9e57f73c36518a5b06c86e62b69776f616b03359d4eb098ea28d412c4296b84b189cd33d9255c45411016fd3f096105204ed3810719a4f0cc077656e757945b293c33e9fa4f3a79df98316f9f5fc7f0f0cc4638bc39799dc59cc904fe37db3c05446615015ca39ffe8e7e28e2e5547eea6b76840798a9a501513b15ce3d5e4551f1ae08b38f62f0fafd7a199847cc9c9ace5cf0b9d4162450123edcb8cf99eff4eb619d5504345daddb5fae6673f86afa142de8a3026793fdadd1d966b47fa44d12659ff0c45e1960bb1865497cd4a4691e8ff781bb5e11249b7e465f4dbdfce013b4f95537aff81f39661992aeee514e38b6576d44854d5a282291e3fc8bf32f735aa19a1cf81bcf3a217e9eafec29266c8fb10724c5b0f073d3c8c550c09d6ebcd9ff1a77f93039e640e517eee80cb958ec5b2b250e333d5ca4281088592cf864ec6fa327dfb2f0b77557ebe8e50ec7e2f6afb5c2441528cef618a88a1004d78392291ca446a3611c0c893e7bd9a13a6b68350333ba80d48c77f5d8c7ecdeb3a63efc7743bd9d4edfeea01839e976befd1a8d2ccd336ea604af55800693e063cc545da44830a2358e1134d1d0ec1aa7389636af354d4fe32a5d8ad874809ce2cbe4844cb13bb5fb4b0210c36ea05d34355ec64e1a5fbbba842c391638045a47c5336bcb5a2135ac7c857874e888cea440f1a997bd39a6f1e74c53be3961b12a4d2fa52e9d18ad67cb53b0a5f1fde41ac30ea59f09b280a57d22ed6313c46bdc74c7bf25f5c387f49e3d704cc642254dcc4e3dd49c8ec00a248b2e4e8ee901cef7bf3f42d0a98b589d0abd2f85f7663a7a1b9aa0099b798efd1a2a2d751888d68aafa8a931acb24bac29d013f470df595f04c2b72482d65971d85d5b22bc3d0e327821867f650c28d44b41c58649863fd6e473c7cecfa0deeccb32ee8db7810ca4b8017d4cb754864c326e5da3b6330d9e117c50505b51b423f13c4710f872c62a607f5426854c348e5b0551302495e6d841559f8ce975d2af9af532b207a1f900baee7f578460c15f8b5cbbd3f280659c0e22dc11e1e34e062804ec3fd189d19945ad6e96903f70b9f1222140de45e2d49ced114deea16d07867b3a885aaef65536fa9f260a0768ccfa64562620d95b854ae1aa36a3c07dc59d2a31f3a21eaee3dd4ef3219cc156a068f119b84eb059c139134b7231e02855b889bded4c916ee50b9cb334ea1b4245f7751269bb40218a015ce0bfe2763e9c7524b28217928c54e9c34ddc87d61d22a48dde0010c30633e68ee5a6f380853284f2cbf1b28c981a8342ffe6d46fb177c13800796ce303b7b558b99235497488daf817a1a8091fb1b3ba8327bdc3d62c8fd382916a099dac3dbbe5c255640b43ab7517e184a6dedc7bdc589e71be3a0b0c89b85043f23a8c227cd9a05d882da12806e4ce02a678edade874f1022f25ecea098270db1a711c78a26247da0ed13ff2fa4bc2db221bedc3d5f7975174fc69bb453979621cf76337d7ffd5a6796606b2f26dd15ed1a0cfaac791302efe4a446b03a9d2802b6830981a3fabab52e12ba2c7b0c8ded04d0df04cafe814628d20503d10bbc16ada79d8ad1e45e8e1fac420b283a4834ef1c78760cf43efdd94eb270c606460814123fd3a451247e3914fb6d37062e9f4cb20d4cc2f5233befbe0ccf4b124fccc623551e2f046b43ac35ebcee6e21738d9bd1b4842f304f6ec6f90912cbcb42904693864d5ebefca12bef2cc03353b8d3d5f36f70440ee6f5095d4cd73d4d536b61c56a7a41c0ebc222277ac6c11f67d590af95d1b959db3311ae2d071bac473bd400de0b593b34b7115306c6b380b5707504a7103e138eac22ed9768b3235c746070d40134ab7caccf90307b329feeb3b2ebd8129fcad9083bfa73fe8d7dbc36ea031011caa4241b81b51cd95b3454a3d9f967e05e3999faf991047461ee26f917f5534891815ae6e636da847e9be9aa651b5d21254bdc0405741e354aed402af1a37369c1d4659c094116a3b13a7a4c720575b1e8ddf71de5845e7ff8fa8475e0852cb49aec5917e9cd8b38ebc415656665887c7ac6d72496f81c992147ac7a222faed3c14a2e178ea55ad14e845a9c39a0ab95465ee78ffb4f2037917b48166990efe8074d3d3e54bca88e0b90a8fea8a7c3fdbb6321efb6d2592f9032cb6f126ddc2ba5aa6185ef04cd955bfeaf85e66e5876c55f8e8a367659a2c7a123076cad6db3886f82899d1393b652c07673a32880b9fb20b1da615edb4afdd48e87e98700071b29c7408fcda90b1bdfb0f5a80757ea8138f7da0da321b43aa482051e3056cd12f85393038b7d981c74e913ec4619384568608ee2e5fe12aa4bfec33c77771b5759ba4e322d708aa609a10ef05920ec925409c92e3fd346dbf637d7435fe696a711dd1c7fa8c8d1efe31ae39ca6f13af1df7bbdac8e4173adac021d11c337e08cd5f20c5ae51c0803c0fd0d5d1f0501517acf1311ed9eabbfffbb74ca882a632b52d8669da247d666cb2eda9f4a53f2d4eff1229656dd39e45d380122d4c70052b0b522b7d9f6a7fb03da358b49255fa9666e371d3d46f041f5c734c4512ba158474f0a07293f73a30d36eb89c5efb8c264e4bc2f034a9b1198cb1dd94cb1fb3548286d2b700dd7d6fd4948a54eb571a9d63bd9d6cb097253910d37b926396cb33df2ef20948fd732be64010ce9dc3892682a7c26cdda226cf6beaadf4ef1b09d186d4bad92f5acaa0844c7edd09330a8444673d6d9a1f4cc2496f1739b863fbb7766ee85a38a015f90f22916990f8c7428f49c8d9dab92965ddbd434eb1e7daa9ce5835e5aedfd66617cf87c32b3c2735ab9ed218c66e5a50e1804641e7ce579dfb6c7285289e470862cd0245da6463903f8d88b331e94620b1edb9f8c29e0b0f2401c77f2fef604f6fa78a5516206990d3ca7cb3da68b7a328178f5702925cf967693a4d1cdcbea2e1cd0c775edcc5da10b408b07a6f3d9b7151b231ac419bfb29be22ba912c292513556c5497b147fcdc7953910ed0b67cd558738b5e5911133174841b19bb01c574038f3e85cd44fa57941c5e59f16a48fde2bb251e05c12a0929b328ea8a73a9c74101a056107d8b5029c75dedb769c95af39743fc9f3a86617daa68dea800d5dbf3bbf6898cef6fcf7eefdf3b9f341646b96543c1cd4f6cef1d732c34aeee7d14ec489cfe23490ffea35ad156f342ed59a92583526c12ea3edcb1fe11e2bd
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>奶蛙游戏合集</title>
-    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
-    <content><![CDATA[<ol>
-<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
-<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
-<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
-<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
-<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
-<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
-<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
-<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
-<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
-<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
-<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
-<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
-<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
-<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
-<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
-<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
-<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
-<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
-<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
-<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
-<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
-<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
+    <title>MIPS ?</title>
+    <url>/czyyy_nlw/2026/10/20/MIPS/</url>
+    <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
+<li>输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro input(%in)   #输入一个整数</span><br><span class="line">    li $v0, 5</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_char(%in)   #输入一个字符</span><br><span class="line">    li $v0, 12</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_str(%addr, %max_len)    #输入一个字符串</span><br><span class="line">    li $v0,8</span><br><span class="line">    la $a0, %addr</span><br><span class="line">    move $a1, %max_len</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro print(%out)  # 输出一个整数</span><br><span class="line">    li $v0, 1</span><br><span class="line">    move $a0, %out</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_char(%out) # 打印一个字符</span><br><span class="line">    li $v0, 11</span><br><span class="line">    move $a0, %out</span><br><span class="line">     syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_str(%addr) # 打印一个字符串</span><br><span class="line">    li $v0, 4</span><br><span class="line">    la $a0, %addr </span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>退出程序<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro exit()</span><br><span class="line">    li $v0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印换行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro println()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro printspace()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 32</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>计算二维数组字节偏移量<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro calc_addr(%dst, %row, %col, %rank)</span><br><span class="line">    multu %row, %rank</span><br><span class="line">    mflo %dst</span><br><span class="line">    addu %dst, %dst %col</span><br><span class="line">    sll %dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>读数组元素 arr[index] -&gt; %val (用到$t9)<br>字符串：去掉sll，lw -&gt; lb<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro lw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    lw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>写数组元素 %val -&gt; arr[index] (用到$t9)<br>字符串：去掉sll，lw -&gt; lb <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro sw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    sw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+</ol>
+<h1 id="循环的写法"><a href="#循环的写法" class="headerlink" title="循环的写法"></a>循环的写法</h1><ol>
+<li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line"># 初始化</span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
+<li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line"># 初始化</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+</ol>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><ol>
+<li><p>可分为线性递归，树形递归，循环递归</p>
+</li>
+<li><p>入栈出栈宏</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro push(%src)</span><br><span class="line">    addi $sp, $sp, -4</span><br><span class="line">    sw %src, 0($sp)</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro pop(%src)</span><br><span class="line">    lw %src, 0($sp)</span><br><span class="line">    addi $sp, $sp, 4</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li><p>写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func:</span><br><span class="line">     # 1. 基线条件处理(停止递归)</span><br><span class="line">     beq $a0, $zero, base_case</span><br><span class="line"></span><br><span class="line">     # 2. 压栈</span><br><span class="line">     push($ra)</span><br><span class="line">     push($a0)</span><br><span class="line"> </span><br><span class="line">     # 3. 递归准备与调用</span><br><span class="line">     addi $a0, $a0, -1   # 修改参数，准备下一层的入参</span><br><span class="line">     </span><br><span class="line">     jal func    # 递归调用</span><br><span class="line"></span><br><span class="line">     move $s0, $v0   #存值（如果第二次还要调用）</span><br><span class="line"></span><br><span class="line">     # 恢复参数</span><br><span class="line"></span><br><span class="line">     # 4. 合并结果</span><br><span class="line"></span><br><span class="line">     # 5. 弹栈</span><br><span class="line">     pop($a0)</span><br><span class="line">     pop($ra)</span><br><span class="line"></span><br><span class="line"> base_case:  # 出口设置</span><br><span class="line">     xxx</span><br><span class="line">     jr $ra</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
 </ol>
 ]]></content>
-  </entry>
-  <entry>
-    <title>爱有万分之一甜</title>
-    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="4e3831f5434baf1ff46c06f1b0c9cc748dfd8635487b55165b043273bd76788b"
-     data-nonce="4651b218907df39f1e90cc52"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    a0cc98c171d0b3dc94e1af2ca95a1d961ec3744d64017bf3fb79e07b3754a811b1ef39b844d4bf3bb15d1db89dcbf0f914cec9d053ca092ffcebc537ef03e6ff4a07b580baa648fbf835aecdc7ab6f589ae65851049224e1316cd14005c463b40e1a37338ff524713b98b2cebb101682bc6fca1487f4884f3e45f62612b2610c9d434812bbcb6d3c48640d09491418cecb78b904b2e1a50731e9d3351fc07bad01474d079645c0af86de460bfd1f9e51393b3dac85a102c7279c03a94ea609bdc495284d80467f7004c6e5ab599747cfb976027465d4aef7bcd3785ad4848fb2034839ba0006736fe18dd9d3c1895d1a91198f98e84b6d339d1d65fe5f9264e9682b6cfc44433883d7d3d09b0c493caf45f72f4db578482d6ddc3cab6420584932eec3f04c9a88498fd62dd8b9862cd72f4a04658a1817b691644ff8206b4c7913c0a05027ca466cb642ddb995b557a23ccf1e07dc82bd169a94fe5da85233b3bd3aa0ca5c365a5069900f167cce06300db680b73b5de7ecc10321abfdf4313624f9e993f4d18ec9a1409cb4d419a929e64e1c11a3fb0565d07fd397fdd30337b96d8a4a1c561c7b4f6747e6cff37f290d63dc483d4d0b3d8ed55c54448917ef3c4f29ca2676b9efa2bf69c84a56859f4e871391cf5dcd8ce98530ae4798903848b1887c505f6508face6b49fa6d2a1b051803c5ccbee52e61d0521cb3bbf446db15066b754d1bfbe7abed6cdef17237528b0b348f299fb38603a498efa6442d32d4778fac01a1c0c5b6f54abf0a081c2b4019eb66e24011a4b94939897aeaa1f93d8728a1954130db4bc9fafc9c1081d3e58a345a4bab044ea97d93e638ca0a01e1f21157d19f49055843a9f16257d311476bd17a14b4d1a5adc9f54c559b3defe550d607417faec1f6887ba53c469e8ecd67b48179c01302ac2bf311b52482558c8ace3c47063ba6bd216a5015d25923fa1b4aba63cdc93cb5118c5fcdc072513a46da99d3748919a437c871ea19c072418959f1b48e355a2eae1ba2aa83b201ce48311aa6ebeffa0cd6096e1fe208aa5af16aced44efde0987d68370292904899c222be4d4cecc1094768601ce6223f1caf3e34b7f1449e4547ee147bcabb577ab9c2fb2bffecdf158e469b30ef48fab72cb08774c00c1dfe1e65a61b5be0e7fff67edaf26ab2dcb0b068badbc868a19795523a0d9ee3452c24ee5641004cd4ba5cdedfdbf5f3b2bf5212a2d72c780703b1a2d151cfce39484a117debbea4df988c13e2e34fbc6f5a967e39be93a287397df924ba72c47397d59cec9107720de4451ccd67343b4f22c3abcfe11dffd13395d59346f1bac35f5b7599646ff1de68d1f15c07876578e17505b95a4f0d199ba9c521f31e2110ae80466e50a44a90ac2d39185e1fd220a9254b454deae9d36dcf458c725c493df9a7b9d4855da521595d21f13c9b2a87c42e6a4072dfa149761bc794775a478242736e0bf2725198e5cb5ee57626735cf987c705f5ba8821974fe7cb07e6388d8a69c819416d7b726ceb626e93e43a2e14800831d2467f4361b838b534e511a107c91c878c74f23abbf716ed17869ff18fec6dfaea62e8375518007946027bf699657bf45b476cf11159dd0990abdd5be9f4758c07784ba3fc70b2ba86f60afc060ec048fb0f98e66b90aba18824d55fc5997cb2634c2c78aef82ecbf28e6bbd23c4761b307fc6a87e8a351ed6cecec50de62314f89597f620b460cf42ae660a293b916772a0b1ffc263c939f02db8170732864bca447049157a2434f98b94fdcb1fdfb5c18cb5afc7d38106e4f6c0d67a478c51edda4b8c7e69420cbbba187a9465656a0d5379c2299a20d88fa792d1b58ff171312a6c608b2a7c6e554265ebbe1dcf2f0fe75a363dc1c2df23123a9bf0eb6485dbb40b13ea8cb98d2316b66bb7e8cfdaab59ef731a3285ab50e3f3d0d8beaebbb270d76db1319a9d19140904a06efdb6298bcf0980404aa407f7869f0e88e96350db9bbaa69eb7cce48c38664f4e15e77f6caecd9e2d13852fc9363dbcb57f895f881a45cdfb28fa893f6d2dfcf0d34715ae333c3db6b418e6df6c8f27ea7430e8c67365151b3d7805f9bca034eff03f04e95aa0881435096578fe0181777ed8a6346442a1f88fa55a7cafc4750aca54d2282de0a7d92115b98e1131f01b8cc519b8df2f4f0f9d654af7a26035f511fad7b6b1beb36a4f846c03dd57e3aa0ec5456bb3d386d747907b2e2fc8d887593356ff024e448842e3d86a81b3e83a624d6c97031a57592d8978c26deb2b1b27ac163885d060d6e4fdbf6680415da49bd36be5b7a6c93c97fd951b765c6fc2543c8a7512f13d810a4df0f3505fe1ff98eaa89d5f08773a2f2efcf6b46270d60880ed531f37cdd77dc8d4f82a1a0f711a6a061df76bf84e7a33dab47b3b095b8ddf883dc375a874a02a607b516664378180a277283b378ee15ee86a65b16ead308e84e4fdbda241de69dd69e05f106a1f5ceb75ba82401aa1315eaa4f86fe6cf6e50a546819fb65c13699c1f43bc59eb7b6dd5c526d07ffe1a17cc48e502d79eb3ea2b1b8aebdb2fc8797d5faf04b0c058fe00c93b5c379f813a71dcd826d52f723cc8b5e4dc568fe7bdaee39de5a39ed40c11e843153b680ff3f6f9eec1391078d3f7745ce0d1f1da45672b3807607c6b533f538c4b4ddb3db4637a78d1c2b857c0ead6a004ec69d04fd671175e2104e1fd59b65569e9c2f528199c458ff5c7ada803654915e3876cf7eb6d7c53422ac49c370b4b0a525099ba1e590846c7154e87d5508bf1debc9153bf284b12e3180b6e0da992631ba3e9dd7edc4ea4015c8c6d8597ad5af581302ecf797afd2be5791b4948c4cd0b28337ba6f62310ff40dce442d77188e89408bffb06f1b0ebee0efeb56c70e116a24fbc2e5aff75cc91c4a088b97da433cbe037bd00a38cd93c8d32aeee03b2943a1924672ea7ca5de4f56213284e4355616be03476b3906169bcaa4170df1ff04
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
     <title>爱有万分之一甜</title>
@@ -1213,26 +1471,6 @@
 <p>我逃不掉的。</p>
 <p>哪怕时间倒流一千次、一万次，只要她穿过人群走向我——</p>
 <p>我依然会心甘情愿地，再次跌进这场名为阮棠的宿命里。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>日常</title>
-    <url>/czyyy_nlw/2026/10/24/%E7%AE%97%E6%B3%95-%E6%97%A5%E5%B8%B8/</url>
-    <content><![CDATA[<hr>
-<h1 id="幂和对数"><a href="#幂和对数" class="headerlink" title="幂和对数"></a>幂和对数</h1><ol>
-<li>用<code>pow(n, m)</code>来计算n的m次幂</li>
-<li>用<code>log2()</code> <code>log10()</code>来计算以2，10为底的对数；用换底公式来计算其他数的对数</li>
-<li>判断一个数是否是n的次幂：记得加一个精度，避免精度损失导致取整出错</li>
-</ol>
-<hr>
-<h1 id="矩阵"><a href="#矩阵" class="headerlink" title="矩阵"></a>矩阵</h1><ol>
-<li>原地旋转矩阵<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">   <span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">rotate</span><span class="params">(vector&lt;vector&lt;<span class="type">int</span>&gt;&gt;&amp; matrix)</span> </span>&#123;</span><br><span class="line">        <span class="type">int</span> n = matrix.<span class="built_in">size</span>();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n / <span class="number">2</span>; ++i) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; (n + <span class="number">1</span>) / <span class="number">2</span>; ++j) &#123;</span><br><span class="line">                <span class="type">int</span> temp = matrix[i][j];</span><br><span class="line">                matrix[i][j] = matrix[n - j - <span class="number">1</span>][i];</span><br><span class="line">                matrix[n - j - <span class="number">1</span>][i] = matrix[n - i - <span class="number">1</span>][n - j - <span class="number">1</span>];</span><br><span class="line">                matrix[n - i - <span class="number">1</span>][n - j - <span class="number">1</span>] = matrix[j][n - i - <span class="number">1</span>];</span><br><span class="line">                matrix[j][n - i - <span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<hr>
-<h1 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h1><ol>
-<li>C(n, m) &#x3D; C(n - 1, m - 1) + C(n - 1, m);</li>
-</ol>
-<hr>
 ]]></content>
   </entry>
 </search>

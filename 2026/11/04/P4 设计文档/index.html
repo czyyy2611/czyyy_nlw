@@ -1,0 +1,414 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>P4 设计文档 | czyyy_nlw</title><meta name="author" content="czyyy"><meta name="copyright" content="czyyy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="P4 设计文档 基于P3的修改 因为verilog可直接切片，所以去掉了IS模块 将storesrc和loadsrc封装进DM模块中 新增CMP模块，集中处理分支跳转指令（ALU模块去掉了zero接口）新增一个BranchType选择信号，配合zero来控制分支跳转的选择；   我很容易忘记的事情 位宽不要忘了写； 带符号比较和算术右移两边一定要显式加 $signed； Store 类指令和普通">
+<meta property="og:type" content="article">
+<meta property="og:title" content="P4 设计文档">
+<meta property="og:url" content="https://czyyy2611.github.io/czyyy_nlw/2026/11/04/P4%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/index.html">
+<meta property="og:site_name" content="czyyy_nlw">
+<meta property="og:description" content="P4 设计文档 基于P3的修改 因为verilog可直接切片，所以去掉了IS模块 将storesrc和loadsrc封装进DM模块中 新增CMP模块，集中处理分支跳转指令（ALU模块去掉了zero接口）新增一个BranchType选择信号，配合zero来控制分支跳转的选择；   我很容易忘记的事情 位宽不要忘了写； 带符号比较和算术右移两边一定要显式加 $signed； Store 类指令和普通">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://czyyy2611.github.io/czyyy_nlw/img/zy%E5%A4%B4%E5%83%8F.jpg">
+<meta property="article:published_time" content="2026-11-03T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-11-07T04:47:52.368Z">
+<meta property="article:author" content="czyyy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://czyyy2611.github.io/czyyy_nlw/img/zy%E5%A4%B4%E5%83%8F.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "P4 设计文档",
+  "url": "https://czyyy2611.github.io/czyyy_nlw/2026/11/04/P4%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/",
+  "image": "https://czyyy2611.github.io/czyyy_nlw/img/zy%E5%A4%B4%E5%83%8F.jpg",
+  "datePublished": "2026-11-03T16:00:00.000Z",
+  "dateModified": "2026-11-07T04:47:52.368Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "czyyy",
+      "url": "https://czyyy2611.github.io/czyyy_nlw"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/czyyy_nlw/img/favicon.png"><link rel="canonical" href="https://czyyy2611.github.io/czyyy_nlw/2026/11/04/P4%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/czyyy_nlw/css/index.css?v=5.7.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.3.1/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        const data = { value }
+
+        if (ttl != null) {
+          data.expiry = Date.now() + ttl * 86400000
+        }
+
+        localStorage.setItem(key, JSON.stringify(data))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return
+
+        try {
+          const data = JSON.parse(itemStr)
+
+          if (data.expiry && Date.now() > data.expiry) {
+            localStorage.removeItem(key)
+            return
+          }
+
+          return data.value
+        } catch {
+          localStorage.removeItem(key)
+        }
+      }
+    }
+
+    const scriptCache = new Map()
+    const cssCache = new Map()
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => {
+        if (scriptCache.has(url)) {
+          return scriptCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const script = document.createElement('script')
+
+          script.src = url
+          script.async = true
+
+          for (const key in attr) {
+            script.setAttribute(key, attr[key])
+          }
+
+          script.onload = resolve
+          script.onerror = reject
+
+          document.head.appendChild(script)
+        })
+
+        scriptCache.set(url, promise)
+
+        return promise
+      },
+      getCSS: (url, id) => {
+        if (cssCache.has(url)) {
+          return cssCache.get(url)
+        }
+
+        const promise = new Promise((resolve, reject) => {
+          const link = document.createElement('link')
+
+          link.rel = 'stylesheet'
+          link.href = url
+
+          if (id) {
+            link.id = id
+          }
+
+          link.onload = resolve
+          link.onerror = reject
+
+          document.head.appendChild(link)
+        })
+
+        cssCache.set(url, promise)
+
+        return promise
+      },
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const metaThemeColor = document.querySelector('meta[name="theme-color"]')
+      const activateDarkMode = () => {
+        document.documentElement.dataset.theme = 'dark'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.dataset.theme = 'light'
+        if (metaThemeColor !== null) {
+          metaThemeColor.setAttribute('content', 'ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/czyyy_nlw/',
+  algolia: undefined,
+  localSearch: {"path":"/czyyy_nlw/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'P4 设计文档',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="robots" content="noindex, nofollow"><style>
+  #page-header.post-bg,
+  #page-header.not-home-page {
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+  }
+  #page-header.post-bg::before,
+  #page-header.not-home-page::before {
+    background-color: transparent !important;
+  }
+</style>
+<meta name="generator" content="Hexo 7.3.0"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/czyyy_nlw/img/%E9%9B%B7%E8%B5%9B.jpg);"></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/czyyy_nlw/img/%E9%9B%B7%E8%B5%9B.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/czyyy_nlw/"><span class="site-name">czyyy_nlw</span></a><a class="nav-page-title" href="/czyyy_nlw/"><span class="site-name">P4 设计文档</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div></div></nav><div id="post-info"><h1 class="post-title">P4 设计文档</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-11-03T16:00:00.000Z" title="发表于 2026-11-04 00:00:00">2026-11-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-11-07T04:47:52.368Z" title="更新于 2026-11-07 12:47:52">2026-11-07</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="P4-设计文档"><a href="#P4-设计文档" class="headerlink" title="P4 设计文档"></a>P4 设计文档</h1><hr>
+<h1 id="基于P3的修改"><a href="#基于P3的修改" class="headerlink" title="基于P3的修改"></a>基于P3的修改</h1><ol>
+<li>因为verilog可直接切片，所以去掉了IS模块</li>
+<li>将storesrc和loadsrc封装进DM模块中</li>
+<li>新增CMP模块，集中处理分支跳转指令（ALU模块去掉了zero接口）<br>新增一个BranchType选择信号，配合zero来控制分支跳转的选择；</li>
+</ol>
+<hr>
+<h1 id="我很容易忘记的事情"><a href="#我很容易忘记的事情" class="headerlink" title="我很容易忘记的事情"></a>我很容易忘记的事情</h1><ol>
+<li>位宽不要忘了写；</li>
+<li>带符号比较和算术右移两边一定要显式加 $signed；</li>
+<li>Store 类指令和普通 Branch 严禁开启 RegWrite！</li>
+</ol>
+<hr>
+<h1 id="设计草稿"><a href="#设计草稿" class="headerlink" title="设计草稿"></a>设计草稿</h1><p>基于P3设计草稿，将其转化为verilog代码<br><img src="/czyyy_nlw/img/P3/%E6%97%A0%E7%BA%BF%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1.png" alt="无线顶层设计" title="无线顶层设计"><br><img src="/czyyy_nlw/img/P3/%E6%9C%89%E7%BA%BF%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1.png" alt="有线顶层设计" title="有线顶层设计"></p>
+<hr>
+<h1 id="测试方案"><a href="#测试方案" class="headerlink" title="测试方案"></a>测试方案</h1><figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ori </span>$<span class="number">4</span>, $<span class="number">0</span>, <span class="number">123</span></span><br><span class="line"><span class="keyword">lui </span>$<span class="number">6</span>, <span class="number">123</span></span><br><span class="line"><span class="keyword">lui </span>$<span class="number">7</span>, <span class="number">0xffff</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">7</span>, $<span class="number">7</span>, <span class="number">0xffff</span></span><br><span class="line"><span class="keyword">add </span>$<span class="number">16</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"><span class="keyword">sub </span>$<span class="number">21</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"><span class="keyword">add </span>$<span class="number">0</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">8</span>, $<span class="number">0</span>, <span class="number">0</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">16</span>, <span class="number">0</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">21</span>, <span class="number">4</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">lw </span>$<span class="number">14</span>, <span class="number">0</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">14</span>, <span class="number">8</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">1</span>, $<span class="number">0</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">2</span>, $<span class="number">0</span>, <span class="number">2</span></span><br><span class="line"><span class="keyword">beq </span>$<span class="number">1</span>, $<span class="number">2</span>, <span class="keyword">beq_fail</span></span><br><span class="line"><span class="keyword"></span><span class="keyword">beq </span>$<span class="number">1</span>, $<span class="number">1</span>, <span class="keyword">beq_pass</span></span><br><span class="line"><span class="keyword"></span><span class="symbol"></span></span><br><span class="line"><span class="symbol">beq_fail:</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">27</span>, $<span class="number">0</span>, <span class="number">111</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">27</span>, <span class="number">12</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">beq_pass:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">1</span>, <span class="number">16</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">j </span>skip_target</span><br><span class="line"><span class="keyword">ori </span>$<span class="number">26</span>, $<span class="number">0</span>, <span class="number">222</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">26</span>, <span class="number">20</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">skip_target:</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">26</span>, $<span class="number">0</span>, <span class="number">333</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">26</span>, <span class="number">20</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">jal </span>func1</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">31</span>, <span class="number">24</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">jal </span>func2</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">31</span>, <span class="number">28</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">end:</span></span><br><span class="line"><span class="keyword">j </span>end</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">func1:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">4</span>, <span class="number">32</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">jr </span>$<span class="number">31</span></span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">func2:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">6</span>, <span class="number">36</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">jr </span>$<span class="number">31</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h1><ol>
+<li>阅读下面给出的 DM 的输入示例中（示例 DM 容量为 4KB，即 32bit × 1024字），根据你的理解回答，这个 addr 信号又是从哪里来的？地址信号 addr 位数为什么是 [11:2] 而不是 [9:0] ？<br>addr 信号是ALU的计算结果；<br>实际实用是按字寻址，addr 必然是4的倍数，后两位必然是0，所以只需要[11:2]就行了</li>
+<li>思考上述两种控制器设计的译码方式，给出代码示例，并尝试对比各方式的优劣。<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">assign</span> NPC_Sel = (jal | j) ? <span class="number">2&#x27;b01</span> :</span><br><span class="line">                 (jr) ? <span class="number">2&#x27;b10</span> :</span><br><span class="line">                 (beq) ? <span class="number">2&#x27;b11</span> : <span class="number">2&#x27;b00</span>;</span><br></pre></td></tr></table></figure>
+使用三目运算符来译码，优势：简洁，易于维护<br>劣势：不够直观</li>
+<li>在相应的部件中，复位信号的设计都是同步复位，这与 P3 中的设计要求不同。请对比同步复位与异步复位这两种方式的 reset 信号与 clk 信号优先级的关系。<br>同步复位：clk &gt; reset<br>异步复位: clk &lt; reset</li>
+<li>C 语言是一种弱类型程序设计语言。C 语言中不对计算结果溢出进行处理，这意味着 C 语言要求程序员必须很清楚计算结果是否会导致溢出。因此，如果仅仅支持 C 语言，MIPS 指令的所有计算指令均可以忽略溢出。 请说明为什么在忽略溢出的前提下，addi 与 addiu 是等价的，add 与 addu 是等价的。提示：阅读《MIPS32® Architecture For Programmers Volume II: The MIPS32® Instruction Set》中相关指令的 Operation 部分。<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">temp ← (GPR[rs]31||GPR[rs]31..0) + (GPR[rt]31||GPR[rt]31..0)</span><br><span class="line">if temp32 ≠ temp31 then</span><br><span class="line">    SignalException(IntegerOverflow)</span><br><span class="line">else</span><br><span class="line">    GPR[rd] ← temp</span><br><span class="line">endif</span><br></pre></td></tr></table></figure>
+在忽略溢出的情况下，代码可以直接改写成：<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GPR[rd] ← GPR[rs]31..0 + GPR[rt]31..0</span><br></pre></td></tr></table></figure>
+和addu是等价的</li>
+</ol>
+<hr>
+<h1 id="tb模板"><a href="#tb模板" class="headerlink" title="tb模板"></a>tb模板</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">`timescale 1ns / 1ps</span><br><span class="line"></span><br><span class="line">module mips_tb;</span><br><span class="line">    reg clk;</span><br><span class="line">    reg reset;</span><br><span class="line"></span><br><span class="line">    mips uut (</span><br><span class="line">        .clk(clk),</span><br><span class="line">        .reset(reset)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    initial begin</span><br><span class="line">        clk = 1&#x27;b0;</span><br><span class="line">        forever #5 clk = ~clk;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    initial begin</span><br><span class="line">        reset = 1&#x27;b1;</span><br><span class="line">        #20;</span><br><span class="line">        reset = 1&#x27;b0;</span><br><span class="line">        #200000;</span><br><span class="line">        $finish;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="添加各种指令流程"><a href="#添加各种指令流程" class="headerlink" title="添加各种指令流程"></a>添加各种指令流程</h1><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
+<li>判断是那种类型的指令</li>
+<li>在Controller中添加指令识别</li>
+<li>修改控制信号</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>控制信号</th>
+<th>选择意义</th>
+<th>指令取值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>NPC_Sel</td>
+<td><code>2&#39;b00</code> : PC+4<br><code>2&#39;b01</code> : J型跳转<br><code>2&#39;b10</code> : 寄存器跳转<br><code>2&#39;b11</code> : Branch分支</td>
+<td>• 正常顺序指令：默认 <code>2&#39;b00</code><br>• <code>j, jal</code> : <code>2&#39;b01</code><br>• <code>jr, jalr</code> : <code>2&#39;b10</code><br>• 所有 B 类（<code>beq, bne</code> 等）：<code>2&#39;b11</code></td>
+</tr>
+<tr>
+<td>RegWrite</td>
+<td><code>1</code> : 写寄存器<br><code>0</code> : 不写寄存器</td>
+<td>• 计算指令（R&#x2F;I型）、Load指令、Link指令为 <code>1</code><br>• Store 类、普通 Branch、纯跳转指令严格为 <code>0</code><br>• 条件写入（如 <code>bgezal</code>）：<code>zero ? 1 : 0</code></td>
+</tr>
+<tr>
+<td>RegDst</td>
+<td><code>1</code> : 写 <code>rd</code><br><code>0</code> : 写 <code>rt</code></td>
+<td>• R 型计算指令（<code>add, slt</code>）、<code>jalr</code> 为 <code>1</code><br>• I 型计算指令（<code>addi</code>）、Load 指令为 <code>0</code></td>
+</tr>
+<tr>
+<td>Regra</td>
+<td><code>1</code> : 强制写 <code>$31 ($ra)</code><br><code>0</code> : 正常选 rd&#x2F;rt</td>
+<td>• 只有带固定返回地址的指令（<code>jal, bgezal</code>）为 <code>1</code><br>• <code>jalr</code> 写入的是 <code>rd</code>，因此 Regra 必须为 0！</td>
+</tr>
+<tr>
+<td>PCtoReg</td>
+<td><code>1</code> : 写回数据选 <code>PC+4</code><br><code>0</code> : 选其他数据</td>
+<td>• 所有带链接功能的指令（<code>jal, jalr, bgezal</code>）为 <code>1</code><br>• 其余指令为 <code>0</code></td>
+</tr>
+<tr>
+<td>MemtoReg</td>
+<td><code>1</code> : 写回数据选内存读出值<br><code>0</code> : 选 ALU 运算值</td>
+<td>• 所有 Load 类指令（<code>lw, lb, lh</code>）为 <code>1</code><br>• 其余指令为 <code>0</code></td>
+</tr>
+<tr>
+<td>ALUsrc</td>
+<td><code>1</code> : 操作数 B 选立即数 <code>ext32</code><br><code>0</code> : 操作数 B 选寄存器 <code>RD2</code></td>
+<td>• I 型计算指令、Load、Store 指令为 <code>1</code><br>• R 型计算指令、Branch 指令为 <code>0</code></td>
+</tr>
+<tr>
+<td>EXTop</td>
+<td><code>1</code> : 符号扩展<br><code>0</code> : 零扩展</td>
+<td>• 算术计算（<code>addi, slti</code>）、Load&#x2F;Store 偏移为 <code>1</code><br>• 逻辑计算（<code>andi, xori</code>）为 <code>0</code></td>
+</tr>
+<tr>
+<td>MemWrite</td>
+<td><code>1</code> : 写内存<br><code>0</code> : 不写内存</td>
+<td>• 只有 Store 类指令（<code>sw, sb, sh</code>）为 <code>1</code>，其余全为 <code>0</code></td>
+</tr>
+<tr>
+<td>storeSel</td>
+<td><code>2&#39;b00</code> : sw (整字)<br><code>2&#39;b01</code> : sh (半字)<br><code>2&#39;b10</code> : sb (单字节)</td>
+<td>• <code>sw</code> 为 <code>2&#39;b00</code><br>• <code>sh</code> 为 <code>2&#39;b01</code><br>• <code>sb</code> 为 <code>2&#39;b10</code><br>• 非 Store 指令填 <code>2&#39;b00</code></td>
+</tr>
+<tr>
+<td>loadSel</td>
+<td><code>2&#39;b00</code> : lw (整字)<br><code>2&#39;b01</code> : lh (有符号半字)<br><code>2&#39;b10</code> : lb (有符号字节)</td>
+<td>• <code>lw</code> 为 <code>2&#39;b00</code><br>• <code>lh</code> 为 <code>2&#39;b01</code><br>• <code>lb</code> 为 <code>2&#39;b10</code><br>• 无符号读（<code>lhu/lbu</code>）在 DM 中根据扩展增加对应编码</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li>修改数据通路<br>需要ALU新算子 -&gt; 改ALU<br>需要新比较条件 -&gt; 改CMP<br>需要特殊读写宽度 -&gt; 改DM</li>
+</ol>
+<hr>
+<h2 id="B型指令"><a href="#B型指令" class="headerlink" title="B型指令"></a>B型指令</h2><ol>
+<li>语义：根据寄存器比较结果决定是否相对跳转（PC &#x3D; PC + 4 + offset）。</li>
+<li>Controller 配置：<ul>
+<li>NPC_Sel &#x3D; 2’b11</li>
+<li>普通 Branch（beq, bne, blez, bgtz）：RegWrite &#x3D; 0</li>
+<li>带链接 Branch（bgezal, bltzal）：<ul>
+<li>RegWrite &#x3D; zero ? 1 : 0（满足跳转才写）</li>
+<li>Regra &#x3D; 1（写 $31），PCtoReg &#x3D; 1（写 PC+4）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据通路修改：<ul>
+<li>修改 CMP.v：增加分支判定（zero &#x3D; (inputA !&#x3D; inputB) 等）</li>
+</ul>
+</li>
+</ol>
+<h2 id="J型指令"><a href="#J型指令" class="headerlink" title="J型指令"></a>J型指令</h2><ol>
+<li>语义：无条件跳转或寄存器跳转，按需保存返回地址。</li>
+<li>各指令对号入座：<ul>
+<li>j：NPC_Sel &#x3D; 2’b01，RegWrite &#x3D; 0</li>
+<li>jal：NPC_Sel &#x3D; 2’b01，RegWrite &#x3D; 1，Regra &#x3D; 1（写 $31），PCtoReg &#x3D; 1（写 PC+4）</li>
+<li>jr：NPC_Sel &#x3D; 2’b10（跳转目标来自 RD1），RegWrite &#x3D; 0</li>
+<li>jalr：NPC_Sel &#x3D; 2’b10，RegWrite &#x3D; 1，RegDst &#x3D; 1，Regra &#x3D; 0，PCtoReg &#x3D; 1</li>
+</ul>
+</li>
+<li>数据通路修改：无，仅 Controller 改动即可。</li>
+</ol>
+<h2 id="计算型指令（R型）"><a href="#计算型指令（R型）" class="headerlink" title="计算型指令（R型）"></a>计算型指令（R型）</h2><ol>
+<li>语义：两个寄存器操作数运算，结果写入目标寄存器 rd。</li>
+<li>Controller 配置：<ul>
+<li>NPC_Sel &#x3D; 2’b00</li>
+<li>RegWrite &#x3D; 1，RegDst &#x3D; 1（写 rd）</li>
+<li>ALUsrc &#x3D; 0（选 RD2）</li>
+<li>type：分配新的 ALU 操作码</li>
+</ul>
+</li>
+<li>数据通路修改（ALU.v）</li>
+</ol>
+<h2 id="计算型指令（I型）"><a href="#计算型指令（I型）" class="headerlink" title="计算型指令（I型）"></a>计算型指令（I型）</h2><ol>
+<li>语义：寄存器与立即数运算，结果写入目标寄存器 rt。</li>
+<li>Controller 配置：<ul>
+<li>NPC_Sel &#x3D; 2’b00</li>
+<li>RegWrite &#x3D; 1，RegDst &#x3D; 0（写 rt）</li>
+<li>ALUsrc &#x3D; 1（选 ext32）</li>
+<li>EXTop：<ul>
+<li>算术类（addi, slti）：EXTop &#x3D; 1（符号扩展）</li>
+<li>逻辑类（andi, xori）：EXTop &#x3D; 0（零扩展）</li>
+</ul>
+</li>
+<li>type：分配或复用 ALU 操作码</li>
+</ul>
+</li>
+<li>数据通路修改（ALU.v）</li>
+</ol>
+<h2 id="访存型指令（Load-Store）"><a href="#访存型指令（Load-Store）" class="headerlink" title="访存型指令（Load&#x2F;Store）"></a>访存型指令（Load&#x2F;Store）</h2><ol>
+<li>共通点：ALUsrc &#x3D; 1，EXTop &#x3D; 1，type &#x3D; （？）。</li>
+<li>Load 类（读内存）：<ul>
+<li>RegWrite &#x3D; 1，RegDst &#x3D; 0（写 rt），MemtoReg &#x3D; 1（选内存读出），MemWrite &#x3D; 0</li>
+<li>loadSel：00 为 lw，01 为 lh，10 为 lb。</li>
+<li>无符号加载（lbu, lhu）：在 DM.v 中增加高位补零截取逻辑。</li>
+</ul>
+</li>
+<li>Store 类（写内存）：<ul>
+<li>MemWrite &#x3D; 1，RegWrite &#x3D; 0（严禁写寄存器）</li>
+<li>storeSel：00 为 sw，01 为 sh，10 为 sb。</li>
+<li>DM.v 内部自动支持字节&#x2F;半字写入。</li>
+</ul>
+</li>
+</ol>
+<h2 id="条件传送型指令"><a href="#条件传送型指令" class="headerlink" title="条件传送型指令"></a>条件传送型指令</h2><ol>
+<li>典型指令：movz（rt 为 0 时存 rs 到 rd）、movn（rt 不为 0 时存 rs 到 rd）。</li>
+<li>Controller 配置：<ul>
+<li>RegDst &#x3D; 1（写 rd）</li>
+<li>ALUsrc &#x3D; 0，MemWrite &#x3D; 0，MemtoReg &#x3D; 0</li>
+<li>type：ALU 直通 inputA</li>
+<li>动态写使能：RegWrite &#x3D; (movz &amp;&amp; RD2 &#x3D;&#x3D; 0) || (movn &amp;&amp; RD2 !&#x3D; 0)</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="一些知识点"><a href="#一些知识点" class="headerlink" title="一些知识点"></a>一些知识点</h1><ol>
+<li>for<br>在always块中使用for<br>模板：<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">integer</span> i;</span><br><span class="line"><span class="keyword">always</span>@(*) <span class="keyword">begin</span></span><br><span class="line">   <span class="comment">//进入循环前必须初始化</span></span><br><span class="line">   <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i ...; i = i + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">      ...</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></li>
+<li>function<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> [返回位宽] 函数名(输入端口列表)</span><br><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] abs_val(<span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] data);</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      <span class="keyword">if</span> (data &lt; <span class="number">0</span>) <span class="keyword">begin</span></span><br><span class="line">         abs_val = -data;<span class="comment">//通过把值赋给函数名来实现“return”</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">      ...</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
+<li>算数右移<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">$signed</span>(A) &gt;&gt;&gt; <span class="number">2</span></span><br></pre></td></tr></table></figure></li>
+<li>切片与掩码的选择<br>切片[base +: width] 宽度是固定常数的时候用；<br>掩码在提取长度是动态变量的时候用<br>造掩码：<ol>
+<li>种子：A :32’b1(单点定位和借位减法)  B : 32’hffffffff(整片裁剪)</li>
+<li>造低位n个1:<br>种子A左移n位，借位减1 low_mask &#x3D; (32’b1 &lt;&lt; N) - 1</li>
+<li>造高位n个1：<br>种子B左移 32 - n 位 high_mask &#x3D; 32’hffffffff &lt;&lt; (32 - N)</li>
+<li>[high : low]为1<br>len &#x3D; high - low + 1<br>造出低len个1 (32’b1 &lt;&lt; len - 1)<br>将它整体左移low位 ((32’b1 &lt;&lt; Len) - 1) &lt;&lt; low</li>
+</ol>
+</li>
+<li>bit adder<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] bit_adder;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      bit_adder = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         bit_adder = bit_adder + in[k];</span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure>
+下面这些其实可以用掩码来做吧，不管了先贴在这里</li>
+<li>区间比特倒置<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] reverse_range;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">4</span>:<span class="number">0</span>]  high, low;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      reverse_range = in;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         <span class="keyword">if</span> (k &gt;= low &amp;&amp; k &lt;= high) <span class="keyword">begin</span></span><br><span class="line">            reverse_range[k] = in[high + low - k];</span><br><span class="line">         <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
+<li>区间按位翻转<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] invert_range;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">4</span>:<span class="number">0</span>]  high, low;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      invert_range = in;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         <span class="keyword">if</span> (k &gt;= low &amp;&amp; k &lt;= high) <span class="keyword">begin</span></span><br><span class="line">            invert_range[k] = ~in[k];</span><br><span class="line">         <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://czyyy2611.github.io/czyyy_nlw">czyyy</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://czyyy2611.github.io/czyyy_nlw/2026/11/04/P4%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/">https://czyyy2611.github.io/czyyy_nlw/2026/11/04/P4%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://czyyy2611.github.io/czyyy_nlw" target="_blank">czyyy_nlw</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/czyyy_nlw/img/zy%E5%A4%B4%E5%83%8F.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/czyyy_nlw/2026/11/03/python/" title="learn Python"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">learn Python</div></div><div class="info-2"><div class="info-item-1">与C的区别 无需入口函数 使用严格缩进（4个空格），而不是{} 不需要分号，直接换行   输入输出与变量变量1234name = &quot;zhangsan&quot;age = 18price = 9.9is_student = True 输出print()默认自动换行，f-string，变量直接放进{} 12print(f&quot;姓名: &#123;name&#125;, 年龄: &#123;age&#125;&quot;)print(f&quot;价格保留两位小数: &#123;price:.2f&#125;&quot;) # 用 :.2f 类似的来保留小数 输入input()统一读取为字符串,需要数字运算时，显式调用类型转换函数 int() 或 float()input().split() 按空格切分，map(int, …) 把切出来的每一项转为 int 12age = int(input(&quot;请输入年龄：&quot;))x, y = map(int, input(&quot;请输入两个数字: &quot;).split())  流程控制条件判断省略小括号，...</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/czyyy_nlw/img/zy%E5%A4%B4%E5%83%8F.jpg" onerror="this.onerror=null;this.src='/czyyy_nlw/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">czyyy</div><div class="author-info-description">岁月失语 惟石能言</div><div class="site-data"><a href="/czyyy_nlw/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/czyyy_nlw/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/czyyy_nlw/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#P4-%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3"><span class="toc-number">1.</span> <span class="toc-text">P4 设计文档</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8EP3%E7%9A%84%E4%BF%AE%E6%94%B9"><span class="toc-number">2.</span> <span class="toc-text">基于P3的修改</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E5%BE%88%E5%AE%B9%E6%98%93%E5%BF%98%E8%AE%B0%E7%9A%84%E4%BA%8B%E6%83%85"><span class="toc-number">3.</span> <span class="toc-text">我很容易忘记的事情</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E8%8D%89%E7%A8%BF"><span class="toc-number">4.</span> <span class="toc-text">设计草稿</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E6%96%B9%E6%A1%88"><span class="toc-number">5.</span> <span class="toc-text">测试方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%9D%E8%80%83%E9%A2%98"><span class="toc-number">6.</span> <span class="toc-text">思考题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tb%E6%A8%A1%E6%9D%BF"><span class="toc-number">7.</span> <span class="toc-text">tb模板</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%90%84%E7%A7%8D%E6%8C%87%E4%BB%A4%E6%B5%81%E7%A8%8B"><span class="toc-number">8.</span> <span class="toc-text">添加各种指令流程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B"><span class="toc-number">8.1.</span> <span class="toc-text">流程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B%E5%9E%8B%E6%8C%87%E4%BB%A4"><span class="toc-number">8.2.</span> <span class="toc-text">B型指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#J%E5%9E%8B%E6%8C%87%E4%BB%A4"><span class="toc-number">8.3.</span> <span class="toc-text">J型指令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%9E%8B%E6%8C%87%E4%BB%A4%EF%BC%88R%E5%9E%8B%EF%BC%89"><span class="toc-number">8.4.</span> <span class="toc-text">计算型指令（R型）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A1%E7%AE%97%E5%9E%8B%E6%8C%87%E4%BB%A4%EF%BC%88I%E5%9E%8B%EF%BC%89"><span class="toc-number">8.5.</span> <span class="toc-text">计算型指令（I型）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BF%E5%AD%98%E5%9E%8B%E6%8C%87%E4%BB%A4%EF%BC%88Load-Store%EF%BC%89"><span class="toc-number">8.6.</span> <span class="toc-text">访存型指令（Load&#x2F;Store）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6%E4%BC%A0%E9%80%81%E5%9E%8B%E6%8C%87%E4%BB%A4"><span class="toc-number">8.7.</span> <span class="toc-text">条件传送型指令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="toc-number">9.</span> <span class="toc-text">一些知识点</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/czyyy_nlw/2026/11/04/P4%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/" title="P4 设计文档">P4 设计文档</a><time datetime="2026-11-03T16:00:00.000Z" title="发表于 2026-11-04 00:00:00">2026-11-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/czyyy_nlw/2026/11/03/python/" title="learn Python">learn Python</a><time datetime="2026-11-02T16:00:00.000Z" title="发表于 2026-11-03 00:00:00">2026-11-03</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/czyyy_nlw/2026/11/01/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C1/" title="爱有万分之一甜">爱有万分之一甜</a><time datetime="2026-10-31T16:00:00.000Z" title="发表于 2026-11-01 00:00:00">2026-11-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/czyyy_nlw/2026/10/29/OOPre/" title="OOPre">OOPre</a><time datetime="2026-10-28T16:00:00.000Z" title="发表于 2026-10-29 00:00:00">2026-10-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/czyyy_nlw/2026/10/27/P3%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/" title="P3 设计文档">P3 设计文档</a><time datetime="2026-10-27T08:57:06.056Z" title="发表于 2026-10-27 16:57:06">2026-10-27</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By czyyy</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.7.0</a></span></div><div class="footer_custom_text">Good Bye</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/czyyy_nlw/js/utils.js?v=5.7.0"></script><script src="/czyyy_nlw/js/main.js?v=5.7.0"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="/czyyy_nlw/js/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章…" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/czyyy_nlw/js/search/local-search.js?v=5.7.0"></script></div></div></body></html>
