@@ -865,6 +865,8 @@ git config --global credential.helper manager
 git config --global http."https://github.com".proxy http://127.0.0.1:7897
 ```
 
+> **`git add` 报 `warning: LF will be replaced by CRLF`**：这是全局 `core.autocrlf=true` 和仓库里的 LF 文件冲突，不是错误。本仓库已把 `core.autocrlf` 改成 `input`，并加了 `.gitattributes`（`* text=auto eol=lf`），仓库内统一 LF，不会再警告。换电脑后如果又出现，在 `D:\myblog` 下执行 `git config core.autocrlf input` 即可。
+
 报错对照：
 
 | 报错 | 原因 |
@@ -872,6 +874,7 @@ git config --global http."https://github.com".proxy http://127.0.0.1:7897
 | `Failed to connect to github.com:443 over proxy` | 代理没开 |
 | `Author identity unknown` | 没配 `user.name` / `user.email` |
 | `SEC_E_UNTRUSTED_ROOT` | git 没走代理，检查上面最后一行 |
+| `warning: LF will be replaced by CRLF` | 行尾转换警告，仓库已配 `core.autocrlf input`，见上 |
 
 ### 4.3 源码也要推
 
