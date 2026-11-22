@@ -875,6 +875,7 @@ git config --global http."https://github.com".proxy http://127.0.0.1:7897
 | `Author identity unknown` | 没配 `user.name` / `user.email` |
 | `SEC_E_UNTRUSTED_ROOT` | git 没走代理，检查上面最后一行 |
 | `warning: LF will be replaced by CRLF` | 行尾转换警告，仓库已配 `core.autocrlf input`，见上 |
+| 部署命令跑完，但网页没变 | `.deploy_git` 里已经有新 commit，但 push 没成功（代理/网络）。在 `D:\myblog\.deploy_git` 执行 `git push -u https://github.com/czyyy2611/czyyy_nlw.git HEAD:gh-pages`，再用 `git ls-remote <repo> refs/heads/gh-pages` 确认远程 commit 是否更新 |
 
 ### 4.3 源码也要推
 
