@@ -7,12 +7,12 @@
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="80a40918f56865627f2a4627c6ff735726cb61e01f79a8954ec59f1e7f934bd7"
-     data-nonce="93e409d074f930c0b9caad19"
+     data-salt="c3f58d3313badc61023b069f8a233b9b400e586dec20118d514a8e8f5c5a673b"
+     data-nonce="6812c3b88d6c4bbe5e435c97"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    8cae7054b292d82d3e5c438617a9f26902a515db6138396ef5b46262c8251e2f28b26be4ff45cbc047744b7dd04cf985205c9e155e748b81d617add581ffb559f9aa30740a16817b477fcb44ff0f96c9df5e253a304a821e6f90762f0c842ce9ef68972f57fb3ce7ce117cb2afcaa66c24d6a15c606c6585bb211b233082f77aee6a9b309d715c1d362adb43b51686da5f829264b12c561eef3ef305d7af9d4e64ba2e942f4c4f10c6e6aee4486b6bf56842b292daa3e1fd67baa078f9cd4552d746331f82b0f59ef0275dc7d6c40be08a2af7e98f346d120f682c203f32ca97f2db7ee5ec35c33323e1b21128c14360a1b91be3064db18f16b4371ec76ccf556fa3fd25ac7c9d57174488c6f15621ebd44aed9412eea8b4d0916b070d92c7695fac7ecefcc4ca31debc87dbef7ac334bfc19d
+    667d2498065bce64dcce57c7d853dfff2047b81623fc53973b46f901641c98c68474b48c926908f990fd0d54aa322d5914c4bf2ef32c51cd12ec6dd45efcc7d4957cbe0cea86516cffff1512d657c59d2f8f43a2b62719aae728bd8c83280b36f8d4e9d1d9256f45ee5cf036261b1257fbd2f34a154b988aa46ddd7f2f4346dc6e67c237a48e0b0782d26d92ca6a0af17eb3d6d48bd5177f3c6939a8d43bfd1349a1f05d5412056526b7a2c5d1e30cce2fded3b4f026f5e0d8ae4712bae97f307b9243d550c07371c63b4e56f1d74fa0862d0346ff3bbe833d4758b125c6d8620704636882f2458046272a79584e141edf0a26dce038e2b90051ad378ac94d14bba99efdd315a82117deafd9857656683388587158705555daefd352ed4ea981b45dfa9c063173c540e8770f87eaf8d66c7894
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
@@ -116,6 +116,292 @@
 </ol>
 <hr>
 <p>参考：OOpre指导书</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>MIPS ?</title>
+    <url>/czyyy_nlw/2026/10/20/MIPS/</url>
+    <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
+<li>输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro input(%in)   #输入一个整数</span><br><span class="line">    li $v0, 5</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_char(%in)   #输入一个字符</span><br><span class="line">    li $v0, 12</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_str(%addr, %max_len)    #输入一个字符串</span><br><span class="line">    li $v0,8</span><br><span class="line">    la $a0, %addr</span><br><span class="line">    move $a1, %max_len</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro print(%out)  # 输出一个整数</span><br><span class="line">    li $v0, 1</span><br><span class="line">    move $a0, %out</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_char(%out) # 打印一个字符</span><br><span class="line">    li $v0, 11</span><br><span class="line">    move $a0, %out</span><br><span class="line">     syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_str(%addr) # 打印一个字符串</span><br><span class="line">    li $v0, 4</span><br><span class="line">    la $a0, %addr </span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>退出程序<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro exit()</span><br><span class="line">    li $v0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印换行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro println()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>打印空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro printspace()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 32</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>计算二维数组字节偏移量<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro calc_addr(%dst, %row, %col, %rank)</span><br><span class="line">    multu %row, %rank</span><br><span class="line">    mflo %dst</span><br><span class="line">    addu %dst, %dst %col</span><br><span class="line">    sll %dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>读数组元素 arr[index] -&gt; %val (用到$t9)<br>字符串：去掉sll，lw -&gt; lb<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro lw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    lw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li>写数组元素 %val -&gt; arr[index] (用到$t9)<br>字符串：去掉sll，lw -&gt; lb <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro sw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    sw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+</ol>
+<h1 id="循环的写法"><a href="#循环的写法" class="headerlink" title="循环的写法"></a>循环的写法</h1><ol>
+<li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line"># 初始化</span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
+<li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line"># 初始化</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+</ol>
+<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><ol>
+<li><p>可分为线性递归，树形递归，循环递归</p>
+</li>
+<li><p>入栈出栈宏</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro push(%src)</span><br><span class="line">    addi $sp, $sp, -4</span><br><span class="line">    sw %src, 0($sp)</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro pop(%src)</span><br><span class="line">    lw %src, 0($sp)</span><br><span class="line">    addi $sp, $sp, 4</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
+<li><p>写法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func:</span><br><span class="line">     # 1. 基线条件处理(停止递归)</span><br><span class="line">     beq $a0, $zero, base_case</span><br><span class="line"></span><br><span class="line">     # 2. 压栈</span><br><span class="line">     push($ra)</span><br><span class="line">     push($a0)</span><br><span class="line"> </span><br><span class="line">     # 3. 递归准备与调用</span><br><span class="line">     addi $a0, $a0, -1   # 修改参数，准备下一层的入参</span><br><span class="line">     </span><br><span class="line">     jal func    # 递归调用</span><br><span class="line"></span><br><span class="line">     move $s0, $v0   #存值（如果第二次还要调用）</span><br><span class="line"></span><br><span class="line">     # 恢复参数</span><br><span class="line"></span><br><span class="line">     # 4. 合并结果</span><br><span class="line"></span><br><span class="line">     # 5. 弹栈</span><br><span class="line">     pop($a0)</span><br><span class="line">     pop($ra)</span><br><span class="line"></span><br><span class="line"> base_case:  # 出口设置</span><br><span class="line">     xxx</span><br><span class="line">     jr $ra</span><br></pre></td></tr></table></figure>
+<hr>
+</li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>P4 设计文档</title>
+    <url>/czyyy_nlw/2026/11/04/P4%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<h1 id="P4-设计文档"><a href="#P4-设计文档" class="headerlink" title="P4 设计文档"></a>P4 设计文档</h1><hr>
+<h1 id="基于P3的修改"><a href="#基于P3的修改" class="headerlink" title="基于P3的修改"></a>基于P3的修改</h1><ol>
+<li>因为verilog可直接切片，所以去掉了IS模块</li>
+<li>将storesrc和loadsrc封装进DM模块中</li>
+<li>新增CMP模块，集中处理分支跳转指令（ALU模块去掉了zero接口）<br>CMP 直接复用 type 信号匹配对应分支判定，配合 zero 控制分支跳转；</li>
+<li>二次迭代：给 Controller 新增 zero, rt 输入；拓宽 loadSel storeSel 位宽为 3 位；引入 constants.v 统一管理 type 操作码宏定义，复用 type 驱动 CMP；重新设计多路控制信号，更加直观；</li>
+</ol>
+<hr>
+<h1 id="设计反思"><a href="#设计反思" class="headerlink" title="设计反思"></a>设计反思</h1><ol>
+<li>留出足够的位宽，适当写大一位</li>
+<li>可以适当穷举所有的数据通路，然后为他们留好控制信号和位宽</li>
+</ol>
+<hr>
+<h1 id="我很容易忘记的事情"><a href="#我很容易忘记的事情" class="headerlink" title="我很容易忘记的事情"></a>我很容易忘记的事情</h1><ol>
+<li>位宽不要忘了写；</li>
+<li>带符号比较和算术右移两边一定要显式加 $signed；不要忘了无符号会传导，直接给两边同时套上$signed 就行；</li>
+<li>Store 类指令和普通 Branch 严禁开启 RegWrite！</li>
+</ol>
+<hr>
+<h1 id="设计草稿"><a href="#设计草稿" class="headerlink" title="设计草稿"></a>设计草稿</h1><p>基于P3设计草稿和上述修改，将其转化为verilog代码<br><img src="/czyyy_nlw/img/P3/%E6%97%A0%E7%BA%BF%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1.png" alt="无线顶层设计" title="无线顶层设计"><br><img src="/czyyy_nlw/img/P3/%E6%9C%89%E7%BA%BF%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1.png" alt="有线顶层设计" title="有线顶层设计"></p>
+<hr>
+<h1 id="测试方案"><a href="#测试方案" class="headerlink" title="测试方案"></a>测试方案</h1><figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ori </span>$<span class="number">4</span>, $<span class="number">0</span>, <span class="number">123</span></span><br><span class="line"><span class="keyword">lui </span>$<span class="number">6</span>, <span class="number">123</span></span><br><span class="line"><span class="keyword">lui </span>$<span class="number">7</span>, <span class="number">0xffff</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">7</span>, $<span class="number">7</span>, <span class="number">0xffff</span></span><br><span class="line"><span class="keyword">add </span>$<span class="number">16</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"><span class="keyword">sub </span>$<span class="number">21</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"><span class="keyword">add </span>$<span class="number">0</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">8</span>, $<span class="number">0</span>, <span class="number">0</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">16</span>, <span class="number">0</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">21</span>, <span class="number">4</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">lw </span>$<span class="number">14</span>, <span class="number">0</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">14</span>, <span class="number">8</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">1</span>, $<span class="number">0</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">2</span>, $<span class="number">0</span>, <span class="number">2</span></span><br><span class="line"><span class="keyword">beq </span>$<span class="number">1</span>, $<span class="number">2</span>, <span class="keyword">beq_fail</span></span><br><span class="line"><span class="keyword"></span><span class="keyword">beq </span>$<span class="number">1</span>, $<span class="number">1</span>, <span class="keyword">beq_pass</span></span><br><span class="line"><span class="keyword"></span><span class="symbol"></span></span><br><span class="line"><span class="symbol">beq_fail:</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">27</span>, $<span class="number">0</span>, <span class="number">111</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">27</span>, <span class="number">12</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">beq_pass:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">1</span>, <span class="number">16</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">j </span>skip_target</span><br><span class="line"><span class="keyword">ori </span>$<span class="number">26</span>, $<span class="number">0</span>, <span class="number">222</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">26</span>, <span class="number">20</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">skip_target:</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">26</span>, $<span class="number">0</span>, <span class="number">333</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">26</span>, <span class="number">20</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">jal </span>func1</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">31</span>, <span class="number">24</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">jal </span>func2</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">31</span>, <span class="number">28</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">end:</span></span><br><span class="line"><span class="keyword">j </span>end</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">func1:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">4</span>, <span class="number">32</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">jr </span>$<span class="number">31</span></span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">func2:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">6</span>, <span class="number">36</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">jr </span>$<span class="number">31</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h1><ol>
+<li>阅读下面给出的 DM 的输入示例中（示例 DM 容量为 4KB，即 32bit × 1024字），根据你的理解回答，这个 addr 信号又是从哪里来的？地址信号 addr 位数为什么是 [11:2] 而不是 [9:0] ？<br>addr 信号是ALU的计算结果；<br>实际实用是按字寻址，addr 必然是4的倍数，后两位必然是0，所以只需要[11:2]就行了</li>
+<li>思考上述两种控制器设计的译码方式，给出代码示例，并尝试对比各方式的优劣。<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">assign</span> NPC_Sel = (jal | j) ? <span class="number">3&#x27;b001</span> :</span><br><span class="line">                 (jr) ? <span class="number">3&#x27;b010</span> :</span><br><span class="line">                 (beq) ? <span class="number">3&#x27;b011</span> : <span class="number">3&#x27;b000</span>;</span><br></pre></td></tr></table></figure>
+使用三目运算符来译码，优势：简洁，易于维护<br>劣势：不够直观</li>
+<li>在相应的部件中，复位信号的设计都是同步复位，这与 P3 中的设计要求不同。请对比同步复位与异步复位这两种方式的 reset 信号与 clk 信号优先级的关系。<br>同步复位：clk &gt; reset<br>异步复位: clk &lt; reset</li>
+<li>C 语言是一种弱类型程序设计语言。C 语言中不对计算结果溢出进行处理，这意味着 C 语言要求程序员必须很清楚计算结果是否会导致溢出。因此，如果仅仅支持 C 语言，MIPS 指令的所有计算指令均可以忽略溢出。 请说明为什么在忽略溢出的前提下，addi 与 addiu 是等价的，add 与 addu 是等价的。提示：阅读《MIPS32® Architecture For Programmers Volume II: The MIPS32® Instruction Set》中相关指令的 Operation 部分。<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">temp ← (GPR[rs]31||GPR[rs]31..0) + (GPR[rt]31||GPR[rt]31..0)</span><br><span class="line">if temp32 ≠ temp31 then</span><br><span class="line">    SignalException(IntegerOverflow)</span><br><span class="line">else</span><br><span class="line">    GPR[rd] ← temp</span><br><span class="line">endif</span><br></pre></td></tr></table></figure>
+在忽略溢出的情况下，代码可以直接改写成：<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">GPR[rd] ← GPR[rs]31..0 + GPR[rt]31..0</span><br></pre></td></tr></table></figure>
+和addu是等价的</li>
+</ol>
+<hr>
+<h1 id="tb模板"><a href="#tb模板" class="headerlink" title="tb模板"></a>tb模板</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`timescale 1ns / 1ps</span><br><span class="line"></span><br><span class="line">module mips_tb;</span><br><span class="line">    reg clk;</span><br><span class="line">    reg reset;</span><br><span class="line"></span><br><span class="line">    mips uut (</span><br><span class="line">        .clk(clk),</span><br><span class="line">        .reset(reset)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    initial begin</span><br><span class="line">        clk = 1&#x27;b0;</span><br><span class="line">        forever #5 clk = ~clk;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    initial begin</span><br><span class="line">        reset = 1&#x27;b1;</span><br><span class="line">        #20;</span><br><span class="line">        reset = 1&#x27;b0;</span><br><span class="line">        #200000;</span><br><span class="line">        $finish;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="添加各种指令流程"><a href="#添加各种指令流程" class="headerlink" title="添加各种指令流程"></a>添加各种指令流程</h1><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
+<li>判断是哪种类型的指令（R型计算、I型计算、Branch分支、Jump跳转、Load访存、Store存储、条件传送&#x2F;链接等）；</li>
+<li>在 Controller 中添加指令识别 wire 与译码逻辑</li>
+<li>配置各项控制信号；</li>
+<li>修改数据通路：<ul>
+<li>需要 ALU 新算子 &#x2F; 运算来源改变 -&gt; 扩充 ALU.v 并配置 ALU_ASel &#x2F; ALU_BSel；</li>
+<li>需要新分支判断条件 -&gt; 扩充 CMP.v 并在 Controller 中将 type 赋值为该指令宏；</li>
+<li>需要特殊访存读写宽度或规则 -&gt; 扩充 DM.v 并配置 loadSel &#x2F; storeSel；</li>
+<li>需要特殊写回目标 -&gt; 配置 RegDst_Sel 和 RegWD_Sel。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="控制信号速查表（重构）"><a href="#控制信号速查表（重构）" class="headerlink" title="控制信号速查表（重构）"></a>控制信号速查表（重构）</h2><table>
+<thead>
+<tr>
+<th>控制信号</th>
+<th>位宽与选择意义</th>
+<th>基础指令配置与扩展说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>NPC_Sel</code></td>
+<td><code>3&#39;b000</code> : PC+4（顺序执行）<br><code>3&#39;b001</code> : 26位跳转（<code>j, jal</code>）<br><code>3&#39;b010</code> : 寄存器跳转（<code>jr</code>）<br><code>3&#39;b011</code> : 16位条件分支（<code>beq</code>）<br><code>3&#39;b100~111</code> : 扩展保留</td>
+<td>默认顺序执行：<code>3&#39;b000</code><br><code>j, jal</code> : <code>3&#39;b001</code><br><code>jr</code> : <code>3&#39;b010</code><br><code>beq</code> : <code>3&#39;b011</code><br>新增分支与跳转按需配置</td>
+</tr>
+<tr>
+<td><code>RegWrite</code></td>
+<td><code>1</code> : 写寄存器使能<br><code>0</code> : 禁止写寄存器</td>
+<td><code>add, sub, ori, lui, lw, jal</code> 为 <code>1</code><br><code>sw, beq, j, jr</code> 为 <code>0</code><br>新增条件写指令需结合 <code>zero</code> 门控</td>
+</tr>
+<tr>
+<td><code>RegDst_Sel</code></td>
+<td><code>2&#39;b00</code> : 写 <code>rt</code><br><code>2&#39;b01</code> : 写 <code>rd</code><br><code>2&#39;b10</code> : 写 <code>31号寄存器($ra)</code><br><code>2&#39;b11</code> : 备用</td>
+<td><code>ori, lui, lw</code> 为 <code>2&#39;b00</code><br><code>add, sub</code> 为 <code>2&#39;b01</code><br><code>jal</code> 为 <code>2&#39;b10</code><br>新增指令按目标寄存器选择</td>
+</tr>
+<tr>
+<td><code>RegWD_Sel</code></td>
+<td><code>3&#39;b000</code> : 写回 ALU 运算结果 (<code>ALUout</code>)<br><code>3&#39;b001</code> : 写回内存读出值 (<code>Memout</code>)<br><code>3&#39;b010</code> : 写回 <code>PC + 4</code>（链接返回地址）<br><code>3&#39;b011</code> : 写回当前指令 <code>pc</code><br><code>3&#39;b100~111</code> : 备用</td>
+<td><code>add, sub, ori, lui</code> 为 <code>3&#39;b000</code><br><code>lw</code> 为 <code>3&#39;b001</code><br><code>jal</code> 为 <code>3&#39;b010</code><br>新增写回来源按需扩充</td>
+</tr>
+<tr>
+<td><code>ALU_ASel</code></td>
+<td><code>2&#39;b00</code> : 选寄存器 <code>RD1</code><br><code>2&#39;b01</code> : 选移位量 <code>shamt</code><br><code>2&#39;b10</code> : 选当前指令 <code>pc</code><br><code>2&#39;b11</code> : 备用</td>
+<td>基础10条指令全部默认选 <code>2&#39;b00</code><br>新增需要移位量或PC参与运算的指令按需选择</td>
+</tr>
+<tr>
+<td><code>ALU_BSel</code></td>
+<td><code>2&#39;b00</code> : 选寄存器 <code>RD2</code><br><code>2&#39;b01</code> : 选立即数扩展值 <code>ext32</code><br><code>2&#39;b10</code> : 选当前指令 <code>pc</code><br><code>2&#39;b11</code> : 备用</td>
+<td><code>add, sub, beq</code> 为 <code>2&#39;b00</code><br><code>ori, lui, lw, sw</code> 为 <code>2&#39;b01</code><br>新增以PC为第二操作数的指令选 <code>2&#39;b10</code></td>
+</tr>
+<tr>
+<td><code>EXTop</code></td>
+<td><code>1</code> : 符号扩展（Sign-extend）<br><code>0</code> : 零扩展（Zero-extend）</td>
+<td><code>lui, lw, sw</code> 为 <code>1</code><br><code>ori</code> 为 <code>0</code><br>新增算术&#x2F;访存类填 <code>1</code>，逻辑&#x2F;掩码类填 <code>0</code></td>
+</tr>
+<tr>
+<td><code>MemWrite</code></td>
+<td><code>1</code> : 写内存使能<br><code>0</code> : 禁止写内存</td>
+<td>只有 <code>sw</code> 为 <code>1</code>，其余基础指令全为 <code>0</code><br>新增 Store 类指令填 <code>1</code></td>
+</tr>
+<tr>
+<td><code>storeSel</code></td>
+<td><code>3&#39;b000</code> : sw (整字)<br><code>3&#39;b001</code> : sh (半字)<br><code>3&#39;b010</code> : sb (单字节)<br><code>3&#39;b011~111</code> : 扩展保留</td>
+<td>基础指令 <code>sw</code> 为 <code>3&#39;b000</code><br>其余基础指令保持默认 <code>3&#39;b000</code><br>新增 Store 类指令按需扩充</td>
+</tr>
+<tr>
+<td><code>loadSel</code></td>
+<td><code>3&#39;b000</code> : lw (整字)<br><code>3&#39;b001</code> : lh (有符号半字)<br><code>3&#39;b010</code> : lb (有符号字节)<br><code>3&#39;b011~111</code> : 扩展保留</td>
+<td>基础指令 <code>lw</code> 为 <code>3&#39;b000</code><br>新增 Load 类指令按需分配 <code>3&#39;b011</code> 起的编码</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td>6位指令类型操作码（在 constants.v 中统一宏定义）</td>
+<td>Controller 输出，同时送入 ALU 与 CMP<br>ALU 用于执行算术逻辑计算，CMP 用于识别分支条件判断</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="各类指令加指令标准配置流程"><a href="#各类指令加指令标准配置流程" class="headerlink" title="各类指令加指令标准配置流程"></a>各类指令加指令标准配置流程</h2><h3 id="1-B-型分支指令（Branch）"><a href="#1-B-型分支指令（Branch）" class="headerlink" title="1. B 型分支指令（Branch）"></a>1. B 型分支指令（Branch）</h3><ol>
+<li>语义：根据条件比较结果决定是否发生 16 位相对跳转（PC &#x3D; PC + 4 + sign_extend(offset || 00)）。</li>
+<li>Controller 配置：<ul>
+<li>NPC_Sel &#x3D; 3’b011</li>
+<li>type &#x3D; 对应分支指令的宏（如 &#96;BEQ）</li>
+<li>ALU_BSel &#x3D; 2’b00（送入 RD2 供 CMP 比对）</li>
+<li>普通 Branch：<ul>
+<li>RegWrite &#x3D; 0（严禁写寄存器）</li>
+</ul>
+</li>
+<li>带链接 Branch：<ul>
+<li>RegWrite &#x3D; (zero) ? 1’b1 : 1’b0（只有条件成立时才允许写寄存器）</li>
+<li>RegDst_Sel &#x3D; 2’b10（固定写回 31 号寄存器 $ra）</li>
+<li>RegWD_Sel &#x3D; 3’b010（写回 PC + 4）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据通路修改：<ul>
+<li>CMP.v：在 assign zero 中增加一行 ((type &#x3D;&#x3D; &#96;xxx) &amp;&amp; (条件)) ? 1’b1 :</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="2-J-型跳转指令（Jump）"><a href="#2-J-型跳转指令（Jump）" class="headerlink" title="2. J 型跳转指令（Jump）"></a>2. J 型跳转指令（Jump）</h3><ol>
+<li>各指令对号入座：<ul>
+<li>j（无条件跳转）：<ul>
+<li>NPC_Sel &#x3D; 3’b001，RegWrite &#x3D; 0</li>
+</ul>
+</li>
+<li>jal（跳转并链接）：<ul>
+<li>NPC_Sel &#x3D; 3’b001</li>
+<li>RegWrite &#x3D; 1</li>
+<li>RegDst_Sel &#x3D; 2’b10（写 $31）</li>
+<li>RegWD_Sel &#x3D; 3’b010（写 PC + 4）</li>
+</ul>
+</li>
+<li>jr（寄存器跳转）：<ul>
+<li>NPC_Sel &#x3D; 3’b010（目标取自 RD1），RegWrite &#x3D; 0</li>
+</ul>
+</li>
+<li>jalr（寄存器跳转并链接）：<ul>
+<li>NPC_Sel &#x3D; 3’b010</li>
+<li>RegWrite &#x3D; 1</li>
+<li>RegDst_Sel &#x3D; 2’b01（写回目标是 rd）</li>
+<li>RegWD_Sel &#x3D; 3’b010（写 PC + 4）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据通路修改：无，仅 Controller 配置即可。</li>
+</ol>
+<hr>
+<h3 id="3-计算型指令（R-型）"><a href="#3-计算型指令（R-型）" class="headerlink" title="3. 计算型指令（R 型）"></a>3. 计算型指令（R 型）</h3><ol>
+<li>语义：寄存器与寄存器（或移位量&#x2F;PC）运算，结果写入目标寄存器 rd。</li>
+<li>Controller 配置：<ul>
+<li>NPC_Sel &#x3D; 3’b000</li>
+<li>RegWrite &#x3D; 1</li>
+<li>RegDst_Sel &#x3D; 2’b01（写回 rd）</li>
+<li>RegWD_Sel &#x3D; 3’b000（写回 ALUout）</li>
+<li>ALU_ASel：默认 2’b00（RD1）；固定移位选 2’b01（shamt）；PC 参与运算选 2’b10（PC）</li>
+<li>ALU_BSel：默认 2’b00（RD2）；PC 作为第二操作数选 2’b10（PC）</li>
+<li>type：在 constants.v 中新增一行 define 分配新的 ALU 操作码，并在 Controller.v 与 ALU.v 中引用（记得加反引号）</li>
+</ul>
+</li>
+<li>数据通路修改：在 ALU.v 中增加算子并接入 outputA 多路选择器。</li>
+</ol>
+<hr>
+<h3 id="4-计算型指令（I-型）"><a href="#4-计算型指令（I-型）" class="headerlink" title="4. 计算型指令（I 型）"></a>4. 计算型指令（I 型）</h3><ol>
+<li>语义：寄存器与 16 位立即数运算，结果写入目标寄存器 rt。</li>
+<li>Controller 配置：<ul>
+<li>NPC_Sel &#x3D; 3’b000</li>
+<li>RegWrite &#x3D; 1</li>
+<li>RegDst_Sel &#x3D; 2’b00（写回 rt）</li>
+<li>RegWD_Sel &#x3D; 3’b000（写回 ALUout）</li>
+<li>ALU_ASel &#x3D; 2’b00（选 RD1）</li>
+<li>ALU_BSel &#x3D; 2’b01（选 ext32 立即数）</li>
+<li>EXTop：算术运算填 1（符号扩展）；逻辑运算&#x2F;掩码填 0（零扩展）</li>
+<li>type：分配或复用 ALU 操作码</li>
+</ul>
+</li>
+<li>数据通路修改：在 ALU.v 中增加算子并接入 outputA。</li>
+</ol>
+<hr>
+<h3 id="5-访存型指令（Load-Store）"><a href="#5-访存型指令（Load-Store）" class="headerlink" title="5. 访存型指令（Load &#x2F; Store）"></a>5. 访存型指令（Load &#x2F; Store）</h3><ol>
+<li>共通点：<ul>
+<li>基地址加偏移量：ALU_ASel &#x3D; 2’b00, ALU_BSel &#x3D; 2’b01, EXTop &#x3D; 1（偏移量符号扩展），type &#x3D; ADD。</li>
+</ul>
+</li>
+<li>Load 类（读内存存入寄存器）：<ul>
+<li>RegWrite &#x3D; 1</li>
+<li>RegDst_Sel &#x3D; 2’b00（写目标寄存器 rt）</li>
+<li>RegWD_Sel &#x3D; 3’b001（写回数据来源选择 Memout）</li>
+<li>MemWrite &#x3D; 0（严禁写内存）</li>
+<li>loadSel：3’b000 为 lw，3’b001 为 lh，3’b010 为 lb，扩展指令按需分配编码。</li>
+<li>通路修改：在 DM.v 中根据 loadSel 用切片提取对应字节并处理。</li>
+</ul>
+</li>
+<li>Store 类（将寄存器数据写入内存）：<ul>
+<li>MemWrite &#x3D; 1（写内存使能开启）</li>
+<li>RegWrite &#x3D; 0（严禁写寄存器）</li>
+<li>storeSel：3’b000 为 sw，3’b001 为 sh，3’b010 为 sb，扩展指令按需增加。</li>
+<li>通路修改：在 DM.v 中按字节掩码局部写入 RAM。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="6-条件传送-条件链接型指令"><a href="#6-条件传送-条件链接型指令" class="headerlink" title="6. 条件传送 &#x2F; 条件链接型指令"></a>6. 条件传送 &#x2F; 条件链接型指令</h3><ol>
+<li>典型特征：执行与否取决于某个条件的真假。</li>
+<li>Controller 配置原则：<ul>
+<li>寄存器写使能必须受条件门控：<ul>
+<li>当满足条件时写使能为 1，不满足时为 0</li>
+</ul>
+</li>
+<li>将条件判断收敛到 CMP.v 中输出 zero，再作为 Controller 输入直接控制 RegWrite，避免在顶层乱拉胶水线。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="一些知识点"><a href="#一些知识点" class="headerlink" title="一些知识点"></a>一些知识点</h1><ol>
+<li>for<br>在always块中使用for<br>其中的变量用reg类型<br>模板：<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">integer</span> i;</span><br><span class="line"><span class="keyword">always</span>@(*) <span class="keyword">begin</span></span><br><span class="line">   <span class="comment">//进入循环前必须初始化</span></span><br><span class="line">   <span class="keyword">for</span> (i = <span class="number">0</span>; i ...; i = i + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">      ...</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></li>
+<li>function<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [返回位宽] 函数名(输入端口列表)</span><br><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] abs_val(<span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] data);</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      <span class="keyword">if</span> (data &lt; <span class="number">0</span>) <span class="keyword">begin</span></span><br><span class="line">         abs_val = -data;<span class="comment">//通过把值赋给函数名来实现“return”</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">      ...</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
+<li>算数右移<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="built_in">$signed</span>(A) &gt;&gt;&gt; <span class="number">2</span></span><br><span class="line"><span class="comment">//这里的2保险起见还是加上$signed吧</span></span><br></pre></td></tr></table></figure></li>
+<li>切片与掩码的选择<br>切片[base +: width] 宽度是固定常数的时候用；<br>掩码在提取长度是动态变量的时候用<br>造掩码：<ol>
+<li>种子：A :32’b1(单点定位和借位减法)  B : 32’hffffffff(整片裁剪)</li>
+<li>造低位n个1:<br>种子A左移n位，借位减1 low_mask &#x3D; (32’b1 &lt;&lt; N) - 1</li>
+<li>造高位n个1：<br>种子B左移 32 - n 位 high_mask &#x3D; 32’hffffffff &lt;&lt; (32 - N)</li>
+<li>[high : low]为1<br>len &#x3D; high - low + 1<br>造出低len个1 (32’b1 &lt;&lt; len - 1)<br>将它整体左移low位 ((32’b1 &lt;&lt; Len) - 1) &lt;&lt; low</li>
+</ol>
+</li>
+<li>bit adder<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] bit_adder;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      bit_adder = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         bit_adder = bit_adder + in[k];</span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure>
+下面这些其实可以用掩码来做吧，不管了先贴在这里</li>
+<li>区间比特倒置<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] reverse_range;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">4</span>:<span class="number">0</span>]  high, low;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      reverse_range = in;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         <span class="keyword">if</span> (k &gt;= low &amp;&amp; k &lt;= high) <span class="keyword">begin</span></span><br><span class="line">            reverse_range[k] = in[high + low - k];</span><br><span class="line">         <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
+<li>区间按位翻转<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] invert_range;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">4</span>:<span class="number">0</span>]  high, low;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      invert_range = in;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         <span class="keyword">if</span> (k &gt;= low &amp;&amp; k &lt;= high) <span class="keyword">begin</span></span><br><span class="line">            invert_range[k] = ~in[k];</span><br><span class="line">         <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
+</ol>
 ]]></content>
   </entry>
   <entry>
@@ -701,259 +987,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>P4 设计文档</title>
-    <url>/czyyy_nlw/2026/11/04/P4%20%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/</url>
-    <content><![CDATA[<h1 id="P4-设计文档"><a href="#P4-设计文档" class="headerlink" title="P4 设计文档"></a>P4 设计文档</h1><hr>
-<h1 id="基于P3的修改"><a href="#基于P3的修改" class="headerlink" title="基于P3的修改"></a>基于P3的修改</h1><ol>
-<li>因为verilog可直接切片，所以去掉了IS模块</li>
-<li>将storesrc和loadsrc封装进DM模块中</li>
-<li>新增CMP模块，集中处理分支跳转指令（ALU模块去掉了zero接口）<br>CMP 直接复用 type 信号匹配对应分支判定，配合 zero 控制分支跳转；</li>
-<li>二次迭代：给 Controller 新增 zero, rt 输入；拓宽 loadSel storeSel 位宽为 3 位；引入 constants.v 统一管理 type 操作码宏定义，复用 type 驱动 CMP；重新设计多路控制信号，更加直观；</li>
-</ol>
-<hr>
-<h1 id="设计反思"><a href="#设计反思" class="headerlink" title="设计反思"></a>设计反思</h1><ol>
-<li>留出足够的位宽，适当写大一位</li>
-<li>可以适当穷举所有的数据通路，然后为他们留好控制信号和位宽</li>
-</ol>
-<hr>
-<h1 id="我很容易忘记的事情"><a href="#我很容易忘记的事情" class="headerlink" title="我很容易忘记的事情"></a>我很容易忘记的事情</h1><ol>
-<li>位宽不要忘了写；</li>
-<li>带符号比较和算术右移两边一定要显式加 $signed；不要忘了无符号会传导，直接给两边同时套上$signed 就行；</li>
-<li>Store 类指令和普通 Branch 严禁开启 RegWrite！</li>
-</ol>
-<hr>
-<h1 id="设计草稿"><a href="#设计草稿" class="headerlink" title="设计草稿"></a>设计草稿</h1><p>基于P3设计草稿和上述修改，将其转化为verilog代码<br><img src="/czyyy_nlw/img/P3/%E6%97%A0%E7%BA%BF%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1.png" alt="无线顶层设计" title="无线顶层设计"><br><img src="/czyyy_nlw/img/P3/%E6%9C%89%E7%BA%BF%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1.png" alt="有线顶层设计" title="有线顶层设计"></p>
-<hr>
-<h1 id="测试方案"><a href="#测试方案" class="headerlink" title="测试方案"></a>测试方案</h1><figure class="highlight mipsasm"><table><tr><td class="code"><pre><span class="line"><span class="keyword">ori </span>$<span class="number">4</span>, $<span class="number">0</span>, <span class="number">123</span></span><br><span class="line"><span class="keyword">lui </span>$<span class="number">6</span>, <span class="number">123</span></span><br><span class="line"><span class="keyword">lui </span>$<span class="number">7</span>, <span class="number">0xffff</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">7</span>, $<span class="number">7</span>, <span class="number">0xffff</span></span><br><span class="line"><span class="keyword">add </span>$<span class="number">16</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"><span class="keyword">sub </span>$<span class="number">21</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"><span class="keyword">add </span>$<span class="number">0</span>, $<span class="number">4</span>, $<span class="number">6</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">8</span>, $<span class="number">0</span>, <span class="number">0</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">16</span>, <span class="number">0</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">21</span>, <span class="number">4</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">lw </span>$<span class="number">14</span>, <span class="number">0</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">14</span>, <span class="number">8</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">1</span>, $<span class="number">0</span>, <span class="number">1</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">2</span>, $<span class="number">0</span>, <span class="number">2</span></span><br><span class="line"><span class="keyword">beq </span>$<span class="number">1</span>, $<span class="number">2</span>, <span class="keyword">beq_fail</span></span><br><span class="line"><span class="keyword"></span><span class="keyword">beq </span>$<span class="number">1</span>, $<span class="number">1</span>, <span class="keyword">beq_pass</span></span><br><span class="line"><span class="keyword"></span><span class="symbol"></span></span><br><span class="line"><span class="symbol">beq_fail:</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">27</span>, $<span class="number">0</span>, <span class="number">111</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">27</span>, <span class="number">12</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">beq_pass:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">1</span>, <span class="number">16</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">j </span>skip_target</span><br><span class="line"><span class="keyword">ori </span>$<span class="number">26</span>, $<span class="number">0</span>, <span class="number">222</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">26</span>, <span class="number">20</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">skip_target:</span></span><br><span class="line"><span class="keyword">ori </span>$<span class="number">26</span>, $<span class="number">0</span>, <span class="number">333</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">26</span>, <span class="number">20</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">jal </span>func1</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">31</span>, <span class="number">24</span>($<span class="number">8</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">jal </span>func2</span><br><span class="line"><span class="keyword">sw </span>$<span class="number">31</span>, <span class="number">28</span>($<span class="number">8</span>)</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">end:</span></span><br><span class="line"><span class="keyword">j </span>end</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">func1:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">4</span>, <span class="number">32</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">jr </span>$<span class="number">31</span></span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">func2:</span></span><br><span class="line"><span class="keyword">sw </span>$<span class="number">6</span>, <span class="number">36</span>($<span class="number">8</span>)</span><br><span class="line"><span class="keyword">jr </span>$<span class="number">31</span></span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h1><ol>
-<li>阅读下面给出的 DM 的输入示例中（示例 DM 容量为 4KB，即 32bit × 1024字），根据你的理解回答，这个 addr 信号又是从哪里来的？地址信号 addr 位数为什么是 [11:2] 而不是 [9:0] ？<br>addr 信号是ALU的计算结果；<br>实际实用是按字寻址，addr 必然是4的倍数，后两位必然是0，所以只需要[11:2]就行了</li>
-<li>思考上述两种控制器设计的译码方式，给出代码示例，并尝试对比各方式的优劣。<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">assign</span> NPC_Sel = (jal | j) ? <span class="number">3&#x27;b001</span> :</span><br><span class="line">                 (jr) ? <span class="number">3&#x27;b010</span> :</span><br><span class="line">                 (beq) ? <span class="number">3&#x27;b011</span> : <span class="number">3&#x27;b000</span>;</span><br></pre></td></tr></table></figure>
-使用三目运算符来译码，优势：简洁，易于维护<br>劣势：不够直观</li>
-<li>在相应的部件中，复位信号的设计都是同步复位，这与 P3 中的设计要求不同。请对比同步复位与异步复位这两种方式的 reset 信号与 clk 信号优先级的关系。<br>同步复位：clk &gt; reset<br>异步复位: clk &lt; reset</li>
-<li>C 语言是一种弱类型程序设计语言。C 语言中不对计算结果溢出进行处理，这意味着 C 语言要求程序员必须很清楚计算结果是否会导致溢出。因此，如果仅仅支持 C 语言，MIPS 指令的所有计算指令均可以忽略溢出。 请说明为什么在忽略溢出的前提下，addi 与 addiu 是等价的，add 与 addu 是等价的。提示：阅读《MIPS32® Architecture For Programmers Volume II: The MIPS32® Instruction Set》中相关指令的 Operation 部分。<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">temp ← (GPR[rs]31||GPR[rs]31..0) + (GPR[rt]31||GPR[rt]31..0)</span><br><span class="line">if temp32 ≠ temp31 then</span><br><span class="line">    SignalException(IntegerOverflow)</span><br><span class="line">else</span><br><span class="line">    GPR[rd] ← temp</span><br><span class="line">endif</span><br></pre></td></tr></table></figure>
-在忽略溢出的情况下，代码可以直接改写成：<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">GPR[rd] ← GPR[rs]31..0 + GPR[rt]31..0</span><br></pre></td></tr></table></figure>
-和addu是等价的</li>
-</ol>
-<hr>
-<h1 id="tb模板"><a href="#tb模板" class="headerlink" title="tb模板"></a>tb模板</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">`timescale 1ns / 1ps</span><br><span class="line"></span><br><span class="line">module mips_tb;</span><br><span class="line">    reg clk;</span><br><span class="line">    reg reset;</span><br><span class="line"></span><br><span class="line">    mips uut (</span><br><span class="line">        .clk(clk),</span><br><span class="line">        .reset(reset)</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    initial begin</span><br><span class="line">        clk = 1&#x27;b0;</span><br><span class="line">        forever #5 clk = ~clk;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">    initial begin</span><br><span class="line">        reset = 1&#x27;b1;</span><br><span class="line">        #20;</span><br><span class="line">        reset = 1&#x27;b0;</span><br><span class="line">        #200000;</span><br><span class="line">        $finish;</span><br><span class="line">    end</span><br><span class="line"></span><br><span class="line">endmodule</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="添加各种指令流程"><a href="#添加各种指令流程" class="headerlink" title="添加各种指令流程"></a>添加各种指令流程</h1><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
-<li>判断是哪种类型的指令（R型计算、I型计算、Branch分支、Jump跳转、Load访存、Store存储、条件传送&#x2F;链接等）；</li>
-<li>在 Controller 中添加指令识别 wire 与译码逻辑</li>
-<li>配置各项控制信号；</li>
-<li>修改数据通路：<ul>
-<li>需要 ALU 新算子 &#x2F; 运算来源改变 -&gt; 扩充 ALU.v 并配置 ALU_ASel &#x2F; ALU_BSel；</li>
-<li>需要新分支判断条件 -&gt; 扩充 CMP.v 并在 Controller 中将 type 赋值为该指令宏；</li>
-<li>需要特殊访存读写宽度或规则 -&gt; 扩充 DM.v 并配置 loadSel &#x2F; storeSel；</li>
-<li>需要特殊写回目标 -&gt; 配置 RegDst_Sel 和 RegWD_Sel。</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="控制信号速查表（重构）"><a href="#控制信号速查表（重构）" class="headerlink" title="控制信号速查表（重构）"></a>控制信号速查表（重构）</h2><table>
-<thead>
-<tr>
-<th>控制信号</th>
-<th>位宽与选择意义</th>
-<th>基础指令配置与扩展说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>NPC_Sel</code></td>
-<td><code>3&#39;b000</code> : PC+4（顺序执行）<br><code>3&#39;b001</code> : 26位跳转（<code>j, jal</code>）<br><code>3&#39;b010</code> : 寄存器跳转（<code>jr</code>）<br><code>3&#39;b011</code> : 16位条件分支（<code>beq</code>）<br><code>3&#39;b100~111</code> : 扩展保留</td>
-<td>默认顺序执行：<code>3&#39;b000</code><br><code>j, jal</code> : <code>3&#39;b001</code><br><code>jr</code> : <code>3&#39;b010</code><br><code>beq</code> : <code>3&#39;b011</code><br>新增分支与跳转按需配置</td>
-</tr>
-<tr>
-<td><code>RegWrite</code></td>
-<td><code>1</code> : 写寄存器使能<br><code>0</code> : 禁止写寄存器</td>
-<td><code>add, sub, ori, lui, lw, jal</code> 为 <code>1</code><br><code>sw, beq, j, jr</code> 为 <code>0</code><br>新增条件写指令需结合 <code>zero</code> 门控</td>
-</tr>
-<tr>
-<td><code>RegDst_Sel</code></td>
-<td><code>2&#39;b00</code> : 写 <code>rt</code><br><code>2&#39;b01</code> : 写 <code>rd</code><br><code>2&#39;b10</code> : 写 <code>31号寄存器($ra)</code><br><code>2&#39;b11</code> : 备用</td>
-<td><code>ori, lui, lw</code> 为 <code>2&#39;b00</code><br><code>add, sub</code> 为 <code>2&#39;b01</code><br><code>jal</code> 为 <code>2&#39;b10</code><br>新增指令按目标寄存器选择</td>
-</tr>
-<tr>
-<td><code>RegWD_Sel</code></td>
-<td><code>3&#39;b000</code> : 写回 ALU 运算结果 (<code>ALUout</code>)<br><code>3&#39;b001</code> : 写回内存读出值 (<code>Memout</code>)<br><code>3&#39;b010</code> : 写回 <code>PC + 4</code>（链接返回地址）<br><code>3&#39;b011</code> : 写回当前指令 <code>pc</code><br><code>3&#39;b100~111</code> : 备用</td>
-<td><code>add, sub, ori, lui</code> 为 <code>3&#39;b000</code><br><code>lw</code> 为 <code>3&#39;b001</code><br><code>jal</code> 为 <code>3&#39;b010</code><br>新增写回来源按需扩充</td>
-</tr>
-<tr>
-<td><code>ALU_ASel</code></td>
-<td><code>2&#39;b00</code> : 选寄存器 <code>RD1</code><br><code>2&#39;b01</code> : 选移位量 <code>shamt</code><br><code>2&#39;b10</code> : 选当前指令 <code>pc</code><br><code>2&#39;b11</code> : 备用</td>
-<td>基础10条指令全部默认选 <code>2&#39;b00</code><br>新增需要移位量或PC参与运算的指令按需选择</td>
-</tr>
-<tr>
-<td><code>ALU_BSel</code></td>
-<td><code>2&#39;b00</code> : 选寄存器 <code>RD2</code><br><code>2&#39;b01</code> : 选立即数扩展值 <code>ext32</code><br><code>2&#39;b10</code> : 选当前指令 <code>pc</code><br><code>2&#39;b11</code> : 备用</td>
-<td><code>add, sub, beq</code> 为 <code>2&#39;b00</code><br><code>ori, lui, lw, sw</code> 为 <code>2&#39;b01</code><br>新增以PC为第二操作数的指令选 <code>2&#39;b10</code></td>
-</tr>
-<tr>
-<td><code>EXTop</code></td>
-<td><code>1</code> : 符号扩展（Sign-extend）<br><code>0</code> : 零扩展（Zero-extend）</td>
-<td><code>lui, lw, sw</code> 为 <code>1</code><br><code>ori</code> 为 <code>0</code><br>新增算术&#x2F;访存类填 <code>1</code>，逻辑&#x2F;掩码类填 <code>0</code></td>
-</tr>
-<tr>
-<td><code>MemWrite</code></td>
-<td><code>1</code> : 写内存使能<br><code>0</code> : 禁止写内存</td>
-<td>只有 <code>sw</code> 为 <code>1</code>，其余基础指令全为 <code>0</code><br>新增 Store 类指令填 <code>1</code></td>
-</tr>
-<tr>
-<td><code>storeSel</code></td>
-<td><code>3&#39;b000</code> : sw (整字)<br><code>3&#39;b001</code> : sh (半字)<br><code>3&#39;b010</code> : sb (单字节)<br><code>3&#39;b011~111</code> : 扩展保留</td>
-<td>基础指令 <code>sw</code> 为 <code>3&#39;b000</code><br>其余基础指令保持默认 <code>3&#39;b000</code><br>新增 Store 类指令按需扩充</td>
-</tr>
-<tr>
-<td><code>loadSel</code></td>
-<td><code>3&#39;b000</code> : lw (整字)<br><code>3&#39;b001</code> : lh (有符号半字)<br><code>3&#39;b010</code> : lb (有符号字节)<br><code>3&#39;b011~111</code> : 扩展保留</td>
-<td>基础指令 <code>lw</code> 为 <code>3&#39;b000</code><br>新增 Load 类指令按需分配 <code>3&#39;b011</code> 起的编码</td>
-</tr>
-<tr>
-<td><code>type</code></td>
-<td>6位指令类型操作码（在 constants.v 中统一宏定义）</td>
-<td>Controller 输出，同时送入 ALU 与 CMP<br>ALU 用于执行算术逻辑计算，CMP 用于识别分支条件判断</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="各类指令加指令标准配置流程"><a href="#各类指令加指令标准配置流程" class="headerlink" title="各类指令加指令标准配置流程"></a>各类指令加指令标准配置流程</h2><h3 id="1-B-型分支指令（Branch）"><a href="#1-B-型分支指令（Branch）" class="headerlink" title="1. B 型分支指令（Branch）"></a>1. B 型分支指令（Branch）</h3><ol>
-<li>语义：根据条件比较结果决定是否发生 16 位相对跳转（PC &#x3D; PC + 4 + sign_extend(offset || 00)）。</li>
-<li>Controller 配置：<ul>
-<li>NPC_Sel &#x3D; 3’b011</li>
-<li>type &#x3D; 对应分支指令的宏（如 &#96;BEQ）</li>
-<li>ALU_BSel &#x3D; 2’b00（送入 RD2 供 CMP 比对）</li>
-<li>普通 Branch：<ul>
-<li>RegWrite &#x3D; 0（严禁写寄存器）</li>
-</ul>
-</li>
-<li>带链接 Branch：<ul>
-<li>RegWrite &#x3D; (zero) ? 1’b1 : 1’b0（只有条件成立时才允许写寄存器）</li>
-<li>RegDst_Sel &#x3D; 2’b10（固定写回 31 号寄存器 $ra）</li>
-<li>RegWD_Sel &#x3D; 3’b010（写回 PC + 4）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>数据通路修改：<ul>
-<li>CMP.v：在 assign zero 中增加一行 ((type &#x3D;&#x3D; &#96;xxx) &amp;&amp; (条件)) ? 1’b1 :</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="2-J-型跳转指令（Jump）"><a href="#2-J-型跳转指令（Jump）" class="headerlink" title="2. J 型跳转指令（Jump）"></a>2. J 型跳转指令（Jump）</h3><ol>
-<li>各指令对号入座：<ul>
-<li>j（无条件跳转）：<ul>
-<li>NPC_Sel &#x3D; 3’b001，RegWrite &#x3D; 0</li>
-</ul>
-</li>
-<li>jal（跳转并链接）：<ul>
-<li>NPC_Sel &#x3D; 3’b001</li>
-<li>RegWrite &#x3D; 1</li>
-<li>RegDst_Sel &#x3D; 2’b10（写 $31）</li>
-<li>RegWD_Sel &#x3D; 3’b010（写 PC + 4）</li>
-</ul>
-</li>
-<li>jr（寄存器跳转）：<ul>
-<li>NPC_Sel &#x3D; 3’b010（目标取自 RD1），RegWrite &#x3D; 0</li>
-</ul>
-</li>
-<li>jalr（寄存器跳转并链接）：<ul>
-<li>NPC_Sel &#x3D; 3’b010</li>
-<li>RegWrite &#x3D; 1</li>
-<li>RegDst_Sel &#x3D; 2’b01（写回目标是 rd）</li>
-<li>RegWD_Sel &#x3D; 3’b010（写 PC + 4）</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>数据通路修改：无，仅 Controller 配置即可。</li>
-</ol>
-<hr>
-<h3 id="3-计算型指令（R-型）"><a href="#3-计算型指令（R-型）" class="headerlink" title="3. 计算型指令（R 型）"></a>3. 计算型指令（R 型）</h3><ol>
-<li>语义：寄存器与寄存器（或移位量&#x2F;PC）运算，结果写入目标寄存器 rd。</li>
-<li>Controller 配置：<ul>
-<li>NPC_Sel &#x3D; 3’b000</li>
-<li>RegWrite &#x3D; 1</li>
-<li>RegDst_Sel &#x3D; 2’b01（写回 rd）</li>
-<li>RegWD_Sel &#x3D; 3’b000（写回 ALUout）</li>
-<li>ALU_ASel：默认 2’b00（RD1）；固定移位选 2’b01（shamt）；PC 参与运算选 2’b10（PC）</li>
-<li>ALU_BSel：默认 2’b00（RD2）；PC 作为第二操作数选 2’b10（PC）</li>
-<li>type：在 constants.v 中新增一行 define 分配新的 ALU 操作码，并在 Controller.v 与 ALU.v 中引用（记得加反引号）</li>
-</ul>
-</li>
-<li>数据通路修改：在 ALU.v 中增加算子并接入 outputA 多路选择器。</li>
-</ol>
-<hr>
-<h3 id="4-计算型指令（I-型）"><a href="#4-计算型指令（I-型）" class="headerlink" title="4. 计算型指令（I 型）"></a>4. 计算型指令（I 型）</h3><ol>
-<li>语义：寄存器与 16 位立即数运算，结果写入目标寄存器 rt。</li>
-<li>Controller 配置：<ul>
-<li>NPC_Sel &#x3D; 3’b000</li>
-<li>RegWrite &#x3D; 1</li>
-<li>RegDst_Sel &#x3D; 2’b00（写回 rt）</li>
-<li>RegWD_Sel &#x3D; 3’b000（写回 ALUout）</li>
-<li>ALU_ASel &#x3D; 2’b00（选 RD1）</li>
-<li>ALU_BSel &#x3D; 2’b01（选 ext32 立即数）</li>
-<li>EXTop：算术运算填 1（符号扩展）；逻辑运算&#x2F;掩码填 0（零扩展）</li>
-<li>type：分配或复用 ALU 操作码</li>
-</ul>
-</li>
-<li>数据通路修改：在 ALU.v 中增加算子并接入 outputA。</li>
-</ol>
-<hr>
-<h3 id="5-访存型指令（Load-Store）"><a href="#5-访存型指令（Load-Store）" class="headerlink" title="5. 访存型指令（Load &#x2F; Store）"></a>5. 访存型指令（Load &#x2F; Store）</h3><ol>
-<li>共通点：<ul>
-<li>基地址加偏移量：ALU_ASel &#x3D; 2’b00, ALU_BSel &#x3D; 2’b01, EXTop &#x3D; 1（偏移量符号扩展），type &#x3D; ADD。</li>
-</ul>
-</li>
-<li>Load 类（读内存存入寄存器）：<ul>
-<li>RegWrite &#x3D; 1</li>
-<li>RegDst_Sel &#x3D; 2’b00（写目标寄存器 rt）</li>
-<li>RegWD_Sel &#x3D; 3’b001（写回数据来源选择 Memout）</li>
-<li>MemWrite &#x3D; 0（严禁写内存）</li>
-<li>loadSel：3’b000 为 lw，3’b001 为 lh，3’b010 为 lb，扩展指令按需分配编码。</li>
-<li>通路修改：在 DM.v 中根据 loadSel 用切片提取对应字节并处理。</li>
-</ul>
-</li>
-<li>Store 类（将寄存器数据写入内存）：<ul>
-<li>MemWrite &#x3D; 1（写内存使能开启）</li>
-<li>RegWrite &#x3D; 0（严禁写寄存器）</li>
-<li>storeSel：3’b000 为 sw，3’b001 为 sh，3’b010 为 sb，扩展指令按需增加。</li>
-<li>通路修改：在 DM.v 中按字节掩码局部写入 RAM。</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h3 id="6-条件传送-条件链接型指令"><a href="#6-条件传送-条件链接型指令" class="headerlink" title="6. 条件传送 &#x2F; 条件链接型指令"></a>6. 条件传送 &#x2F; 条件链接型指令</h3><ol>
-<li>典型特征：执行与否取决于某个条件的真假。</li>
-<li>Controller 配置原则：<ul>
-<li>寄存器写使能必须受条件门控：<ul>
-<li>当满足条件时写使能为 1，不满足时为 0</li>
-</ul>
-</li>
-<li>将条件判断收敛到 CMP.v 中输出 zero，再作为 Controller 输入直接控制 RegWrite，避免在顶层乱拉胶水线。</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h1 id="一些知识点"><a href="#一些知识点" class="headerlink" title="一些知识点"></a>一些知识点</h1><ol>
-<li>for<br>在always块中使用for<br>其中的变量用reg类型<br>模板：<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">integer</span> i;</span><br><span class="line"><span class="keyword">always</span>@(*) <span class="keyword">begin</span></span><br><span class="line">   <span class="comment">//进入循环前必须初始化</span></span><br><span class="line">   <span class="keyword">for</span> (i = <span class="number">0</span>; i ...; i = i + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">      ...</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure></li>
-<li>function<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [返回位宽] 函数名(输入端口列表)</span><br><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] abs_val(<span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] data);</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      <span class="keyword">if</span> (data &lt; <span class="number">0</span>) <span class="keyword">begin</span></span><br><span class="line">         abs_val = -data;<span class="comment">//通过把值赋给函数名来实现“return”</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">      ...</span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
-<li>算数右移<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="built_in">$signed</span>(A) &gt;&gt;&gt; <span class="number">2</span></span><br><span class="line"><span class="comment">//这里的2保险起见还是加上$signed吧</span></span><br></pre></td></tr></table></figure></li>
-<li>切片与掩码的选择<br>切片[base +: width] 宽度是固定常数的时候用；<br>掩码在提取长度是动态变量的时候用<br>造掩码：<ol>
-<li>种子：A :32’b1(单点定位和借位减法)  B : 32’hffffffff(整片裁剪)</li>
-<li>造低位n个1:<br>种子A左移n位，借位减1 low_mask &#x3D; (32’b1 &lt;&lt; N) - 1</li>
-<li>造高位n个1：<br>种子B左移 32 - n 位 high_mask &#x3D; 32’hffffffff &lt;&lt; (32 - N)</li>
-<li>[high : low]为1<br>len &#x3D; high - low + 1<br>造出低len个1 (32’b1 &lt;&lt; len - 1)<br>将它整体左移low位 ((32’b1 &lt;&lt; Len) - 1) &lt;&lt; low</li>
-</ol>
-</li>
-<li>bit adder<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] bit_adder;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      bit_adder = <span class="number">0</span>;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         bit_adder = bit_adder + in[k];</span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure>
-下面这些其实可以用掩码来做吧，不管了先贴在这里</li>
-<li>区间比特倒置<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] reverse_range;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">4</span>:<span class="number">0</span>]  high, low;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      reverse_range = in;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         <span class="keyword">if</span> (k &gt;= low &amp;&amp; k &lt;= high) <span class="keyword">begin</span></span><br><span class="line">            reverse_range[k] = in[high + low - k];</span><br><span class="line">         <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
-<li>区间按位翻转<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] invert_range;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">4</span>:<span class="number">0</span>]  high, low;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      invert_range = in;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         <span class="keyword">if</span> (k &gt;= low &amp;&amp; k &lt;= high) <span class="keyword">begin</span></span><br><span class="line">            invert_range[k] = ~in[k];</span><br><span class="line">         <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
     <title>learn c++</title>
     <url>/czyyy_nlw/2026/10/21/c++/</url>
     <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
@@ -1002,73 +1035,6 @@
 </ol>
 <hr>
 <p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>MIPS ?</title>
-    <url>/czyyy_nlw/2026/10/20/MIPS/</url>
-    <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
-<li>输入 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro input(%in)   #输入一个整数</span><br><span class="line">    li $v0, 5</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_char(%in)   #输入一个字符</span><br><span class="line">    li $v0, 12</span><br><span class="line">    syscall</span><br><span class="line">    move %in, $v0</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro input_str(%addr, %max_len)    #输入一个字符串</span><br><span class="line">    li $v0,8</span><br><span class="line">    la $a0, %addr</span><br><span class="line">    move $a1, %max_len</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>输出<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro print(%out)  # 输出一个整数</span><br><span class="line">    li $v0, 1</span><br><span class="line">    move $a0, %out</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_char(%out) # 打印一个字符</span><br><span class="line">    li $v0, 11</span><br><span class="line">    move $a0, %out</span><br><span class="line">     syscall</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro print_str(%addr) # 打印一个字符串</span><br><span class="line">    li $v0, 4</span><br><span class="line">    la $a0, %addr </span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>退出程序<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro exit()</span><br><span class="line">    li $v0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>打印换行<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro println()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 10</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>打印空格<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro printspace()</span><br><span class="line">    li $v0, 11</span><br><span class="line">    li $a0, 32</span><br><span class="line">    syscall</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>计算二维数组字节偏移量<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro calc_addr(%dst, %row, %col, %rank)</span><br><span class="line">    multu %row, %rank</span><br><span class="line">    mflo %dst</span><br><span class="line">    addu %dst, %dst %col</span><br><span class="line">    sll %dst, %dst, 2</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>读数组元素 arr[index] -&gt; %val (用到$t9)<br>字符串：去掉sll，lw -&gt; lb<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro lw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    lw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li>写数组元素 %val -&gt; arr[index] (用到$t9)<br>字符串：去掉sll，lw -&gt; lb <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro sw_arr(%val, %base, %index)</span><br><span class="line">    sll $t9, %index, 2</span><br><span class="line">    add $t9, %base, $t9</span><br><span class="line">    sw %val, 0($t9)</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure>
-<hr>
-</li>
-</ol>
-<h1 id="循环的写法"><a href="#循环的写法" class="headerlink" title="循环的写法"></a>循环的写法</h1><ol>
-<li>单循环 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n </span><br><span class="line"># 初始化</span><br><span class="line">li $t0, 0  # t0 = i = 0</span><br><span class="line">for_loop:</span><br><span class="line">    beq $t0, $s0, end_for</span><br><span class="line"></span><br><span class="line">     # code</span><br><span class="line"></span><br><span class="line">    addi $t0, $t0, 1</span><br><span class="line">    j for_loop</span><br><span class="line">end_for:</span><br><span class="line">    # over</span><br></pre></td></tr></table></figure></li>
-<li>双循环<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># s0 = n</span><br><span class="line"># s1 = m</span><br><span class="line"># 初始化</span><br><span class="line">li	$t0, 0	# t0 = i = 0</span><br><span class="line"></span><br><span class="line">loop_i:</span><br><span class="line"> beq	$t0, $s0, end_loop_i</span><br><span class="line"> li	$t1, 0					# t1 = j = 0</span><br><span class="line">loop_j:</span><br><span class="line"> beq	$t1, $s1, end_loop_j</span><br><span class="line"></span><br><span class="line"> # code</span><br><span class="line"></span><br><span class="line"> addi	$t1, $t1, 1				# j++</span><br><span class="line"> j	loop_j</span><br><span class="line">end_loop_j:</span><br><span class="line"> addi	$t0, $t0, 1				# i++</span><br><span class="line"> j	i</span><br><span class="line">end_loop_i:</span><br><span class="line"> # over</span><br></pre></td></tr></table></figure>
-<hr>
-</li>
-</ol>
-<h1 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h1><ol>
-<li><p>可分为线性递归，树形递归，循环递归</p>
-</li>
-<li><p>入栈出栈宏</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.macro push(%src)</span><br><span class="line">    addi $sp, $sp, -4</span><br><span class="line">    sw %src, 0($sp)</span><br><span class="line">.end_macro</span><br><span class="line"></span><br><span class="line">.macro pop(%src)</span><br><span class="line">    lw %src, 0($sp)</span><br><span class="line">    addi $sp, $sp, 4</span><br><span class="line">.end_macro</span><br></pre></td></tr></table></figure></li>
-<li><p>写法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">func:</span><br><span class="line">     # 1. 基线条件处理(停止递归)</span><br><span class="line">     beq $a0, $zero, base_case</span><br><span class="line"></span><br><span class="line">     # 2. 压栈</span><br><span class="line">     push($ra)</span><br><span class="line">     push($a0)</span><br><span class="line"> </span><br><span class="line">     # 3. 递归准备与调用</span><br><span class="line">     addi $a0, $a0, -1   # 修改参数，准备下一层的入参</span><br><span class="line">     </span><br><span class="line">     jal func    # 递归调用</span><br><span class="line"></span><br><span class="line">     move $s0, $v0   #存值（如果第二次还要调用）</span><br><span class="line"></span><br><span class="line">     # 恢复参数</span><br><span class="line"></span><br><span class="line">     # 4. 合并结果</span><br><span class="line"></span><br><span class="line">     # 5. 弹栈</span><br><span class="line">     pop($a0)</span><br><span class="line">     pop($ra)</span><br><span class="line"></span><br><span class="line"> base_case:  # 出口设置</span><br><span class="line">     xxx</span><br><span class="line">     jr $ra</span><br></pre></td></tr></table></figure>
-<hr>
-</li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>learn Python</title>
-    <url>/czyyy_nlw/2026/11/03/python/</url>
-    <content><![CDATA[<h1 id="与C的区别"><a href="#与C的区别" class="headerlink" title="与C的区别"></a>与C的区别</h1><ol>
-<li>无需入口函数</li>
-<li>使用严格缩进（4个空格），而不是{}</li>
-<li>不需要分号，直接换行</li>
-</ol>
-<hr>
-<h1 id="输入输出与变量"><a href="#输入输出与变量" class="headerlink" title="输入输出与变量"></a>输入输出与变量</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">name = <span class="string">&quot;zhangsan&quot;</span></span><br><span class="line">age = <span class="number">18</span></span><br><span class="line">price = <span class="number">9.9</span></span><br><span class="line">is_student = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p><code>print()</code>默认自动换行，f-string，变量直接放进{}</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;姓名: <span class="subst">&#123;name&#125;</span>, 年龄: <span class="subst">&#123;age&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;价格保留两位小数: <span class="subst">&#123;price:<span class="number">.2</span>f&#125;</span>&quot;</span>) <span class="comment"># 用 :.2f 类似的来保留小数</span></span><br></pre></td></tr></table></figure>
-<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>input()统一读取为字符串,需要数字运算时，显式调用类型转换函数 int() 或 float()<br>input().split() 按空格切分，map(int, …) 把切出来的每一项转为 int</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入年龄：&quot;</span>))</span><br><span class="line">x, y = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>(<span class="string">&quot;请输入两个数字: &quot;</span>).split())</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><p>省略小括号，结尾跟冒号，逻辑与或非直接用<code>and or not</code><br>注意是<em>elif</em></p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;优秀&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span> <span class="keyword">and</span> score &lt; <span class="number">90</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;及格&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;不及格&quot;</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><p><code>range(start, end, step)</code>左闭右开</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):  <span class="comment"># 0,1,2,3,4</span></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
-<p>用<code>enumerate()</code>获取下标</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i, item <span class="keyword">in</span> <span class="built_in">enumerate</span>(fruits):</span><br></pre></td></tr></table></figure>
-<h2 id="while循环条件不需要加括号"><a href="#while循环条件不需要加括号" class="headerlink" title="while循环条件不需要加括号"></a>while循环条件不需要加括号</h2><h1 id="容器与数据结构"><a href="#容器与数据结构" class="headerlink" title="容器与数据结构"></a>容器与数据结构</h1><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>变长动态数组（有点像vector），<em>能存任意混合类型</em><br>a &#x3D; [1, 2, 3, 4, 5]<br>b &#x3D; list(range(5))<br>负索引：a[-1] # 5 最后一个<br>    a[-2] # 4 倒数第二个<br>切片：左闭右开<br>a[2:6] a[:4] a[6:] a[::-1]</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">a.append(<span class="number">4</span>)        <span class="comment"># 末尾加一个</span></span><br><span class="line">a.extend([<span class="number">5</span>,<span class="number">6</span>])    <span class="comment"># 末尾加多个</span></span><br><span class="line">a.insert(<span class="number">0</span>, <span class="number">0</span>)     <span class="comment"># 指定位置插入</span></span><br><span class="line">a.pop()        <span class="comment"># 弹出末尾元素（返回被弹出的值，对标 stack 的 pop）</span></span><br><span class="line">a.pop(<span class="number">0</span>)       <span class="comment"># 弹出指定下标的元素</span></span><br><span class="line">a.remove(<span class="number">2</span>)    <span class="comment"># 按值删除：直接删除列表中第一个出现的数值 2</span></span><br></pre></td></tr></table></figure>
-<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>可以理解为只读的列表</p>
-<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>原生内置高度优化的散列表，直接通过大括号 {key: value} 操作</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">user = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;wangwu&quot;</span>, <span class="number">101</span>: <span class="string">&quot;客服热线&quot;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(user.get(<span class="string">&quot;name&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(user[<span class="string">&quot;name&quot;</span>]) <span class="comment"># 两种查找方式</span></span><br><span class="line"><span class="comment"># 增，改直接写就好了</span></span><br><span class="line"><span class="keyword">del</span> info[<span class="string">&quot;age&quot;</span>]</span><br><span class="line">info.pop(<span class="string">&quot;city&quot;</span>) <span class="comment"># 删</span></span><br><span class="line"><span class="keyword">for</span> subject <span class="keyword">in</span> scores: <span class="comment"># 相当于for subject in scores.keys():</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> val <span class="keyword">in</span> scores.values():</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> subject, val <span class="keyword">in</span> scores.items(): <span class="comment"># .items() 产出的本质是一个个 (key, value) 的元组</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>可返回多个值</p>
-<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">get_user_info</span>():</span><br><span class="line">    name = <span class="string">&quot;lisi&quot;</span></span><br><span class="line">    age = <span class="number">18</span></span><br><span class="line">    <span class="keyword">return</span> name, age</span><br><span class="line"></span><br><span class="line">user_name, user_age = get_user_info()</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>参考：</p>
 ]]></content>
   </entry>
   <entry>
@@ -1177,47 +1143,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>爱有万分之一甜</title>
-    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="4f2e0b9615e77dc9c99ba4e4ef2da97914028f3b66caa96cc6497f9660448582"
-     data-nonce="df7adb5804045c1534b212b9"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    932fb154e024652b25c1e2667bb9fcdc155473099b6572280f8640da2a4cc0230548535893b29a0bd458b05374f13f913c9bdfd901a7b33f09294bd92a6863a64dbbc2690792756e82105c5e8b69a0190d63870681805e33a9ff4f867b8daf9d8cd502aba111b44b83e71cca4ea7ff8e9d0510d562e763431b7e94d817230b67a42b054ca4ae918286126f03ad2cbcc2f30bc1f1f365923ff466d24e670d4267be4ca551ee9064e4a0d263d727635eebf2ef12b64c8873a48fa861fa4ad6b1679234fac3aa9ddba88e15f7a2a598abf587cd54f92a60c6b7afc19b915a0300d62c9d1b8cb87611bca8ccf52842adfd2f8843d02cc2e2e47601f62305bb40d1dc5d8667af46925dcea7d1c33ae269d0015fc242b2161cb358743fdababf2acd54e54f316fd78e711126c90e8bd1f4dab3f6376c5ae6092f13f2ea6173a5e27fa7c98bb8c1db1e7061e0e5b52d7161311ef53134454bd330ccb317e69ea868cdd42ff39aafd21d80d056848dfabde54b9ddaed6787768b470abc27fae749c4d42b240af1be410459f839311e782f85c673434bfe90097bff9d582160c86bee541a460f15d97adab7966fea6e088af4194d84b0a5dc89ec3614efe5a34becdb4ba3c463f4c80627ddf7f03d6ce65f0dc6a03e15318a5dcca645d5a6070b1bfa4815ef53219f5671138eba9c735273fe531de13925cdc9a9b77ac1882ce7a7cec93659f285c01bfd35eb3984c1ab87e2a034d6cc579318eaea5c7cc232bcada4a3325a9db363ba95597ad67f6b0115778e99cffa5f2f680325e1063ea9b52ab4ba62fcb43706d6a1e8971109f13eb1cf0553017d72dbda9cab941c623373b5d1a6db46291b62de8380b3c6f0e7958bcb5229ad748bde2135fba881ee50aff96d4bfb90faac690ef9425ddf9145fd9e29eddc979de71aa9e68044339cba306e3503c71c91521c9267fa15caec9b2ca35c8e3bf368ebaec44d6c523ee74bde67f2690e99e82974558696cad2432c81e84caa7c200335af9e1c1d3a71ed66aa7e94d3b1df5a2e10dd8b6d15d4eeb27f5e916cd01212b05b1accd669a54c6d23e5ab1d0f0eb96bc677b531b99b4c173e1768a2cc0b9f9eddbac03fb4789fcfe11047bbea9ce7c3d27397a188543430751e2838c8c433af9500105a3e254e4407efe045eb3ba9a0fd6781f63763b0d5f1a8e522d00ee698a682f76f8dc83276f9dc66aba6906373029c9b093b7def7f5c557bff7e029919238ba7a06e368830f0174639881672110cdac712cb5a6bbd9f216bcbcebae88d8453c2d40007a7100f93859309261f1512872ee31d63caf78bf4120c08743248c96ef59739ecd4ba6584bd9c2a9c13da0e7bf48647bec89e37518eb3a5c72648d8e1fc0f6092d8a94e218698d033f367ddfc013f01b8a33a0d22c13f54272b3b39f029a086408846479b715b4f33415d69e01e404a50e90faaf73e5e9331737215b31bc2f039b06d4769c276e09759fb39cfcb051da02440d8d30199cdef2f4bd699e96e844c15dfc51a2ee3ee82d48ef29e9bc1aca161c3beb87dfbec5df37a6331e66da82d42fc1d6281fe3049cd384ffaaa3983769a13d28a21b56c811b686096229c2ee112f923ca16b672d9b71e41c01828b43659b2fcbb64524ca3f1310076e7c3f61851dd30aed2f9cacea5e29173524217c9fe3e3f5cec68129992c331b8910c5ed1ae31de9de90ca075d9b932281149a3c124743b4a2a082508122c62f6b4aa00b3961f88b26ea689d1b5a758f5d233cb784cdbd31f9118032e7d37fb624cee3dc80b5975a47c17c9c8fc9f537707a54da568f3749dbfd84c9042f05802d49be7fa8b391797d8ec8dd9acd04f8723b597c5ba4e74266200ddff57cf87e1f62152a737efb2202a0a4c62a0d38e8a640fdfaaadcf66468c9d50372e6c270e6ccfe04a863cdd9464f56aaa4471d0af448717f53c25db3d431e106de01a435826e18144ae2ce986a584bb04acf6bc9f25996115fc87294cd27cdccc0bf017a39eb20f92ffa21cd8178c6146f83d2458aaf49b11268b54848713b3132c9366bae5e1966e7fd74969eba7c21c9f63e91d39cf1439c00220526c743523215de0ab8de6f69f47cfa677988868fdef49206e7f6ec5939a5a976bdc62bbbc127ebdd13ff8ad13a1f16878309f85ca1275348194a8e54d8c8d63b7687660984656c25d3259a0a7159aecdb415868a1607b0610161b2ca6a1f57b60fd86702ee28611dc5e2ab61d023c1537a2f08522b4e6030eed019bb68bf7d9c57567fa7bfc102ed341a912fbee75e667126c0f4c987f44e03228df8697548416c47e253911f8fb916f5e3da8d28d16d2eaa69e75f92291b58d4b725bc8834c58677bc62c6506dcfba3f1c028f3f8df5491ce3818f223703e2920e6594fc931276f2e767c7771095f2998bd21d0e431d74d0e50bd5e3e0743f764d0eafbdc4827ea1afef978f9566b27f3938233ae3f90b77d92d55a451bd95a57e050e45bbc8ab541889ede0ceb25dd25b9b2119a0cfe1ce7feea8bf23d98eb39468d9349d0c71c35e192af80e44ce6075161fa38fd6d7e115f34150268f2a36bda6603bf9f745044658217ed057f2d9a339154629a72dec4b0e23ea52e0a5b00b4a07637a4026bbb77e1d27b3210af8c142229500eb9a54301d22463b4aa6109361bcf91314818c479aebf55ebf39174488eb2012896e1b44aa2f359ae0a30d5576bd4dcfabe3f183cfb4b0b69c007fca1113bbc1fe44fe0bdd7bf50e0c1baae21b7f756c0ba2839004ee699f7b99061f86c785e8fb6597898a02d58b4a4069a0214518baf2856ceb7b2725831b36592d509c6e01989ebee2a3e7a457d13232668dc1d6dd2e6a9f76c70eb64af85ad0ba355b12407de680143bf407c1ff97ed9aa2766f3cafc12f4e3aac769ad2b98b5dd86e5dd736dcb9f2414a90d6a9d694a195523bc0b15bf46c03f5ffb7e66d02b254d3d8ec3259ef1f0972b1e11a4907d44092319b041902ef4e90bb0
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>并查集</title>
-    <url>/czyyy_nlw/2026/11/15/%E5%B9%B6%E6%9F%A5%E9%9B%86/</url>
-    <content><![CDATA[<h1 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h1><hr>
-<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><ol>
-<li>一开始每个元素都有自己的集合，这个集合只有自己这个元素</li>
-<li><code>int find(i)</code> 查找i所在的集合的代表元素</li>
-<li><code>bool isSameSet(a, b)</code> 判断a, b是否在同一个集合里</li>
-<li><code>void union(a, b)</code> 将a, b 所在的集合合并</li>
-</ol>
-<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; father;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; size;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i != father[i]) &#123;   </span><br><span class="line">        father[i] = <span class="built_in">find</span>(father[i]);    <span class="comment">//递归 + 扁平化</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> father[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isSameSet</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">find</span>(x) == <span class="built_in">find</span>(y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">union</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> fx = <span class="built_in">find</span>(x);</span><br><span class="line">    <span class="type">int</span> fy = <span class="built_in">find</span>(y);</span><br><span class="line">    <span class="keyword">if</span> (fx != fy) &#123; <span class="comment">//小挂大优化</span></span><br><span class="line">        <span class="keyword">if</span> (size[fx] &gt;= size[fy]) &#123;</span><br><span class="line">            father[fy] = fx;</span><br><span class="line">            size[fx] += size[fy];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            father[fx] = fy;</span><br><span class="line">            size[fy] += size[fx];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
     <title>奶蛙游戏合集</title>
     <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
     <content><![CDATA[<ol>
@@ -1247,18 +1172,249 @@
 ]]></content>
   </entry>
   <entry>
+    <title>P5 设计文档</title>
+    <url>/czyyy_nlw/2026/11/17/P5%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<h1 id="P5-设计文档"><a href="#P5-设计文档" class="headerlink" title="P5 设计文档"></a>P5 设计文档</h1><hr>
+<h1 id="基于P4的修改"><a href="#基于P4的修改" class="headerlink" title="基于P4的修改"></a>基于P4的修改</h1><ol>
+<li><p>增加了流水线寄存器<br>所有流水线都有的控制信号：clk, reset, en, clear<br>所有流水线寄存器都流水的数据：Instr, PCplus8, PC </p>
+<ol>
+<li>FDreg</li>
+</ol>
+<ul>
+<li>无</li>
+</ul>
+<ol start="2">
+<li>DEreg</li>
+</ol>
+<ul>
+<li>RD1, RD2, A3, ext32</li>
+</ul>
+<ol start="3">
+<li>EMreg</li>
+</ol>
+<ul>
+<li>outputA, RD2, A3</li>
+</ul>
+<ol start="4">
+<li>MWreg</li>
+</ol>
+<ul>
+<li>A3, outputA, data</li>
+</ul>
+</li>
+<li><p>增加了转发和阻塞的数据通路<br>见设计草图<br>转发来源：E_PCplus8, M_PCplus8, M_outputA, W_WD_Reg<br>转发去路：D_RD1, D_RD2, E_RD1, E_RD2, M_RD2；只有后面的级可以转发到前面的级，加上这些本身共同构成转发结构；<br> GRF内部转发</p>
+<p>转发条件 ：</p>
+<ol>
+<li>是否为下一级isPCplus8</li>
+<li>寄存器编号是否为0，转发起点终点是否相同</li>
+<li>t_use是否存在</li>
+<li>t_new是否存在</li>
+<li>t_use是否大于等于t_new</li>
+</ol>
+<p>阻塞条件：<br>6. 寄存器编号是否为 0<br>7. 转发起点和终点寄存器是否相同<br>8. t_use 是否存在<br>9. t_new 是否存在<br>10. t_use 是否小于 t_new</p>
+</li>
+<li><p>AT法与Controller<br>在Controller.v中新增了t_rs（何时使用rs）, t_rt（何时使用rt）, t（何时可以转发）<br>都是以指令在D级来说的，D -&gt; 0, E -&gt; 1, M -&gt; 2, W -&gt; 3;<br>关于t_rs, t_rt，注意是 <strong>使用</strong>，如果是写入的话为4’hf ！<br>关于t， 可以转发是要生成数据，然后在下一级流水线可以转发</p>
+</li>
+<li><p>各类指令AT表</p>
+<table>
+<thead>
+<tr>
+<th align="left">指令大类（参照P4）</th>
+<th align="left">代表指令</th>
+<th align="center"><code>t_rs</code> ($T_{use_rs}$)</th>
+<th align="center"><code>t_rt</code> ($T_{use_rt}$)</th>
+<th align="center"><code>t</code> ($T_{new}$)</th>
+<th align="center">写入目标 $A_3$</th>
+<th align="left">核心时序说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>1. B 型分支指令</strong></td>
+<td align="left"><code>beq</code> (以及扩展 <code>bne</code>, <code>bgtz</code>, <code>bltz</code> 等)</td>
+<td align="center"><strong><code>4&#39;h0</code></strong></td>
+<td align="center"><strong><code>4&#39;h0</code></strong><br>(若与0比则为 <code>4&#39;hf</code>)</td>
+<td align="center"><strong><code>4&#39;hf</code></strong></td>
+<td align="center"><code>5&#39;d0</code></td>
+<td align="left"><strong>D 级 CMP 立即需要</strong>操作数比对；不写寄存器</td>
+</tr>
+<tr>
+<td align="left"><strong>2. J 型跳转指令</strong></td>
+<td align="left"><code>j</code><br><code>jal</code><br><code>jr</code><br><code>jalr</code></td>
+<td align="center"><code>4&#39;hf</code><br><code>4&#39;hf</code><br><strong><code>4&#39;h0</code></strong><br><strong><code>4&#39;h0</code></strong></td>
+<td align="center"><code>4&#39;hf</code><br><code>4&#39;hf</code><br><code>4&#39;hf</code><br><code>4&#39;hf</code></td>
+<td align="center"><code>4&#39;hf</code><br><strong><code>4&#39;h0</code></strong><br><code>4&#39;hf</code><br><strong><code>4&#39;h0</code></strong></td>
+<td align="center"><code>5&#39;d0</code><br><code>5&#39;d31</code><br><code>5&#39;d0</code><br><code>rd</code></td>
+<td align="left"><code>jr/jalr</code> <strong>D 级 NPC 立即需要</strong> rs 跳转；<br><code>jal/jalr</code> 的 $PC+8$ 在 D 级即生成，<code>t=0</code> 随时可转发</td>
+</tr>
+<tr>
+<td align="left"><strong>3. 计算型指令（R 型）</strong></td>
+<td align="left"><code>add</code>, <code>sub</code> (以及扩展 <code>and</code>, <code>or</code>, <code>slt</code> 等)</td>
+<td align="center"><strong><code>4&#39;h1</code></strong></td>
+<td align="center"><strong><code>4&#39;h1</code></strong><br>(移位指令为 <code>4&#39;hf</code>)</td>
+<td align="center"><strong><code>4&#39;h2</code></strong></td>
+<td align="center"><code>rd</code></td>
+<td align="left">E 级 ALU 读操作数计算；E 级算完进入 M 级可转发（E级 $T_{new}&#x3D;1$，M级 $T_{new}&#x3D;0$）</td>
+</tr>
+<tr>
+<td align="left"><strong>4. 计算型指令（I 型）</strong></td>
+<td align="left"><code>ori</code>, <code>lui</code> (以及扩展 <code>addi</code>, <code>andi</code> 等)</td>
+<td align="center"><strong><code>4&#39;h1</code></strong><br>(<code>lui</code> 为 <code>4&#39;hf</code>)</td>
+<td align="center"><strong><code>4&#39;hf</code></strong></td>
+<td align="center"><strong><code>4&#39;h2</code></strong></td>
+<td align="center"><code>rt</code></td>
+<td align="left">E 级 ALU 读 rs 与立即数计算；<code>rt</code> 是写入目标，不读取</td>
+</tr>
+<tr>
+<td align="left"><strong>5. 访存型指令（Load）</strong></td>
+<td align="left"><code>lw</code> (以及扩展 <code>lh</code>, <code>lb</code> 等)</td>
+<td align="center"><strong><code>4&#39;h1</code></strong></td>
+<td align="center"><strong><code>4&#39;hf</code></strong></td>
+<td align="center"><strong><code>4&#39;h3</code></strong></td>
+<td align="center"><code>rt</code></td>
+<td align="left">E 级算地址，M 级读内存，到 W 级才可转发数据（E级 $T_{new}&#x3D;2$，M级 $T_{new}&#x3D;1$）</td>
+</tr>
+<tr>
+<td align="left"><strong>6. 访存型指令（Store）</strong></td>
+<td align="left"><code>sw</code> (以及扩展 <code>sh</code>, <code>sb</code> 等)</td>
+<td align="center"><strong><code>4&#39;h1</code></strong></td>
+<td align="center"><strong><code>4&#39;h2</code></strong></td>
+<td align="center"><strong><code>4&#39;hf</code></strong></td>
+<td align="center"><code>5&#39;d0</code></td>
+<td align="left">E 级算地址；<strong><code>rt</code> 到 M 级存入内存才需要</strong>；不写寄存器</td>
+</tr>
+<tr>
+<td align="left"><strong>7. 条件类 &#x2F; 特殊指令</strong></td>
+<td align="left"><code>movz</code>（未定写使能）<br><code>bltzal</code>（条件链接）</td>
+<td align="center"><code>4&#39;h1</code><br><code>4&#39;h0</code></td>
+<td align="center"><code>4&#39;h1</code><br><code>4&#39;hf</code></td>
+<td align="center"><code>4&#39;h2</code><br><code>4&#39;h0</code></td>
+<td align="center">动态 <code>rd</code> &#x2F; 0<br>动态 31 &#x2F; 0</td>
+<td align="left">条件成立时正常写，条件不成立时通过“A3置零法”关闭写入</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<hr>
+<h1 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h1><p>1、我们使用提前分支判断的方法尽早产生结果来减少因不确定而带来的开销，但实际上这种方法并非总能提高效率，请从流水线冒险的角度思考其原因并给出一个指令序列的例子。<br>   分支判断提前是为了减少控制冒险，然而提前到D级对操作数寄存器的需求时间大大提前，可能会加重阻塞<br>   例子：<br>   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">add $1, $2, $3</span><br><span class="line">beq $1, $0, lable</span><br><span class="line">lable:</span><br></pre></td></tr></table></figure><br>2、因为延迟槽的存在，对于 jal 等需要将指令地址写入寄存器的指令，要写回 PC + 8，请思考为什么这样设计？<br>   有延迟槽时，jal并不会立即跳转，而是会先执行pc+4后再跳转，因此真正的下一条未被执行的指令是pc+8。<br>3、我们要求大家所有转发数据都来源于流水寄存器而不能是功能部件（如 DM 、 ALU ），请思考为什么？<br>   防止时钟关键路径过长。如果直接从功能部件转发，转发的时候已经是周期末尾了，可能会导致转发出错或CPU频率下降；如果从流水线寄存器转发则不会出现这个问题<br>4、我们为什么要使用 GPR 内部转发？该如何实现？<br>   W级指令向GRF中写入数据，若此时D级指令在同一个周期内尝试读取GRF而且是相同的寄存器，就会产生冒险，使用内部转发可以简单高效的解决冒险；<br>   实现：<br>   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">assign RD1 = (A1 == 5&#x27;d0) ? 32&#x27;d0 :</span><br><span class="line">          (WE &amp;&amp; (A1 == A3)) ? WD : GRF[A1];</span><br><span class="line">assign RD2 = (A2 == 5&#x27;d0) ? 32&#x27;d0 :</span><br><span class="line">          (WE &amp;&amp; (A2 == A3)) ? WD : GRF[A2];</span><br></pre></td></tr></table></figure><br>5、我们转发时数据的需求者和供给者可能来源于哪些位置？共有哪些转发数据通路？<br>   需求者：D 级：D_RD1（CMP 比较、JR 跳转）、D_RD2（CMP 比较）；E 级：E_RD1（ALU 操作数 A）、E_RD2（ALU 操作数 B）；M 级：M_RD2（DM 写入数据端口 WD，如 sw, sh, sb）<br>   供给者：E 级寄存器：E_PCplus8（jal 等链接指令已生成的返回地址）；M 级寄存器：M_outputA（ALU 运算结果）、M_PCplus8（链接返回地址）；W 级寄存器：W_WD_Reg（包含 DM 读出数据、ALU 结果、PCplus8 等最终写回数据）<br>   数据通路：由上述供给者-&gt;需求者排列组合而成，再加一条GRF内部转发<br>6、在课上测试时，我们需要你现场实现新的指令，对于这些新的指令，你可能需要在原有的数据通路上做哪些扩展或修改？提示：你可以对指令进行分类，思考每一类指令可能修改或扩展哪些位置。</p>
+<ol>
+<li>计算型指令（R&#x2F; I）<br>ALU</li>
+<li>分支跳转型指令（B&#x2F; J）<br>CMP</li>
+<li>访存型指令（load&#x2F; store）<br>DM</li>
+</ol>
+<h2 id="7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。-采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大"><a href="#7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。-采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大" class="headerlink" title="7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。   采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大"></a>7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。<br>   采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大</h2><h1 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h1><ol>
+<li>级数_信号名：例如D_Instr…</li>
+<li>用下划线作分割</li>
+</ol>
+<hr>
+<h1 id="设计草稿"><a href="#设计草稿" class="headerlink" title="设计草稿"></a>设计草稿</h1><p><img src="/czyyy_nlw/img/P3/P5%E8%AE%BE%E8%AE%A1%E8%8D%89%E5%9B%BE.png" alt="P5设计草图" title="P5设计草图"><br>(下面是P4设计草图)<br><img src="/czyyy_nlw/img/P3/%E6%97%A0%E7%BA%BF%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1.png" alt="无线顶层设计" title="无线顶层设计"></p>
+<hr>
+<h1 id="三种常见题型加指令流程"><a href="#三种常见题型加指令流程" class="headerlink" title="三种常见题型加指令流程"></a>三种常见题型加指令流程</h1><h2 id="清空延迟槽"><a href="#清空延迟槽" class="headerlink" title="清空延迟槽"></a>清空延迟槽</h2><ol>
+<li>CMP 10 14</li>
+<li>mips 310-318 634</li>
+</ol>
+<p>一般出现在B型分支跳转指令中，满足条件则跳转，延迟槽正常执行；不满足条件不跳转，延迟槽指令被清空</p>
+<p>做以下修改<br>在CMP.v中新增一个信号<code>nullify</code><br><code>nullify = (type == xx) &amp;&amp; !zero</code><br>mips.v 新增防自杀门控：<code>fixed_nullify</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">assign fixed_xx_nullify = xx_nullify &amp;&amp; (~D_stall)</span><br><span class="line">assign FD_clear = (fixed_xx_nullify) ? 1 : 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="未定写使能"><a href="#未定写使能" class="headerlink" title="未定写使能"></a>未定写使能</h2><ol>
+<li>mips 320-332 &#x2F; 374-386</li>
+</ol>
+<p>采用A3置零法，若不满足写入条件则将A3置零；</p>
+<p>在 RegWrite 中直接添加<code>xx</code>，然后判断在哪里能计算出到底写还是不写，然后在对应计算器中新增一个信号<code>xx_we</code>，然后对对应计算器对应级的A3进行fixed</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wire [4:0] D_fixedA3;</span><br><span class="line">assign D_fixedA3 = (D_type == xx &amp;&amp; !xx_we) ? 5&#x27;d0 : D_A3;</span><br><span class="line">DEreg DEreg(...  .D_A3(D_fixedA3)...)</span><br></pre></td></tr></table></figure>
+<p>这里是以D级为例，对应级对应修改（还有下一级流水线寄存器）</p>
+<h2 id="未定写寄存器"><a href="#未定写寄存器" class="headerlink" title="未定写寄存器"></a>未定写寄存器</h2><ol>
+<li>mips 430-440 646</li>
+</ol>
+<p>一般出现在load类指令中，这里就直接以M级来写了吧<br>修正M_A3； 改写M转发检测，将所有M级发起的转发中的M_A3全部改成M_fixedA3; 阻塞想读取欲写入寄存器的指令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wire [4:0] dynamic_A3 = (condition) ? 寄存器1 : 寄存器2;</span><br><span class="line">wire [4:0] M_fixedA3 = (M_type == xx) ? dynamic_A3 : M_A3;</span><br><span class="line">MWreg MWreg ( ... .M_A3(M_fixedA3), ... );</span><br><span class="line"></span><br><span class="line">// condition(寄存器) 表示目标寄存器满足的条件</span><br><span class="line">assign D_stall = </span><br><span class="line">    (E_type == xx &amp;&amp; D_rs != 5&#x27;b00000 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; condition(D_rs)) ? 1&#x27;b1 :</span><br><span class="line">    (E_type == xx &amp;&amp; D_rt != 5&#x27;b00000 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; condition(D_rt)) ? 1&#x27;b1 :</span><br><span class="line">    (E_type != xx &amp;&amp; E_A3 != 5&#x27;b00000 &amp;&amp; D_rs == E_A3 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; E_t_new != 4&#x27;hf &amp;&amp; D_t_rsuse &lt; E_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (E_type != xx &amp;&amp; E_A3 != 5&#x27;b00000 &amp;&amp; D_rt == E_A3 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; E_t_new != 4&#x27;hf &amp;&amp; D_t_rtuse &lt; E_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (M_fixedA3 != 5&#x27;b00000 &amp;&amp; D_rs == M_fixedA3 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; M_t_new != 4&#x27;hf &amp;&amp; D_t_rsuse &lt; M_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (M_fixedA3 != 5&#x27;b00000 &amp;&amp; D_rt == M_fixedA3 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; M_t_new != 4&#x27;hf &amp;&amp; D_t_rtuse &lt; M_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (W_A3 != 5&#x27;b00000 &amp;&amp; D_rs == W_A3 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; W_t_new != 4&#x27;hf &amp;&amp; D_t_rsuse &lt; W_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (W_A3 != 5&#x27;b00000 &amp;&amp; D_rt == W_A3 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; W_t_new != 4&#x27;hf &amp;&amp; D_t_rtuse &lt; W_t_new) ? 1&#x27;b1 :</span><br><span class="line">    1&#x27;b0;</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="测试方案"><a href="#测试方案" class="headerlink" title="测试方案"></a>测试方案</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> // 基础数据初始化</span><br><span class="line">ori $1, $0, 1</span><br><span class="line">ori $2, $0, 2</span><br><span class="line">lui $3, 0x1234</span><br><span class="line">ori $3, $3, 0x5678</span><br><span class="line"></span><br><span class="line">// 1. 测试alu计算与前推(距离1, 距离2, 距离3)</span><br><span class="line">add $4, $1, $2        // $4 = 3</span><br><span class="line">sub $5, $4, $1        // 紧跟上条读$4, 距离1转发(E-&gt;E)</span><br><span class="line">ori $6, $5, 4         // 紧跟上条读$5, 距离1转发(E-&gt;E)</span><br><span class="line">lui $7, 0x0001</span><br><span class="line">add $8, $7, $6        // 间隔1条读$6, 距离2转发(M-&gt;E)</span><br><span class="line">add $9, $4, $0        // 间隔多条, 测试W级写优先/内部转发</span><br><span class="line"></span><br><span class="line">// 2. 测试load-use冒险(检查是否正确阻塞1拍)</span><br><span class="line">sw  $3, 0($0)</span><br><span class="line">lw  $10, 0($0)</span><br><span class="line">add $11, $10, $1      // lw后紧跟读$10, 必须stall 1拍</span><br><span class="line"></span><br><span class="line">// 3. 测试store数据前推</span><br><span class="line">add $12, $1, $2       // E级算出$12</span><br><span class="line">sw  $12, 4($0)        // 紧跟sw, 测试向M级WD前推</span><br><span class="line">lw  $13, 4($0)</span><br><span class="line"></span><br><span class="line">// 4. 测试branch冒险与延迟槽</span><br><span class="line">// 4.1 alu紧跟beq(D级需要数据, 必须stall 1拍)</span><br><span class="line">ori $14, $0, 10</span><br><span class="line">add $15, $14, $0</span><br><span class="line">beq $15, $14, label1</span><br><span class="line">ori $16, $0, 0x1111   // 延迟槽指令, 必须执行</span><br><span class="line"></span><br><span class="line">fail1:</span><br><span class="line">beq $0, $0, fail1</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">label1:</span><br><span class="line">// 4.2 lw紧跟beq(必须连续stall 2拍)</span><br><span class="line">sw  $2, 8($0)</span><br><span class="line">lw  $15, 8($0)</span><br><span class="line">beq $15, $2, label2</span><br><span class="line">ori $16, $0, 0x2222   // 延迟槽指令, 必须执行</span><br><span class="line"></span><br><span class="line">fail2:</span><br><span class="line">beq $0, $0, fail2</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">label2:</span><br><span class="line">// 5. 测试jal/jr与延迟槽中的$31转发</span><br><span class="line">jal func</span><br><span class="line">ori $17, $31, 0       // 延迟槽读$31, 测试PCplus8立即前推</span><br><span class="line"></span><br><span class="line">loop:</span><br><span class="line">beq $0, $0, loop</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">func:</span><br><span class="line">ori $18, $0, 100</span><br><span class="line">jr  $31</span><br><span class="line">ori $19, $0, 200      // jr延迟槽, 返回前必须执行</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 1. 测条件满足: 跳转 + 延迟槽执行 + 链接写$31</span><br><span class="line">ori $31, $0, 0x1111     // 初值</span><br><span class="line">new_branch $0, target1  // 假设满足跳转</span><br><span class="line">ori $1, $0, 0x2222      // 延迟槽: 执行后$1应为0x2222</span><br><span class="line"></span><br><span class="line">fail1:</span><br><span class="line">beq $0, $0, fail1</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">target1:</span><br><span class="line">// 此时看仿真: $31应为PC+8, $1应为0x2222</span><br><span class="line"></span><br><span class="line">// 2. 测条件不满足: 不跳 + 作废延迟槽 + 不链接</span><br><span class="line">ori $31, $0, 0x1111     // 重置初值</span><br><span class="line">ori $2, $0, 0x3333</span><br><span class="line">new_branch $4, fail2    // 假设不满足条件, 顺序往下走</span><br><span class="line">ori $2, $0, 0x4444      // 延迟槽: 若作废, $2绝不能变成0x4444!</span><br><span class="line"></span><br><span class="line">// 此时看仿真: $31应保持0x1111, $2应保持0x3333</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 1. 测计算是否正确</span><br><span class="line">ori $1, $0, 5</span><br><span class="line">new_alu $2, $1, 10      // 算完看仿真$2是不是预期值</span><br><span class="line"></span><br><span class="line">// 2. 测条件不满足时不写回</span><br><span class="line">ori $3, $0, 0x1234      // 预置初值</span><br><span class="line">new_alu_cond $3, $1     // 假设此条件不满足写回</span><br><span class="line">// 看仿真: $3是否依然保持0x1234原值</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 1. 存入测试数据</span><br><span class="line">ori $1, $0, 10</span><br><span class="line">sw  $1, 0($0)</span><br><span class="line"></span><br><span class="line">ori $2, $0, 0xaaaa      // 备选目标1</span><br><span class="line">ori $3, $0, 0xbbbb      // 备选目标2</span><br><span class="line"></span><br><span class="line">// 2. 测动态写回</span><br><span class="line">new_load $2, 0($0)      // 执行完看仿真: 哪个寄存器被写入新值, 另一个是否保持原值</span><br></pre></td></tr></table></figure>
+<hr>
+]]></content>
+  </entry>
+  <entry>
+    <title>learn Python</title>
+    <url>/czyyy_nlw/2026/11/03/python/</url>
+    <content><![CDATA[<h1 id="与C的区别"><a href="#与C的区别" class="headerlink" title="与C的区别"></a>与C的区别</h1><ol>
+<li>无需入口函数</li>
+<li>使用严格缩进（4个空格），而不是{}</li>
+<li>不需要分号，直接换行</li>
+</ol>
+<hr>
+<h1 id="输入输出与变量"><a href="#输入输出与变量" class="headerlink" title="输入输出与变量"></a>输入输出与变量</h1><h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">name = <span class="string">&quot;zhangsan&quot;</span></span><br><span class="line">age = <span class="number">18</span></span><br><span class="line">price = <span class="number">9.9</span></span><br><span class="line">is_student = <span class="literal">True</span></span><br></pre></td></tr></table></figure>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p><code>print()</code>默认自动换行，f-string，变量直接放进{}</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;姓名: <span class="subst">&#123;name&#125;</span>, 年龄: <span class="subst">&#123;age&#125;</span>&quot;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">f&quot;价格保留两位小数: <span class="subst">&#123;price:<span class="number">.2</span>f&#125;</span>&quot;</span>) <span class="comment"># 用 :.2f 类似的来保留小数</span></span><br></pre></td></tr></table></figure>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><p>input()统一读取为字符串,需要数字运算时，显式调用类型转换函数 int() 或 float()<br>input().split() 按空格切分，map(int, …) 把切出来的每一项转为 int</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">age = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&quot;请输入年龄：&quot;</span>))</span><br><span class="line">x, y = <span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>(<span class="string">&quot;请输入两个数字: &quot;</span>).split())</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="流程控制"><a href="#流程控制" class="headerlink" title="流程控制"></a>流程控制</h1><h2 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h2><p>省略小括号，结尾跟冒号，逻辑与或非直接用<code>and or not</code><br>注意是<em>elif</em></p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;优秀&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span> <span class="keyword">and</span> score &lt; <span class="number">90</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;及格&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;不及格&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><p><code>range(start, end, step)</code>左闭右开</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):  <span class="comment"># 0,1,2,3,4</span></span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+<p>用<code>enumerate()</code>获取下标</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> i, item <span class="keyword">in</span> <span class="built_in">enumerate</span>(fruits):</span><br></pre></td></tr></table></figure>
+<h2 id="while循环条件不需要加括号"><a href="#while循环条件不需要加括号" class="headerlink" title="while循环条件不需要加括号"></a>while循环条件不需要加括号</h2><h1 id="容器与数据结构"><a href="#容器与数据结构" class="headerlink" title="容器与数据结构"></a>容器与数据结构</h1><h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><p>变长动态数组（有点像vector），<em>能存任意混合类型</em><br>a &#x3D; [1, 2, 3, 4, 5]<br>b &#x3D; list(range(5))<br>负索引：a[-1] # 5 最后一个<br>    a[-2] # 4 倒数第二个<br>切片：左闭右开<br>a[2:6] a[:4] a[6:] a[::-1]</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">a.append(<span class="number">4</span>)        <span class="comment"># 末尾加一个</span></span><br><span class="line">a.extend([<span class="number">5</span>,<span class="number">6</span>])    <span class="comment"># 末尾加多个</span></span><br><span class="line">a.insert(<span class="number">0</span>, <span class="number">0</span>)     <span class="comment"># 指定位置插入</span></span><br><span class="line">a.pop()        <span class="comment"># 弹出末尾元素（返回被弹出的值，对标 stack 的 pop）</span></span><br><span class="line">a.pop(<span class="number">0</span>)       <span class="comment"># 弹出指定下标的元素</span></span><br><span class="line">a.remove(<span class="number">2</span>)    <span class="comment"># 按值删除：直接删除列表中第一个出现的数值 2</span></span><br></pre></td></tr></table></figure>
+<h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><p>可以理解为只读的列表</p>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>原生内置高度优化的散列表，直接通过大括号 {key: value} 操作</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">user = &#123;<span class="string">&quot;name&quot;</span>: <span class="string">&quot;wangwu&quot;</span>, <span class="number">101</span>: <span class="string">&quot;客服热线&quot;</span>&#125;</span><br><span class="line"><span class="built_in">print</span>(user.get(<span class="string">&quot;name&quot;</span>))</span><br><span class="line"><span class="built_in">print</span>(user[<span class="string">&quot;name&quot;</span>]) <span class="comment"># 两种查找方式</span></span><br><span class="line"><span class="comment"># 增，改直接写就好了</span></span><br><span class="line"><span class="keyword">del</span> info[<span class="string">&quot;age&quot;</span>]</span><br><span class="line">info.pop(<span class="string">&quot;city&quot;</span>) <span class="comment"># 删</span></span><br><span class="line"><span class="keyword">for</span> subject <span class="keyword">in</span> scores: <span class="comment"># 相当于for subject in scores.keys():</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> val <span class="keyword">in</span> scores.values():</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> subject, val <span class="keyword">in</span> scores.items(): <span class="comment"># .items() 产出的本质是一个个 (key, value) 的元组</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>可返回多个值</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">get_user_info</span>():</span><br><span class="line">    name = <span class="string">&quot;lisi&quot;</span></span><br><span class="line">    age = <span class="number">18</span></span><br><span class="line">    <span class="keyword">return</span> name, age</span><br><span class="line"></span><br><span class="line">user_name, user_age = get_user_info()</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>参考：</p>
+]]></content>
+  </entry>
+  <entry>
     <title>diary1</title>
     <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="7050124b4a09fe37f1081d4faa526e7ef183d754c05c17b150d2d90f777780f9"
-     data-nonce="e9c6af33723187f29d465068"
+     data-salt="0c68e99cd280d4f31e3aa91e0591aec093e549332c9e775c4a0577bebd108522"
+     data-nonce="a517da23f4e805a155962566"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    78d159598ce146c8985635f61b4754c5a96183c183c4e3366ab31fa489dd0b6aa7d4e936d6b1b85076d81fddbc1549076a89342ffa090951fbe31c9843b4b9b80c581547b39ea9f8b54fe8dc12e349d7c0481dfb4a69abb567d52b5c85fc6b46a6df881c2c9b39e995a9d5a3dadda7c1a2d86aa9d3aa23962c78976a0e2d052e297ca258b00767e48c6efed2bdb6887e6bede8abdf7cc1e8aecf018e947faed5fbfc680fd790f9884c9c2c158cb4b92f345b5a53dd430ff6147294116f957eb7524d57e840a735c9185039b85b0543d28ff15e5b3a8879d3c2a3e7c4abba8be84e27c01611523fa28e63a2b74bf89217a29dc8a3a569c64e2a1c8982b0762c2bea2c45c6720f3fafdf95efaa6488e60889d6bf456f1553a146a370b0ee3e09cbde8ca0925ef59c82741f5dd5e8edd3ee19fbe64b76fbfbd1d5d231798b34693589b174f9c1d5bebc820c6cf533a82f9feeeb8dab9875361cb82b417a847e8ab3ba653730445a2c92db3e038d361cbf0f40eba6052d036a223d8ef90ccd0b7cecaaa5ab4335d79c42fb50385827d44c33cb22f3829afd93b82ab247b716fdaadba927fcdb4c4e742c45e9e4ba9affc23a0511ca028278853f6c15776ab1a0c7102368b47ba1f5ccbed4c75acde517d9191baf60b5960892086d9214c223f15ad91e57a4270b89103e654aabb8a59e07b5b8d86e182a5fc3e2060fcd297a946575b438980d9bb79a66abb105924c24cb56dfad7d01670c2c6ba9e5e3514b26565b58a023392a563f540621af232f72fc4dc1ee77e4c92dd0ae4be28de3f6821c1d570c0623b12f7675e1d951c9a9ad13b172fc621e1f30a9d2cf54ae9181dfd10671089ace3d9f62f625e69e80ae5a5c36e9d39ca0208db8e5e903ed05d0ed92f1e9604336edb1714a7532dde9b9e161e6caa46edb8be7e6d43a5d0634a81fd36cd8bfa5006279b6846f2e812b928eec1c8c414e396157ae20ad43147677c8bb23c2bfe419aa53b2cbeed6e9d5efd9fceaae0e2d759f4375654dd422c0cc510e140b648a5c09fe6e61836eb47f934003b7045316718b25e4e4556aa85cf84cef37fba703117c70ad5fedf70e87108a5954b86ffc3dd2da506d3db88b67cc403844ae328a3b449d74dc8caeccc3dc94e6ca0e317778006cc465040c979365897fac65a96a8f75a921eadca0827035b5d6041b46c84784b451478ee6b7a496c23b283bd922328e18298a093f3dd682dd387570d663e8d135afb3a2d7ca97961f9bc07723216187c517d904b07b39e7edbfd5c09c5091e3dccca33b534fb89f83506086c93d3f9b0430d6a27e76aa3031976eae164cea19b58dde2395731947706dfc6854792d281a0689c0f2cc997e4a50864973ded2e498ec2da4c1d5dd8bbbc0ff86779c3a3f894c4d58ba7cefe4d1a9d82825eec1cbb640faf713e8be9061ae16b60d34035e54ac984fa81cc01ca7c444bc7fda49258cf3333604b026f26b2eeaae9e2e6c275059064646afc832436f8412b74af66ade479a636ab44848bfbde2ff4245a27a90e24445e0b8de0aa43efc469a0f6ac9160732a027538f1cf651dd756a5935bcdfe7964366c1ca97a6f8a87cd6b72813cb6e3037018ab581901bdfe9327e8258fa2010b9dc7b55c40a2b8f466118f048ba2c7aec76861e2b76fc174a75b1cf2ca728419926ebcc514965c1b6770b49a42279bb20805abb2d104c874bed5af02c447844d0d46bb16cd8181a6e44a9ef227a3377347645ca065c0dca6ddbc7baedfc5f4189c17069c8bc6c794a48a93499b74345cc2849911e84cc1ae649e115a6bbfb46be1c70e83f6b742d5337aeb6ca55ea2d8c4af1cb9ac60a8be99dde058e4485bffbe5604d8f9271d83760399daddd3123abdc10b1d1621557f2b96cfb5884e95d7e4b75afc7018c39a53c8f9aeeadadf99df0a36d9b84efcd1ba797060c1343e00988346443c90c2ad56685d304435d56f6ad7e23ed228831cfa221bce7bc8324a7db11b197b87df6562b18ca9dc1742fd788af6dd3af5c661eb7d9f9a6506a4c3e3f3ef458dedd1dd7f217af27c863608560fd6c415e00c959e155895c0f50932a38ff36f7073d8972db1fee366350d56f29557ff2651ef8ce18a153d43a027586ce48a4f8efdcede56e1ba5700c4d0f3f17e478e02de6147abade6e856723eecb8041d3cc1d1f462f77274bf7f521cba4fda543ddf4f9a8df4669e1c6d34688141289ace17ff008da5600297d8862ada9508bbac186be1dbf9cd0bdf0f3946e8bc237f80840630ddbe998db321b0a0d79336c021999622ccba33d5a886df5246294f6e2c186c13838055120fce315a8ca587392104a31c92bd46469feb2928711b8e6de36f9ea1ea5a59b6bb13a1c35fd8bdf384ec5204886599213513514847825e003a747494880f0024b6fcd70ed2d2da00199ecb8184764d0819ff957f9dc2668fa5ae2f0e68ea748323caa79217ce872e957b2bc43bcffb1bbedbc37f54119140c8d399ecc452fafb9efa9ce8ad951bf45ff3cef3d229bd901ecd7a8c26588240a5af1b7f7eb8055cb061142867a9c6d294815c730a42c3f8d944b05855f15f26ed8f6a6b755b0b6d9aafcc3442a08b953da482f72b326f7212f6184eb87b31f43e1b8926c697610992dfc837ccae1af7f40c28ac6fb84ac318a0430bc3498f16d9557f2a7c47ae1e0900e826446a4607540e2ccccb133860dad5e0e180528a0f7454ba748667e484204e5545d5575020e20bfb95ce61d51a5d202c4d51bbb8cc770ebe17c290381f8ba6a28fc34f0a249493a43cafc403c2daca7145f3f55db58ac3e29ba13b734bb3726f3d09c3f75a6b069c56c5f1763c2524f81bc1d2ef6e3f499d450ef6065b237b8d3d0d480aa62e9cd5d8870a75efd3e8dc8749da054f3595dd6c964a8e05c1c7330e8959c49dff2de8eeaf2af4e176907a5da66d03e2afac3f76b113e9f6143ba39d900824e5c951d686de992895b427d86826d80531b016ad4e7e247a5ebf4487ad31bd6a6335e8ca9df8cd6752917e8f0ca26c3fdb36f4a1d190abba7a3f3bd50aedf3c4590299da9aff847387226425f50860e5514aed442f05be1f861bf835b90d4cb7444fae519c4d89343082a7680005fc36fada967638115627b633391eb443ff45948b6e5b09d1fe47b9ddbad5432ada045e438ef51f5e9cc9a902ebd394381a10979d44b9dff8fb5edd30d5e5f943b1a85e60e832a366c7be34f0c0dde44bc326dff7198de46e893c219f695dad0f9f931842cf5510c46360dcb3ce421186fe1afeda1ea8c8adbb6f94bcf1db37ffe1d13cbb4a7634a6d78d980356c40e2ea652abda2076b68a1e441b1cbcb3dab913d3fba278e3d378c6687b706758c425148f7363694ddb6264655406ebf80a8ed2ae9e6bb177fe2e04c57e94f3109f03c31afc2ef7b22f8955031461dff358c0450ded6197dd33eb1d57a9747f2aa76e69a2036501c60a4a1ce107023b4b78bf73119ce2e4e6e051191c8e8ef5bb63c3211af8527138864f767ca9833fdc9f29085f09c4fcdf46313d5f39ab67bed44d1f832bd2e1494c5a7c330adf1783b3c112545b47315918469ce0b8849fce9d23d3b728a0912f39c9922cb059d9bca857f3944ac8f3b233d4e6e833ef1e9ddc6db5c917242f106c1eb49db6e1cfc86e403d4ddbd5ea7ce0bb20746fd7c6f08bb79f3787595d739d67eb80a1f0d7dc3a8a7fc20edf3190f01041983c5cc3d31ff6cfef421381373420cc18d022e64c7f52bf6d2e050a0b044a9ef68e12a5d2f50756146725946db5efa14b2ac36b77449b42a9e49adcbf185a72649ac88c0b7413f0df84455dfc01dadfd976903515819ce5d5bd29768c215de5f0b0906bb13c64170cf93846770c3eb0c0d
+    cfb0cc6a2c952869568b2895a9bb6e6d2ca83cf4786b96dad2afe11f0cbf11e5394f0aede43ae57210942a1169b6e1cc0a1f7f6364a2542609e1a2409b65f2459b176c8195c729a9a8a29758c896962f155df50f2e98105262b24fd75e6822cd3b13ae5d80ad7b8a826a8801e37b262f5063f233604cbba9f08f277a6867d4bffa847affbdf0851dce7dd79fe0617ba5db9bd8255d3895919710566809819f891e3948d8be72830eb4549570c21afcdddf2b8faacbf4ba4d8ee6873854d049b8a60d8af22ac45559c0497b192b3b5e3f6b74aebd57af407ce4f30e99007730b85040d3f1d33df78932a953a88bddf581392c720822c1c1e32a0bffa92342b1210566441ff2de5b8302ff99ce73fe57af2d851f800f7d3fc1c041b9c8fd999acffc4a96acd1f1ac8ba7533d405d165338c42eb0cd0eb3f62a9d1c4618e7232fa6f19c9e08128ce2bbe0bfd6514def48bb2f518e2155e15e3085ff761d0faec4d40292dbfaa8077b6db94ed68f547a8ce9d17de18aeeb48b9afb57e639b0e2513b2da7b8b6c21e72b533e39a94cfa9fa61c37e6bd237dae6e5d7c5420b05be2eba826ce9d8491d787138d76769001af0225250309e7fc17de70799743e931a90a4145072eb644fdefdc319ece2f1fe61e34530510d1b528b88475e5836562bbe8c4f76ea5b95143ca0d72542078d10c50aecd7f1b44acca10705ced33796a24bbeb6ab3b2972fab6523323d849df75eccf761f662fd49c8e33c8e895869bf6027ecf6c212e9c7c5382d15b24977b3fc4ffea719d525d61e37a07ec3d298db2172dfd8364c211d26fd4df54a0fc3ee4c7c414c9dffb1f5434a56d0b34cb1ff1728990b29bfce57c40dc1bfef752f14143acbd0a715883cf364b9b267f7cb17f46336081f070799919368f3191efa09623d0b9c4f2df1c5116c48df4aed71369e7b080643ed585a3aad37c4755aa48ed20aa93634fbb85b35e7c213a9945605b1934abcd20d5d6e6df0e87421e4146b0231721f673114dee20f416ae1a4acfec49937e0a253ad343f5393c196e3076aaa94f68ec71157b4d2fa5b47947fb668de1c977ea098a661d9583474344a2ab3828ff9f972dd6d492784caf5985f7937714f1e0ade263955733a141f161af1e93cd66e63affc3ef15cd1cc5ad5dac94e0735fa196b4e284b8a800bd57068d4e483a530d45e37f543ec0504a42d8754e9836dde81f95b8786fb8faea40745823adcadd705f69951dc6011da5ba45fa00d9e099893033c74008df13bda2fbd7027186a97b53f4e89b1df019c55102aea421951481882069707523b1ee459baf153a46b3c3ca333a2e634d62cbe015c2701fc3ce631df23ea248ce98812c09bb93486860584088fa623f48f995f36e8749f5f407bc243a9d2f430649a33f8361c322ecba7ab6bb775d74902da52ea3f57f000a11ef44ffed0ddd1570e9b5a5742dabae2e628562cacd335306af6473036db8029118a23a06b8e95bd04ddbaffc20d6d5955a50500c9a2e90c3164718f08a2c47929891f06ca82dc56658e35d18b6be2b76938e6f6a30ff93092e9fc6c30e781893904a0db1e0dd92435dd31105b7e0de9e169c2cfdc8eee304651469ff0629cdaebba070eb3a5a7a358febb12384782c69378623649e13b3c3888b913b92e8927284828cc934c25be7e66f806c140ac827aebbfd16c2b6122b3f52d5384fe4d97df0345216c0014f834576e379edbfa48d00943acd720cceb385aa8166fa47793cd936279530c3b6df30ea4896fff6b52634fe11dcdff50339dd5e8f233dd8ce28e25c6ba4e6899a4906e7c9541988bd27ec167788e435ae4b76456f64931d4d8b8a28f68f3b3595a52ab31d57e7caec84246dbe657996f4bfdb9977d75df5b3e716a72172a215da8bc9b7edbc54543231cf2744d47ea7f0106eb36ec22ff4914ad4d8389b98269e83316172182203bd27b906deecd797e25bf3ee478cb1e3c752a2ca29ffe5bc28e231a9528ecaac2e158a584f95c950e1698e8e867c3fcb6a7a4994c018ce4287c4afd7f4564dd599ecb0e1093959a2750de1071e6def55ba6abc5209340725d01b6af51d3d254a0e481ac41cd861bb9468e6c47c7f8543c44450c694ec9db29b27be019885c52d23d0c83d8043167d74b806464c680aee6dfdabbeaeec59198f4d48b53bd2aadbff8105c27184d31824a885a1a393213d424045e9b0cbd713b0a226ca6ccc33407531d9b72f599768ce02ee9753cfc2f32d558c1a600b6edd5f5c395b9e87da9d2822e7e0c7814eb9d189d85d3fab88961696a5dbb1a3f56d2ff914dc59323cab53dbdc13c3f0d2b3ea8fb27ea1b0539e7c0be31e8f0195cfded18ad0764ea66becdbb9b89d1359f82f887f7faeac51f02466ab6cd90a6b85086563865f9e27ea61460b5159bca4740582f1c4be8f1bdded02ea5eb348f9fd1590ac5788d63ab50035ec329942232d21f248582bd1a85d249065222f3e1ec882b362ae8bb5c23248d785d599039e6a73456817dd3e7d22b706a93d39a3baa45c466991e76594a3c955ca610ab61e7910efd365f0337ea604f2c3c69cad61b771ef0b7b2a5ab4f5b469ac4a3e46ff0744597152e736efe71512538372363f78a0151913cd68594f5b69dab6a4f2daefb0a5a6f90caa275939b157681810b6f8af5046b62affc819ec645462790c25d46b9fe4513c0a52fe2c2accf1b948b420b49885dafd0f681e09672479ed0f2d5af2cc1c0e241c11b8be731b6ad4cbb075dde15f138677c6d904273b9af93057d93e9d1255345fff604d3b40cdd96b9d863c2499a486e8bc75094c810d8d1d8605e33557da9a3a9143ad8be09cdcdb7df5540c9f10421d980b645b2ebebed9ae41e44939e3989ba7f1f1b40a93c7013dd35878622240772315ec67650aa557a2347b7e716b729857f372be87ee2839964e9568dc8d1e4535608c5f13ec56abac594895c98e1f5e6c04c9a02f03607d9a9090a81e89ea91c83fb2bc265ac6c5b3b4fb76a04abdb144df9c2cc64094fad7e28cd12a519112338232e70de2fd0cdfb17344a402eb6f8565fd06f3b8a0c2e0b8802e5d97312899b941e4a0dd614a9cdec581b10152e6e0b9e0e103bd0b80ddb6ae6741a00636a57481764f4cf1ff3ed671347da423a993886fec1423469b1008156ec237c7f687bea868a7a81bccf72950786f49419f90d51b5efbc5b94965509409a43ef09b50b60f29e432e33c2f517950fab3fdfe55c44ec97c7d5e934d0172449d3f089aa3acfac50c99b205a5cfaf7d2cc274900ed64e7fbe48ce78687ce07a02b75754e80bd803b42f5c80e549c83b91a81d10ffe0255eda73f21e37aa4909cdb72edb98c76efd763de23f887d2a6d712c4f16f090e31fe8774751c8ff8bc05ea32af5c673ce2574e4d8bbb4de825011d46296a46aadf5fe7d9bd1e45093bfa13d55c5f4e3d76cc346b857f9278daeac9a1bf7f7e24f5fa54cbd79ed6aadc96f1894977c46a13a22c34e1ac14849fb512c38011722b44412bcd684df30f8f1c852f7095105c61928124b1c36e10ed175a760e4c8cd8388698dfac18a1234d42175f851ec356a881fbc15ee8e1f64df99fb6f1c12256ad53c7723414b75555b2e8eec36471716821d286e4418c3e36e90a063786297e31e47b3a922b3f16a048747ab486dc2be8cbfdf31c4b91bee6504d17b8519c94f8621daa8c526f7546532551200a9cd8c3d7232316ee04eee42b6adad10a1258767f85ce0fe8cd570e5019e903baf28b3da75173822adf24640e6b7bfa651c62c573c64cc45aaf8548921c28a0729f8deffa9fd9944875d78519699afd4729a90c0ceffd589ea64b4e89dd85a9bd7f1d7cd51e84959c6c378dd096be38abe93c5381399fe
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+  </entry>
+  <entry>
+    <title>爱有万分之一甜</title>
+    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="1a23d9afa83376db931ce3f0c42a97068431814a8200a78a3c3b4de574ef928e"
+     data-nonce="edc7719338a8b4e7b3ef0d0c"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    aaf9a33b83fb4520e89258700d0af14fa9e4f7fda1f0ffb9c6baa7f09c60cdb276ef053972b14c6120a77836976d53b08f689ef80641ece389bac00782acc271b492c555c1d21acd734d7cc1b9fb3dc37641e3b204c49aadd6aba42bc4ba6acb1e1c64659d1ba81802373ac361a35fd7ea60f348443f6c843cc2bf0688bc61873a343c82ab5bf04af213339bccc05aa8d893c22c36a1d499d8d9898f66b59e15f447b35d41729cf2e5a230861c1c6dae33d2d5740a463d8b208e8b28da75f31d0115ea3c281267b7538a88445b6c9292a528cb8bee703fc5578e73c732f0dc0925b4eba0fc898eecdc79a9ad1d0fd9fc652b5d22dbb9b64b7089a55f66bdb5bbe0114c19c95e7ea1344eff8c747d1eaef2d02dce56e26b5390eba7ec95871963c6cca959c82e4644076956417d727af1a6ecf7ba7ecc607cb32d98e4c5ffa8c1b22677f7740ca50a163889d5e5b26beeb3a7db639c2efc251f65084aea48d859b1b12a734dd8efda4c094a4d05e8a6c22c330836666abe09590117a46e16af3552d082d268a8d3792887ed9b56f8888622caf559bef670db9a6ac7c7467e1f1e1559c49486b4206df6f29f83989d8cc2c41885dfc23f4d6a61e8709d13b3992e8eaaacf9fa06aa6094d79ab32589850645cc881f7b0c7a166dc9a5ef7dc2162d6a0c9f5267781abb5f51cc797d6af504b6752d3653e82c0981638172d4683172497cd85af6a13bded849c77728b23ff5c211a220c14ac9f29385df2a79e4f35e66d1c06ab0b0acfc4c817ca1cbdb36e9bd213bfe93e7d72baf37f7ace07056c6c938c1b5576f0b597ae73567445733333576c832589ef2e43acc659e4beedde32380ac099ae9758d511bd0560bfab293b4c898c67c97273549a429bd760111c216aa42233756d0d71f3c07654c480a0fa8319301778ec8a46af4ef56aa058553e1d5a540562ad870b1b207c985161e19c72b711609e28389fb48caa61e3d8a3994b2e2b59ab0f73c6516e7ac03fb55646cb45726e965980b0ad8009963abe1a73522d0618c772d32ef0bb900fb7ab4cae4a15d713c12c2a6203a9c4976ca1bc95c94b93a661851a0130ff84fd95cb2c25f955729b120c88a326587681860b236ea8f128136367e56d4d64208a005c46cb1c1a73286dcd731f144c141b8a928de23698beccb2c6b80e1d1af5eec86a27ede247d05ac227a3d0736cb05580ef48d6b1f2ea85747720b545beeade883f4f3fe4579683d8787a952d5fa3e9c9e60d3515f9b0aa38f6ee65871154d1ab4af1fe7b114ccdde8cf0c38f65a4d9866f0f963f6f7d0e508f993778704951f0845f313cf61cfb0881d94aa860f331c82e6707dbfcae8edc2f88d12091bcca6f05025779da54dcf9c06f0cbda10ddc2409a5f077bd1942cb0a5009b6ebbe9e71c667915c5ef9e719562ad56b2b5ee34597226a97e80f0f8b8c2f3d3f64b79a998a5cb957ef37886de1ca56ed4c82492af0b07b9c7a5f8b734e6537aad2814381832acb64b35a48a89611ad84b8ce83c980d8bb21ef677bc792b5299463c11a74a08e7e69ed8f5cf276040f2f9331c4cce24e0c998d3d353b1f106cd07c55d50cd169a96ea83d06a830b64b96c7861e5385874296635c6785d0cec198d6f33de75d2941e27c8b2be3baad78011e30f7d43aec19022fb0e369ecbcbf11e815accd3fb81d91f6fddf2655ec978fc78337e18ca19367182ed256ce6a4356dd09c09368f32f0f39102da9e1969720c50cff7b932d0d7926ac17f79836b974bf228f4e3ed4c840faf5939b65836448dde8da3a02f4c17dcde0696a3d5159ace9fe9f6e887df084c444a15c2c42c262e6cd622f86b5f48493ed59601cdba62aec462c5f9ac4b3b271351abe600b46740ebd03148015eb4d3cf84813d688da5b5cdeefc657c11ca851fedcee9f8f70fe47c930fe75b688334c045b0efc8ddb87a6cdae670b46e44c02de5b8e9d47d0a27e452c6822197630f4b435b84c774f8d56f1e8d0b865ba58835b9de11aefcbf173139f36bd44bbac3d6ed19cd712367458948ce3744af0bcc6612a5bc60c9a833c95052007d8e5e2268504cd0239618e094bb4ca7b74ffdbe7f4c68ddb9b43de5479d5a66a7117afc5b5292c9462b8a71f3b0018977807020bcbd071af7298c2b43d2352217375a978cbc5712465beeb8164cf4d70ca136bed147d74b82bddbeb94b950db9e1eda8c620b136b4fc64cd9e25dcae07a49a5f3d91057275241e04c3f070f2eb9da1fe43381029c29c11f23f11c52745e1e20c162a39bc246d558644d1b97887748fdec5e80868836e2ea6f7c87c30fe1d7aefd5edcc9e35c3cd15d15f02518882e76cb5d6df92d45e5bf455a7741bc9016c460736c476acbb1c482d787b0ef780972ebde20c7325a3e7f599008df562e1d8fb46670d36c79ac5a378c31625eb9d0932fcf23936943de9a0d092e4d4f5fd3bab7bd3948a38e662598fffae5bee4f0575ccfe74df4d3071382559209ab3dda92dd8ade00f9e5085342164c478d1ae461c3883864b346ed55f8d2d3cb74c00548f90a34e11f311f791637ba71ad7345f2e4fab189c4b94ae2744032703ab6730bc7a697965c758b39246fbf73024fc17650680a7dbe2663fde545c50436b2fc30ac724d2aef2e99f36ec20211f5f46c2392083ec83bd699db4b49bb18a6dee851d56d4ce11e6a6fbce6c194e2fbb768bb7c8808802d4a237822007dae58410d70676e4437c0d91b5c6ed499ea2661b61132853268814ab903cc5aee43cf93d29d5579ce55e6abceda64b2a004697e49ac16815f903309d40dfca0105295ecbb66abcd7f8a0a14191f50509c699dc4196527972bff0f19883e094f75f89e299b6045d50935612cee3b882b743ec4b31b86d8e3f9d8c9a25c012ba7b86b18493bd799af905f9e4e6bf6d60f46f4c15feee2f1f0a10040cd7034d58f2f5a0c5327e28912ba9d68b9d2d3630c9dcd525e6beae87efa1d29bb145c0bb2f188f351ea49122e
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
@@ -1294,6 +1450,18 @@
 </ol>
 <hr>
 ]]></content>
+  </entry>
+  <entry>
+    <title>并查集</title>
+    <url>/czyyy_nlw/2026/11/15/%E5%B9%B6%E6%9F%A5%E9%9B%86/</url>
+    <content><![CDATA[<h1 id="并查集"><a href="#并查集" class="headerlink" title="并查集"></a>并查集</h1><hr>
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><ol>
+<li>一开始每个元素都有自己的集合，这个集合只有自己这个元素</li>
+<li><code>int find(i)</code> 查找i所在的集合的代表元素</li>
+<li><code>bool isSameSet(a, b)</code> 判断a, b是否在同一个集合里</li>
+<li><code>void union(a, b)</code> 将a, b 所在的集合合并</li>
+</ol>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;<span class="type">int</span>&gt; father;</span><br><span class="line">vector&lt;<span class="type">int</span>&gt; size;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">build</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">find</span><span class="params">(<span class="type">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (i != father[i]) &#123;   </span><br><span class="line">        father[i] = <span class="built_in">find</span>(father[i]);    <span class="comment">//递归 + 扁平化</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> father[i];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">isSameSet</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">find</span>(x) == <span class="built_in">find</span>(y);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">union</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;</span><br><span class="line">    <span class="type">int</span> fx = <span class="built_in">find</span>(x);</span><br><span class="line">    <span class="type">int</span> fy = <span class="built_in">find</span>(y);</span><br><span class="line">    <span class="keyword">if</span> (fx != fy) &#123; <span class="comment">//小挂大优化</span></span><br><span class="line">        <span class="keyword">if</span> (size[fx] &gt;= size[fy]) &#123;</span><br><span class="line">            father[fy] = fx;</span><br><span class="line">            size[fx] += size[fy];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            father[fx] = fy;</span><br><span class="line">            size[fy] += size[fx];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>爱有万分之一甜</title>
