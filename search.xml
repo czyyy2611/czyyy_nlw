@@ -1,124 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>a</title>
-    <url>/czyyy_nlw/2026/10/18/1/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="c3f58d3313badc61023b069f8a233b9b400e586dec20118d514a8e8f5c5a673b"
-     data-nonce="6812c3b88d6c4bbe5e435c97"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    667d2498065bce64dcce57c7d853dfff2047b81623fc53973b46f901641c98c68474b48c926908f990fd0d54aa322d5914c4bf2ef32c51cd12ec6dd45efcc7d4957cbe0cea86516cffff1512d657c59d2f8f43a2b62719aae728bd8c83280b36f8d4e9d1d9256f45ee5cf036261b1257fbd2f34a154b988aa46ddd7f2f4346dc6e67c237a48e0b0782d26d92ca6a0af17eb3d6d48bd5177f3c6939a8d43bfd1349a1f05d5412056526b7a2c5d1e30cce2fded3b4f026f5e0d8ae4712bae97f307b9243d550c07371c63b4e56f1d74fa0862d0346ff3bbe833d4758b125c6d8620704636882f2458046272a79584e141edf0a26dce038e2b90051ad378ac94d14bba99efdd315a82117deafd9857656683388587158705555daefd352ed4ea981b45dfa9c063173c540e8770f87eaf8d66c7894
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>OOPre</title>
-    <url>/czyyy_nlw/2026/10/29/OOPre/</url>
-    <content><![CDATA[<hr>
-<h1 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h1><blockquote>
-<ol>
-<li>Java基础</li>
-<li>类与对象</li>
-<li>继承与接口</li>
-<li>错误分析</li>
-<li>容器与层次化</li>
-<li>设计模式</li>
-<li>递归下降</li>
-</ol>
-</blockquote>
-<hr>
-<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><ol>
-<li>输入 Scanner<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner</span><br><span class="line"></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line"><span class="type">double</span> <span class="variable">b</span> <span class="operator">=</span> scanner.nextDouble();</span><br><span class="line"><span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> scanner.next();<span class="comment">//next以空白符为分割</span></span><br><span class="line"><span class="type">String</span> <span class="variable">d</span> <span class="operator">=</span> scanner.nextLine();<span class="comment">//nextLine以换行符为分割</span></span><br></pre></td></tr></table></figure></li>
-<li>输出 System<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println();</span><br></pre></td></tr></table></figure></li>
-<li>访问权限<br>public, protected, private</li>
-<li>static<br>用于声明类的属性和方法；静态属性可以被类的所有对象共享访问；免实例调用</li>
-<li>final<br>不可变；不可重写；不可继承</li>
-</ol>
-<hr>
-<h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><ol>
-<li>主类<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">void</span> <span class="title function_">main</span><span class="params">(String[ ] args)</span>&#123;</span><br><span class="line"><span class="comment">// 程序入口</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
-<li>构造方法<br> 与类同名；用 this. 构造</li>
-<li>get方法与set方法</li>
-</ol>
-<hr>
-<h1 id="继承与接口"><a href="#继承与接口" class="headerlink" title="继承与接口"></a>继承与接口</h1><ol>
-<li>抽象类，方法<br><code>abstract</code>，不能实例化</li>
-<li>重写<br><code>@Override</code><br>要求方法名称，参数与返回类型保持一致；重写的可见性&gt;&#x3D;父类方法</li>
-</ol>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
-<li>继承的写法<br> 使用 <code>子类 extends 父类</code></li>
-<li>访问权限<br>子类不能访问父类的private字段，需改成protected</li>
-<li>构造方法<br>可以用<code>super(...)</code>调用父类的构造方法；若显式调用，<code>super(...)</code>必须是子类构造方法的第一条语句</li>
-<li>其他方法<br>可以直接通过<code>super.</code>调用父类方法</li>
-</ol>
-<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ol>
-<li>接口的写法<br><code>interface 接口名</code><br><code>类名 implements 接口名</code></li>
-<li>接口方法<br>隐含为<code>public abstract</code>，实现类的对应方法也必须是<code>public</code></li>
-<li><code>instanceof</code><br>检查是否是目标类型，可以用以检测是否为接口的实例</li>
-</ol>
-<hr>
-<h1 id="错误分析"><a href="#错误分析" class="headerlink" title="错误分析"></a>错误分析</h1><ol>
-<li>基本类型和引用类型<br>基本类型直接存<em>值</em>，引用类型存的是<em>引用地址</em></li>
-<li>引用赋值<br><code>Book book2 = book1</code>，两个变量引用同一个目标，相当于形成别名</li>
-<li>浅复制<br>新旧对象共享同一个内部对象</li>
-<li>深复制<br>新旧对象完全独立，互不影响；所以对容器的深复制需要遍历所有对象，逐个深复制</li>
-<li><code>==</code>与<code>equals</code><br><code>==</code>用于判断二者是否指向同一对象，也就是地址是否相同 <code>equals</code>只判断内容是否相同</li>
-<li>Scanner常见问题<blockquote>
-<p>Scanner.next() 读取下一个以空白字符分隔的内容，Scanner.nextLine() 读取当前行剩余内容。混合使用时，前一个读取操作留下的换行符可能使 nextLine() 立即返回空串。</p>
-</blockquote>
-</li>
-<li>遍历删除错误<br>不要在增强for循环中增删改变容器的状态，因为删除方法不会改变迭代器的状态，导致迭代器状态与容器状态不一致从而出错</li>
-<li>下标与substring<br>subbstring(beginIndex, endIndex)是左闭右开区间</li>
-</ol>
-<hr>
-<h1 id="容器与层次化"><a href="#容器与层次化" class="headerlink" title="容器与层次化"></a>容器与层次化</h1><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><ol>
-<li>需要 <code>import java.util.ArrayList</code>（对应）</li>
-<li>ArrayList<br>基本用法：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ArrayList</span>&lt;Potion&gt; <span class="variable">potions</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();<span class="comment">//创建</span></span><br><span class="line">potions.add(potion1);<span class="comment">//加入一个元素</span></span><br><span class="line">potions.set(<span class="number">1</span>, potion2);<span class="comment">//修改下标为1的元素</span></span><br><span class="line"><span class="type">Potion</span> <span class="variable">potion</span> <span class="operator">=</span> potions.gets(i);<span class="comment">//访问下标为i的元素</span></span><br><span class="line">potions.contains(<span class="string">&quot;A&quot;</span>);<span class="comment">//是否包含某元素</span></span><br><span class="line"><span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> potions.size();<span class="comment">//大小</span></span><br><span class="line"><span class="keyword">for</span> (Potion item : potions)&#123;</span><br><span class="line">   <span class="comment">//遍历</span></span><br><span class="line">&#125;</span><br><span class="line">potions.remove(i);<span class="comment">//删除</span></span><br><span class="line">potions.clear();<span class="comment">//清空所有</span></span><br></pre></td></tr></table></figure></li>
-<li>HashMap<br>存储无序<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashMap</span>&lt;String, Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="comment">//&lt;Key, Value&gt;</span></span><br><span class="line">items.put(item1.getId(), item1);<span class="comment">//加入，用的是*put*</span></span><br><span class="line">items.get(item1.getId());<span class="comment">//访问key值对应的value</span></span><br><span class="line">items.containsKey(item1.getId());<span class="comment">//检查是否存在key对应的映射关系</span></span><br><span class="line">items.containsValue(item2);<span class="comment">//检查是否存在value对应的映射关系</span></span><br><span class="line">items.size();</span><br><span class="line"><span class="keyword">for</span> (String key : items.keySet()) &#123; <span class="comment">// keySet 可以获取所有 key 组成的集合</span></span><br><span class="line">      </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (Item value : items.values()) &#123; <span class="comment">// values 可以获取所有 value 组成的集合</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">items.remove(item1.getId());<span class="comment">//删除一个映射关系</span></span><br><span class="line">items.remove(item2.getId(), item2);<span class="comment">//删除一个键值对；仅当该 key 当前映射到该 value 时才能删除</span></span><br></pre></td></tr></table></figure></li>
-<li>HashSet<br>本质是只保存key的HashMap<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashSet</span>&lt;Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">items.add(item1);</span><br><span class="line">items.contains(item1);</span><br><span class="line">size(); remove();</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h2 id="层次化对象管理"><a href="#层次化对象管理" class="headerlink" title="层次化对象管理"></a>层次化对象管理</h2><ol>
-<li>组合关系<br>多个对象组合形成一个更大的对象；这是一种整体与部分的关系</li>
-<li>聚合关系<br>相互独立，弱关联</li>
-</ol>
-<hr>
-<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ol>
-<li>工厂模式<ol>
-<li>简单工厂模式<br>定义一个类（工厂）负责创建其他类的实例；由产品抽象父类Product，具体产品ProductA，工厂类Factory：public static Product create(String type)构成；</li>
-<li>工厂方法模式<br>定义一个用于创建对象的接口，让具体工厂子类决定实例化哪个产品类；构成：工厂接口 Factory，具体工厂 FactoryA</li>
-<li>抽象工厂模式<br>提供创建一组相关产品（产品族）的接口；构成：产品族，工厂接口 Factory：声明多个创建方法，具体工厂</li>
-</ol>
-</li>
-<li>观察者模式<br>被观察者Subject，需维护观察者列表，增删观察者，事件触发时发出通知；观察者Observer，提供响应方法，收到通知后响应<br>定义被观察者和观察者接口；具体实现类实现接口；</li>
-</ol>
-<hr>
-<h1 id="递归下降"><a href="#递归下降" class="headerlink" title="递归下降"></a>递归下降</h1><ol>
-<li>词法分析Lexer<br>把Expr拆成Token，一般有peek(), next()方法</li>
-<li>语法分析Parser<br>以下内容来自指导书<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">parseExpr:</span><br><span class="line"> 新建一个Term的容器T</span><br><span class="line"> 调用parseTerm获得一个项t</span><br><span class="line"> T中加上parseTerm返回的项t</span><br><span class="line"> <span class="keyword">while</span> 当前token是+:</span><br><span class="line">     跳过当前token(+)</span><br><span class="line">     调用parseTerm获得一个项t</span><br><span class="line">     T中加上parseTerm返回的项t</span><br><span class="line"> 利用T生成一个新的Expr e</span><br><span class="line"> 返回e</span><br><span class="line"></span><br><span class="line"> parseTerm:</span><br><span class="line"> 新建一个Factor的容器F</span><br><span class="line"> 调用parseFactor获得一个因子f</span><br><span class="line"> F中加上parseFactor返回的因子f</span><br><span class="line"> <span class="keyword">while</span> 当前token是*:</span><br><span class="line">     跳过当前token(*)</span><br><span class="line">     调用parseFactor获得一个因子f</span><br><span class="line">     F中加上parseFactor返回的因子f</span><br><span class="line"> 利用F生成一个新的Term t</span><br><span class="line"> 返回t</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> 跳过当前的token(i)</span><br><span class="line"> 利用i生成一个新的Factor f</span><br><span class="line"> 返回f</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> <span class="keyword">if</span> 真:</span><br><span class="line">     跳过当前的token(i)</span><br><span class="line">     利用i生成一个新的Factor f</span><br><span class="line">     返回f</span><br><span class="line"> <span class="keyword">if</span> 假，说明是(表达式):</span><br><span class="line">     跳过当前token(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">     调用parseExpr获得一个表达式e</span><br><span class="line">     利用e生成因子f</span><br><span class="line">     跳过当前token(<span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">     返回f</span><br></pre></td></tr></table></figure></li>
-</ol>
-<hr>
-<p>参考：OOpre指导书</p>
-]]></content>
-  </entry>
-  <entry>
     <title>MIPS ?</title>
     <url>/czyyy_nlw/2026/10/20/MIPS/</url>
     <content><![CDATA[<h1 id="常用的一些宏"><a href="#常用的一些宏" class="headerlink" title="常用的一些宏"></a>常用的一些宏</h1><ol>
@@ -150,6 +32,35 @@
 </li>
 </ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>a</title>
+    <url>/czyyy_nlw/2026/10/18/1/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="d23c6fce79dfbcb2c86cb83bd96dddc4cf6c2816c9166bd7de4762238c02b144"
+     data-nonce="9c06746ee35de8623ac59725"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    b0ce29741b647273148475252d6d6c0a1e8b9fdad1592e1d1e61788794c7c89443cc49c1acc1efa952a8d2480a2ff66d7220252fe5d5fab4fdeabb78ed68b656d0267ae15bd6fbd9295a82fd94146b664ef0b4074491b8042e1a90556d8761ba0ac57fadca77f1dfb5d97ad22a602b997a2bac9d22daceb175479a6caecd9f54e776d6c5416fb1cf7e6de13c1072f1c9c88b97ccb31a631eaf8b33603a7faf26ac038ea1c016a767346f1e894ad9afb156c62de71cb0e4321910963f38fe487dbacb927aa665a76fd39d28d30f521fc69a2a2b4be83d91c16644c9bea45aabf8bca3ae2e2856026be82aadbacf8eb19e44e1dfb4c93ae3f0e9e4f75fb7f749fda51e02677b205e9592096f317033a7027bc2be542f103840c57433b8ab84414f37676198a762775d8f579d2cc8622a9cb4cf5f
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
     <title>P4 设计文档</title>
@@ -402,6 +313,423 @@
 <li>区间比特倒置<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] reverse_range;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">4</span>:<span class="number">0</span>]  high, low;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      reverse_range = in;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         <span class="keyword">if</span> (k &gt;= low &amp;&amp; k &lt;= high) <span class="keyword">begin</span></span><br><span class="line">            reverse_range[k] = in[high + low - k];</span><br><span class="line">         <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
 <li>区间按位翻转<figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> [<span class="number">31</span>:<span class="number">0</span>] invert_range;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">31</span>:<span class="number">0</span>] in;</span><br><span class="line">   <span class="keyword">input</span> [<span class="number">4</span>:<span class="number">0</span>]  high, low;</span><br><span class="line">   <span class="keyword">integer</span> k;</span><br><span class="line">   <span class="keyword">begin</span></span><br><span class="line">      invert_range = in;</span><br><span class="line">      <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; <span class="number">32</span>; k = k + <span class="number">1</span>) <span class="keyword">begin</span></span><br><span class="line">         <span class="keyword">if</span> (k &gt;= low &amp;&amp; k &lt;= high) <span class="keyword">begin</span></span><br><span class="line">            invert_range[k] = ~in[k];</span><br><span class="line">         <span class="keyword">end</span></span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">   <span class="keyword">end</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br></pre></td></tr></table></figure></li>
 </ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>OOPre</title>
+    <url>/czyyy_nlw/2026/10/29/OOPre/</url>
+    <content><![CDATA[<hr>
+<h1 id="学习内容"><a href="#学习内容" class="headerlink" title="学习内容"></a>学习内容</h1><blockquote>
+<ol>
+<li>Java基础</li>
+<li>类与对象</li>
+<li>继承与接口</li>
+<li>错误分析</li>
+<li>容器与层次化</li>
+<li>设计模式</li>
+<li>递归下降</li>
+</ol>
+</blockquote>
+<hr>
+<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><ol>
+<li>输入 Scanner<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner</span><br><span class="line"></span><br><span class="line"><span class="type">Scanner</span> <span class="variable">scanner</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Scanner</span>(System.in);</span><br><span class="line"><span class="type">int</span> <span class="variable">a</span> <span class="operator">=</span> scanner.nextInt();</span><br><span class="line"><span class="type">double</span> <span class="variable">b</span> <span class="operator">=</span> scanner.nextDouble();</span><br><span class="line"><span class="type">String</span> <span class="variable">c</span> <span class="operator">=</span> scanner.next();<span class="comment">//next以空白符为分割</span></span><br><span class="line"><span class="type">String</span> <span class="variable">d</span> <span class="operator">=</span> scanner.nextLine();<span class="comment">//nextLine以换行符为分割</span></span><br></pre></td></tr></table></figure></li>
+<li>输出 System<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">System.out.println();</span><br></pre></td></tr></table></figure></li>
+<li>访问权限<br>public, protected, private</li>
+<li>static<br>用于声明类的属性和方法；静态属性可以被类的所有对象共享访问；免实例调用</li>
+<li>final<br>不可变；不可重写；不可继承</li>
+</ol>
+<hr>
+<h1 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h1><ol>
+<li>主类<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">void</span> <span class="title function_">main</span><span class="params">(String[ ] args)</span>&#123;</span><br><span class="line"><span class="comment">// 程序入口</span></span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
+<li>构造方法<br> 与类同名；用 this. 构造</li>
+<li>get方法与set方法</li>
+</ol>
+<hr>
+<h1 id="继承与接口"><a href="#继承与接口" class="headerlink" title="继承与接口"></a>继承与接口</h1><ol>
+<li>抽象类，方法<br><code>abstract</code>，不能实例化</li>
+<li>重写<br><code>@Override</code><br>要求方法名称，参数与返回类型保持一致；重写的可见性&gt;&#x3D;父类方法</li>
+</ol>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><ol>
+<li>继承的写法<br> 使用 <code>子类 extends 父类</code></li>
+<li>访问权限<br>子类不能访问父类的private字段，需改成protected</li>
+<li>构造方法<br>可以用<code>super(...)</code>调用父类的构造方法；若显式调用，<code>super(...)</code>必须是子类构造方法的第一条语句</li>
+<li>其他方法<br>可以直接通过<code>super.</code>调用父类方法</li>
+</ol>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><ol>
+<li>接口的写法<br><code>interface 接口名</code><br><code>类名 implements 接口名</code></li>
+<li>接口方法<br>隐含为<code>public abstract</code>，实现类的对应方法也必须是<code>public</code></li>
+<li><code>instanceof</code><br>检查是否是目标类型，可以用以检测是否为接口的实例</li>
+</ol>
+<hr>
+<h1 id="错误分析"><a href="#错误分析" class="headerlink" title="错误分析"></a>错误分析</h1><ol>
+<li>基本类型和引用类型<br>基本类型直接存<em>值</em>，引用类型存的是<em>引用地址</em></li>
+<li>引用赋值<br><code>Book book2 = book1</code>，两个变量引用同一个目标，相当于形成别名</li>
+<li>浅复制<br>新旧对象共享同一个内部对象</li>
+<li>深复制<br>新旧对象完全独立，互不影响；所以对容器的深复制需要遍历所有对象，逐个深复制</li>
+<li><code>==</code>与<code>equals</code><br><code>==</code>用于判断二者是否指向同一对象，也就是地址是否相同 <code>equals</code>只判断内容是否相同</li>
+<li>Scanner常见问题<blockquote>
+<p>Scanner.next() 读取下一个以空白字符分隔的内容，Scanner.nextLine() 读取当前行剩余内容。混合使用时，前一个读取操作留下的换行符可能使 nextLine() 立即返回空串。</p>
+</blockquote>
+</li>
+<li>遍历删除错误<br>不要在增强for循环中增删改变容器的状态，因为删除方法不会改变迭代器的状态，导致迭代器状态与容器状态不一致从而出错</li>
+<li>下标与substring<br>subbstring(beginIndex, endIndex)是左闭右开区间</li>
+</ol>
+<hr>
+<h1 id="容器与层次化"><a href="#容器与层次化" class="headerlink" title="容器与层次化"></a>容器与层次化</h1><h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h2><ol>
+<li>需要 <code>import java.util.ArrayList</code>（对应）</li>
+<li>ArrayList<br>基本用法：<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">ArrayList</span>&lt;Potion&gt; <span class="variable">potions</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();<span class="comment">//创建</span></span><br><span class="line">potions.add(potion1);<span class="comment">//加入一个元素</span></span><br><span class="line">potions.set(<span class="number">1</span>, potion2);<span class="comment">//修改下标为1的元素</span></span><br><span class="line"><span class="type">Potion</span> <span class="variable">potion</span> <span class="operator">=</span> potions.gets(i);<span class="comment">//访问下标为i的元素</span></span><br><span class="line">potions.contains(<span class="string">&quot;A&quot;</span>);<span class="comment">//是否包含某元素</span></span><br><span class="line"><span class="type">int</span> <span class="variable">size</span> <span class="operator">=</span> potions.size();<span class="comment">//大小</span></span><br><span class="line"><span class="keyword">for</span> (Potion item : potions)&#123;</span><br><span class="line">   <span class="comment">//遍历</span></span><br><span class="line">&#125;</span><br><span class="line">potions.remove(i);<span class="comment">//删除</span></span><br><span class="line">potions.clear();<span class="comment">//清空所有</span></span><br></pre></td></tr></table></figure></li>
+<li>HashMap<br>存储无序<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashMap</span>&lt;String, Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line"><span class="comment">//&lt;Key, Value&gt;</span></span><br><span class="line">items.put(item1.getId(), item1);<span class="comment">//加入，用的是*put*</span></span><br><span class="line">items.get(item1.getId());<span class="comment">//访问key值对应的value</span></span><br><span class="line">items.containsKey(item1.getId());<span class="comment">//检查是否存在key对应的映射关系</span></span><br><span class="line">items.containsValue(item2);<span class="comment">//检查是否存在value对应的映射关系</span></span><br><span class="line">items.size();</span><br><span class="line"><span class="keyword">for</span> (String key : items.keySet()) &#123; <span class="comment">// keySet 可以获取所有 key 组成的集合</span></span><br><span class="line">      </span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (Item value : items.values()) &#123; <span class="comment">// values 可以获取所有 value 组成的集合</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">items.remove(item1.getId());<span class="comment">//删除一个映射关系</span></span><br><span class="line">items.remove(item2.getId(), item2);<span class="comment">//删除一个键值对；仅当该 key 当前映射到该 value 时才能删除</span></span><br></pre></td></tr></table></figure></li>
+<li>HashSet<br>本质是只保存key的HashMap<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">HashSet</span>&lt;Item&gt; <span class="variable">items</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">HashSet</span>&lt;&gt;();</span><br><span class="line">items.add(item1);</span><br><span class="line">items.contains(item1);</span><br><span class="line">size(); remove();</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="层次化对象管理"><a href="#层次化对象管理" class="headerlink" title="层次化对象管理"></a>层次化对象管理</h2><ol>
+<li>组合关系<br>多个对象组合形成一个更大的对象；这是一种整体与部分的关系</li>
+<li>聚合关系<br>相互独立，弱关联</li>
+</ol>
+<hr>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ol>
+<li>工厂模式<ol>
+<li>简单工厂模式<br>定义一个类（工厂）负责创建其他类的实例；由产品抽象父类Product，具体产品ProductA，工厂类Factory：public static Product create(String type)构成；</li>
+<li>工厂方法模式<br>定义一个用于创建对象的接口，让具体工厂子类决定实例化哪个产品类；构成：工厂接口 Factory，具体工厂 FactoryA</li>
+<li>抽象工厂模式<br>提供创建一组相关产品（产品族）的接口；构成：产品族，工厂接口 Factory：声明多个创建方法，具体工厂</li>
+</ol>
+</li>
+<li>观察者模式<br>被观察者Subject，需维护观察者列表，增删观察者，事件触发时发出通知；观察者Observer，提供响应方法，收到通知后响应<br>定义被观察者和观察者接口；具体实现类实现接口；</li>
+</ol>
+<hr>
+<h1 id="递归下降"><a href="#递归下降" class="headerlink" title="递归下降"></a>递归下降</h1><ol>
+<li>词法分析Lexer<br>把Expr拆成Token，一般有peek(), next()方法</li>
+<li>语法分析Parser<br>以下内容来自指导书<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">parseExpr:</span><br><span class="line"> 新建一个Term的容器T</span><br><span class="line"> 调用parseTerm获得一个项t</span><br><span class="line"> T中加上parseTerm返回的项t</span><br><span class="line"> <span class="keyword">while</span> 当前token是+:</span><br><span class="line">     跳过当前token(+)</span><br><span class="line">     调用parseTerm获得一个项t</span><br><span class="line">     T中加上parseTerm返回的项t</span><br><span class="line"> 利用T生成一个新的Expr e</span><br><span class="line"> 返回e</span><br><span class="line"></span><br><span class="line"> parseTerm:</span><br><span class="line"> 新建一个Factor的容器F</span><br><span class="line"> 调用parseFactor获得一个因子f</span><br><span class="line"> F中加上parseFactor返回的因子f</span><br><span class="line"> <span class="keyword">while</span> 当前token是*:</span><br><span class="line">     跳过当前token(*)</span><br><span class="line">     调用parseFactor获得一个因子f</span><br><span class="line">     F中加上parseFactor返回的因子f</span><br><span class="line"> 利用F生成一个新的Term t</span><br><span class="line"> 返回t</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> 跳过当前的token(i)</span><br><span class="line"> 利用i生成一个新的Factor f</span><br><span class="line"> 返回f</span><br><span class="line"></span><br><span class="line"> parseFactor:</span><br><span class="line"> 检查当前的token是否是i</span><br><span class="line"> <span class="keyword">if</span> 真:</span><br><span class="line">     跳过当前的token(i)</span><br><span class="line">     利用i生成一个新的Factor f</span><br><span class="line">     返回f</span><br><span class="line"> <span class="keyword">if</span> 假，说明是(表达式):</span><br><span class="line">     跳过当前token(<span class="string">&#x27;(&#x27;</span>)</span><br><span class="line">     调用parseExpr获得一个表达式e</span><br><span class="line">     利用e生成因子f</span><br><span class="line">     跳过当前token(<span class="string">&#x27;)&#x27;</span>)</span><br><span class="line">     返回f</span><br></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+<p>参考：OOpre指导书</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>learn c++</title>
+    <url>/czyyy_nlw/2026/10/21/c++/</url>
+    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
+<li>格式<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> namespcae std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>输入输出<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
+<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
+<li>结构体<br>省去了typedef</li>
+</ol>
+<hr>
+<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
+<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="keyword">auto</span> p = q.<span class="built_in">begin</span>(); p != q.<span class="built_in">end</span>(); p++)<span class="comment">//这个就是迭代器</span></span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>vector</p>
+  <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  vector &lt;<span class="type">int</span>&gt; q;<span class="comment">//创建名为q的一个int型动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">a</span>(<span class="number">10</span>);<span class="comment">//创建一个长度为10的动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">b</span>(<span class="number">10</span>,<span class="number">2</span>);<span class="comment">//创建一个长度为10，元素值均为2的动态数组</span></span><br><span class="line">  q.<span class="built_in">resize</span>(<span class="number">10</span>);<span class="comment">//为q分配10个空间</span></span><br><span class="line">  q.<span class="built_in">push_back</span>(<span class="number">1</span>);<span class="comment">//往q里增加一个1</span></span><br><span class="line">  q.<span class="built_in">pop_back</span>();<span class="comment">//删掉最后一个元素</span></span><br><span class="line">  q.<span class="built_in">size</span>();<span class="comment">//元素个数</span></span><br><span class="line">  q.<span class="built_in">empty</span>();<span class="comment">//是否为空，空返回 true</span></span><br><span class="line">  q.<span class="built_in">clear</span>();<span class="comment">//清空</span></span><br><span class="line">  q.<span class="built_in">front</span>();<span class="comment">//第一个元素</span></span><br><span class="line">  q.<span class="built_in">back</span>();<span class="comment">//最后一个元素</span></span><br></pre></td></tr></table></figure></li>
+<li><p>set (会按从小到大自动排好)</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">set &lt;<span class="type">int</span>&gt; s;</span><br><span class="line">s.<span class="built_in">insert</span>(<span class="number">4</span>);</span><br><span class="line">s.<span class="built_in">find</span>(<span class="number">2</span>);  <span class="comment">//find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span></span><br><span class="line">cout &lt;&lt; (s.<span class="built_in">find</span>(<span class="number">2</span>)!=s.<span class="built_in">end</span>()) &lt;&lt; endl;</span><br><span class="line">s.<span class="built_in">erase</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure></li>
+<li><p>map (会按从小到大自动排序)</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">map &lt;string, <span class="type">int</span>&gt; m;</span><br><span class="line">p-&gt;first <span class="comment">//键</span></span><br><span class="line">p-&gt;second <span class="comment">//值</span></span><br><span class="line">m.<span class="built_in">count</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//1，判断键是否存在</span></span><br><span class="line">m.<span class="built_in">erase</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//删除这个键</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>unordered_set, unordered_map;</p>
+</li>
+<li><p>stack</p>
+ <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">s.<span class="built_in">top</span>();</span><br><span class="line">s.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure></li>
+<li><p>queue</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">q.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">q.<span class="built_in">front</span>();</span><br><span class="line">q.<span class="built_in">back</span>();</span><br><span class="line">q.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure>
+<p>栈和队没有迭代器</p>
+</li>
+</ol>
+<hr>
+<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
+<li><p>sort</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(a, a + n);</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">rbegin</span>(), v.<span class="built_in">rend</span>());  <span class="comment">//从大到小，不用写 cmp</span></span><br></pre></td></tr></table></figure>
+<p>用cmp自定义排序顺序</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;    <span class="comment">//只能有 &gt; &lt;</span></span><br><span class="line">    <span class="keyword">return</span> x &gt; y;   <span class="comment">//从大到小排</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>cctype</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">isalpha</span>();</span><br><span class="line"><span class="built_in">islower</span>()</span><br><span class="line"><span class="built_in">isupper</span>()</span><br><span class="line"><span class="built_in">isalnum</span>()</span><br><span class="line"><span class="built_in">isspace</span>()</span><br><span class="line"><span class="built_in">tolower</span>()</span><br><span class="line"><span class="built_in">toupper</span>()</span><br></pre></td></tr></table></figure></li>
+<li><p>bitset</p>
+</li>
+<li><p>C++ 11</p>
+<ol>
+<li>auto</li>
+<li>for(int i : a), for(int &amp;i : a)</li>
+<li>to_string(),  stoi(), stod()…</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Learn Markdown</title>
+    <url>/czyyy_nlw/2026/10/19/markdown/</url>
+    <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
+<li>语法：使用 <strong>#</strong> 创建1-6级标题</li>
+<li><strong>#</strong> 号和标题文字之间必须有一个空格</li>
+<li><strong>#</strong> 号必须在行首，前面不能有其他字符</li>
+</ul>
+<hr>
+<h1 id="文本格式"><a href="#文本格式" class="headerlink" title="文本格式"></a>文本格式</h1><ul>
+<li>** xx ** 表示 粗体 <strong>xx</strong></li>
+<li>* xx * 表示 斜体 <em>xx</em></li>
+<li>*** xx *** 表示 斜粗体 <em><strong>xxx</strong></em></li>
+<li>~~ xxxxxx ~~ 表示 删除线 <del>xxxxxx</del></li>
+<li>三个以上的星号、减号、底线来建立一个分隔线</li>
+</ul>
+<hr>
+<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><ol>
+<li>无序列表<ul>
+<li>使用 * 、 + 或是 - 作为列表标记（建议使用 - ）</li>
+</ul>
+</li>
+<li>有序列表<ul>
+<li>数字 + .</li>
+</ul>
+</li>
+<li>任务列表<br> - [ ] 未完成的任务<br> - [x] 已完成的任务<ul>
+<li><input disabled="" type="checkbox"> 未完成的任务</li>
+<li><input checked="" disabled="" type="checkbox"> 已完成的任务</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h1><ol>
+<li>单级引用<ul>
+<li>段落开头使用 &gt; 符号 ，然后后面紧跟一个空格<blockquote>
+<p>这是一段引用</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>多级引用<br>&gt;最外层<br>&gt;&gt;第一层嵌套<br>&gt;&gt;&gt;…<blockquote>
+<p>最外层</p>
+<blockquote>
+<p>第一层嵌套</p>
+<blockquote>
+<p>…</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><ol>
+<li>行内代码 使用 ` 包起来 `printf`<br><code>printf</code></li>
+<li>区块代码 使用`&#96;&#96;包裹<br> `&#96;&#96;<br> 这是一段代码<br> `&#96;&#96; <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一段代码</span><br></pre></td></tr></table></figure></li>
+<li>语言表示 语法高亮 高级特性</li>
+</ol>
+<hr>
+<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><ol>
+<li>[链接名称](链接地址)<br>[链接文字](链接地址 “可选的标题”)<br><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接名称</a><br><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80" title="可选的标题">链接文字</a></li>
+<li>&lt;链接地址&gt;</li>
+<li>锚点链接 ： <ol>
+<li><p>[第一章：介绍](#第一章介绍)<br> <a href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E4%BB%8B%E7%BB%8D">第一章：介绍</a></p>
+</li>
+<li><p>锚点规则：<br>标题会自动生成锚点<br>锚点名称通常是标题的小写形式<br>空格替换为连字符<br>移除特殊字符</p>
+</li>
+<li><p>手动创建锚点：<br>&lt;a id&#x3D;”custom-anchor”&gt;</a><br> ## 自定义锚点位置<br> [跳转到自定义位置](#custom-anchor)</p>
+</li>
+<li><p>页面顶部返回链接：<br> [回到顶部](#)</p>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><ol>
+<li>![替代文字](图片路径)<br>![替代文字](图片路径 “图片标题”)<br>其中图片路径可以是相对路径，也可以是绝对路径；</li>
+<li>图片尺寸控制<ol>
+<li>使用HTML img 标签<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” width&#x3D;”300” height&#x3D;”200”&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” width&#x3D;”50%”&gt;<br> &lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” style&#x3D;”width: 300px; height: auto;”&gt;</li>
+<li>图片对齐<br>&lt;!– 居中对齐 –&gt;<br>&lt;div align&#x3D;”center”&gt;<br>  &lt;img src&#x3D;”image.jpg” alt&#x3D;”居中图片” width&#x3D;”400”&gt;<br>&lt;&#x2F;div&gt;<br> &lt;!– 左对齐（默认） –&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”左对齐图片” style&#x3D;”float: left; margin-right: 20px;”&gt;<br> &lt;!– 右对齐 –&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”右对齐图片” style&#x3D;”float: right; margin-left: 20px;”&gt;</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>\ |  表头   | 表头  |<br>|  —-  | —-  |<br>| 单元格  | 单元格 |<br>| 单元格  | 单元格 |</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody></table>
+<hr>
+<p>参考： <a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>P5 设计文档</title>
+    <url>/czyyy_nlw/2026/11/17/P5%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<h1 id="P5-设计文档"><a href="#P5-设计文档" class="headerlink" title="P5 设计文档"></a>P5 设计文档</h1><hr>
+<h1 id="基于P4的修改"><a href="#基于P4的修改" class="headerlink" title="基于P4的修改"></a>基于P4的修改</h1><ol>
+<li><p>增加了流水线寄存器<br>所有流水线都有的控制信号：clk, reset, en, clear<br>所有流水线寄存器都流水的数据：Instr, PCplus8, PC </p>
+<ol>
+<li>FDreg</li>
+</ol>
+<ul>
+<li>无</li>
+</ul>
+<ol start="2">
+<li>DEreg</li>
+</ol>
+<ul>
+<li>RD1, RD2, A3, ext32</li>
+</ul>
+<ol start="3">
+<li>EMreg</li>
+</ol>
+<ul>
+<li>outputA, RD2, A3</li>
+</ul>
+<ol start="4">
+<li>MWreg</li>
+</ol>
+<ul>
+<li>A3, outputA, data</li>
+</ul>
+</li>
+<li><p>增加了转发和阻塞的数据通路<br>见设计草图<br>转发来源：E_PCplus8, M_PCplus8, M_outputA, W_WD_Reg<br>转发去路：D_RD1, D_RD2, E_RD1, E_RD2, M_RD2；只有后面的级可以转发到前面的级，加上这些本身共同构成转发结构；<br> GRF内部转发</p>
+<p>转发条件 ：</p>
+<ol>
+<li>是否为下一级isPCplus8</li>
+<li>寄存器编号是否为0，转发起点终点是否相同</li>
+<li>t_use是否存在</li>
+<li>t_new是否存在</li>
+<li>t_use是否大于等于t_new</li>
+</ol>
+<p>阻塞条件：<br>6. 寄存器编号是否为 0<br>7. 转发起点和终点寄存器是否相同<br>8. t_use 是否存在<br>9. t_new 是否存在<br>10. t_use 是否小于 t_new</p>
+</li>
+<li><p>AT法与Controller<br>在Controller.v中新增了t_rs（何时使用rs）, t_rt（何时使用rt）, t（何时可以转发）<br>都是以指令在D级来说的，D -&gt; 0, E -&gt; 1, M -&gt; 2, W -&gt; 3;<br>关于t_rs, t_rt，注意是 <strong>使用</strong>，如果是写入的话为4’hf ！<br>关于t， 可以转发是要生成数据，然后在下一级流水线可以转发</p>
+</li>
+<li><p>各类指令AT表</p>
+<table>
+<thead>
+<tr>
+<th align="left">指令大类（参照P4）</th>
+<th align="left">代表指令</th>
+<th align="center"><code>t_rs</code> ($T_{use_rs}$)</th>
+<th align="center"><code>t_rt</code> ($T_{use_rt}$)</th>
+<th align="center"><code>t</code> ($T_{new}$)</th>
+<th align="center">写入目标 $A_3$</th>
+<th align="left">核心时序说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>1. B 型分支指令</strong></td>
+<td align="left"><code>beq</code> (以及扩展 <code>bne</code>, <code>bgtz</code>, <code>bltz</code> 等)</td>
+<td align="center"><strong><code>4&#39;h0</code></strong></td>
+<td align="center"><strong><code>4&#39;h0</code></strong><br>(若与0比则为 <code>4&#39;hf</code>)</td>
+<td align="center"><strong><code>4&#39;hf</code></strong></td>
+<td align="center"><code>5&#39;d0</code></td>
+<td align="left"><strong>D 级 CMP 立即需要</strong>操作数比对；不写寄存器</td>
+</tr>
+<tr>
+<td align="left"><strong>2. J 型跳转指令</strong></td>
+<td align="left"><code>j</code><br><code>jal</code><br><code>jr</code><br><code>jalr</code></td>
+<td align="center"><code>4&#39;hf</code><br><code>4&#39;hf</code><br><strong><code>4&#39;h0</code></strong><br><strong><code>4&#39;h0</code></strong></td>
+<td align="center"><code>4&#39;hf</code><br><code>4&#39;hf</code><br><code>4&#39;hf</code><br><code>4&#39;hf</code></td>
+<td align="center"><code>4&#39;hf</code><br><strong><code>4&#39;h0</code></strong><br><code>4&#39;hf</code><br><strong><code>4&#39;h0</code></strong></td>
+<td align="center"><code>5&#39;d0</code><br><code>5&#39;d31</code><br><code>5&#39;d0</code><br><code>rd</code></td>
+<td align="left"><code>jr/jalr</code> <strong>D 级 NPC 立即需要</strong> rs 跳转；<br><code>jal/jalr</code> 的 $PC+8$ 在 D 级即生成，<code>t=0</code> 随时可转发</td>
+</tr>
+<tr>
+<td align="left"><strong>3. 计算型指令（R 型）</strong></td>
+<td align="left"><code>add</code>, <code>sub</code> (以及扩展 <code>and</code>, <code>or</code>, <code>slt</code> 等)</td>
+<td align="center"><strong><code>4&#39;h1</code></strong></td>
+<td align="center"><strong><code>4&#39;h1</code></strong><br>(移位指令为 <code>4&#39;hf</code>)</td>
+<td align="center"><strong><code>4&#39;h2</code></strong></td>
+<td align="center"><code>rd</code></td>
+<td align="left">E 级 ALU 读操作数计算；E 级算完进入 M 级可转发（E级 $T_{new}&#x3D;1$，M级 $T_{new}&#x3D;0$）</td>
+</tr>
+<tr>
+<td align="left"><strong>4. 计算型指令（I 型）</strong></td>
+<td align="left"><code>ori</code>, <code>lui</code> (以及扩展 <code>addi</code>, <code>andi</code> 等)</td>
+<td align="center"><strong><code>4&#39;h1</code></strong><br>(<code>lui</code> 为 <code>4&#39;hf</code>)</td>
+<td align="center"><strong><code>4&#39;hf</code></strong></td>
+<td align="center"><strong><code>4&#39;h2</code></strong></td>
+<td align="center"><code>rt</code></td>
+<td align="left">E 级 ALU 读 rs 与立即数计算；<code>rt</code> 是写入目标，不读取</td>
+</tr>
+<tr>
+<td align="left"><strong>5. 访存型指令（Load）</strong></td>
+<td align="left"><code>lw</code> (以及扩展 <code>lh</code>, <code>lb</code> 等)</td>
+<td align="center"><strong><code>4&#39;h1</code></strong></td>
+<td align="center"><strong><code>4&#39;hf</code></strong></td>
+<td align="center"><strong><code>4&#39;h3</code></strong></td>
+<td align="center"><code>rt</code></td>
+<td align="left">E 级算地址，M 级读内存，到 W 级才可转发数据（E级 $T_{new}&#x3D;2$，M级 $T_{new}&#x3D;1$）</td>
+</tr>
+<tr>
+<td align="left"><strong>6. 访存型指令（Store）</strong></td>
+<td align="left"><code>sw</code> (以及扩展 <code>sh</code>, <code>sb</code> 等)</td>
+<td align="center"><strong><code>4&#39;h1</code></strong></td>
+<td align="center"><strong><code>4&#39;h2</code></strong></td>
+<td align="center"><strong><code>4&#39;hf</code></strong></td>
+<td align="center"><code>5&#39;d0</code></td>
+<td align="left">E 级算地址；<strong><code>rt</code> 到 M 级存入内存才需要</strong>；不写寄存器</td>
+</tr>
+<tr>
+<td align="left"><strong>7. 条件类 &#x2F; 特殊指令</strong></td>
+<td align="left"><code>movz</code>（未定写使能）<br><code>bltzal</code>（条件链接）</td>
+<td align="center"><code>4&#39;h1</code><br><code>4&#39;h0</code></td>
+<td align="center"><code>4&#39;h1</code><br><code>4&#39;hf</code></td>
+<td align="center"><code>4&#39;h2</code><br><code>4&#39;h0</code></td>
+<td align="center">动态 <code>rd</code> &#x2F; 0<br>动态 31 &#x2F; 0</td>
+<td align="left">条件成立时正常写，条件不成立时通过“A3置零法”关闭写入</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<hr>
+<h1 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h1><p>1、我们使用提前分支判断的方法尽早产生结果来减少因不确定而带来的开销，但实际上这种方法并非总能提高效率，请从流水线冒险的角度思考其原因并给出一个指令序列的例子。<br>   分支判断提前是为了减少控制冒险，然而提前到D级对操作数寄存器的需求时间大大提前，可能会加重阻塞<br>   例子：<br>   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">add $1, $2, $3</span><br><span class="line">beq $1, $0, lable</span><br><span class="line">lable:</span><br></pre></td></tr></table></figure><br>2、因为延迟槽的存在，对于 jal 等需要将指令地址写入寄存器的指令，要写回 PC + 8，请思考为什么这样设计？<br>   有延迟槽时，jal并不会立即跳转，而是会先执行pc+4后再跳转，因此真正的下一条未被执行的指令是pc+8。<br>3、我们要求大家所有转发数据都来源于流水寄存器而不能是功能部件（如 DM 、 ALU ），请思考为什么？<br>   防止时钟关键路径过长。如果直接从功能部件转发，转发的时候已经是周期末尾了，可能会导致转发出错或CPU频率下降；如果从流水线寄存器转发则不会出现这个问题<br>4、我们为什么要使用 GPR 内部转发？该如何实现？<br>   W级指令向GRF中写入数据，若此时D级指令在同一个周期内尝试读取GRF而且是相同的寄存器，就会产生冒险，使用内部转发可以简单高效的解决冒险；<br>   实现：<br>   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">assign RD1 = (A1 == 5&#x27;d0) ? 32&#x27;d0 :</span><br><span class="line">          (WE &amp;&amp; (A1 == A3)) ? WD : GRF[A1];</span><br><span class="line">assign RD2 = (A2 == 5&#x27;d0) ? 32&#x27;d0 :</span><br><span class="line">          (WE &amp;&amp; (A2 == A3)) ? WD : GRF[A2];</span><br></pre></td></tr></table></figure><br>5、我们转发时数据的需求者和供给者可能来源于哪些位置？共有哪些转发数据通路？<br>   需求者：D 级：D_RD1（CMP 比较、JR 跳转）、D_RD2（CMP 比较）；E 级：E_RD1（ALU 操作数 A）、E_RD2（ALU 操作数 B）；M 级：M_RD2（DM 写入数据端口 WD，如 sw, sh, sb）<br>   供给者：E 级寄存器：E_PCplus8（jal 等链接指令已生成的返回地址）；M 级寄存器：M_outputA（ALU 运算结果）、M_PCplus8（链接返回地址）；W 级寄存器：W_WD_Reg（包含 DM 读出数据、ALU 结果、PCplus8 等最终写回数据）<br>   数据通路：由上述供给者-&gt;需求者排列组合而成，再加一条GRF内部转发<br>6、在课上测试时，我们需要你现场实现新的指令，对于这些新的指令，你可能需要在原有的数据通路上做哪些扩展或修改？提示：你可以对指令进行分类，思考每一类指令可能修改或扩展哪些位置。</p>
+<ol>
+<li>计算型指令（R&#x2F; I）<br>ALU</li>
+<li>分支跳转型指令（B&#x2F; J）<br>CMP</li>
+<li>访存型指令（load&#x2F; store）<br>DM</li>
+</ol>
+<h2 id="7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。-采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大"><a href="#7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。-采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大" class="headerlink" title="7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。   采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大"></a>7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。<br>   采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大</h2><h1 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h1><ol>
+<li>级数_信号名：例如D_Instr…</li>
+<li>用下划线作分割</li>
+</ol>
+<hr>
+<h1 id="设计草稿"><a href="#设计草稿" class="headerlink" title="设计草稿"></a>设计草稿</h1><p><img src="/czyyy_nlw/img/P3/P5%E8%AE%BE%E8%AE%A1%E8%8D%89%E5%9B%BE.png" alt="P5设计草图" title="P5设计草图"><br>(下面是P4设计草图)<br><img src="/czyyy_nlw/img/P3/%E6%97%A0%E7%BA%BF%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1.png" alt="无线顶层设计" title="无线顶层设计"></p>
+<hr>
+<h1 id="三种常见题型加指令流程"><a href="#三种常见题型加指令流程" class="headerlink" title="三种常见题型加指令流程"></a>三种常见题型加指令流程</h1><h2 id="清空延迟槽"><a href="#清空延迟槽" class="headerlink" title="清空延迟槽"></a>清空延迟槽</h2><ol>
+<li>CMP 10 14</li>
+<li>mips 310-318 634</li>
+</ol>
+<p>一般出现在B型分支跳转指令中，满足条件则跳转，延迟槽正常执行；不满足条件不跳转，延迟槽指令被清空</p>
+<p>做以下修改<br>在CMP.v中新增一个信号<code>nullify</code><br><code>nullify = (type == xx) &amp;&amp; !zero</code><br>mips.v 新增防自杀门控：<code>fixed_nullify</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">assign fixed_xx_nullify = xx_nullify &amp;&amp; (~D_stall)</span><br><span class="line">assign FD_clear = (fixed_xx_nullify) ? 1 : 0</span><br></pre></td></tr></table></figure>
+
+<h2 id="未定写使能"><a href="#未定写使能" class="headerlink" title="未定写使能"></a>未定写使能</h2><ol>
+<li>mips 320-332 &#x2F; 374-386</li>
+</ol>
+<p>采用A3置零法，若不满足写入条件则将A3置零；</p>
+<p>在 RegWrite 中直接添加<code>xx</code>，然后判断在哪里能计算出到底写还是不写，然后在对应计算器中新增一个信号<code>xx_we</code>，然后对对应计算器对应级的A3进行fixed</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wire [4:0] D_fixedA3;</span><br><span class="line">assign D_fixedA3 = (D_type == xx &amp;&amp; !xx_we) ? 5&#x27;d0 : D_A3;</span><br><span class="line">DEreg DEreg(...  .D_A3(D_fixedA3)...)</span><br></pre></td></tr></table></figure>
+<p>这里是以D级为例，对应级对应修改（还有下一级流水线寄存器）</p>
+<h2 id="未定写寄存器"><a href="#未定写寄存器" class="headerlink" title="未定写寄存器"></a>未定写寄存器</h2><ol>
+<li>mips 430-440 646</li>
+</ol>
+<p>一般出现在load类指令中，这里就直接以M级来写了吧<br>修正M_A3； 阻塞想读取欲写入寄存器的指令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wire [4:0] dynamic_A3 = (condition) ? 寄存器1 : 寄存器2;</span><br><span class="line">wire [4:0] M_fixedA3 = (M_type == xx) ? dynamic_A3 : M_A3;</span><br><span class="line">MWreg MWreg ( ... .M_A3(M_fixedA3), ... );</span><br><span class="line"></span><br><span class="line">// condition(寄存器) 表示目标寄存器满足的条件</span><br><span class="line">assign D_stall = </span><br><span class="line">    (E_type == xx &amp;&amp; D_rs != 5&#x27;b00000 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; condition(D_rs)) ? 1&#x27;b1 :</span><br><span class="line">    (E_type == xx &amp;&amp; D_rt != 5&#x27;b00000 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; condition(D_rt)) ? 1&#x27;b1 :</span><br><span class="line">    (E_type != xx &amp;&amp; E_A3 != 5&#x27;b00000 &amp;&amp; D_rs == E_A3 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; E_t_new != 4&#x27;hf &amp;&amp; D_t_rsuse &lt; E_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (E_type != xx &amp;&amp; E_A3 != 5&#x27;b00000 &amp;&amp; D_rt == E_A3 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; E_t_new != 4&#x27;hf &amp;&amp; D_t_rtuse &lt; E_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (M_fixedA3 != 5&#x27;b00000 &amp;&amp; D_rs == M_fixedA3 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; M_t_new != 4&#x27;hf &amp;&amp; D_t_rsuse &lt; M_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (M_fixedA3 != 5&#x27;b00000 &amp;&amp; D_rt == M_fixedA3 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; M_t_new != 4&#x27;hf &amp;&amp; D_t_rtuse &lt; M_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (W_A3 != 5&#x27;b00000 &amp;&amp; D_rs == W_A3 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; W_t_new != 4&#x27;hf &amp;&amp; D_t_rsuse &lt; W_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (W_A3 != 5&#x27;b00000 &amp;&amp; D_rt == W_A3 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; W_t_new != 4&#x27;hf &amp;&amp; D_t_rtuse &lt; W_t_new) ? 1&#x27;b1 :</span><br><span class="line">    1&#x27;b0;</span><br></pre></td></tr></table></figure>
+
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><p>对4个数进行冒泡排序，这里以inputA的四个字节为例，排序结果是让最大值浮到b3,最小值为b0；</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">reg [7:0] b0, b1, b2,b3;</span><br><span class="line">reg [7:0] tmp;</span><br><span class="line">always@(*) begin</span><br><span class="line">   b0 = inputA[7:0];</span><br><span class="line">   // b1 = , b2 = , b3 =</span><br><span class="line">   </span><br><span class="line">    // [第 1 轮] 将最大值冒泡浮动到 b3</span><br><span class="line">    if (b0 &gt; b1) begin t = b0; b0 = b1; b1 = t; end</span><br><span class="line">    if (b1 &gt; b2) begin t = b1; b1 = b2; b2 = t; end</span><br><span class="line">    if (b2 &gt; b3) begin t = b2; b2 = b3; b3 = t; end</span><br><span class="line">    // [第 2 轮] 将次大值冒泡浮动到 b2</span><br><span class="line">    if (b0 &gt; b1) begin t = b0; b0 = b1; b1 = t; end</span><br><span class="line">    if (b1 &gt; b2) begin t = b1; b1 = b2; b2 = t; end</span><br><span class="line">    // [第 3 轮] 确定 b0 和 b1 的最终顺序</span><br><span class="line">    if (b0 &gt; b1) begin t = b0; b0 = b1; b1 = t; end</span><br><span class="line">end</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="测试方案"><a href="#测试方案" class="headerlink" title="测试方案"></a>测试方案</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> // 基础数据初始化</span><br><span class="line">ori $1, $0, 1</span><br><span class="line">ori $2, $0, 2</span><br><span class="line">lui $3, 0x1234</span><br><span class="line">ori $3, $3, 0x5678</span><br><span class="line"></span><br><span class="line">// 1. 测试alu计算与前推(距离1, 距离2, 距离3)</span><br><span class="line">add $4, $1, $2        // $4 = 3</span><br><span class="line">sub $5, $4, $1        // 紧跟上条读$4, 距离1转发(E-&gt;E)</span><br><span class="line">ori $6, $5, 4         // 紧跟上条读$5, 距离1转发(E-&gt;E)</span><br><span class="line">lui $7, 0x0001</span><br><span class="line">add $8, $7, $6        // 间隔1条读$6, 距离2转发(M-&gt;E)</span><br><span class="line">add $9, $4, $0        // 间隔多条, 测试W级写优先/内部转发</span><br><span class="line"></span><br><span class="line">// 2. 测试load-use冒险(检查是否正确阻塞1拍)</span><br><span class="line">sw  $3, 0($0)</span><br><span class="line">lw  $10, 0($0)</span><br><span class="line">add $11, $10, $1      // lw后紧跟读$10, 必须stall 1拍</span><br><span class="line"></span><br><span class="line">// 3. 测试store数据前推</span><br><span class="line">add $12, $1, $2       // E级算出$12</span><br><span class="line">sw  $12, 4($0)        // 紧跟sw, 测试向M级WD前推</span><br><span class="line">lw  $13, 4($0)</span><br><span class="line"></span><br><span class="line">// 4. 测试branch冒险与延迟槽</span><br><span class="line">// 4.1 alu紧跟beq(D级需要数据, 必须stall 1拍)</span><br><span class="line">ori $14, $0, 10</span><br><span class="line">add $15, $14, $0</span><br><span class="line">beq $15, $14, label1</span><br><span class="line">ori $16, $0, 0x1111   // 延迟槽指令, 必须执行</span><br><span class="line"></span><br><span class="line">fail1:</span><br><span class="line">beq $0, $0, fail1</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">label1:</span><br><span class="line">// 4.2 lw紧跟beq(必须连续stall 2拍)</span><br><span class="line">sw  $2, 8($0)</span><br><span class="line">lw  $15, 8($0)</span><br><span class="line">beq $15, $2, label2</span><br><span class="line">ori $16, $0, 0x2222   // 延迟槽指令, 必须执行</span><br><span class="line"></span><br><span class="line">fail2:</span><br><span class="line">beq $0, $0, fail2</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">label2:</span><br><span class="line">// 5. 测试jal/jr与延迟槽中的$31转发</span><br><span class="line">jal func</span><br><span class="line">ori $17, $31, 0       // 延迟槽读$31, 测试PCplus8立即前推</span><br><span class="line"></span><br><span class="line">loop:</span><br><span class="line">beq $0, $0, loop</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">func:</span><br><span class="line">ori $18, $0, 100</span><br><span class="line">jr  $31</span><br><span class="line">ori $19, $0, 200      // jr延迟槽, 返回前必须执行</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 1. 测条件满足: 跳转 + 延迟槽执行 + 链接写$31</span><br><span class="line">ori $31, $0, 0x1111     // 初值</span><br><span class="line">new_branch $0, target1  // 假设满足跳转</span><br><span class="line">ori $1, $0, 0x2222      // 延迟槽: 执行后$1应为0x2222</span><br><span class="line"></span><br><span class="line">fail1:</span><br><span class="line">beq $0, $0, fail1</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">target1:</span><br><span class="line">// 此时看仿真: $31应为PC+8, $1应为0x2222</span><br><span class="line"></span><br><span class="line">// 2. 测条件不满足: 不跳 + 作废延迟槽 + 不链接</span><br><span class="line">ori $31, $0, 0x1111     // 重置初值</span><br><span class="line">ori $2, $0, 0x3333</span><br><span class="line">new_branch $4, fail2    // 假设不满足条件, 顺序往下走</span><br><span class="line">ori $2, $0, 0x4444      // 延迟槽: 若作废, $2绝不能变成0x4444!</span><br><span class="line"></span><br><span class="line">// 此时看仿真: $31应保持0x1111, $2应保持0x3333</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 1. 测计算是否正确</span><br><span class="line">ori $1, $0, 5</span><br><span class="line">new_alu $2, $1, 10      // 算完看仿真$2是不是预期值</span><br><span class="line"></span><br><span class="line">// 2. 测条件不满足时不写回</span><br><span class="line">ori $3, $0, 0x1234      // 预置初值</span><br><span class="line">new_alu_cond $3, $1     // 假设此条件不满足写回</span><br><span class="line">// 看仿真: $3是否依然保持0x1234原值</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 1. 存入测试数据</span><br><span class="line">ori $1, $0, 10</span><br><span class="line">sw  $1, 0($0)</span><br><span class="line"></span><br><span class="line">ori $2, $0, 0xaaaa      // 备选目标1</span><br><span class="line">ori $3, $0, 0xbbbb      // 备选目标2</span><br><span class="line"></span><br><span class="line">// 2. 测动态写回</span><br><span class="line">new_load $2, 0($0)      // 执行完看仿真: 哪个寄存器被写入新值, 另一个是否保持原值</span><br></pre></td></tr></table></figure>
+<hr>
 ]]></content>
   </entry>
   <entry>
@@ -987,359 +1315,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>learn c++</title>
-    <url>/czyyy_nlw/2026/10/21/c++/</url>
-    <content><![CDATA[<h1 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h1><ol>
-<li>格式<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> namespcae std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>输入输出<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">cout &lt;&lt; a &lt;&lt; b &lt;&lt; endl;</span><br></pre></td></tr></table></figure></li>
-<li>字符串(string 类)<br>主要操作： s &#x3D; s1 + s2<br>getline(cin, s3)<br>s.length()<br>s.substr(n, m)   &#x2F;&#x2F;从第n个开始截取(算它本身),截m个<br>s.substr(n)      &#x2F;&#x2F;从第n个开始截取(算它本身),一直截到尾</li>
-<li>结构体<br>省去了typedef</li>
-</ol>
-<hr>
-<h1 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h1><ol>
-<li><p>基本<br>计算长度用 .size()<br>定义方式 STL容器名 &lt;类型&gt; 名字<br>迭代器 (c++ 11)</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  <span class="keyword">for</span>(<span class="keyword">auto</span> p = q.<span class="built_in">begin</span>(); p != q.<span class="built_in">end</span>(); p++)<span class="comment">//这个就是迭代器</span></span><br><span class="line">&#123;</span><br><span class="line">	cout&lt;&lt;*p&lt;&lt;<span class="string">&quot; &quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>vector</p>
-  <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">  vector &lt;<span class="type">int</span>&gt; q;<span class="comment">//创建名为q的一个int型动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">a</span>(<span class="number">10</span>);<span class="comment">//创建一个长度为10的动态数组，默认值是0</span></span><br><span class="line">vector &lt;<span class="type">int</span>&gt; <span class="built_in">b</span>(<span class="number">10</span>,<span class="number">2</span>);<span class="comment">//创建一个长度为10，元素值均为2的动态数组</span></span><br><span class="line">  q.<span class="built_in">resize</span>(<span class="number">10</span>);<span class="comment">//为q分配10个空间</span></span><br><span class="line">  q.<span class="built_in">push_back</span>(<span class="number">1</span>);<span class="comment">//往q里增加一个1</span></span><br><span class="line">  q.<span class="built_in">pop_back</span>();<span class="comment">//删掉最后一个元素</span></span><br><span class="line">  q.<span class="built_in">size</span>();<span class="comment">//元素个数</span></span><br><span class="line">  q.<span class="built_in">empty</span>();<span class="comment">//是否为空，空返回 true</span></span><br><span class="line">  q.<span class="built_in">clear</span>();<span class="comment">//清空</span></span><br><span class="line">  q.<span class="built_in">front</span>();<span class="comment">//第一个元素</span></span><br><span class="line">  q.<span class="built_in">back</span>();<span class="comment">//最后一个元素</span></span><br></pre></td></tr></table></figure></li>
-<li><p>set (会按从小到大自动排好)</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">set &lt;<span class="type">int</span>&gt; s;</span><br><span class="line">s.<span class="built_in">insert</span>(<span class="number">4</span>);</span><br><span class="line">s.<span class="built_in">find</span>(<span class="number">2</span>);  <span class="comment">//find()是查找函数，其返回值是一个指针，所以只能用比较的方法来输出</span></span><br><span class="line">cout &lt;&lt; (s.<span class="built_in">find</span>(<span class="number">2</span>)!=s.<span class="built_in">end</span>()) &lt;&lt; endl;</span><br><span class="line">s.<span class="built_in">erase</span>(<span class="number">2</span>);</span><br></pre></td></tr></table></figure></li>
-<li><p>map (会按从小到大自动排序)</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">map &lt;string, <span class="type">int</span>&gt; m;</span><br><span class="line">p-&gt;first <span class="comment">//键</span></span><br><span class="line">p-&gt;second <span class="comment">//值</span></span><br><span class="line">m.<span class="built_in">count</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//1，判断键是否存在</span></span><br><span class="line">m.<span class="built_in">erase</span>(<span class="string">&quot;apple&quot;</span>);      <span class="comment">//删除这个键</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>unordered_set, unordered_map;</p>
-</li>
-<li><p>stack</p>
- <figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">s.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">s.<span class="built_in">top</span>();</span><br><span class="line">s.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure></li>
-<li><p>queue</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">q.<span class="built_in">push</span>(<span class="number">1</span>);</span><br><span class="line">q.<span class="built_in">front</span>();</span><br><span class="line">q.<span class="built_in">back</span>();</span><br><span class="line">q.<span class="built_in">pop</span>();</span><br></pre></td></tr></table></figure>
-<p>栈和队没有迭代器</p>
-</li>
-</ol>
-<hr>
-<h1 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h1><ol>
-<li><p>sort</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sort</span>(a, a + n);</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">begin</span>(), v.<span class="built_in">end</span>());</span><br><span class="line"><span class="built_in">sort</span>(v.<span class="built_in">rbegin</span>(), v.<span class="built_in">rend</span>());  <span class="comment">//从大到小，不用写 cmp</span></span><br></pre></td></tr></table></figure>
-<p>用cmp自定义排序顺序</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">cmp</span><span class="params">(<span class="type">int</span> x, <span class="type">int</span> y)</span> </span>&#123;    <span class="comment">//只能有 &gt; &lt;</span></span><br><span class="line">    <span class="keyword">return</span> x &gt; y;   <span class="comment">//从大到小排</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>cctype</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="built_in">isalpha</span>();</span><br><span class="line"><span class="built_in">islower</span>()</span><br><span class="line"><span class="built_in">isupper</span>()</span><br><span class="line"><span class="built_in">isalnum</span>()</span><br><span class="line"><span class="built_in">isspace</span>()</span><br><span class="line"><span class="built_in">tolower</span>()</span><br><span class="line"><span class="built_in">toupper</span>()</span><br></pre></td></tr></table></figure></li>
-<li><p>bitset</p>
-</li>
-<li><p>C++ 11</p>
-<ol>
-<li>auto</li>
-<li>for(int i : a), for(int &amp;i : a)</li>
-<li>to_string(),  stoi(), stod()…</li>
-</ol>
-</li>
-</ol>
-<hr>
-<p>参考：<a href="https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316">https://blog.csdn.net/wfuzhuandaaliu/article/details/122518316</a><br>找了一些发现内容都差不多</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Learn Markdown</title>
-    <url>/czyyy_nlw/2026/10/19/markdown/</url>
-    <content><![CDATA[<h1 id="markdown"><a href="#markdown" class="headerlink" title="markdown"></a>markdown</h1><h1 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h1><ul>
-<li>语法：使用 <strong>#</strong> 创建1-6级标题</li>
-<li><strong>#</strong> 号和标题文字之间必须有一个空格</li>
-<li><strong>#</strong> 号必须在行首，前面不能有其他字符</li>
-</ul>
-<hr>
-<h1 id="文本格式"><a href="#文本格式" class="headerlink" title="文本格式"></a>文本格式</h1><ul>
-<li>** xx ** 表示 粗体 <strong>xx</strong></li>
-<li>* xx * 表示 斜体 <em>xx</em></li>
-<li>*** xx *** 表示 斜粗体 <em><strong>xxx</strong></em></li>
-<li>~~ xxxxxx ~~ 表示 删除线 <del>xxxxxx</del></li>
-<li>三个以上的星号、减号、底线来建立一个分隔线</li>
-</ul>
-<hr>
-<h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><ol>
-<li>无序列表<ul>
-<li>使用 * 、 + 或是 - 作为列表标记（建议使用 - ）</li>
-</ul>
-</li>
-<li>有序列表<ul>
-<li>数字 + .</li>
-</ul>
-</li>
-<li>任务列表<br> - [ ] 未完成的任务<br> - [x] 已完成的任务<ul>
-<li><input disabled="" type="checkbox"> 未完成的任务</li>
-<li><input checked="" disabled="" type="checkbox"> 已完成的任务</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h1 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h1><ol>
-<li>单级引用<ul>
-<li>段落开头使用 &gt; 符号 ，然后后面紧跟一个空格<blockquote>
-<p>这是一段引用</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li>多级引用<br>&gt;最外层<br>&gt;&gt;第一层嵌套<br>&gt;&gt;&gt;…<blockquote>
-<p>最外层</p>
-<blockquote>
-<p>第一层嵌套</p>
-<blockquote>
-<p>…</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</li>
-</ol>
-<hr>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><ol>
-<li>行内代码 使用 ` 包起来 `printf`<br><code>printf</code></li>
-<li>区块代码 使用`&#96;&#96;包裹<br> `&#96;&#96;<br> 这是一段代码<br> `&#96;&#96; <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是一段代码</span><br></pre></td></tr></table></figure></li>
-<li>语言表示 语法高亮 高级特性</li>
-</ol>
-<hr>
-<h1 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h1><ol>
-<li>[链接名称](链接地址)<br>[链接文字](链接地址 “可选的标题”)<br><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80">链接名称</a><br><a href="%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80" title="可选的标题">链接文字</a></li>
-<li>&lt;链接地址&gt;</li>
-<li>锚点链接 ： <ol>
-<li><p>[第一章：介绍](#第一章介绍)<br> <a href="#%E7%AC%AC%E4%B8%80%E7%AB%A0%E4%BB%8B%E7%BB%8D">第一章：介绍</a></p>
-</li>
-<li><p>锚点规则：<br>标题会自动生成锚点<br>锚点名称通常是标题的小写形式<br>空格替换为连字符<br>移除特殊字符</p>
-</li>
-<li><p>手动创建锚点：<br>&lt;a id&#x3D;”custom-anchor”&gt;</a><br> ## 自定义锚点位置<br> [跳转到自定义位置](#custom-anchor)</p>
-</li>
-<li><p>页面顶部返回链接：<br> [回到顶部](#)</p>
-</li>
-</ol>
-</li>
-</ol>
-<hr>
-<h1 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h1><ol>
-<li>![替代文字](图片路径)<br>![替代文字](图片路径 “图片标题”)<br>其中图片路径可以是相对路径，也可以是绝对路径；</li>
-<li>图片尺寸控制<ol>
-<li>使用HTML img 标签<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” width&#x3D;”300” height&#x3D;”200”&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” width&#x3D;”50%”&gt;<br> &lt;img src&#x3D;”image.jpg” alt&#x3D;”描述文字” style&#x3D;”width: 300px; height: auto;”&gt;</li>
-<li>图片对齐<br>&lt;!– 居中对齐 –&gt;<br>&lt;div align&#x3D;”center”&gt;<br>  &lt;img src&#x3D;”image.jpg” alt&#x3D;”居中图片” width&#x3D;”400”&gt;<br>&lt;&#x2F;div&gt;<br> &lt;!– 左对齐（默认） –&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”左对齐图片” style&#x3D;”float: left; margin-right: 20px;”&gt;<br> &lt;!– 右对齐 –&gt;<br>&lt;img src&#x3D;”image.jpg” alt&#x3D;”右对齐图片” style&#x3D;”float: right; margin-left: 20px;”&gt;</li>
-</ol>
-</li>
-</ol>
-<hr>
-<h1 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h1><p>\ |  表头   | 表头  |<br>|  —-  | —-  |<br>| 单元格  | 单元格 |<br>| 单元格  | 单元格 |</p>
-<table>
-<thead>
-<tr>
-<th>表头</th>
-<th>表头</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-<tr>
-<td>单元格</td>
-<td>单元格</td>
-</tr>
-</tbody></table>
-<hr>
-<p>参考： <a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>奶蛙游戏合集</title>
-    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
-    <content><![CDATA[<ol>
-<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
-<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
-<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
-<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
-<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
-<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
-<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
-<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
-<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
-<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
-<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
-<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
-<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
-<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
-<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
-<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
-<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
-<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
-<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
-<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
-<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
-<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>P5 设计文档</title>
-    <url>/czyyy_nlw/2026/11/17/P5%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3/</url>
-    <content><![CDATA[<h1 id="P5-设计文档"><a href="#P5-设计文档" class="headerlink" title="P5 设计文档"></a>P5 设计文档</h1><hr>
-<h1 id="基于P4的修改"><a href="#基于P4的修改" class="headerlink" title="基于P4的修改"></a>基于P4的修改</h1><ol>
-<li><p>增加了流水线寄存器<br>所有流水线都有的控制信号：clk, reset, en, clear<br>所有流水线寄存器都流水的数据：Instr, PCplus8, PC </p>
-<ol>
-<li>FDreg</li>
-</ol>
-<ul>
-<li>无</li>
-</ul>
-<ol start="2">
-<li>DEreg</li>
-</ol>
-<ul>
-<li>RD1, RD2, A3, ext32</li>
-</ul>
-<ol start="3">
-<li>EMreg</li>
-</ol>
-<ul>
-<li>outputA, RD2, A3</li>
-</ul>
-<ol start="4">
-<li>MWreg</li>
-</ol>
-<ul>
-<li>A3, outputA, data</li>
-</ul>
-</li>
-<li><p>增加了转发和阻塞的数据通路<br>见设计草图<br>转发来源：E_PCplus8, M_PCplus8, M_outputA, W_WD_Reg<br>转发去路：D_RD1, D_RD2, E_RD1, E_RD2, M_RD2；只有后面的级可以转发到前面的级，加上这些本身共同构成转发结构；<br> GRF内部转发</p>
-<p>转发条件 ：</p>
-<ol>
-<li>是否为下一级isPCplus8</li>
-<li>寄存器编号是否为0，转发起点终点是否相同</li>
-<li>t_use是否存在</li>
-<li>t_new是否存在</li>
-<li>t_use是否大于等于t_new</li>
-</ol>
-<p>阻塞条件：<br>6. 寄存器编号是否为 0<br>7. 转发起点和终点寄存器是否相同<br>8. t_use 是否存在<br>9. t_new 是否存在<br>10. t_use 是否小于 t_new</p>
-</li>
-<li><p>AT法与Controller<br>在Controller.v中新增了t_rs（何时使用rs）, t_rt（何时使用rt）, t（何时可以转发）<br>都是以指令在D级来说的，D -&gt; 0, E -&gt; 1, M -&gt; 2, W -&gt; 3;<br>关于t_rs, t_rt，注意是 <strong>使用</strong>，如果是写入的话为4’hf ！<br>关于t， 可以转发是要生成数据，然后在下一级流水线可以转发</p>
-</li>
-<li><p>各类指令AT表</p>
-<table>
-<thead>
-<tr>
-<th align="left">指令大类（参照P4）</th>
-<th align="left">代表指令</th>
-<th align="center"><code>t_rs</code> ($T_{use_rs}$)</th>
-<th align="center"><code>t_rt</code> ($T_{use_rt}$)</th>
-<th align="center"><code>t</code> ($T_{new}$)</th>
-<th align="center">写入目标 $A_3$</th>
-<th align="left">核心时序说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>1. B 型分支指令</strong></td>
-<td align="left"><code>beq</code> (以及扩展 <code>bne</code>, <code>bgtz</code>, <code>bltz</code> 等)</td>
-<td align="center"><strong><code>4&#39;h0</code></strong></td>
-<td align="center"><strong><code>4&#39;h0</code></strong><br>(若与0比则为 <code>4&#39;hf</code>)</td>
-<td align="center"><strong><code>4&#39;hf</code></strong></td>
-<td align="center"><code>5&#39;d0</code></td>
-<td align="left"><strong>D 级 CMP 立即需要</strong>操作数比对；不写寄存器</td>
-</tr>
-<tr>
-<td align="left"><strong>2. J 型跳转指令</strong></td>
-<td align="left"><code>j</code><br><code>jal</code><br><code>jr</code><br><code>jalr</code></td>
-<td align="center"><code>4&#39;hf</code><br><code>4&#39;hf</code><br><strong><code>4&#39;h0</code></strong><br><strong><code>4&#39;h0</code></strong></td>
-<td align="center"><code>4&#39;hf</code><br><code>4&#39;hf</code><br><code>4&#39;hf</code><br><code>4&#39;hf</code></td>
-<td align="center"><code>4&#39;hf</code><br><strong><code>4&#39;h0</code></strong><br><code>4&#39;hf</code><br><strong><code>4&#39;h0</code></strong></td>
-<td align="center"><code>5&#39;d0</code><br><code>5&#39;d31</code><br><code>5&#39;d0</code><br><code>rd</code></td>
-<td align="left"><code>jr/jalr</code> <strong>D 级 NPC 立即需要</strong> rs 跳转；<br><code>jal/jalr</code> 的 $PC+8$ 在 D 级即生成，<code>t=0</code> 随时可转发</td>
-</tr>
-<tr>
-<td align="left"><strong>3. 计算型指令（R 型）</strong></td>
-<td align="left"><code>add</code>, <code>sub</code> (以及扩展 <code>and</code>, <code>or</code>, <code>slt</code> 等)</td>
-<td align="center"><strong><code>4&#39;h1</code></strong></td>
-<td align="center"><strong><code>4&#39;h1</code></strong><br>(移位指令为 <code>4&#39;hf</code>)</td>
-<td align="center"><strong><code>4&#39;h2</code></strong></td>
-<td align="center"><code>rd</code></td>
-<td align="left">E 级 ALU 读操作数计算；E 级算完进入 M 级可转发（E级 $T_{new}&#x3D;1$，M级 $T_{new}&#x3D;0$）</td>
-</tr>
-<tr>
-<td align="left"><strong>4. 计算型指令（I 型）</strong></td>
-<td align="left"><code>ori</code>, <code>lui</code> (以及扩展 <code>addi</code>, <code>andi</code> 等)</td>
-<td align="center"><strong><code>4&#39;h1</code></strong><br>(<code>lui</code> 为 <code>4&#39;hf</code>)</td>
-<td align="center"><strong><code>4&#39;hf</code></strong></td>
-<td align="center"><strong><code>4&#39;h2</code></strong></td>
-<td align="center"><code>rt</code></td>
-<td align="left">E 级 ALU 读 rs 与立即数计算；<code>rt</code> 是写入目标，不读取</td>
-</tr>
-<tr>
-<td align="left"><strong>5. 访存型指令（Load）</strong></td>
-<td align="left"><code>lw</code> (以及扩展 <code>lh</code>, <code>lb</code> 等)</td>
-<td align="center"><strong><code>4&#39;h1</code></strong></td>
-<td align="center"><strong><code>4&#39;hf</code></strong></td>
-<td align="center"><strong><code>4&#39;h3</code></strong></td>
-<td align="center"><code>rt</code></td>
-<td align="left">E 级算地址，M 级读内存，到 W 级才可转发数据（E级 $T_{new}&#x3D;2$，M级 $T_{new}&#x3D;1$）</td>
-</tr>
-<tr>
-<td align="left"><strong>6. 访存型指令（Store）</strong></td>
-<td align="left"><code>sw</code> (以及扩展 <code>sh</code>, <code>sb</code> 等)</td>
-<td align="center"><strong><code>4&#39;h1</code></strong></td>
-<td align="center"><strong><code>4&#39;h2</code></strong></td>
-<td align="center"><strong><code>4&#39;hf</code></strong></td>
-<td align="center"><code>5&#39;d0</code></td>
-<td align="left">E 级算地址；<strong><code>rt</code> 到 M 级存入内存才需要</strong>；不写寄存器</td>
-</tr>
-<tr>
-<td align="left"><strong>7. 条件类 &#x2F; 特殊指令</strong></td>
-<td align="left"><code>movz</code>（未定写使能）<br><code>bltzal</code>（条件链接）</td>
-<td align="center"><code>4&#39;h1</code><br><code>4&#39;h0</code></td>
-<td align="center"><code>4&#39;h1</code><br><code>4&#39;hf</code></td>
-<td align="center"><code>4&#39;h2</code><br><code>4&#39;h0</code></td>
-<td align="center">动态 <code>rd</code> &#x2F; 0<br>动态 31 &#x2F; 0</td>
-<td align="left">条件成立时正常写，条件不成立时通过“A3置零法”关闭写入</td>
-</tr>
-</tbody></table>
-</li>
-</ol>
-<hr>
-<h1 id="思考题"><a href="#思考题" class="headerlink" title="思考题"></a>思考题</h1><p>1、我们使用提前分支判断的方法尽早产生结果来减少因不确定而带来的开销，但实际上这种方法并非总能提高效率，请从流水线冒险的角度思考其原因并给出一个指令序列的例子。<br>   分支判断提前是为了减少控制冒险，然而提前到D级对操作数寄存器的需求时间大大提前，可能会加重阻塞<br>   例子：<br>   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">add $1, $2, $3</span><br><span class="line">beq $1, $0, lable</span><br><span class="line">lable:</span><br></pre></td></tr></table></figure><br>2、因为延迟槽的存在，对于 jal 等需要将指令地址写入寄存器的指令，要写回 PC + 8，请思考为什么这样设计？<br>   有延迟槽时，jal并不会立即跳转，而是会先执行pc+4后再跳转，因此真正的下一条未被执行的指令是pc+8。<br>3、我们要求大家所有转发数据都来源于流水寄存器而不能是功能部件（如 DM 、 ALU ），请思考为什么？<br>   防止时钟关键路径过长。如果直接从功能部件转发，转发的时候已经是周期末尾了，可能会导致转发出错或CPU频率下降；如果从流水线寄存器转发则不会出现这个问题<br>4、我们为什么要使用 GPR 内部转发？该如何实现？<br>   W级指令向GRF中写入数据，若此时D级指令在同一个周期内尝试读取GRF而且是相同的寄存器，就会产生冒险，使用内部转发可以简单高效的解决冒险；<br>   实现：<br>   <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">assign RD1 = (A1 == 5&#x27;d0) ? 32&#x27;d0 :</span><br><span class="line">          (WE &amp;&amp; (A1 == A3)) ? WD : GRF[A1];</span><br><span class="line">assign RD2 = (A2 == 5&#x27;d0) ? 32&#x27;d0 :</span><br><span class="line">          (WE &amp;&amp; (A2 == A3)) ? WD : GRF[A2];</span><br></pre></td></tr></table></figure><br>5、我们转发时数据的需求者和供给者可能来源于哪些位置？共有哪些转发数据通路？<br>   需求者：D 级：D_RD1（CMP 比较、JR 跳转）、D_RD2（CMP 比较）；E 级：E_RD1（ALU 操作数 A）、E_RD2（ALU 操作数 B）；M 级：M_RD2（DM 写入数据端口 WD，如 sw, sh, sb）<br>   供给者：E 级寄存器：E_PCplus8（jal 等链接指令已生成的返回地址）；M 级寄存器：M_outputA（ALU 运算结果）、M_PCplus8（链接返回地址）；W 级寄存器：W_WD_Reg（包含 DM 读出数据、ALU 结果、PCplus8 等最终写回数据）<br>   数据通路：由上述供给者-&gt;需求者排列组合而成，再加一条GRF内部转发<br>6、在课上测试时，我们需要你现场实现新的指令，对于这些新的指令，你可能需要在原有的数据通路上做哪些扩展或修改？提示：你可以对指令进行分类，思考每一类指令可能修改或扩展哪些位置。</p>
-<ol>
-<li>计算型指令（R&#x2F; I）<br>ALU</li>
-<li>分支跳转型指令（B&#x2F; J）<br>CMP</li>
-<li>访存型指令（load&#x2F; store）<br>DM</li>
-</ol>
-<h2 id="7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。-采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大"><a href="#7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。-采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大" class="headerlink" title="7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。   采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大"></a>7、确定你的译码方式，简要描述你的译码器架构，并思考该架构的优势以及不足。<br>   采用的是分布式译码，在各级流水线分别实例化一个独立的Controller。优势：扩展性强，顶层连线清晰，不用复杂流水；劣势：硬件开销大</h2><h1 id="命名规则"><a href="#命名规则" class="headerlink" title="命名规则"></a>命名规则</h1><ol>
-<li>级数_信号名：例如D_Instr…</li>
-<li>用下划线作分割</li>
-</ol>
-<hr>
-<h1 id="设计草稿"><a href="#设计草稿" class="headerlink" title="设计草稿"></a>设计草稿</h1><p><img src="/czyyy_nlw/img/P3/P5%E8%AE%BE%E8%AE%A1%E8%8D%89%E5%9B%BE.png" alt="P5设计草图" title="P5设计草图"><br>(下面是P4设计草图)<br><img src="/czyyy_nlw/img/P3/%E6%97%A0%E7%BA%BF%E9%A1%B6%E5%B1%82%E8%AE%BE%E8%AE%A1.png" alt="无线顶层设计" title="无线顶层设计"></p>
-<hr>
-<h1 id="三种常见题型加指令流程"><a href="#三种常见题型加指令流程" class="headerlink" title="三种常见题型加指令流程"></a>三种常见题型加指令流程</h1><h2 id="清空延迟槽"><a href="#清空延迟槽" class="headerlink" title="清空延迟槽"></a>清空延迟槽</h2><ol>
-<li>CMP 10 14</li>
-<li>mips 310-318 634</li>
-</ol>
-<p>一般出现在B型分支跳转指令中，满足条件则跳转，延迟槽正常执行；不满足条件不跳转，延迟槽指令被清空</p>
-<p>做以下修改<br>在CMP.v中新增一个信号<code>nullify</code><br><code>nullify = (type == xx) &amp;&amp; !zero</code><br>mips.v 新增防自杀门控：<code>fixed_nullify</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">assign fixed_xx_nullify = xx_nullify &amp;&amp; (~D_stall)</span><br><span class="line">assign FD_clear = (fixed_xx_nullify) ? 1 : 0</span><br></pre></td></tr></table></figure>
-
-<h2 id="未定写使能"><a href="#未定写使能" class="headerlink" title="未定写使能"></a>未定写使能</h2><ol>
-<li>mips 320-332 &#x2F; 374-386</li>
-</ol>
-<p>采用A3置零法，若不满足写入条件则将A3置零；</p>
-<p>在 RegWrite 中直接添加<code>xx</code>，然后判断在哪里能计算出到底写还是不写，然后在对应计算器中新增一个信号<code>xx_we</code>，然后对对应计算器对应级的A3进行fixed</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wire [4:0] D_fixedA3;</span><br><span class="line">assign D_fixedA3 = (D_type == xx &amp;&amp; !xx_we) ? 5&#x27;d0 : D_A3;</span><br><span class="line">DEreg DEreg(...  .D_A3(D_fixedA3)...)</span><br></pre></td></tr></table></figure>
-<p>这里是以D级为例，对应级对应修改（还有下一级流水线寄存器）</p>
-<h2 id="未定写寄存器"><a href="#未定写寄存器" class="headerlink" title="未定写寄存器"></a>未定写寄存器</h2><ol>
-<li>mips 430-440 646</li>
-</ol>
-<p>一般出现在load类指令中，这里就直接以M级来写了吧<br>修正M_A3； 改写M转发检测，将所有M级发起的转发中的M_A3全部改成M_fixedA3; 阻塞想读取欲写入寄存器的指令</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">wire [4:0] dynamic_A3 = (condition) ? 寄存器1 : 寄存器2;</span><br><span class="line">wire [4:0] M_fixedA3 = (M_type == xx) ? dynamic_A3 : M_A3;</span><br><span class="line">MWreg MWreg ( ... .M_A3(M_fixedA3), ... );</span><br><span class="line"></span><br><span class="line">// condition(寄存器) 表示目标寄存器满足的条件</span><br><span class="line">assign D_stall = </span><br><span class="line">    (E_type == xx &amp;&amp; D_rs != 5&#x27;b00000 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; condition(D_rs)) ? 1&#x27;b1 :</span><br><span class="line">    (E_type == xx &amp;&amp; D_rt != 5&#x27;b00000 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; condition(D_rt)) ? 1&#x27;b1 :</span><br><span class="line">    (E_type != xx &amp;&amp; E_A3 != 5&#x27;b00000 &amp;&amp; D_rs == E_A3 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; E_t_new != 4&#x27;hf &amp;&amp; D_t_rsuse &lt; E_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (E_type != xx &amp;&amp; E_A3 != 5&#x27;b00000 &amp;&amp; D_rt == E_A3 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; E_t_new != 4&#x27;hf &amp;&amp; D_t_rtuse &lt; E_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (M_fixedA3 != 5&#x27;b00000 &amp;&amp; D_rs == M_fixedA3 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; M_t_new != 4&#x27;hf &amp;&amp; D_t_rsuse &lt; M_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (M_fixedA3 != 5&#x27;b00000 &amp;&amp; D_rt == M_fixedA3 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; M_t_new != 4&#x27;hf &amp;&amp; D_t_rtuse &lt; M_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (W_A3 != 5&#x27;b00000 &amp;&amp; D_rs == W_A3 &amp;&amp; D_t_rsuse != 4&#x27;hf &amp;&amp; W_t_new != 4&#x27;hf &amp;&amp; D_t_rsuse &lt; W_t_new) ? 1&#x27;b1 :</span><br><span class="line">    (W_A3 != 5&#x27;b00000 &amp;&amp; D_rt == W_A3 &amp;&amp; D_t_rtuse != 4&#x27;hf &amp;&amp; W_t_new != 4&#x27;hf &amp;&amp; D_t_rtuse &lt; W_t_new) ? 1&#x27;b1 :</span><br><span class="line">    1&#x27;b0;</span><br></pre></td></tr></table></figure>
-<hr>
-<h1 id="测试方案"><a href="#测试方案" class="headerlink" title="测试方案"></a>测试方案</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> // 基础数据初始化</span><br><span class="line">ori $1, $0, 1</span><br><span class="line">ori $2, $0, 2</span><br><span class="line">lui $3, 0x1234</span><br><span class="line">ori $3, $3, 0x5678</span><br><span class="line"></span><br><span class="line">// 1. 测试alu计算与前推(距离1, 距离2, 距离3)</span><br><span class="line">add $4, $1, $2        // $4 = 3</span><br><span class="line">sub $5, $4, $1        // 紧跟上条读$4, 距离1转发(E-&gt;E)</span><br><span class="line">ori $6, $5, 4         // 紧跟上条读$5, 距离1转发(E-&gt;E)</span><br><span class="line">lui $7, 0x0001</span><br><span class="line">add $8, $7, $6        // 间隔1条读$6, 距离2转发(M-&gt;E)</span><br><span class="line">add $9, $4, $0        // 间隔多条, 测试W级写优先/内部转发</span><br><span class="line"></span><br><span class="line">// 2. 测试load-use冒险(检查是否正确阻塞1拍)</span><br><span class="line">sw  $3, 0($0)</span><br><span class="line">lw  $10, 0($0)</span><br><span class="line">add $11, $10, $1      // lw后紧跟读$10, 必须stall 1拍</span><br><span class="line"></span><br><span class="line">// 3. 测试store数据前推</span><br><span class="line">add $12, $1, $2       // E级算出$12</span><br><span class="line">sw  $12, 4($0)        // 紧跟sw, 测试向M级WD前推</span><br><span class="line">lw  $13, 4($0)</span><br><span class="line"></span><br><span class="line">// 4. 测试branch冒险与延迟槽</span><br><span class="line">// 4.1 alu紧跟beq(D级需要数据, 必须stall 1拍)</span><br><span class="line">ori $14, $0, 10</span><br><span class="line">add $15, $14, $0</span><br><span class="line">beq $15, $14, label1</span><br><span class="line">ori $16, $0, 0x1111   // 延迟槽指令, 必须执行</span><br><span class="line"></span><br><span class="line">fail1:</span><br><span class="line">beq $0, $0, fail1</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">label1:</span><br><span class="line">// 4.2 lw紧跟beq(必须连续stall 2拍)</span><br><span class="line">sw  $2, 8($0)</span><br><span class="line">lw  $15, 8($0)</span><br><span class="line">beq $15, $2, label2</span><br><span class="line">ori $16, $0, 0x2222   // 延迟槽指令, 必须执行</span><br><span class="line"></span><br><span class="line">fail2:</span><br><span class="line">beq $0, $0, fail2</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">label2:</span><br><span class="line">// 5. 测试jal/jr与延迟槽中的$31转发</span><br><span class="line">jal func</span><br><span class="line">ori $17, $31, 0       // 延迟槽读$31, 测试PCplus8立即前推</span><br><span class="line"></span><br><span class="line">loop:</span><br><span class="line">beq $0, $0, loop</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">func:</span><br><span class="line">ori $18, $0, 100</span><br><span class="line">jr  $31</span><br><span class="line">ori $19, $0, 200      // jr延迟槽, 返回前必须执行</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 1. 测条件满足: 跳转 + 延迟槽执行 + 链接写$31</span><br><span class="line">ori $31, $0, 0x1111     // 初值</span><br><span class="line">new_branch $0, target1  // 假设满足跳转</span><br><span class="line">ori $1, $0, 0x2222      // 延迟槽: 执行后$1应为0x2222</span><br><span class="line"></span><br><span class="line">fail1:</span><br><span class="line">beq $0, $0, fail1</span><br><span class="line">nop</span><br><span class="line"></span><br><span class="line">target1:</span><br><span class="line">// 此时看仿真: $31应为PC+8, $1应为0x2222</span><br><span class="line"></span><br><span class="line">// 2. 测条件不满足: 不跳 + 作废延迟槽 + 不链接</span><br><span class="line">ori $31, $0, 0x1111     // 重置初值</span><br><span class="line">ori $2, $0, 0x3333</span><br><span class="line">new_branch $4, fail2    // 假设不满足条件, 顺序往下走</span><br><span class="line">ori $2, $0, 0x4444      // 延迟槽: 若作废, $2绝不能变成0x4444!</span><br><span class="line"></span><br><span class="line">// 此时看仿真: $31应保持0x1111, $2应保持0x3333</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 1. 测计算是否正确</span><br><span class="line">ori $1, $0, 5</span><br><span class="line">new_alu $2, $1, 10      // 算完看仿真$2是不是预期值</span><br><span class="line"></span><br><span class="line">// 2. 测条件不满足时不写回</span><br><span class="line">ori $3, $0, 0x1234      // 预置初值</span><br><span class="line">new_alu_cond $3, $1     // 假设此条件不满足写回</span><br><span class="line">// 看仿真: $3是否依然保持0x1234原值</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 1. 存入测试数据</span><br><span class="line">ori $1, $0, 10</span><br><span class="line">sw  $1, 0($0)</span><br><span class="line"></span><br><span class="line">ori $2, $0, 0xaaaa      // 备选目标1</span><br><span class="line">ori $3, $0, 0xbbbb      // 备选目标2</span><br><span class="line"></span><br><span class="line">// 2. 测动态写回</span><br><span class="line">new_load $2, 0($0)      // 执行完看仿真: 哪个寄存器被写入新值, 另一个是否保持原值</span><br></pre></td></tr></table></figure>
-<hr>
-]]></content>
-  </entry>
-  <entry>
     <title>learn Python</title>
     <url>/czyyy_nlw/2026/11/03/python/</url>
     <content><![CDATA[<h1 id="与C的区别"><a href="#与C的区别" class="headerlink" title="与C的区别"></a>与C的区别</h1><ol>
@@ -1374,47 +1349,53 @@
 ]]></content>
   </entry>
   <entry>
+    <title>归并分治</title>
+    <url>/czyyy_nlw/2026/11/25/%E5%BD%92%E5%B9%B6%E5%88%86%E6%B2%BB/</url>
+    <content><![CDATA[<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>1. </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>奶蛙游戏合集</title>
+    <url>/czyyy_nlw/2026/10/20/%E5%A5%B6%E5%A8%83%E6%B8%B8%E6%88%8F/</url>
+    <content><![CDATA[<ol>
+<li><a href="https://milkyfrog.com/">奶蛙狂笑</a></li>
+<li><a href="https://milkyfrog.com/hecheng">合成大奶蛙</a></li>
+<li><a href="https://milkyfrog.com/shenpao">奶蛙神跑</a></li>
+<li><a href="https://milkyfrog.com/yumaoqiu">奶蛙羽毛球</a></li>
+<li><a href="https://milkyfrog.com/jump">奶蛙jump</a></li>
+<li><a href="https://milkyfrog.com/shenlong">召唤神龙</a></li>
+<li><a href="https://milkyfrog.com/fangpi">奶蛙放屁</a></li>
+<li><a href="https://milkyfrog.com/zhua">抓奶蛙</a></li>
+<li><a href="https://milkyfrog.com/tanchiwa">奶蛙贪吃蛙</a></li>
+<li><a href="https://milkyfrog.com/2048">奶蛙2048超级版</a></li>
+<li><a href="https://milkyfrog.com/wuziqi">奶蛙五子棋</a></li>
+<li><a href="https://milkyfrog.com/nailegewa">奶了个蛙</a></li>
+<li><a href="https://milkyfrog.com/tiao">奶蛙一跳</a></li>
+<li><a href="https://milkyfrog.com/douluo">奶斗罗</a></li>
+<li><a href="https://milkyfrog.com/yanse">奶蛙颜色大挑战</a></li>
+<li><a href="https://milkyfrog.com/lvxing">旅行奶蛙</a></li>
+<li><a href="https://milkyfrog.com/kuaipao">奶蛙快跑</a></li>
+<li><a href="https://milkyfrog.com/gongchang">奶蛙工厂</a></li>
+<li><a href="https://milkyfrog.com/jiewu">奶蛙街舞</a></li>
+<li><a href="https://milkyfrog.com/gugupeng">奶蛙鼓鼓碰</a></li>
+<li><a href="https://milkyfrog.com/xiaoxiaole">奶蛙消消乐</a></li>
+<li><a href="https://milkyfrog.com/xiaowo">奶蛙的小窝</a><br><a href="https://milkyfrog.com/games">更多奶蛙游戏</a></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
     <title>diary1</title>
     <url>/czyyy_nlw/2026/10/25/%E6%97%A5%E8%AE%B0261025/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
      data-hbe-format="4"
      data-wpm="密码错误，请重新输入。"
      data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="0c68e99cd280d4f31e3aa91e0591aec093e549332c9e775c4a0577bebd108522"
-     data-nonce="a517da23f4e805a155962566"
+     data-salt="86df03172cab161ce39101769099ec20e9ffd03744e61e068fe76b07ddc7e961"
+     data-nonce="e3688fda7e0cf72757364e4f"
      data-kdf-iterations="250000"
      data-auto-save="false">
   <script id="hbeData" type="hbeData">
-    cfb0cc6a2c952869568b2895a9bb6e6d2ca83cf4786b96dad2afe11f0cbf11e5394f0aede43ae57210942a1169b6e1cc0a1f7f6364a2542609e1a2409b65f2459b176c8195c729a9a8a29758c896962f155df50f2e98105262b24fd75e6822cd3b13ae5d80ad7b8a826a8801e37b262f5063f233604cbba9f08f277a6867d4bffa847affbdf0851dce7dd79fe0617ba5db9bd8255d3895919710566809819f891e3948d8be72830eb4549570c21afcdddf2b8faacbf4ba4d8ee6873854d049b8a60d8af22ac45559c0497b192b3b5e3f6b74aebd57af407ce4f30e99007730b85040d3f1d33df78932a953a88bddf581392c720822c1c1e32a0bffa92342b1210566441ff2de5b8302ff99ce73fe57af2d851f800f7d3fc1c041b9c8fd999acffc4a96acd1f1ac8ba7533d405d165338c42eb0cd0eb3f62a9d1c4618e7232fa6f19c9e08128ce2bbe0bfd6514def48bb2f518e2155e15e3085ff761d0faec4d40292dbfaa8077b6db94ed68f547a8ce9d17de18aeeb48b9afb57e639b0e2513b2da7b8b6c21e72b533e39a94cfa9fa61c37e6bd237dae6e5d7c5420b05be2eba826ce9d8491d787138d76769001af0225250309e7fc17de70799743e931a90a4145072eb644fdefdc319ece2f1fe61e34530510d1b528b88475e5836562bbe8c4f76ea5b95143ca0d72542078d10c50aecd7f1b44acca10705ced33796a24bbeb6ab3b2972fab6523323d849df75eccf761f662fd49c8e33c8e895869bf6027ecf6c212e9c7c5382d15b24977b3fc4ffea719d525d61e37a07ec3d298db2172dfd8364c211d26fd4df54a0fc3ee4c7c414c9dffb1f5434a56d0b34cb1ff1728990b29bfce57c40dc1bfef752f14143acbd0a715883cf364b9b267f7cb17f46336081f070799919368f3191efa09623d0b9c4f2df1c5116c48df4aed71369e7b080643ed585a3aad37c4755aa48ed20aa93634fbb85b35e7c213a9945605b1934abcd20d5d6e6df0e87421e4146b0231721f673114dee20f416ae1a4acfec49937e0a253ad343f5393c196e3076aaa94f68ec71157b4d2fa5b47947fb668de1c977ea098a661d9583474344a2ab3828ff9f972dd6d492784caf5985f7937714f1e0ade263955733a141f161af1e93cd66e63affc3ef15cd1cc5ad5dac94e0735fa196b4e284b8a800bd57068d4e483a530d45e37f543ec0504a42d8754e9836dde81f95b8786fb8faea40745823adcadd705f69951dc6011da5ba45fa00d9e099893033c74008df13bda2fbd7027186a97b53f4e89b1df019c55102aea421951481882069707523b1ee459baf153a46b3c3ca333a2e634d62cbe015c2701fc3ce631df23ea248ce98812c09bb93486860584088fa623f48f995f36e8749f5f407bc243a9d2f430649a33f8361c322ecba7ab6bb775d74902da52ea3f57f000a11ef44ffed0ddd1570e9b5a5742dabae2e628562cacd335306af6473036db8029118a23a06b8e95bd04ddbaffc20d6d5955a50500c9a2e90c3164718f08a2c47929891f06ca82dc56658e35d18b6be2b76938e6f6a30ff93092e9fc6c30e781893904a0db1e0dd92435dd31105b7e0de9e169c2cfdc8eee304651469ff0629cdaebba070eb3a5a7a358febb12384782c69378623649e13b3c3888b913b92e8927284828cc934c25be7e66f806c140ac827aebbfd16c2b6122b3f52d5384fe4d97df0345216c0014f834576e379edbfa48d00943acd720cceb385aa8166fa47793cd936279530c3b6df30ea4896fff6b52634fe11dcdff50339dd5e8f233dd8ce28e25c6ba4e6899a4906e7c9541988bd27ec167788e435ae4b76456f64931d4d8b8a28f68f3b3595a52ab31d57e7caec84246dbe657996f4bfdb9977d75df5b3e716a72172a215da8bc9b7edbc54543231cf2744d47ea7f0106eb36ec22ff4914ad4d8389b98269e83316172182203bd27b906deecd797e25bf3ee478cb1e3c752a2ca29ffe5bc28e231a9528ecaac2e158a584f95c950e1698e8e867c3fcb6a7a4994c018ce4287c4afd7f4564dd599ecb0e1093959a2750de1071e6def55ba6abc5209340725d01b6af51d3d254a0e481ac41cd861bb9468e6c47c7f8543c44450c694ec9db29b27be019885c52d23d0c83d8043167d74b806464c680aee6dfdabbeaeec59198f4d48b53bd2aadbff8105c27184d31824a885a1a393213d424045e9b0cbd713b0a226ca6ccc33407531d9b72f599768ce02ee9753cfc2f32d558c1a600b6edd5f5c395b9e87da9d2822e7e0c7814eb9d189d85d3fab88961696a5dbb1a3f56d2ff914dc59323cab53dbdc13c3f0d2b3ea8fb27ea1b0539e7c0be31e8f0195cfded18ad0764ea66becdbb9b89d1359f82f887f7faeac51f02466ab6cd90a6b85086563865f9e27ea61460b5159bca4740582f1c4be8f1bdded02ea5eb348f9fd1590ac5788d63ab50035ec329942232d21f248582bd1a85d249065222f3e1ec882b362ae8bb5c23248d785d599039e6a73456817dd3e7d22b706a93d39a3baa45c466991e76594a3c955ca610ab61e7910efd365f0337ea604f2c3c69cad61b771ef0b7b2a5ab4f5b469ac4a3e46ff0744597152e736efe71512538372363f78a0151913cd68594f5b69dab6a4f2daefb0a5a6f90caa275939b157681810b6f8af5046b62affc819ec645462790c25d46b9fe4513c0a52fe2c2accf1b948b420b49885dafd0f681e09672479ed0f2d5af2cc1c0e241c11b8be731b6ad4cbb075dde15f138677c6d904273b9af93057d93e9d1255345fff604d3b40cdd96b9d863c2499a486e8bc75094c810d8d1d8605e33557da9a3a9143ad8be09cdcdb7df5540c9f10421d980b645b2ebebed9ae41e44939e3989ba7f1f1b40a93c7013dd35878622240772315ec67650aa557a2347b7e716b729857f372be87ee2839964e9568dc8d1e4535608c5f13ec56abac594895c98e1f5e6c04c9a02f03607d9a9090a81e89ea91c83fb2bc265ac6c5b3b4fb76a04abdb144df9c2cc64094fad7e28cd12a519112338232e70de2fd0cdfb17344a402eb6f8565fd06f3b8a0c2e0b8802e5d97312899b941e4a0dd614a9cdec581b10152e6e0b9e0e103bd0b80ddb6ae6741a00636a57481764f4cf1ff3ed671347da423a993886fec1423469b1008156ec237c7f687bea868a7a81bccf72950786f49419f90d51b5efbc5b94965509409a43ef09b50b60f29e432e33c2f517950fab3fdfe55c44ec97c7d5e934d0172449d3f089aa3acfac50c99b205a5cfaf7d2cc274900ed64e7fbe48ce78687ce07a02b75754e80bd803b42f5c80e549c83b91a81d10ffe0255eda73f21e37aa4909cdb72edb98c76efd763de23f887d2a6d712c4f16f090e31fe8774751c8ff8bc05ea32af5c673ce2574e4d8bbb4de825011d46296a46aadf5fe7d9bd1e45093bfa13d55c5f4e3d76cc346b857f9278daeac9a1bf7f7e24f5fa54cbd79ed6aadc96f1894977c46a13a22c34e1ac14849fb512c38011722b44412bcd684df30f8f1c852f7095105c61928124b1c36e10ed175a760e4c8cd8388698dfac18a1234d42175f851ec356a881fbc15ee8e1f64df99fb6f1c12256ad53c7723414b75555b2e8eec36471716821d286e4418c3e36e90a063786297e31e47b3a922b3f16a048747ab486dc2be8cbfdf31c4b91bee6504d17b8519c94f8621daa8c526f7546532551200a9cd8c3d7232316ee04eee42b6adad10a1258767f85ce0fe8cd570e5019e903baf28b3da75173822adf24640e6b7bfa651c62c573c64cc45aaf8548921c28a0729f8deffa9fd9944875d78519699afd4729a90c0ceffd589ea64b4e89dd85a9bd7f1d7cd51e84959c6c378dd096be38abe93c5381399fe
-  </script>
-  <div class="hbe hbe-content">
-    <form id="hbeForm" class="hbe hbe-form">
-      <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
-      </label>
-    </div>
-      <button class="hbe hbe-button" type="submit">解密</button>
-      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
-    </form>
-  </div>
-</div>
-<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>爱有万分之一甜</title>
-    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
-     data-hbe-format="4"
-     data-wpm="密码错误，请重新输入。"
-     data-whm="抱歉，这篇内容无法通过验证。"
-     data-salt="1a23d9afa83376db931ce3f0c42a97068431814a8200a78a3c3b4de574ef928e"
-     data-nonce="edc7719338a8b4e7b3ef0d0c"
-     data-kdf-iterations="250000"
-     data-auto-save="false">
-  <script id="hbeData" type="hbeData">
-    aaf9a33b83fb4520e89258700d0af14fa9e4f7fda1f0ffb9c6baa7f09c60cdb276ef053972b14c6120a77836976d53b08f689ef80641ece389bac00782acc271b492c555c1d21acd734d7cc1b9fb3dc37641e3b204c49aadd6aba42bc4ba6acb1e1c64659d1ba81802373ac361a35fd7ea60f348443f6c843cc2bf0688bc61873a343c82ab5bf04af213339bccc05aa8d893c22c36a1d499d8d9898f66b59e15f447b35d41729cf2e5a230861c1c6dae33d2d5740a463d8b208e8b28da75f31d0115ea3c281267b7538a88445b6c9292a528cb8bee703fc5578e73c732f0dc0925b4eba0fc898eecdc79a9ad1d0fd9fc652b5d22dbb9b64b7089a55f66bdb5bbe0114c19c95e7ea1344eff8c747d1eaef2d02dce56e26b5390eba7ec95871963c6cca959c82e4644076956417d727af1a6ecf7ba7ecc607cb32d98e4c5ffa8c1b22677f7740ca50a163889d5e5b26beeb3a7db639c2efc251f65084aea48d859b1b12a734dd8efda4c094a4d05e8a6c22c330836666abe09590117a46e16af3552d082d268a8d3792887ed9b56f8888622caf559bef670db9a6ac7c7467e1f1e1559c49486b4206df6f29f83989d8cc2c41885dfc23f4d6a61e8709d13b3992e8eaaacf9fa06aa6094d79ab32589850645cc881f7b0c7a166dc9a5ef7dc2162d6a0c9f5267781abb5f51cc797d6af504b6752d3653e82c0981638172d4683172497cd85af6a13bded849c77728b23ff5c211a220c14ac9f29385df2a79e4f35e66d1c06ab0b0acfc4c817ca1cbdb36e9bd213bfe93e7d72baf37f7ace07056c6c938c1b5576f0b597ae73567445733333576c832589ef2e43acc659e4beedde32380ac099ae9758d511bd0560bfab293b4c898c67c97273549a429bd760111c216aa42233756d0d71f3c07654c480a0fa8319301778ec8a46af4ef56aa058553e1d5a540562ad870b1b207c985161e19c72b711609e28389fb48caa61e3d8a3994b2e2b59ab0f73c6516e7ac03fb55646cb45726e965980b0ad8009963abe1a73522d0618c772d32ef0bb900fb7ab4cae4a15d713c12c2a6203a9c4976ca1bc95c94b93a661851a0130ff84fd95cb2c25f955729b120c88a326587681860b236ea8f128136367e56d4d64208a005c46cb1c1a73286dcd731f144c141b8a928de23698beccb2c6b80e1d1af5eec86a27ede247d05ac227a3d0736cb05580ef48d6b1f2ea85747720b545beeade883f4f3fe4579683d8787a952d5fa3e9c9e60d3515f9b0aa38f6ee65871154d1ab4af1fe7b114ccdde8cf0c38f65a4d9866f0f963f6f7d0e508f993778704951f0845f313cf61cfb0881d94aa860f331c82e6707dbfcae8edc2f88d12091bcca6f05025779da54dcf9c06f0cbda10ddc2409a5f077bd1942cb0a5009b6ebbe9e71c667915c5ef9e719562ad56b2b5ee34597226a97e80f0f8b8c2f3d3f64b79a998a5cb957ef37886de1ca56ed4c82492af0b07b9c7a5f8b734e6537aad2814381832acb64b35a48a89611ad84b8ce83c980d8bb21ef677bc792b5299463c11a74a08e7e69ed8f5cf276040f2f9331c4cce24e0c998d3d353b1f106cd07c55d50cd169a96ea83d06a830b64b96c7861e5385874296635c6785d0cec198d6f33de75d2941e27c8b2be3baad78011e30f7d43aec19022fb0e369ecbcbf11e815accd3fb81d91f6fddf2655ec978fc78337e18ca19367182ed256ce6a4356dd09c09368f32f0f39102da9e1969720c50cff7b932d0d7926ac17f79836b974bf228f4e3ed4c840faf5939b65836448dde8da3a02f4c17dcde0696a3d5159ace9fe9f6e887df084c444a15c2c42c262e6cd622f86b5f48493ed59601cdba62aec462c5f9ac4b3b271351abe600b46740ebd03148015eb4d3cf84813d688da5b5cdeefc657c11ca851fedcee9f8f70fe47c930fe75b688334c045b0efc8ddb87a6cdae670b46e44c02de5b8e9d47d0a27e452c6822197630f4b435b84c774f8d56f1e8d0b865ba58835b9de11aefcbf173139f36bd44bbac3d6ed19cd712367458948ce3744af0bcc6612a5bc60c9a833c95052007d8e5e2268504cd0239618e094bb4ca7b74ffdbe7f4c68ddb9b43de5479d5a66a7117afc5b5292c9462b8a71f3b0018977807020bcbd071af7298c2b43d2352217375a978cbc5712465beeb8164cf4d70ca136bed147d74b82bddbeb94b950db9e1eda8c620b136b4fc64cd9e25dcae07a49a5f3d91057275241e04c3f070f2eb9da1fe43381029c29c11f23f11c52745e1e20c162a39bc246d558644d1b97887748fdec5e80868836e2ea6f7c87c30fe1d7aefd5edcc9e35c3cd15d15f02518882e76cb5d6df92d45e5bf455a7741bc9016c460736c476acbb1c482d787b0ef780972ebde20c7325a3e7f599008df562e1d8fb46670d36c79ac5a378c31625eb9d0932fcf23936943de9a0d092e4d4f5fd3bab7bd3948a38e662598fffae5bee4f0575ccfe74df4d3071382559209ab3dda92dd8ade00f9e5085342164c478d1ae461c3883864b346ed55f8d2d3cb74c00548f90a34e11f311f791637ba71ad7345f2e4fab189c4b94ae2744032703ab6730bc7a697965c758b39246fbf73024fc17650680a7dbe2663fde545c50436b2fc30ac724d2aef2e99f36ec20211f5f46c2392083ec83bd699db4b49bb18a6dee851d56d4ce11e6a6fbce6c194e2fbb768bb7c8808802d4a237822007dae58410d70676e4437c0d91b5c6ed499ea2661b61132853268814ab903cc5aee43cf93d29d5579ce55e6abceda64b2a004697e49ac16815f903309d40dfca0105295ecbb66abcd7f8a0a14191f50509c699dc4196527972bff0f19883e094f75f89e299b6045d50935612cee3b882b743ec4b31b86d8e3f9d8c9a25c012ba7b86b18493bd799af905f9e4e6bf6d60f46f4c15feee2f1f0a10040cd7034d58f2f5a0c5327e28912ba9d68b9d2d3630c9dcd525e6beae87efa1d29bb145c0bb2f188f351ea49122e
+    098352bba950703773ced4a001afda1ef138a6f3c62c29a547a0f7fbe4cf36eb3eff3e03a92c36a580370bfa6fbf04b1be3596f45ad651cc49aa19c7a7f04073f4ba2c1a99afd0bbc4db69a67d83fade85532ba7d8a31b19ad1161eca5a897d20166ac1da3ee5a22901e9dc535d5ebd80ea0a6c9f6cb6097c7ac4cfbaabcdcf1f6724540d7fe9b4d7ca78bd5c23256faf79aa20332b0c47142caeebb57a3add37ed1044ce0f05fe33d73a5bb89671ea9bd540517aeed06f90e9f6de02f61369f7d95555f15a0f3a0206a4131072c49250603ce84087dbd3443ceafa3eb13eccf959f5836d3ddf4eeac5d1ad6a6fa2af423a4d0887cf2b67f264bdc95276c677eb9c5f8342ad09fca69e621f295dd4e61290cce205b0ab7b6862848e67834923f77d77c65e6910651e8b95861707e588348f8545ee461cd850dd3cea311bb6f89ae0cb4aa7e72bb83f5c9d6d3e5f1adfbec84a36bca9cc592a32c631e4bde08d31200bb998026a9729915701a779d18e899f6e939331271ca78a13727ea495b4e25410e52980dfbc714f0f68d8208c541d4e41de3767f354ea6bf41377d80e78cfdf8e00b99ce97ad345c72303dbec7a9bc55aeb9ca158b5ee5d521de1fc860a03e6d8396fd77a05c5672444c56c62be805836aceefd311e9a5a6517c1e7c73a494c63e5eea1fb4cc5325a31f8525d9089a23c11165a1decfbb00926b567975c7e65ff183432593791c4b6ec699f44d9a99b91621552be61842bbd54de39c2722771c385aa0416669ba43099902f472a2d7e4d474160538cd29b2a2a1f2603ccdd071db6300856afc5cf57310577bd321ef07ad90a0d7f3c5d477b0648baf197c25d6f0e453fb6f521af42b1dc7cd9c0eb6f65ebec410455c79e5b5ff8062db190810d98df4846896962862cb0825200754bdcf2cf7691bf812f6d0e14c6634516bdf5b85c4dc62f72176de044f929f18d727bc82eb52564d38878fded0bc9f1380f22fa6e024686bba476778f2edf6662bd09bab9bb22f9a47bd7a201e4f756865cbbe0bf03e678410bfb591219af4c22e7d50fdd0bf6585db377a76b8720a67f92c467a50969fb90ad9fc8ac972c304d36d5f70b8fc91020adb62d11890374009cce75952b7bc6eec52156a437a825d68939482baf9949ec67494eef1f6afa038916dbb568555c16ba5b0bc762283560cd001105be08f2873dbe30d3a54bff20121a2780fe05815f4ae3b69502cf778ee14eaeb8869f51ae91e33033ca73937d6ae37e2a3265286df18f2890eff92f93ce66f5a127f19643825bbdd0a45d81131956b9c6d1de0b767ecee1a2ca07b779b53256b1e95726aacb2590459e61a2fc67472e4f03f47d6c40bfdb9208f7add0300acb7c53095882a3d4eec22dc4d05fe92efc7b3e614b0909a56b41c897bfc2e5a3462ab93274d97aa7fc879a04f59526dd6b7d13d5f85ef9267fd23b1925149ada7c7ed21b41d5492d8080d7fae6dcb691e106143c9bfc540e7a46b8658be47af97bfffcdd3834e4789ae2ec3cec389145184150eb1c823af2f0d4ae505f6e2f6cdc4f6dba86dd9441fda5fec42f4f4dbceafdf180ba5f5d37600b33a03c17b09a3df8266f8ef9f1c2629410dc0767515a2b62c3ac1080e6d683c169a615aeaf7f90ae38f4b479ba4e77a5b9b91c8385c6069831968b41010914136c3c5dd94d9883a0e2d40341905906f73b178e2fd4d5298f68b4ff208106a6c795958eae4f91a317c8c696eefc02c17a7315ebc0ab7f299f7f7e585c9fdffb2c7fe23d5ea8376976bc97c1d45f9a96f502b82fa1d490ba01502449ab809bca77934e3cec9fcca7272415074d56e248fa9703c74d8f6a3c16712f7845b172441af9e354d34efd3607e2b3128cd6b18a72cae24aa7f03ccfdf0e29c4c0d8f8f8ce6c1ae6e158e450943068dc40175467c8ef23d93f593b6109344f8d7a5cd195f51cbdbcc1f8a4faf5d2766f83a289ac8717473563f65ab0e1b3221ac4db51425b84c5729752d9302d9cd877ecdeb3ba5b4039007234fd000bb0a7ba0d492f570e5ad68fbf4fcccd51eecd13aebac01f95159c723baaf733dbf52b90c28c076cfc94bc98d48886d51355e86eac7b3d45a4c5ea216a9783df74d81a570d1e566f4874935cd282fc35de5f0e21e0dc1d47bfd3c915e39b95f91f2e7b7bcda0bbf3e8852ca2587f77abbc808f0d8a91483c7e30226d4a8f86143c9c425ac49bcc3e52aea8198fdbaf71a271d9588d7530db467239e029b92e2a16d17f25e51e5be0b175053b4f9d37ad3d4bb472600c14cb39e3661bced51bd2b9be18fe28a1e88f157c9eda6e53b26f3def8dd77c8c7ed2d8da031f028d7e9fa9d480c5358ede10f3efb930bb6332eeb56560001022c164b6ed3fc3fef1b2751e32d1e4bb08a130aff11ac18d700229cdd941729a1e003b3ef8334266111a6a72ced68e2da0108fbe91a31c618de81e22ec31ce603601130b959c277d58a0b5ddc24e7fdbc92b455eaa4acc06462e5d698ac5b69a44e4d77fb08a40b74b4b1bbc80322388f0d1d816cf95b86380c12703ec449eb104ecfa3062c0069a50936c5b5eda4f9d57c75cbf16012b7577106ce55864e13a8eea524eeecc911c14affae31cbb343ca065f8511273c3d9254f9258d72cba5fe4bee3be2f86f39a4f02d8240361a41a1c58566479d4894a6a1d3d88616569b9ae090bd401fb45a4dcb74b302b45d6852d25769099e5415ae2d6eb3318608c3390a8c15322fa96d09570371e227f39d920b9c7e79507e469ca1cf3a3268db1dd405630d69b9ba15a33e9804800dce494638fb15f508e89dbcf43b5b2b38df1ea32d007e21b64d2e6bfcb11f672dc932a3d0bdcbe47674c9d628c1f24efd1597e88631c0cca9690cc205135e3d1600f00e775ba62d4d0edf4fc200068bce175da901c7b8850b7a4859716cacd1134034a6d7a1caaf5ca520f27ab548e07cf9658110d1478707ca48757f3ae84f9304ca4086e5ba62e53cf141fcb100ec3cc824abdac2d8fa6081c1335fc1c71a9210baef3b227ea2eb8c4c4d2bddfb98bbbad8e6be6be5d393a7be721ac7385053f214fe677aeff498d5d69a66d07e8f09c309be9b38b8cce61789f30011555c4ef1afc94f8874f930ab1fec56c3deee90424e90ef10eaf9069e19bbacb11be883a906532b507d9df703dbe00f7252ad8fbd2c32be3512d285c63e705571cf42c54cbb2da627b7535ba8fed1e199ef47c88f8ebaa1e1ab97586e0c3e89143b3c22160f706cbe79ca0cb453867d96fba5685d410332acaf3c67bde374750c0e21fc321c159eebe0d52d2db700685a933c56f28182171380931fcd235680bae079c2dd58cf633a0d907a1101b5b84dec8bb8b64efb012ef8c1e564bbfe15681145093724d3e3b9d84cd1837f3b053eb4d21a699867de7e53f0ef31e9d8d168a2fa8393bfab46d8d03e0cfbaa561bf4d240c389ae2a0facd9b597f248f2491262ad385e6c5824301fe776d156454b90659a371e4a1b333bb1dea5a9abf357a365f7b9f9b3e633979ac91842d3aa1ef4ce2b2632befd95e65a585b12e1c6b7fd8fd7ada3c69ef64b2ea080e19b4065a6173df1df76355cd5ef73a997d376658b63afd7b15f644edb8d18d4eab8a13695072e1f0e93bc265ed77eb0e89eba8f3382b72a9b45a6b197df3d06e949dc36cbf1da2e9b45d223f0a28ccea2682fccca51c60499c61df5e0504aeac314d8f0dcb736bcc419aa7e3c2d8eeefcc822443b8968980a02b7a20b1246108b809cd3daae1be4fb42299d9e749dfe91bddef0190f3a3519d922e273f5a81baad94f6967c22041be324b5c0c45166b8c3fbe6970e7e0e71d6d3b4a06e7cd43465e1c46cc028d87ec35477d28a514bfcc0ef2425a
   </script>
   <div class="hbe hbe-content">
     <form id="hbeForm" class="hbe hbe-form">
@@ -1701,5 +1682,34 @@
 <p>哪怕时间倒流一千次、一万次，只要她穿过人群走向我——</p>
 <p>我依然会心甘情愿地，再次跌进这场名为阮棠的宿命里。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>爱有万分之一甜</title>
+    <url>/czyyy_nlw/2026/10/21/%E7%88%B1%E6%9C%89%E4%B8%87%E5%88%86%E4%B9%8B%E4%B8%80%E7%94%9C/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt"
+     data-hbe-format="4"
+     data-wpm="密码错误，请重新输入。"
+     data-whm="抱歉，这篇内容无法通过验证。"
+     data-salt="ce440f52ef63fcfbc149cf924f43279f91219b42076628b34f17dd6a90e9acfe"
+     data-nonce="97c092a22f2c1163e08fb530"
+     data-kdf-iterations="250000"
+     data-auto-save="false">
+  <script id="hbeData" type="hbeData">
+    e4c52c27076486d00b004464b4248da33177d4ba9e6c4c6e1cb9eda5d187b12f38465c267191efe2e16de9f639667743ca8e3d0b893ca2d5ec01a1259261716f1255b3f1a9177e340c0188a4bc216a674359ef34332bd246aa627e2f359425b9b8cf47307884b99844263b08d4e57b7e45e078d8b2b7e1ae0703e57652c5374f60110845a4f09316292f9b3a384f00aed75c2bffa3a97867a51d36892fffa622c287e8f827fdcbad7975eacd522972d912c58c87271a45d8116a9077f23d48dc4f048e8f89a19fd4007a0c16b7ef6e9d945a285d3b2cb34030714648e51ac52c83015effe35e30d3d016e4747e8fb2a5c15b4ce12e98bbd88398995a10d9274aca001f05de41d91cf25e4ad6b180405d2b27500f0c017da5e8ed78fac6a28b0931f98eda712799202de76d9a019cab5d6a5c0fe0ac0d34a2e58b7ddc6daa728db55b286da07a5a32aa920e9074c9fa53f10e58ad021b57e8ae158dd6c69677ad3289cf83c48d53de29e237053c5bd7d7daa6ea5c450ba9666f9b84ad60cb7a993d5d8fe80716912eabb69c372de2848c186b5a6e52c5025897664921cbc17f3edc6d8439f29b7aa0359b8ebb043b95a95766f353221d1ecce4504513ab57d5b80572140362c78fbfcdd86118738e114cb40ed19f556e3aadf50af3dd98854a55ea27c193fa2ec0189d341de09c7789c534cad25b8c534fbffd210cf320c54acecd061a1a22da93dfee939c58c073bdb8d9cbc9bf5ef1eb1307671479fea7f82839cac460070ba8a029e1c7f29ef3ab9de85dea491b7cd1f9117f7edd67ef6378b53c3e8668df18f74c8b8aa4b8ddb10451129fd9958df2c3e375ac1c4a0c1c7f02c968f1b7c73c2eaace4f36f92ce64ee22f5d1f15cd9ec51091a4d43a67017b64ecc088daa2f88023ce7671bba292f469534259dd8615fb8e9b6d9a4fd90a855e4c8a011930a212bef94ddfc0eaa2595d377d65ed7e74fc7d6d7fae0ffbefd018a9d363eef35d6463007c6319f77fc0ecaac49ae15391bab808da3f18572b88ca4ed63faba0342a900c853758f047a0ca44bb5489d7fa168668883415a9d4d3f404e8ff36753ef525eb97ee1d34315e81bf37685188fd9007d0fee2d1db4291eb48c075a8a31122eb629413024aafa84d1ed9238303e205298f4212cfebf6594539d449498b4ab53194dc7cb664df104e69933c463667bc861f8603f26c05fee0e379e6326bd034d6236449f208f0ff2d9d55d2d021347ac56f850255690d31407c0fd52207cfb09f01cef4a6c688c55415d1331f25b387dcf1e032c8c43ffc9e0fa759de8e4b6832fa3346125ccdec5b1bcbd33329ce1d3b28bacf28e4c9c9c875ee23c463111baa251daffcc558f2c170f67d82996062a9e4841206c32b4989f1f3a5ecec700c1a82acbd8112ce695315dce331851e43b79a6b6e595cd1d0643e2d5e8e6872a94880c79dc4ea881924c8b2627eb5734b9ed8aa94024dc7776a8a216223ad8619fc7b330bc99ecc9c847b100bc49635d33275feafb178bae70652baefe14e8cb396a7b04cbfa898c8039c7dfe7faf972ed656cffd1771bd2b97dc9efb07839868476bbc07c168235e3180efcdace4fb8d69716ccd196b1d7bb9689437c28a3824ecd035a29355c21c67279b857b9475f973fea22322c7b7541757818bf45b785bc1265ab2c398e3e4f24e09cd63941a46d022badcafefc91b127cda7d21db2ae429ed8e1ee3ee79e3a9a99caabf2955ba939b4e7d3269465f7efbde71de2b7bfb34fcd822bf745f4d8814a85d072079ad0f7f579c483a74ba5dca34190526381ad46147ad05c5574f95e734c777383d45d00b9cd7deb57d60119a7bf4cb9ff9ff95951211a22b58b1832f374a8df06bf39ab9ed186002f40a789d16d424962c3eb8ffeee08b40a2bf268f0d1dca19c3cbb17c1525a71391ec0eed9f81b3fea14f6533681946768d2444dc04e77bbeec353bdf53cf8459a454a2e1dd2b586ee36a97683cce480f66fc133a58ef238517da79ec807ad1b48d0ba011d9a0f69dcf69c03d35749459247b575b27362fde9d3f7c5d27b906b8f071e1b3d6efde41fc810210d149665a300f09adc68bdb7119a41f958031b927f8b8b7a72b58f0dd147c392699c14952a405b5255ef13acf503e14c3b412f1f4ddf11018bfb8d42a1e0a7950bef6f7c733c9f6a3dfde1a6c1510a9b1618debc49f7ee2848cc1076e8344380d7d5a24fdf7e14703623a9c41659d85c68e8b153711574f20ceb00a71162eb991903ba43c85e2cdf0bf86c7d00e6b1a1eebafadddec4a43b76d318b205e76ddbad94acd4e56095cfbfdb048fe235c6a454eac06a08b6bc172386bb6b1ece3efd598124018eca67a2e35651e8b130b5c9ae190fc6e3461c72fff0147caa5a9cdec3032ed3d3aa386c29ae345329146e69d4fcacc48173605468c771974e9d7f0b0d715cd6e33c1d78a88419c0d204a920efc8ab30a7fff500584022b0671364cc121db70a582560246ee9a546801701832949ee3bfc7672ac2e42e1cc3d8b150703309376b2a5501991db6ed410be4068418e790b663a84d196ce7435b09ea070e2b8ade5dc118a62207163c6a2af20c3c56d303631f65a2f367d604e49cf45a1483bb60c96e94abd93a8e59e1c84a072434ca14008ec2635562aabf2b3527bc06a575d3509e20329d1848c9bf28b011777f9d8178344ed3e30fb67f2d6b80ec1974404d0051cccfb74d8692bc4622b59a5aff3fd257faf3ff876ef354aea8c70970f025d9c03af76c74aa8e2aef1808f7d7dec2952d3822b46383820ece501720fa038d65fb23aa9e193ef242e3d82156d1f35dfb643aca91088b97fcb033b11fd8381ed93fd37f87c108a56c9d2f85b8a2a09bd8221a4e211eeab8cb39d494025f90640643e53a13d88047fd0983a8c9f7cfbe7bdd7defe815c3b721a4f07e209aa5f153a86a7686730a481b49b042e6e4bef428a3986376f43dd3cedd25992d2b11ca2a5914afea1e
+  </script>
+  <div class="hbe hbe-content">
+    <form id="hbeForm" class="hbe hbe-form">
+      <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入访问密码</span>
+      </label>
+    </div>
+      <button class="hbe hbe-button" type="submit">解密</button>
+      <div class="hbe hbe-error" role="alert" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<script data-pjax src="/czyyy_nlw/lib/hbe.a3b9f59caa.js"></script><link href="/czyyy_nlw/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
 </search>
